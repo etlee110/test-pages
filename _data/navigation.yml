@@ -23,6 +23,9 @@ main:
   - title: "Blog Posts"
     url: /year-archive/
     
+  - title: "arXiv Feed"
+    url: /arxiv-feed/
+    
   - title: "CV"
     url: /cv/
     

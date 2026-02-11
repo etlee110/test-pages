@@ -505,7 +505,7 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Update arXiv feed: $(date -u +"%Y-%m-%d %H:%M UTC")"
-            git push origin main
+            git push origin master
             echo "✓ Changes pushed successfully"
           fi
       

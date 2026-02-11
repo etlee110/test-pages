@@ -1,4 +1,299 @@
-# Placeholder for arXiv papers data
-# This file will be populated by the GitHub Actions workflow
-
-papers: []
+papers:
+- id: '2602.10117'
+  title: 'Biases in the Blind Spot: Detecting What LLMs Fail to Mention'
+  authors: Iván Arcuschin, David Chanin, Adrià Garriga-Alonso, Oana-Maria Camburu
+  abstract: Large Language Models (LLMs) often provide chain-of-thought (CoT) reasoning
+    traces that appear plausible, but may hide internal biases. We call these *unverbalized
+    biases*. Monitoring models via their stated reasoning is therefore unreliable,
+    and existing bias evaluations typically require predefined categories and hand-crafted
+    datasets. In this work, we introduce a fully automated, black-box pipeline for
+    detecting task-specific unverbalized biases. Given a task dataset, the pipeline
+    uses LLM autoraters to generate candidate bias concepts. It then tests each concept
+    on progressively larger input samples by generating positive and negative variations,
+    and applies statistical techniques for multiple testing and early stopping. A
+    concept is flagged as an unverbalized bias if it yields statistically significant
+    performance differences while not being cited as justification in the model's
+    CoTs. We evaluate our pipeline across six LLMs on three decision tasks (hiring,
+    loan approval, and university admissions). Our technique automatically discovers
+    previously unknown biases in these models (e.g., Spanish fluency, English proficiency,
+    writing formality). In the same run, the pipeline also validates biases that were
+    manually identified by prior work (gender, race, religion, ethnicity). More broadly,
+    our proposed approach provides a practical, scalable path to automatic task-specific
+    bias discovery.
+  published: '2026-02-10'
+  pdf_url: http://arxiv.org/pdf/2602.10117
+  arxiv_url: http://arxiv.org/abs/2602.10117
+  key_findings: Large Language Models (LLMs) often provide chain-of-thought (CoT)
+    reasoning traces that appear plausible, but may hide internal biases. We call
+    these *unverbalized biases*. Monitoring models via their stated reasoning is therefore
+    unreliable, and existing bias evaluations typically require predefined categories
+    and hand-crafted datasets.
+- id: '2602.10104'
+  title: 'Olaf-World: Orienting Latent Actions for Video World Modeling'
+  authors: Yuxin Jiang, Yuchao Gu, Ivor W. Tsang, Mike Zheng Shou
+  abstract: 'Scaling action-controllable world models is limited by the scarcity of
+    action labels. While latent action learning promises to extract control interfaces
+    from unlabeled video, learned latents often fail to transfer across contexts:
+    they entangle scene-specific cues and lack a shared coordinate system. This occurs
+    because standard objectives operate only within each clip, providing no mechanism
+    to align action semantics across contexts. Our key insight is that although actions
+    are unobserved, their semantic effects are observable and can serve as a shared
+    reference. We introduce Seq$Δ$-REPA, a sequence-level control-effect alignment
+    objective that anchors integrated latent action to temporal feature differences
+    from a frozen, self-supervised video encoder. Building on this, we present Olaf-World,
+    a pipeline that pretrains action-conditioned video world models from large-scale
+    passive video. Extensive experiments demonstrate that our method learns a more
+    structured latent action space, leading to stronger zero-shot action transfer
+    and more data-efficient adaptation to new control interfaces than state-of-the-art
+    baselines.'
+  published: '2026-02-10'
+  pdf_url: http://arxiv.org/pdf/2602.10104
+  arxiv_url: http://arxiv.org/abs/2602.10104
+  key_findings: 'Scaling action-controllable world models is limited by the scarcity
+    of action labels. While latent action learning promises to extract control interfaces
+    from unlabeled video, learned latents often fail to transfer across contexts:
+    they entangle scene-specific cues and lack a shared coordinate system. This occurs
+    because standard objectives operate only within each clip, providing no mechanism
+    to align action semantics across contexts.'
+- id: '2602.10097'
+  title: Step-resolved data attribution for looped transformers
+  authors: Georgios Kaissis, David Mildenberger, Juan Felipe Gomez, Martin J. Menten,
+    Eleni Triantafillou
+  abstract: We study how individual training examples shape the internal computation
+    of looped transformers, where a shared block is applied for $τ$ recurrent iterations
+    to enable latent reasoning. Existing training-data influence estimators such as
+    TracIn yield a single scalar score that aggregates over all loop iterations, obscuring
+    when during the recurrent computation a training example matters. We introduce
+    \textit{Step-Decomposed Influence (SDI)}, which decomposes TracIn into a length-$τ$
+    influence trajectory by unrolling the recurrent computation graph and attributing
+    influence to specific loop iterations. To make SDI practical at transformer scale,
+    we propose a TensorSketch implementation that never materialises per-example gradients.
+    Experiments on looped GPT-style models and algorithmic reasoning tasks show that
+    SDI scales excellently, matches full-gradient baselines with low error and supports
+    a broad range of data attribution and interpretability tasks with per-step insights
+    into the latent reasoning process.
+  published: '2026-02-10'
+  pdf_url: http://arxiv.org/pdf/2602.10097
+  arxiv_url: http://arxiv.org/abs/2602.10097
+  key_findings: We study how individual training examples shape the internal computation
+    of looped transformers, where a shared block is applied for $τ$ recurrent iterations
+    to enable latent reasoning. Existing training-data influence estimators such as
+    TracIn yield a single scalar score that aggregates over all loop iterations, obscuring
+    when during the recurrent computation a training example matters. We introduce
+    \textit{Step-Decomposed Influence (SDI)}, which decomposes TracIn into a length-$τ$
+    influence trajectory by unrolling the recurrent computation graph and attributing
+    influence to specific loop iterations.
+- id: '2602.10095'
+  title: Causality in Video Diffusers is Separable from Denoising
+  authors: Xingjian Bai, Guande He, Zhengqi Li, Eli Shechtman, Xun Huang, Zongze Wu
+  abstract: 'Causality -- referring to temporal, uni-directional cause-effect relationships
+    between components -- underlies many complex generative processes, including videos,
+    language, and robot trajectories. Current causal diffusion models entangle temporal
+    reasoning with iterative denoising, applying causal attention across all layers,
+    at every denoising step, and over the entire context. In this paper, we show that
+    the causal reasoning in these models is separable from the multi-step denoising
+    process. Through systematic probing of autoregressive video diffusers, we uncover
+    two key regularities: (1) early layers produce highly similar features across
+    denoising steps, indicating redundant computation along the diffusion trajectory;
+    and (2) deeper layers exhibit sparse cross-frame attention and primarily perform
+    intra-frame rendering. Motivated by these findings, we introduce Separable Causal
+    Diffusion (SCD), a new architecture that explicitly decouples once-per-frame temporal
+    reasoning, via a causal transformer encoder, from multi-step frame-wise rendering,
+    via a lightweight diffusion decoder. Extensive experiments on both pretraining
+    and post-training tasks across synthetic and real benchmarks show that SCD significantly
+    improves throughput and per-frame latency while matching or surpassing the generation
+    quality of strong causal diffusion baselines.'
+  published: '2026-02-10'
+  pdf_url: http://arxiv.org/pdf/2602.10095
+  arxiv_url: http://arxiv.org/abs/2602.10095
+  key_findings: Causality -- referring to temporal, uni-directional cause-effect relationships
+    between components -- underlies many complex generative processes, including videos,
+    language, and robot trajectories. Current causal diffusion models entangle temporal
+    reasoning with iterative denoising, applying causal attention across all layers,
+    at every denoising step, and over the entire context. In this paper, we show that
+    the causal reasoning in these models is separable from the multi-step denoising
+    process.
+- id: '2602.10090'
+  title: 'Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement
+    Learning'
+  authors: Zhaoyang Wang, Canwen Xu, Boyi Liu, Yite Wang, Siwei Han, Zhewei Yao, Huaxiu
+    Yao, Yuxiong He
+  abstract: Recent advances in large language model (LLM) have empowered autonomous
+    agents to perform complex tasks that require multi-turn interactions with tools
+    and environments. However, scaling such agent training is limited by the lack
+    of diverse and reliable environments. In this paper, we propose Agent World Model
+    (AWM), a fully synthetic environment generation pipeline. Using this pipeline,
+    we scale to 1,000 environments covering everyday scenarios, in which agents can
+    interact with rich toolsets (35 tools per environment on average) and obtain high-quality
+    observations. Notably, these environments are code-driven and backed by databases,
+    providing more reliable and consistent state transitions than environments simulated
+    by LLMs. Moreover, they enable more efficient agent interaction compared with
+    collecting trajectories from realistic environments. To demonstrate the effectiveness
+    of this resource, we perform large-scale reinforcement learning for multi-turn
+    tool-use agents. Thanks to the fully executable environments and accessible database
+    states, we can also design reliable reward functions. Experiments on three benchmarks
+    show that training exclusively in synthetic environments, rather than benchmark-specific
+    ones, yields strong out-of-distribution generalization. The code is available
+    at https://github.com/Snowflake-Labs/agent-world-model.
+  published: '2026-02-10'
+  pdf_url: http://arxiv.org/pdf/2602.10090
+  arxiv_url: http://arxiv.org/abs/2602.10090
+  key_findings: Recent advances in large language model (LLM) have empowered autonomous
+    agents to perform complex tasks that require multi-turn interactions with tools
+    and environments. However, scaling such agent training is limited by the lack
+    of diverse and reliable environments. In this paper, we propose Agent World Model
+    (AWM), a fully synthetic environment generation pipeline.
+- id: '2602.10085'
+  title: 'CODE-SHARP: Continuous Open-ended Discovery and Evolution of Skills as Hierarchical
+    Reward Programs'
+  authors: Richard Bornemann, Pierluigi Vito Amadori, Antoine Cully
+  abstract: Developing agents capable of open-endedly discovering and learning novel
+    skills is a grand challenge in Artificial Intelligence. While reinforcement learning
+    offers a powerful framework for training agents to master complex skills, it typically
+    relies on hand-designed reward functions. This is infeasible for open-ended skill
+    discovery, where the set of meaningful skills is not known a priori. While recent
+    methods have shown promising results towards automating reward function design,
+    they remain limited to refining rewards for pre-defined tasks. To address this
+    limitation, we introduce Continuous Open-ended Discovery and Evolution of Skills
+    as Hierarchical Reward Programs (CODE-SHARP), a novel framework leveraging Foundation
+    Models (FM) to open-endedly expand and refine a hierarchical skill archive, structured
+    as a directed graph of executable reward functions in code. We show that a goal-conditioned
+    agent trained exclusively on the rewards generated by the discovered SHARP skills
+    learns to solve increasingly long-horizon goals in the Craftax environment. When
+    composed by a high-level FM-based planner, the discovered skills enable a single
+    goal-conditioned agent to solve complex, long-horizon tasks, outperforming both
+    pretrained agents and task-specific expert policies by over $134$% on average.
+    We will open-source our code and provide additional videos $\href{https://sites.google.com/view/code-sharp/homepage}{here}$.
+  published: '2026-02-10'
+  pdf_url: http://arxiv.org/pdf/2602.10085
+  arxiv_url: http://arxiv.org/abs/2602.10085
+  key_findings: Developing agents capable of open-endedly discovering and learning
+    novel skills is a grand challenge in Artificial Intelligence. While reinforcement
+    learning offers a powerful framework for training agents to master complex skills,
+    it typically relies on hand-designed reward functions. This is infeasible for
+    open-ended skill discovery, where the set of meaningful skills is not known a
+    priori.
+- id: '2602.10081'
+  title: Anagent For Enhancing Scientific Table & Figure Analysis
+  authors: Xuehang Guo, Zhiyong Lu, Tom Hope, Qingyun Wang
+  abstract: 'In scientific research, analysis requires accurately interpreting complex
+    multimodal knowledge, integrating evidence from different sources, and drawing
+    inferences grounded in domain-specific knowledge. However, current artificial
+    intelligence (AI) systems struggle to consistently demonstrate such capabilities.
+    The complexity and variability of scientific tables and figures, combined with
+    heterogeneous structures and long-context requirements, pose fundamental obstacles
+    to scientific table \& figure analysis. To quantify these challenges, we introduce
+    AnaBench, a large-scale benchmark featuring $63,178$ instances from nine scientific
+    domains, systematically categorized along seven complexity dimensions. To tackle
+    these challenges, we propose Anagent, a multi-agent framework for enhanced scientific
+    table \& figure analysis through four specialized agents: Planner decomposes tasks
+    into actionable subtasks, Expert retrieves task-specific information through targeted
+    tool execution, Solver synthesizes information to generate coherent analysis,
+    and Critic performs iterative refinement through five-dimensional quality assessment.
+    We further develop modular training strategies that leverage supervised finetuning
+    and specialized reinforcement learning to optimize individual capabilities while
+    maintaining effective collaboration. Comprehensive evaluation across 170 subdomains
+    demonstrates that Anagent achieves substantial improvements, up to $\uparrow 13.43\%$
+    in training-free settings and $\uparrow 42.12\%$ with finetuning, while revealing
+    that task-oriented reasoning and context-aware problem-solving are essential for
+    high-quality scientific table \& figure analysis. Our project page: https://xhguo7.github.io/Anagent/.'
+  published: '2026-02-10'
+  pdf_url: http://arxiv.org/pdf/2602.10081
+  arxiv_url: http://arxiv.org/abs/2602.10081
+  key_findings: In scientific research, analysis requires accurately interpreting
+    complex multimodal knowledge, integrating evidence from different sources, and
+    drawing inferences grounded in domain-specific knowledge. However, current artificial
+    intelligence (AI) systems struggle to consistently demonstrate such capabilities.
+    The complexity and variability of scientific tables and figures, combined with
+    heterogeneous structures and long-context requirements, pose fundamental obstacles
+    to scientific table \& figure analysis.
+- id: '2602.10063'
+  title: 'Chain of Mindset: Reasoning with Adaptive Cognitive Modes'
+  authors: Tianyi Jiang, Arctanx An, Hengyi Feng, Naixin Zhai, Haodong Li, Xiaomin
+    Yu, Jiahui Liu, Hanwen Du, Shuo Zhang, Zhi Yang, Jie Huang, Yuhua Li, Yongxin
+    Ni, Huacan Wang, Ronghao Chen
+  abstract: 'Human problem-solving is never the repetition of a single mindset, by
+    which we mean a distinct mode of cognitive processing. When tackling a specific
+    task, we do not rely on a single mindset; instead, we integrate multiple mindsets
+    within the single solution process. However, existing LLM reasoning methods fall
+    into a common trap: they apply the same fixed mindset across all steps, overlooking
+    that different stages of solving the same problem require fundamentally different
+    mindsets. This single-minded assumption prevents models from reaching the next
+    level of intelligence. To address this limitation, we propose Chain of Mindset
+    (CoM), a training-free agentic framework that enables step-level adaptive mindset
+    orchestration. CoM decomposes reasoning into four functionally heterogeneous mindsets:
+    Spatial, Convergent, Divergent, and Algorithmic. A Meta-Agent dynamically selects
+    the optimal mindset based on the evolving reasoning state, while a bidirectional
+    Context Gate filters cross-module information flow to maintain effectiveness and
+    efficiency. Experiments across six challenging benchmarks spanning mathematics,
+    code generation, scientific QA, and spatial reasoning demonstrate that CoM achieves
+    state-of-the-art performance, outperforming the strongest baseline by 4.96\% and
+    4.72\% in overall accuracy on Qwen3-VL-32B-Instruct and Gemini-2.0-Flash, while
+    balancing reasoning efficiency. Our code is publicly available at \href{https://github.com/QuantaAlpha/chain-of-mindset}{https://github.com/QuantaAlpha/chain-of-mindset}.'
+  published: '2026-02-10'
+  pdf_url: http://arxiv.org/pdf/2602.10063
+  arxiv_url: http://arxiv.org/abs/2602.10063
+  key_findings: 'Human problem-solving is never the repetition of a single mindset,
+    by which we mean a distinct mode of cognitive processing. When tackling a specific
+    task, we do not rely on a single mindset; instead, we integrate multiple mindsets
+    within the single solution process. However, existing LLM reasoning methods fall
+    into a common trap: they apply the same fixed mindset across all steps, overlooking
+    that different stages of solving the same problem require fundamentally different
+    mindsets.'
+- id: '2602.10048'
+  title: Long Chain-of-Thought Compression via Fine-Grained Group Policy Optimization
+  authors: Xinchen Han, Hossam Afifi, Michel Marot, Xilu Wang, Lu Yin
+  abstract: 'Large Language Models (LLMs) often generate unnecessarily verbose Chain-of-Thought
+    (CoT) reasoning that increases computational costs and latency without proportional
+    performance gains. In this paper, we propose \textbf{F}ine-grained \textbf{G}roup
+    policy \textbf{O}ptimization (\textbf{FGO}), a Reinforcement Learning (RL) algorithm
+    that refines group responses by subdividing them and assigning appropriate weights
+    based on length and entropy, thereby enabling effective CoT compression. Meanwhile,
+    as an enhanced variant of Group Relative Policy Optimization (GRPO), FGO successfully
+    addresses two major limitations of the GRPO: inefficient data utilization and
+    entropy collapse. We evaluate FGO on multiple reasoning LLMs and benchmarks, including
+    MATH500, AIME24, AMC23, and Minerva. Experimental results show that FGO achieves
+    efficient CoT compression without degrading performance, and simultaneously resolves
+    the key limitations of GRPO.'
+  published: '2026-02-10'
+  pdf_url: http://arxiv.org/pdf/2602.10048
+  arxiv_url: http://arxiv.org/abs/2602.10048
+  key_findings: 'Large Language Models (LLMs) often generate unnecessarily verbose
+    Chain-of-Thought (CoT) reasoning that increases computational costs and latency
+    without proportional performance gains. In this paper, we propose \textbf{F}ine-grained
+    \textbf{G}roup policy \textbf{O}ptimization (\textbf{FGO}), a Reinforcement Learning
+    (RL) algorithm that refines group responses by subdividing them and assigning
+    appropriate weights based on length and entropy, thereby enabling effective CoT
+    compression. Meanwhile, as an enhanced variant of Group Relative Policy Optimization
+    (GRPO), FGO successfully addresses two major limitations of the GRPO: inefficient
+    data utilization and entropy collapse.'
+- id: '2602.10044'
+  title: 'Optimistic World Models: Efficient Exploration in Model-Based Deep Reinforcement
+    Learning'
+  authors: Akshay Mete, Shahid Aamir Sheikh, Tzu-Hsiang Lin, Dileep Kalathil, P. R.
+    Kumar
+  abstract: Efficient exploration remains a central challenge in reinforcement learning
+    (RL), particularly in sparse-reward environments. We introduce Optimistic World
+    Models (OWMs), a principled and scalable framework for optimistic exploration
+    that brings classical reward-biased maximum likelihood estimation (RBMLE) from
+    adaptive control into deep RL. In contrast to upper confidence bound (UCB)-style
+    exploration methods, OWMs incorporate optimism directly into model learning by
+    augmentation with an optimistic dynamics loss that biases imagined transitions
+    toward higher-reward outcomes. This fully gradient-based loss requires neither
+    uncertainty estimates nor constrained optimization. Our approach is plug-and-play
+    with existing world model frameworks, preserving scalability while requiring only
+    minimal modifications to standard training procedures. We instantiate OWMs within
+    two state-of-the-art world model architectures, leading to Optimistic DreamerV3
+    and Optimistic STORM, which demonstrate significant improvements in sample efficiency
+    and cumulative return compared to their baseline counterparts.
+  published: '2026-02-10'
+  pdf_url: http://arxiv.org/pdf/2602.10044
+  arxiv_url: http://arxiv.org/abs/2602.10044
+  key_findings: Efficient exploration remains a central challenge in reinforcement
+    learning (RL), particularly in sparse-reward environments. We introduce Optimistic
+    World Models (OWMs), a principled and scalable framework for optimistic exploration
+    that brings classical reward-biased maximum likelihood estimation (RBMLE) from
+    adaptive control into deep RL. In contrast to upper confidence bound (UCB)-style
+    exploration methods, OWMs incorporate optimism directly into model learning by
+    augmentation with an optimistic dynamics loss that biases imagined transitions
+    toward higher-reward outcomes.

@@ -1,314 +1,307 @@
 papers:
-- id: '2602.15028'
-  title: 'Long Context, Less Focus: A Scaling Gap in LLMs Revealed through Privacy
-    and Personalization'
-  authors: Shangding Gu
-  abstract: Large language models (LLMs) are increasingly deployed in privacy-critical
-    and personalization-oriented scenarios, yet the role of context length in shaping
-    privacy leakage and personalization effectiveness remains largely unexplored.
-    We introduce a large-scale benchmark, PAPerBench, to systematically study how
-    increasing context length influences both personalization quality and privacy
-    protection in LLMs. The benchmark comprises approximately 29,000 instances with
-    context lengths ranging from 1K to 256K tokens, yielding a total of 377K evaluation
-    questions. It jointly evaluates personalization performance and privacy risks
-    across diverse scenarios, enabling controlled analysis of long-context model behavior.
-    Extensive evaluations across state-of-the-art LLMs reveal consistent performance
-    degradation in both personalization and privacy as context length increases. We
-    further provide a theoretical analysis of attention dilution under context scaling,
-    explaining this behavior as an inherent limitation of soft attention in fixed-capacity
-    Transformers. The empirical and theoretical findings together suggest a general
-    scaling gap in current models -- long context, less focus. We release the benchmark
-    to support reproducible evaluation and future research on scalable privacy and
-    personalization. Code and data are available at https://github.com/SafeRL-Lab/PAPerBench
-  published: '2026-02-16'
-  pdf_url: http://arxiv.org/pdf/2602.15028
-  arxiv_url: http://arxiv.org/abs/2602.15028
-  key_findings: Large language models (LLMs) are increasingly deployed in privacy-critical
-    and personalization-oriented scenarios, yet the role of context length in shaping
-    privacy leakage and personalization effectiveness remains largely unexplored.
-    We introduce a large-scale benchmark, PAPerBench, to systematically study how
-    increasing context length influences both personalization quality and privacy
-    protection in LLMs. The benchmark comprises approximately 29,000 instances with
-    context lengths ranging from 1K to 256K tokens, yielding a total of 377K evaluation
-    questions.
-- id: '2602.15022'
-  title: Rethinking Diffusion Models with Symmetries through Canonicalization with
-    Applications to Molecular Graph Generation
-  authors: Cai Zhou, Zijie Chen, Zian Li, Jike Wang, Kaiyi Jiang, Pan Li, Rose Yu,
-    Muhan Zhang, Stephen Bates, Tommi Jaakkola
-  abstract: 'Many generative tasks in chemistry and science involve distributions
-    invariant to group symmetries (e.g., permutation and rotation). A common strategy
-    enforces invariance and equivariance through architectural constraints such as
-    equivariant denoisers and invariant priors. In this paper, we challenge this tradition
-    through the alternative canonicalization perspective: first map each sample to
-    an orbit representative with a canonical pose or order, train an unconstrained
-    (non-equivariant) diffusion or flow model on the canonical slice, and finally
-    recover the invariant distribution by sampling a random symmetry transform at
-    generation time. Building on a formal quotient-space perspective, our work provides
-    a comprehensive theory of canonical diffusion by proving: (i) the correctness,
-    universality and superior expressivity of canonical generative models over invariant
-    targets; (ii) canonicalization accelerates training by removing diffusion score
-    complexity induced by group mixtures and reducing conditional variance in flow
-    matching. We then show that aligned priors and optimal transport act complementarily
-    with canonicalization and further improves training efficiency. We instantiate
-    the framework for molecular graph generation under $S_n \times SE(3)$ symmetries.
-    By leveraging geometric spectra-based canonicalization and mild positional encodings,
-    canonical diffusion significantly outperforms equivariant baselines in 3D molecule
-    generation tasks, with similar or even less computation. Moreover, with a novel
-    architecture Canon, CanonFlow achieves state-of-the-art performance on the challenging
-    GEOM-DRUG dataset, and the advantage remains large in few-step generation.'
-  published: '2026-02-16'
-  pdf_url: http://arxiv.org/pdf/2602.15022
-  arxiv_url: http://arxiv.org/abs/2602.15022
-  key_findings: Many generative tasks in chemistry and science involve distributions
-    invariant to group symmetries (e. g. , permutation and rotation).
-- id: '2602.15019'
-  title: 'Hunt Globally: Deep Research AI Agents for Drug Asset Scouting in Investing,
-    Business Development, and Search & Evaluation'
-  authors: Alisa Vinogradova, Vlad Vinogradov, Luba Greenwood, Ilya Yasny, Dmitry
-    Kobyzev, Shoman Kasbekar, Kong Nguyen, Dmitrii Radkevich, Roman Doronin, Andrey
-    Doronichev
-  abstract: 'Bio-pharmaceutical innovation has shifted: many new drug assets now originate
-    outside the United States and are disclosed primarily via regional, non-English
-    channels. Recent data suggests >85% of patent filings originate outside the U.S.,
-    with China accounting for nearly half of the global total; a growing share of
-    scholarly output is also non-U.S. Industry estimates put China at ~30% of global
-    drug development, spanning 1,200+ novel candidates. In this high-stakes environment,
-    failing to surface "under-the-radar" assets creates multi-billion-dollar risk
-    for investors and business development teams, making asset scouting a coverage-critical
-    competition where speed and completeness drive value. Yet today''s Deep Research
-    AI agents still lag human experts in achieving high-recall discovery across heterogeneous,
-    multilingual sources without hallucinations. We propose a benchmarking methodology
-    for drug asset scouting and a tuned, tree-based self-learning Bioptic Agent aimed
-    at complete, non-hallucinated scouting. We construct a challenging completeness
-    benchmark using a multilingual multi-agent pipeline: complex user queries paired
-    with ground-truth assets that are largely outside U.S.-centric radar. To reflect
-    real deal complexity, we collected screening queries from expert investors, BD,
-    and VC professionals and used them as priors to conditionally generate benchmark
-    queries. For grading, we use LLM-as-judge evaluation calibrated to expert opinions.
-    We compare Bioptic Agent against Claude Opus 4.6, OpenAI GPT-5.2 Pro, Perplexity
-    Deep Research, Gemini 3 Pro + Deep Research, and Exa Websets. Bioptic Agent achieves
-    79.7% F1 versus 56.2% (Claude Opus 4.6), 50.6% (Gemini 3 Pro + Deep Research),
-    46.6% (GPT-5.2 Pro), 44.2% (Perplexity Deep Research), and 26.9% (Exa Websets).
-    Performance improves steeply with additional compute, supporting the view that
-    more compute yields better results.'
-  published: '2026-02-16'
-  pdf_url: http://arxiv.org/pdf/2602.15019
-  arxiv_url: http://arxiv.org/abs/2602.15019
-  key_findings: 'Bio-pharmaceutical innovation has shifted: many new drug assets now
-    originate outside the United States and are disclosed primarily via regional,
-    non-English channels. Recent data suggests >85% of patent filings originate outside
-    the U. S.'
-- id: '2602.15012'
-  title: Cold-Start Personalization via Training-Free Priors from Structured World
-    Models
-  authors: Avinandan Bose, Shuyue Stella Li, Faeze Brahman, Pang Wei Koh, Simon Shaolei
-    Du, Yulia Tsvetkov, Maryam Fazel, Lin Xiao, Asli Celikyilmaz
-  abstract: 'Cold-start personalization requires inferring user preferences through
-    interaction when no user-specific historical data is available. The core challenge
-    is a routing problem: each task admits dozens of preference dimensions, yet individual
-    users care about only a few, and which ones matter depends on who is asking. With
-    a limited question budget, asking without structure will miss the dimensions that
-    matter. Reinforcement learning is the natural formulation, but in multi-turn settings
-    its terminal reward fails to exploit the factored, per-criterion structure of
-    preference data, and in practice learned policies collapse to static question
-    sequences that ignore user responses. We propose decomposing cold-start elicitation
-    into offline structure learning and online Bayesian inference. Pep (Preference
-    Elicitation with Priors) learns a structured world model of preference correlations
-    offline from complete profiles, then performs training-free Bayesian inference
-    online to select informative questions and predict complete preference profiles,
-    including dimensions never asked about. The framework is modular across downstream
-    solvers and requires only simple belief models. Across medical, mathematical,
-    social, and commonsense reasoning, Pep achieves 80.8% alignment between generated
-    responses and users'' stated preferences versus 68.5% for RL, with 3-5x fewer
-    interactions. When two users give different answers to the same question, Pep
-    changes its follow-up 39-62% of the time versus 0-28% for RL. It does so with
-    ~10K parameters versus 8B for RL, showing that the bottleneck in cold-start elicitation
-    is the capability to exploit the factored structure of preference data.'
-  published: '2026-02-16'
-  pdf_url: http://arxiv.org/pdf/2602.15012
-  arxiv_url: http://arxiv.org/abs/2602.15012
-  key_findings: 'Cold-start personalization requires inferring user preferences through
-    interaction when no user-specific historical data is available. The core challenge
-    is a routing problem: each task admits dozens of preference dimensions, yet individual
-    users care about only a few, and which ones matter depends on who is asking. With
-    a limited question budget, asking without structure will miss the dimensions that
-    matter.'
-- id: '2602.14997'
-  title: Spectral Convolution on Orbifolds for Geometric Deep Learning
-  authors: Tim Mangliers, Bernhard Mössner, Benjamin Himpel
-  abstract: Geometric deep learning (GDL) deals with supervised learning on data domains
-    that go beyond Euclidean structure, such as data with graph or manifold structure.
-    Due to the demand that arises from application-related data, there is a need to
-    identify further topological and geometric structures with which these use cases
-    can be made accessible to machine learning. There are various techniques, such
-    as spectral convolution, that form the basic building blocks for some convolutional
-    neural network-like architectures on non-Euclidean data. In this paper, the concept
-    of spectral convolution on orbifolds is introduced. This provides a building block
-    for making learning on orbifold structured data accessible using GDL. The theory
-    discussed is illustrated using an example from music theory.
-  published: '2026-02-16'
-  pdf_url: http://arxiv.org/pdf/2602.14997
-  arxiv_url: http://arxiv.org/abs/2602.14997
-  key_findings: Geometric deep learning (GDL) deals with supervised learning on data
-    domains that go beyond Euclidean structure, such as data with graph or manifold
-    structure. Due to the demand that arises from application-related data, there
-    is a need to identify further topological and geometric structures with which
-    these use cases can be made accessible to machine learning. There are various
-    techniques, such as spectral convolution, that form the basic building blocks
-    for some convolutional neural network-like architectures on non-Euclidean data.
-- id: '2602.14994'
-  title: On the Semantics of Primary Cause in Hybrid Dynamic Domains
-  authors: Shakil M. Khan, Asim Mehmood, Sandra Zilles
-  abstract: Reasoning about actual causes of observed effects is fundamental to the
-    study of rationality. This important problem has been studied since the time of
-    Aristotle, with formal mathematical accounts emerging recently. We live in a world
-    where change due to actions can be both discrete and continuous, that is, hybrid.
-    Yet, despite extensive research on actual causation, only few recent studies looked
-    into causation with continuous change. Building on recent progress, in this paper
-    we propose two definitions of primary cause in a hybrid action-theoretic framework,
-    namely the hybrid temporal situation calculus. One of these is foundational in
-    nature while the other formalizes causation through contributions, which can then
-    be verified from a counterfactual perspective using a modified ``but-for'' test.
-    We prove that these two definitions are indeed equivalent. We then show that our
-    definitions of causation have some intuitively justifiable properties.
-  published: '2026-02-16'
-  pdf_url: http://arxiv.org/pdf/2602.14994
-  arxiv_url: http://arxiv.org/abs/2602.14994
-  key_findings: Reasoning about actual causes of observed effects is fundamental to
-    the study of rationality. This important problem has been studied since the time
-    of Aristotle, with formal mathematical accounts emerging recently. We live in
-    a world where change due to actions can be both discrete and continuous, that
-    is, hybrid.
-- id: '2602.14989'
-  title: 'ThermEval: A Structured Benchmark for Evaluation of Vision-Language Models
-    on Thermal Imagery'
-  authors: Ayush Shrivastava, Kirtan Gangani, Laksh Jain, Mayank Goel, Nipun Batra
-  abstract: Vision language models (VLMs) achieve strong performance on RGB imagery,
-    but they do not generalize to thermal images. Thermal sensing plays a critical
-    role in settings where visible light fails, including nighttime surveillance,
-    search and rescue, autonomous driving, and medical screening. Unlike RGB imagery,
-    thermal images encode physical temperature rather than color or texture, requiring
-    perceptual and reasoning capabilities that existing RGB-centric benchmarks do
-    not evaluate. We introduce ThermEval-B, a structured benchmark of approximately
-    55,000 thermal visual question answering pairs designed to assess the foundational
-    primitives required for thermal vision language understanding. ThermEval-B integrates
-    public datasets with our newly collected ThermEval-D, the first dataset to provide
-    dense per-pixel temperature maps with semantic body-part annotations across diverse
-    indoor and outdoor environments. Evaluating 25 open-source and closed-source VLMs,
-    we find that models consistently fail at temperature-grounded reasoning, degrade
-    under colormap transformations, and default to language priors or fixed responses,
-    with only marginal gains from prompting or supervised fine-tuning. These results
-    demonstrate that thermal understanding requires dedicated evaluation beyond RGB-centric
-    assumptions, positioning ThermEval as a benchmark to drive progress in thermal
-    vision language modeling.
-  published: '2026-02-16'
-  pdf_url: http://arxiv.org/pdf/2602.14989
-  arxiv_url: http://arxiv.org/abs/2602.14989
-  key_findings: Vision language models (VLMs) achieve strong performance on RGB imagery,
-    but they do not generalize to thermal images. Thermal sensing plays a critical
-    role in settings where visible light fails, including nighttime surveillance,
-    search and rescue, autonomous driving, and medical screening. Unlike RGB imagery,
-    thermal images encode physical temperature rather than color or texture, requiring
-    perceptual and reasoning capabilities that existing RGB-centric benchmarks do
-    not evaluate.
-- id: '2602.14968'
-  title: 'PhyScensis: Physics-Augmented LLM Agents for Complex Physical Scene Arrangement'
-  authors: Yian Wang, Han Yang, Minghao Guo, Xiaowen Qiu, Tsun-Hsuan Wang, Wojciech
-    Matusik, Joshua B. Tenenbaum, Chuang Gan
-  abstract: 'Automatically generating interactive 3D environments is crucial for scaling
-    up robotic data collection in simulation. While prior work has primarily focused
-    on 3D asset placement, it often overlooks the physical relationships between objects
-    (e.g., contact, support, balance, and containment), which are essential for creating
-    complex and realistic manipulation scenarios such as tabletop arrangements, shelf
-    organization, or box packing. Compared to classical 3D layout generation, producing
-    complex physical scenes introduces additional challenges: (a) higher object density
-    and complexity (e.g., a small shelf may hold dozens of books), (b) richer supporting
-    relationships and compact spatial layouts, and (c) the need to accurately model
-    both spatial placement and physical properties. To address these challenges, we
-    propose PhyScensis, an LLM agent-based framework powered by a physics engine,
-    to produce physically plausible scene configurations with high complexity. Specifically,
-    our framework consists of three main components: an LLM agent iteratively proposes
-    assets with spatial and physical predicates; a solver, equipped with a physics
-    engine, realizes these predicates into a 3D scene; and feedback from the solver
-    informs the agent to refine and enrich the configuration. Moreover, our framework
-    preserves strong controllability over fine-grained textual descriptions and numerical
-    parameters (e.g., relative positions, scene stability), enabled through probabilistic
-    programming for stability and a complementary heuristic that jointly regulates
-    stability and spatial relations. Experimental results show that our method outperforms
-    prior approaches in scene complexity, visual quality, and physical accuracy, offering
-    a unified pipeline for generating complex physical scene layouts for robotic manipulation.'
-  published: '2026-02-16'
-  pdf_url: http://arxiv.org/pdf/2602.14968
-  arxiv_url: http://arxiv.org/abs/2602.14968
-  key_findings: Automatically generating interactive 3D environments is crucial for
-    scaling up robotic data collection in simulation. While prior work has primarily
-    focused on 3D asset placement, it often overlooks the physical relationships between
-    objects (e. g.
-- id: '2602.14941'
-  title: 'AnchorWeave: World-Consistent Video Generation with Retrieved Local Spatial
-    Memories'
-  authors: Zun Wang, Han Lin, Jaehong Yoon, Jaemin Cho, Yue Zhang, Mohit Bansal
-  abstract: Maintaining spatial world consistency over long horizons remains a central
-    challenge for camera-controllable video generation. Existing memory-based approaches
-    often condition generation on globally reconstructed 3D scenes by rendering anchor
-    videos from the reconstructed geometry in the history. However, reconstructing
-    a global 3D scene from multiple views inevitably introduces cross-view misalignment,
-    as pose and depth estimation errors cause the same surfaces to be reconstructed
-    at slightly different 3D locations across views. When fused, these inconsistencies
-    accumulate into noisy geometry that contaminates the conditioning signals and
-    degrades generation quality. We introduce AnchorWeave, a memory-augmented video
-    generation framework that replaces a single misaligned global memory with multiple
-    clean local geometric memories and learns to reconcile their cross-view inconsistencies.
-    To this end, AnchorWeave performs coverage-driven local memory retrieval aligned
-    with the target trajectory and integrates the selected local memories through
-    a multi-anchor weaving controller during generation. Extensive experiments demonstrate
-    that AnchorWeave significantly improves long-term scene consistency while maintaining
-    strong visual quality, with ablation and analysis studies further validating the
-    effectiveness of local geometric conditioning, multi-anchor control, and coverage-driven
-    retrieval.
-  published: '2026-02-16'
-  pdf_url: http://arxiv.org/pdf/2602.14941
-  arxiv_url: http://arxiv.org/abs/2602.14941
-  key_findings: Maintaining spatial world consistency over long horizons remains a
-    central challenge for camera-controllable video generation. Existing memory-based
-    approaches often condition generation on globally reconstructed 3D scenes by rendering
-    anchor videos from the reconstructed geometry in the history. However, reconstructing
-    a global 3D scene from multiple views inevitably introduces cross-view misalignment,
-    as pose and depth estimation errors cause the same surfaces to be reconstructed
-    at slightly different 3D locations across views.
-- id: '2602.14926'
-  title: 'MAC-AMP: A Closed-Loop Multi-Agent Collaboration System for Multi-Objective
-    Antimicrobial Peptide Design'
-  authors: Gen Zhou, Sugitha Janarthanan, Lianghong Chen, Pingzhao Hu
-  abstract: To address the global health threat of antimicrobial resistance, antimicrobial
-    peptides (AMP) are being explored for their potent and promising ability to fight
-    resistant pathogens. While artificial intelligence (AI) is being employed to advance
-    AMP discovery and design, most AMP design models struggle to balance key goals
-    like activity, toxicity, and novelty, using rigid or unclear scoring methods that
-    make results hard to interpret and optimize. As the capabilities of Large Language
-    Models (LLM) advance and evolve swiftly, we turn to AI multi-agent collaboration
-    based on such models (multi-agent LLMs), which show rapidly rising potential in
-    complex scientific design scenarios. Based on this, we introduce MAC-AMP, a closed-loop
-    multi-agent collaboration (MAC) system for multi-objective AMP design. The system
-    implements a fully autonomous simulated peer review-adaptive reinforcement learning
-    framework that requires only a task description and example dataset to design
-    novel AMPs. The novelty of our work lies in introducing a closed-loop multi-agent
-    system for AMP design, with cross-domain transferability, that supports multi-objective
-    optimization while remaining explainable rather than a 'black box'. Experiments
-    show that MAC-AMP outperforms other AMP generative models by effectively optimizing
-    AMP generation for multiple key molecular properties, demonstrating exceptional
-    results in antibacterial activity, AMP likeliness, toxicity compliance, and structural
-    reliability.
-  published: '2026-02-16'
-  pdf_url: http://arxiv.org/pdf/2602.14926
-  arxiv_url: http://arxiv.org/abs/2602.14926
-  key_findings: To address the global health threat of antimicrobial resistance, antimicrobial
-    peptides (AMP) are being explored for their potent and promising ability to fight
-    resistant pathogens. While artificial intelligence (AI) is being employed to advance
-    AMP discovery and design, most AMP design models struggle to balance key goals
-    like activity, toxicity, and novelty, using rigid or unclear scoring methods that
-    make results hard to interpret and optimize. As the capabilities of Large Language
-    Models (LLM) advance and evolve swiftly, we turn to AI multi-agent collaboration
-    based on such models (multi-agent LLMs), which show rapidly rising potential in
-    complex scientific design scenarios.
+- id: '2602.15827'
+  title: 'Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching'
+  authors: Zhen Wu, Xiaoyu Huang, Lujie Yang, Yuanhang Zhang, Koushil Sreenath, Xi
+    Chen, Pieter Abbeel, Rocky Duan, Angjoo Kanazawa, Carmelo Sferrazza, Guanya Shi,
+    C. Karen Liu
+  abstract: 'While recent advances in humanoid locomotion have achieved stable walking
+    on varied terrains, capturing the agility and adaptivity of highly dynamic human
+    motions remains an open challenge. In particular, agile parkour in complex environments
+    demands not only low-level robustness, but also human-like motion expressiveness,
+    long-horizon skill composition, and perception-driven decision-making. In this
+    paper, we present Perceptive Humanoid Parkour (PHP), a modular framework that
+    enables humanoid robots to autonomously perform long-horizon, vision-based parkour
+    across challenging obstacle courses. Our approach first leverages motion matching,
+    formulated as nearest-neighbor search in a feature space, to compose retargeted
+    atomic human skills into long-horizon kinematic trajectories. This framework enables
+    the flexible composition and smooth transition of complex skill chains while preserving
+    the elegance and fluidity of dynamic human motions. Next, we train motion-tracking
+    reinforcement learning (RL) expert policies for these composed motions, and distill
+    them into a single depth-based, multi-skill student policy, using a combination
+    of DAgger and RL. Crucially, the combination of perception and skill composition
+    enables autonomous, context-aware decision-making: using only onboard depth sensing
+    and a discrete 2D velocity command, the robot selects and executes whether to
+    step over, climb onto, vault or roll off obstacles of varying geometries and heights.
+    We validate our framework with extensive real-world experiments on a Unitree G1
+    humanoid robot, demonstrating highly dynamic parkour skills such as climbing tall
+    obstacles up to 1.25m (96% robot height), as well as long-horizon multi-obstacle
+    traversal with closed-loop adaptation to real-time obstacle perturbations.'
+  published: '2026-02-17'
+  pdf_url: http://arxiv.org/pdf/2602.15827
+  arxiv_url: http://arxiv.org/abs/2602.15827
+  key_findings: While recent advances in humanoid locomotion have achieved stable
+    walking on varied terrains, capturing the agility and adaptivity of highly dynamic
+    human motions remains an open challenge. In particular, agile parkour in complex
+    environments demands not only low-level robustness, but also human-like motion
+    expressiveness, long-horizon skill composition, and perception-driven decision-making.
+    In this paper, we present Perceptive Humanoid Parkour (PHP), a modular framework
+    that enables humanoid robots to autonomously perform long-horizon, vision-based
+    parkour across challenging obstacle courses.
+- id: '2602.15823'
+  title: 'CrispEdit: Low-Curvature Projections for Scalable Non-Destructive LLM Editing'
+  authors: Zarif Ikram, Arad Firouzkouhi, Stephen Tu, Mahdi Soltanolkotabi, Paria
+    Rashidinejad
+  abstract: 'A central challenge in large language model (LLM) editing is capability
+    preservation: methods that successfully change targeted behavior can quietly game
+    the editing proxy and corrupt general capabilities, producing degenerate behaviors
+    reminiscent of proxy/reward hacking. We present CrispEdit, a scalable and principled
+    second-order editing algorithm that treats capability preservation as an explicit
+    constraint, unifying and generalizing several existing editing approaches. CrispEdit
+    formulates editing as constrained optimization and enforces the constraint by
+    projecting edit updates onto the low-curvature subspace of the capability-loss
+    landscape. At the crux of CrispEdit is expressing capability constraint via Bregman
+    divergence, whose quadratic form yields the Gauss-Newton Hessian exactly and even
+    when the base model is not trained to convergence. We make this second-order procedure
+    efficient at the LLM scale using Kronecker-factored approximate curvature (K-FAC)
+    and a novel matrix-free projector that exploits Kronecker structure to avoid constructing
+    massive projection matrices. Across standard model-editing benchmarks, CrispEdit
+    achieves high edit success while keeping capability degradation below 1% on average
+    across datasets, significantly improving over prior editors.'
+  published: '2026-02-17'
+  pdf_url: http://arxiv.org/pdf/2602.15823
+  arxiv_url: http://arxiv.org/abs/2602.15823
+  key_findings: 'A central challenge in large language model (LLM) editing is capability
+    preservation: methods that successfully change targeted behavior can quietly game
+    the editing proxy and corrupt general capabilities, producing degenerate behaviors
+    reminiscent of proxy/reward hacking. We present CrispEdit, a scalable and principled
+    second-order editing algorithm that treats capability preservation as an explicit
+    constraint, unifying and generalizing several existing editing approaches. CrispEdit
+    formulates editing as constrained optimization and enforces the constraint by
+    projecting edit updates onto the low-curvature subspace of the capability-loss
+    landscape.'
+- id: '2602.15816'
+  title: 'Developing AI Agents with Simulated Data: Why, what, and how?'
+  authors: Xiaoran Liu, Istvan David
+  abstract: As insufficient data volume and quality remain the key impediments to
+    the adoption of modern subsymbolic AI, techniques of synthetic data generation
+    are in high demand. Simulation offers an apt, systematic approach to generating
+    diverse synthetic data. This chapter introduces the reader to the key concepts,
+    benefits, and challenges of simulation-based synthetic data generation for AI
+    training purposes, and to a reference framework to describe, design, and analyze
+    digital twin-based AI simulation solutions.
+  published: '2026-02-17'
+  pdf_url: http://arxiv.org/pdf/2602.15816
+  arxiv_url: http://arxiv.org/abs/2602.15816
+  key_findings: As insufficient data volume and quality remain the key impediments
+    to the adoption of modern subsymbolic AI, techniques of synthetic data generation
+    are in high demand. Simulation offers an apt, systematic approach to generating
+    diverse synthetic data. This chapter introduces the reader to the key concepts,
+    benefits, and challenges of simulation-based synthetic data generation for AI
+    training purposes, and to a reference framework to describe, design, and analyze
+    digital twin-based AI simulation solutions.
+- id: '2602.15814'
+  title: Avey-B
+  authors: Devang Acharya, Mohammad Hammoud
+  abstract: Compact pretrained bidirectional encoders remain the backbone of industrial
+    NLP under tight compute and memory budgets. Their effectiveness stems from self-attention's
+    ability to deliver high-quality bidirectional contextualization with sequence-level
+    parallelism, as popularized by BERT-style architectures. Recently, Avey was introduced
+    as an autoregressive, attention-free alternative that naturally admits an encoder-only
+    adaptation. In this paper, we reformulate Avey for the encoder-only paradigm and
+    propose several innovations to its architecture, including decoupled static and
+    dynamic parameterizations, stability-oriented normalization, and neural compression.
+    Results show that this reformulated architecture compares favorably to four widely
+    used Transformer-based encoders, consistently outperforming them on standard token-classification
+    and information-retrieval benchmarks while scaling more efficiently to long contexts.
+  published: '2026-02-17'
+  pdf_url: http://arxiv.org/pdf/2602.15814
+  arxiv_url: http://arxiv.org/abs/2602.15814
+  key_findings: Compact pretrained bidirectional encoders remain the backbone of industrial
+    NLP under tight compute and memory budgets. Their effectiveness stems from self-attention's
+    ability to deliver high-quality bidirectional contextualization with sequence-level
+    parallelism, as popularized by BERT-style architectures. Recently, Avey was introduced
+    as an autoregressive, attention-free alternative that naturally admits an encoder-only
+    adaptation.
+- id: '2602.15811'
+  title: Task-Agnostic Continual Learning for Chest Radiograph Classification
+  authors: Muthu Subash Kavitha, Anas Zafar, Amgad Muneer, Jia Wu
+  abstract: Clinical deployment of chest radiograph classifiers requires models that
+    can be updated as new datasets become available without retraining on previously
+    ob- served data or degrading validated performance. We study, for the first time,
+    a task-incremental continual learning setting for chest radiograph classification,
+    in which heterogeneous chest X-ray datasets arrive sequentially and task identifiers
+    are unavailable at inference. We propose a continual adapter-based routing learning
+    strategy for Chest X-rays (CARL-XRay) that maintains a fixed high-capacity backbone
+    and incrementally allocates lightweight task-specific adapters and classifier
+    heads. A latent task selector operates on task-adapted features and leverages
+    both current and historical context preserved through compact prototypes and feature-level
+    experience replay. This design supports stable task identification and adaptation
+    across sequential updates while avoiding raw-image storage. Experiments on large-scale
+    public chest radiograph datasets demonstrate robust performance retention and
+    reliable task-aware inference under continual dataset ingestion. CARL-XRay outperforms
+    joint training under task-unknown deployment, achieving higher routing accuracy
+    (75.0\% vs.\ 62.5\%), while maintaining competitive diagnostic performance with
+    AUROC of 0.74 in the oracle setting with ground-truth task identity and 0.75 under
+    task-unknown inference, using significantly fewer trainable parameters. Finally,
+    the proposed framework provides a practical alternative to joint training and
+    repeated full retraining in continual clinical deployment.
+  published: '2026-02-17'
+  pdf_url: http://arxiv.org/pdf/2602.15811
+  arxiv_url: http://arxiv.org/abs/2602.15811
+  key_findings: Clinical deployment of chest radiograph classifiers requires models
+    that can be updated as new datasets become available without retraining on previously
+    ob- served data or degrading validated performance. We study, for the first time,
+    a task-incremental continual learning setting for chest radiograph classification,
+    in which heterogeneous chest X-ray datasets arrive sequentially and task identifiers
+    are unavailable at inference. We propose a continual adapter-based routing learning
+    strategy for Chest X-rays (CARL-XRay) that maintains a fixed high-capacity backbone
+    and incrementally allocates lightweight task-specific adapters and classifier
+    heads.
+- id: '2602.15809'
+  title: Decision Quality Evaluation Framework at Pinterest
+  authors: Yuqi Tian, Robert Paine, Attila Dobi, Kevin O'Sullivan, Aravindh Manickavasagam,
+    Faisal Farooq
+  abstract: 'Online platforms require robust systems to enforce content safety policies
+    at scale. A critical component of these systems is the ability to evaluate the
+    quality of moderation decisions made by both human agents and Large Language Models
+    (LLMs). However, this evaluation is challenging due to the inherent trade-offs
+    between cost, scale, and trustworthiness, along with the complexity of evolving
+    policies. To address this, we present a comprehensive Decision Quality Evaluation
+    Framework developed and deployed at Pinterest. The framework is centered on a
+    high-trust Golden Set (GDS) curated by subject matter experts (SMEs), which serves
+    as a ground truth benchmark. We introduce an automated intelligent sampling pipeline
+    that uses propensity scores to efficiently expand dataset coverage. We demonstrate
+    the framework''s practical application in several key areas: benchmarking the
+    cost-performance trade-offs of various LLM agents, establishing a rigorous methodology
+    for data-driven prompt optimization, managing complex policy evolution, and ensuring
+    the integrity of policy content prevalence metrics via continuous validation.
+    The framework enables a shift from subjective assessments to a data-driven and
+    quantitative practice for managing content safety systems.'
+  published: '2026-02-17'
+  pdf_url: http://arxiv.org/pdf/2602.15809
+  arxiv_url: http://arxiv.org/abs/2602.15809
+  key_findings: Online platforms require robust systems to enforce content safety
+    policies at scale. A critical component of these systems is the ability to evaluate
+    the quality of moderation decisions made by both human agents and Large Language
+    Models (LLMs). However, this evaluation is challenging due to the inherent trade-offs
+    between cost, scale, and trustworthiness, along with the complexity of evolving
+    policies.
+- id: '2602.15799'
+  title: 'The Geometry of Alignment Collapse: When Fine-Tuning Breaks Safety'
+  authors: Max Springer, Chung Peng Lee, Blossom Metevier, Jane Castleman, Bohdan
+    Turbal, Hayoung Jung, Zeyu Shen, Aleksandra Korolova
+  abstract: 'Fine-tuning aligned language models on benign tasks unpredictably degrades
+    safety guardrails, even when training data contains no harmful content and developers
+    have no adversarial intent. We show that the prevailing explanation, that fine-tuning
+    updates should be orthogonal to safety-critical directions in high-dimensional
+    parameter space, offers false reassurance: we show this orthogonality is structurally
+    unstable and collapses under the dynamics of gradient descent. We then resolve
+    this through a novel geometric analysis, proving that alignment concentrates in
+    low-dimensional subspaces with sharp curvature, creating a brittle structure that
+    first-order methods cannot detect or defend. While initial fine-tuning updates
+    may indeed avoid these subspaces, the curvature of the fine-tuning loss generates
+    second-order acceleration that systematically steers trajectories into alignment-sensitive
+    regions. We formalize this mechanism through the Alignment Instability Condition,
+    three geometric properties that, when jointly satisfied, lead to safety degradation.
+    Our main result establishes a quartic scaling law: alignment loss grows with the
+    fourth power of training time, governed by the sharpness of alignment geometry
+    and the strength of curvature coupling between the fine-tuning task and safety-critical
+    parameters. These results expose a structural blind spot in the current safety
+    paradigm. The dominant approaches to safe fine-tuning address only the initial
+    snapshot of a fundamentally dynamic problem. Alignment fragility is not a bug
+    to be patched; it is an intrinsic geometric property of gradient descent on curved
+    manifolds. Our results motivate the development of curvature-aware methods, and
+    we hope will further enable a shift in alignment safety analysis from reactive
+    red-teaming to predictive diagnostics for open-weight model deployment.'
+  published: '2026-02-17'
+  pdf_url: http://arxiv.org/pdf/2602.15799
+  arxiv_url: http://arxiv.org/abs/2602.15799
+  key_findings: 'Fine-tuning aligned language models on benign tasks unpredictably
+    degrades safety guardrails, even when training data contains no harmful content
+    and developers have no adversarial intent. We show that the prevailing explanation,
+    that fine-tuning updates should be orthogonal to safety-critical directions in
+    high-dimensional parameter space, offers false reassurance: we show this orthogonality
+    is structurally unstable and collapses under the dynamics of gradient descent.
+    We then resolve this through a novel geometric analysis, proving that alignment
+    concentrates in low-dimensional subspaces with sharp curvature, creating a brittle
+    structure that first-order methods cannot detect or defend.'
+- id: '2602.15791'
+  title: Enhancing Building Semantics Preservation in AI Model Training with Large
+    Language Model Encodings
+  authors: Suhyung Jang, Ghang Lee, Jaekun Lee, Hyunjun Lee
+  abstract: Accurate representation of building semantics, encompassing both generic
+    object types and specific subtypes, is essential for effective AI model training
+    in the architecture, engineering, construction, and operation (AECO) industry.
+    Conventional encoding methods (e.g., one-hot) often fail to convey the nuanced
+    relationships among closely related subtypes, limiting AI's semantic comprehension.
+    To address this limitation, this study proposes a novel training approach that
+    employs large language model (LLM) embeddings (e.g., OpenAI GPT and Meta LLaMA)
+    as encodings to preserve finer distinctions in building semantics. We evaluated
+    the proposed method by training GraphSAGE models to classify 42 building object
+    subtypes across five high-rise residential building information models (BIMs).
+    Various embedding dimensions were tested, including original high-dimensional
+    LLM embeddings (1,536, 3,072, or 4,096) and 1,024-dimensional compacted embeddings
+    generated via the Matryoshka representation model. Experimental results demonstrated
+    that LLM encodings outperformed the conventional one-hot baseline, with the llama-3
+    (compacted) embedding achieving a weighted average F1-score of 0.8766, compared
+    to 0.8475 for one-hot encoding. The results underscore the promise of leveraging
+    LLM-based encodings to enhance AI's ability to interpret complex, domain-specific
+    building semantics. As the capabilities of LLMs and dimensionality reduction techniques
+    continue to evolve, this approach holds considerable potential for broad application
+    in semantic elaboration tasks throughout the AECO industry.
+  published: '2026-02-17'
+  pdf_url: http://arxiv.org/pdf/2602.15791
+  arxiv_url: http://arxiv.org/abs/2602.15791
+  key_findings: Accurate representation of building semantics, encompassing both generic
+    object types and specific subtypes, is essential for effective AI model training
+    in the architecture, engineering, construction, and operation (AECO) industry.
+    Conventional encoding methods (e. g.
+- id: '2602.15785'
+  title: 'This human study did not involve human subjects: Validating LLM simulations
+    as behavioral evidence'
+  authors: Jessica Hullman, David Broska, Huaman Sun, Aaron Shaw
+  abstract: A growing literature uses large language models (LLMs) as synthetic participants
+    to generate cost-effective and nearly instantaneous responses in social science
+    experiments. However, there is limited guidance on when such simulations support
+    valid inference about human behavior. We contrast two strategies for obtaining
+    valid estimates of causal effects and clarify the assumptions under which each
+    is suitable for exploratory versus confirmatory research. Heuristic approaches
+    seek to establish that simulated and observed human behavior are interchangeable
+    through prompt engineering, model fine-tuning, and other repair strategies designed
+    to reduce LLM-induced inaccuracies. While useful for many exploratory tasks, heuristic
+    approaches lack the formal statistical guarantees typically required for confirmatory
+    research. In contrast, statistical calibration combines auxiliary human data with
+    statistical adjustments to account for discrepancies between observed and simulated
+    responses. Under explicit assumptions, statistical calibration preserves validity
+    and provides more precise estimates of causal effects at lower cost than experiments
+    that rely solely on human participants. Yet the potential of both approaches depends
+    on how well LLMs approximate the relevant populations. We consider what opportunities
+    are overlooked when researchers focus myopically on substituting LLMs for human
+    participants in a study.
+  published: '2026-02-17'
+  pdf_url: http://arxiv.org/pdf/2602.15785
+  arxiv_url: http://arxiv.org/abs/2602.15785
+  key_findings: A growing literature uses large language models (LLMs) as synthetic
+    participants to generate cost-effective and nearly instantaneous responses in
+    social science experiments. However, there is limited guidance on when such simulations
+    support valid inference about human behavior. We contrast two strategies for obtaining
+    valid estimates of causal effects and clarify the assumptions under which each
+    is suitable for exploratory versus confirmatory research.
+- id: '2602.15776'
+  title: 'GlobeDiff: State Diffusion Process for Partial Observability in Multi-Agent
+    Systems'
+  authors: Yiqin Yang, Xu Yang, Yuhua Jiang, Ni Mu, Hao Hu, Runpeng Xie, Ziyou Zhang,
+    Siyuan Li, Yuan-Hua Ni, Qianchuan Zhao, Bo Xu
+  abstract: In the realm of multi-agent systems, the challenge of \emph{partial observability}
+    is a critical barrier to effective coordination and decision-making. Existing
+    approaches, such as belief state estimation and inter-agent communication, often
+    fall short. Belief-based methods are limited by their focus on past experiences
+    without fully leveraging global information, while communication methods often
+    lack a robust model to effectively utilize the auxiliary information they provide.
+    To solve this issue, we propose Global State Diffusion Algorithm~(GlobeDiff) to
+    infer the global state based on the local observations. By formulating the state
+    inference process as a multi-modal diffusion process, GlobeDiff overcomes ambiguities
+    in state estimation while simultaneously inferring the global state with high
+    fidelity. We prove that the estimation error of GlobeDiff under both unimodal
+    and multi-modal distributions can be bounded. Extensive experimental results demonstrate
+    that GlobeDiff achieves superior performance and is capable of accurately inferring
+    the global state.
+  published: '2026-02-17'
+  pdf_url: http://arxiv.org/pdf/2602.15776
+  arxiv_url: http://arxiv.org/abs/2602.15776
+  key_findings: In the realm of multi-agent systems, the challenge of \emph{partial
+    observability} is a critical barrier to effective coordination and decision-making.
+    Existing approaches, such as belief state estimation and inter-agent communication,
+    often fall short. Belief-based methods are limited by their focus on past experiences
+    without fully leveraging global information, while communication methods often
+    lack a robust model to effectively utilize the auxiliary information they provide.

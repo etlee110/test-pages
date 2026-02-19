@@ -1,307 +1,324 @@
 papers:
-- id: '2602.15827'
-  title: 'Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching'
-  authors: Zhen Wu, Xiaoyu Huang, Lujie Yang, Yuanhang Zhang, Koushil Sreenath, Xi
-    Chen, Pieter Abbeel, Rocky Duan, Angjoo Kanazawa, Carmelo Sferrazza, Guanya Shi,
-    C. Karen Liu
-  abstract: 'While recent advances in humanoid locomotion have achieved stable walking
-    on varied terrains, capturing the agility and adaptivity of highly dynamic human
-    motions remains an open challenge. In particular, agile parkour in complex environments
-    demands not only low-level robustness, but also human-like motion expressiveness,
-    long-horizon skill composition, and perception-driven decision-making. In this
-    paper, we present Perceptive Humanoid Parkour (PHP), a modular framework that
-    enables humanoid robots to autonomously perform long-horizon, vision-based parkour
-    across challenging obstacle courses. Our approach first leverages motion matching,
-    formulated as nearest-neighbor search in a feature space, to compose retargeted
-    atomic human skills into long-horizon kinematic trajectories. This framework enables
-    the flexible composition and smooth transition of complex skill chains while preserving
-    the elegance and fluidity of dynamic human motions. Next, we train motion-tracking
-    reinforcement learning (RL) expert policies for these composed motions, and distill
-    them into a single depth-based, multi-skill student policy, using a combination
-    of DAgger and RL. Crucially, the combination of perception and skill composition
-    enables autonomous, context-aware decision-making: using only onboard depth sensing
-    and a discrete 2D velocity command, the robot selects and executes whether to
-    step over, climb onto, vault or roll off obstacles of varying geometries and heights.
-    We validate our framework with extensive real-world experiments on a Unitree G1
-    humanoid robot, demonstrating highly dynamic parkour skills such as climbing tall
-    obstacles up to 1.25m (96% robot height), as well as long-horizon multi-obstacle
-    traversal with closed-loop adaptation to real-time obstacle perturbations.'
-  published: '2026-02-17'
-  pdf_url: http://arxiv.org/pdf/2602.15827
-  arxiv_url: http://arxiv.org/abs/2602.15827
-  key_findings: While recent advances in humanoid locomotion have achieved stable
-    walking on varied terrains, capturing the agility and adaptivity of highly dynamic
-    human motions remains an open challenge. In particular, agile parkour in complex
-    environments demands not only low-level robustness, but also human-like motion
-    expressiveness, long-horizon skill composition, and perception-driven decision-making.
-    In this paper, we present Perceptive Humanoid Parkour (PHP), a modular framework
-    that enables humanoid robots to autonomously perform long-horizon, vision-based
-    parkour across challenging obstacle courses.
-- id: '2602.15823'
-  title: 'CrispEdit: Low-Curvature Projections for Scalable Non-Destructive LLM Editing'
-  authors: Zarif Ikram, Arad Firouzkouhi, Stephen Tu, Mahdi Soltanolkotabi, Paria
-    Rashidinejad
-  abstract: 'A central challenge in large language model (LLM) editing is capability
-    preservation: methods that successfully change targeted behavior can quietly game
-    the editing proxy and corrupt general capabilities, producing degenerate behaviors
-    reminiscent of proxy/reward hacking. We present CrispEdit, a scalable and principled
-    second-order editing algorithm that treats capability preservation as an explicit
-    constraint, unifying and generalizing several existing editing approaches. CrispEdit
-    formulates editing as constrained optimization and enforces the constraint by
-    projecting edit updates onto the low-curvature subspace of the capability-loss
-    landscape. At the crux of CrispEdit is expressing capability constraint via Bregman
-    divergence, whose quadratic form yields the Gauss-Newton Hessian exactly and even
-    when the base model is not trained to convergence. We make this second-order procedure
-    efficient at the LLM scale using Kronecker-factored approximate curvature (K-FAC)
-    and a novel matrix-free projector that exploits Kronecker structure to avoid constructing
-    massive projection matrices. Across standard model-editing benchmarks, CrispEdit
-    achieves high edit success while keeping capability degradation below 1% on average
-    across datasets, significantly improving over prior editors.'
-  published: '2026-02-17'
-  pdf_url: http://arxiv.org/pdf/2602.15823
-  arxiv_url: http://arxiv.org/abs/2602.15823
-  key_findings: 'A central challenge in large language model (LLM) editing is capability
-    preservation: methods that successfully change targeted behavior can quietly game
-    the editing proxy and corrupt general capabilities, producing degenerate behaviors
-    reminiscent of proxy/reward hacking. We present CrispEdit, a scalable and principled
-    second-order editing algorithm that treats capability preservation as an explicit
-    constraint, unifying and generalizing several existing editing approaches. CrispEdit
-    formulates editing as constrained optimization and enforces the constraint by
-    projecting edit updates onto the low-curvature subspace of the capability-loss
-    landscape.'
-- id: '2602.15816'
-  title: 'Developing AI Agents with Simulated Data: Why, what, and how?'
-  authors: Xiaoran Liu, Istvan David
-  abstract: As insufficient data volume and quality remain the key impediments to
-    the adoption of modern subsymbolic AI, techniques of synthetic data generation
-    are in high demand. Simulation offers an apt, systematic approach to generating
-    diverse synthetic data. This chapter introduces the reader to the key concepts,
-    benefits, and challenges of simulation-based synthetic data generation for AI
-    training purposes, and to a reference framework to describe, design, and analyze
-    digital twin-based AI simulation solutions.
-  published: '2026-02-17'
-  pdf_url: http://arxiv.org/pdf/2602.15816
-  arxiv_url: http://arxiv.org/abs/2602.15816
-  key_findings: As insufficient data volume and quality remain the key impediments
-    to the adoption of modern subsymbolic AI, techniques of synthetic data generation
-    are in high demand. Simulation offers an apt, systematic approach to generating
-    diverse synthetic data. This chapter introduces the reader to the key concepts,
-    benefits, and challenges of simulation-based synthetic data generation for AI
-    training purposes, and to a reference framework to describe, design, and analyze
-    digital twin-based AI simulation solutions.
-- id: '2602.15814'
-  title: Avey-B
-  authors: Devang Acharya, Mohammad Hammoud
-  abstract: Compact pretrained bidirectional encoders remain the backbone of industrial
-    NLP under tight compute and memory budgets. Their effectiveness stems from self-attention's
-    ability to deliver high-quality bidirectional contextualization with sequence-level
-    parallelism, as popularized by BERT-style architectures. Recently, Avey was introduced
-    as an autoregressive, attention-free alternative that naturally admits an encoder-only
-    adaptation. In this paper, we reformulate Avey for the encoder-only paradigm and
-    propose several innovations to its architecture, including decoupled static and
-    dynamic parameterizations, stability-oriented normalization, and neural compression.
-    Results show that this reformulated architecture compares favorably to four widely
-    used Transformer-based encoders, consistently outperforming them on standard token-classification
-    and information-retrieval benchmarks while scaling more efficiently to long contexts.
-  published: '2026-02-17'
-  pdf_url: http://arxiv.org/pdf/2602.15814
-  arxiv_url: http://arxiv.org/abs/2602.15814
-  key_findings: Compact pretrained bidirectional encoders remain the backbone of industrial
-    NLP under tight compute and memory budgets. Their effectiveness stems from self-attention's
-    ability to deliver high-quality bidirectional contextualization with sequence-level
-    parallelism, as popularized by BERT-style architectures. Recently, Avey was introduced
-    as an autoregressive, attention-free alternative that naturally admits an encoder-only
-    adaptation.
-- id: '2602.15811'
-  title: Task-Agnostic Continual Learning for Chest Radiograph Classification
-  authors: Muthu Subash Kavitha, Anas Zafar, Amgad Muneer, Jia Wu
-  abstract: Clinical deployment of chest radiograph classifiers requires models that
-    can be updated as new datasets become available without retraining on previously
-    ob- served data or degrading validated performance. We study, for the first time,
-    a task-incremental continual learning setting for chest radiograph classification,
-    in which heterogeneous chest X-ray datasets arrive sequentially and task identifiers
-    are unavailable at inference. We propose a continual adapter-based routing learning
-    strategy for Chest X-rays (CARL-XRay) that maintains a fixed high-capacity backbone
-    and incrementally allocates lightweight task-specific adapters and classifier
-    heads. A latent task selector operates on task-adapted features and leverages
-    both current and historical context preserved through compact prototypes and feature-level
-    experience replay. This design supports stable task identification and adaptation
-    across sequential updates while avoiding raw-image storage. Experiments on large-scale
-    public chest radiograph datasets demonstrate robust performance retention and
-    reliable task-aware inference under continual dataset ingestion. CARL-XRay outperforms
-    joint training under task-unknown deployment, achieving higher routing accuracy
-    (75.0\% vs.\ 62.5\%), while maintaining competitive diagnostic performance with
-    AUROC of 0.74 in the oracle setting with ground-truth task identity and 0.75 under
-    task-unknown inference, using significantly fewer trainable parameters. Finally,
-    the proposed framework provides a practical alternative to joint training and
-    repeated full retraining in continual clinical deployment.
-  published: '2026-02-17'
-  pdf_url: http://arxiv.org/pdf/2602.15811
-  arxiv_url: http://arxiv.org/abs/2602.15811
-  key_findings: Clinical deployment of chest radiograph classifiers requires models
-    that can be updated as new datasets become available without retraining on previously
-    ob- served data or degrading validated performance. We study, for the first time,
-    a task-incremental continual learning setting for chest radiograph classification,
-    in which heterogeneous chest X-ray datasets arrive sequentially and task identifiers
-    are unavailable at inference. We propose a continual adapter-based routing learning
-    strategy for Chest X-rays (CARL-XRay) that maintains a fixed high-capacity backbone
-    and incrementally allocates lightweight task-specific adapters and classifier
-    heads.
-- id: '2602.15809'
-  title: Decision Quality Evaluation Framework at Pinterest
-  authors: Yuqi Tian, Robert Paine, Attila Dobi, Kevin O'Sullivan, Aravindh Manickavasagam,
-    Faisal Farooq
-  abstract: 'Online platforms require robust systems to enforce content safety policies
-    at scale. A critical component of these systems is the ability to evaluate the
-    quality of moderation decisions made by both human agents and Large Language Models
-    (LLMs). However, this evaluation is challenging due to the inherent trade-offs
-    between cost, scale, and trustworthiness, along with the complexity of evolving
-    policies. To address this, we present a comprehensive Decision Quality Evaluation
-    Framework developed and deployed at Pinterest. The framework is centered on a
-    high-trust Golden Set (GDS) curated by subject matter experts (SMEs), which serves
-    as a ground truth benchmark. We introduce an automated intelligent sampling pipeline
-    that uses propensity scores to efficiently expand dataset coverage. We demonstrate
-    the framework''s practical application in several key areas: benchmarking the
-    cost-performance trade-offs of various LLM agents, establishing a rigorous methodology
-    for data-driven prompt optimization, managing complex policy evolution, and ensuring
-    the integrity of policy content prevalence metrics via continuous validation.
-    The framework enables a shift from subjective assessments to a data-driven and
-    quantitative practice for managing content safety systems.'
-  published: '2026-02-17'
-  pdf_url: http://arxiv.org/pdf/2602.15809
-  arxiv_url: http://arxiv.org/abs/2602.15809
-  key_findings: Online platforms require robust systems to enforce content safety
-    policies at scale. A critical component of these systems is the ability to evaluate
-    the quality of moderation decisions made by both human agents and Large Language
-    Models (LLMs). However, this evaluation is challenging due to the inherent trade-offs
-    between cost, scale, and trustworthiness, along with the complexity of evolving
-    policies.
-- id: '2602.15799'
-  title: 'The Geometry of Alignment Collapse: When Fine-Tuning Breaks Safety'
-  authors: Max Springer, Chung Peng Lee, Blossom Metevier, Jane Castleman, Bohdan
-    Turbal, Hayoung Jung, Zeyu Shen, Aleksandra Korolova
-  abstract: 'Fine-tuning aligned language models on benign tasks unpredictably degrades
-    safety guardrails, even when training data contains no harmful content and developers
-    have no adversarial intent. We show that the prevailing explanation, that fine-tuning
-    updates should be orthogonal to safety-critical directions in high-dimensional
-    parameter space, offers false reassurance: we show this orthogonality is structurally
-    unstable and collapses under the dynamics of gradient descent. We then resolve
-    this through a novel geometric analysis, proving that alignment concentrates in
-    low-dimensional subspaces with sharp curvature, creating a brittle structure that
-    first-order methods cannot detect or defend. While initial fine-tuning updates
-    may indeed avoid these subspaces, the curvature of the fine-tuning loss generates
-    second-order acceleration that systematically steers trajectories into alignment-sensitive
-    regions. We formalize this mechanism through the Alignment Instability Condition,
-    three geometric properties that, when jointly satisfied, lead to safety degradation.
-    Our main result establishes a quartic scaling law: alignment loss grows with the
-    fourth power of training time, governed by the sharpness of alignment geometry
-    and the strength of curvature coupling between the fine-tuning task and safety-critical
-    parameters. These results expose a structural blind spot in the current safety
-    paradigm. The dominant approaches to safe fine-tuning address only the initial
-    snapshot of a fundamentally dynamic problem. Alignment fragility is not a bug
-    to be patched; it is an intrinsic geometric property of gradient descent on curved
-    manifolds. Our results motivate the development of curvature-aware methods, and
-    we hope will further enable a shift in alignment safety analysis from reactive
-    red-teaming to predictive diagnostics for open-weight model deployment.'
-  published: '2026-02-17'
-  pdf_url: http://arxiv.org/pdf/2602.15799
-  arxiv_url: http://arxiv.org/abs/2602.15799
-  key_findings: 'Fine-tuning aligned language models on benign tasks unpredictably
-    degrades safety guardrails, even when training data contains no harmful content
-    and developers have no adversarial intent. We show that the prevailing explanation,
-    that fine-tuning updates should be orthogonal to safety-critical directions in
-    high-dimensional parameter space, offers false reassurance: we show this orthogonality
-    is structurally unstable and collapses under the dynamics of gradient descent.
-    We then resolve this through a novel geometric analysis, proving that alignment
-    concentrates in low-dimensional subspaces with sharp curvature, creating a brittle
-    structure that first-order methods cannot detect or defend.'
-- id: '2602.15791'
-  title: Enhancing Building Semantics Preservation in AI Model Training with Large
-    Language Model Encodings
-  authors: Suhyung Jang, Ghang Lee, Jaekun Lee, Hyunjun Lee
-  abstract: Accurate representation of building semantics, encompassing both generic
-    object types and specific subtypes, is essential for effective AI model training
-    in the architecture, engineering, construction, and operation (AECO) industry.
-    Conventional encoding methods (e.g., one-hot) often fail to convey the nuanced
-    relationships among closely related subtypes, limiting AI's semantic comprehension.
-    To address this limitation, this study proposes a novel training approach that
-    employs large language model (LLM) embeddings (e.g., OpenAI GPT and Meta LLaMA)
-    as encodings to preserve finer distinctions in building semantics. We evaluated
-    the proposed method by training GraphSAGE models to classify 42 building object
-    subtypes across five high-rise residential building information models (BIMs).
-    Various embedding dimensions were tested, including original high-dimensional
-    LLM embeddings (1,536, 3,072, or 4,096) and 1,024-dimensional compacted embeddings
-    generated via the Matryoshka representation model. Experimental results demonstrated
-    that LLM encodings outperformed the conventional one-hot baseline, with the llama-3
-    (compacted) embedding achieving a weighted average F1-score of 0.8766, compared
-    to 0.8475 for one-hot encoding. The results underscore the promise of leveraging
-    LLM-based encodings to enhance AI's ability to interpret complex, domain-specific
-    building semantics. As the capabilities of LLMs and dimensionality reduction techniques
-    continue to evolve, this approach holds considerable potential for broad application
-    in semantic elaboration tasks throughout the AECO industry.
-  published: '2026-02-17'
-  pdf_url: http://arxiv.org/pdf/2602.15791
-  arxiv_url: http://arxiv.org/abs/2602.15791
-  key_findings: Accurate representation of building semantics, encompassing both generic
-    object types and specific subtypes, is essential for effective AI model training
-    in the architecture, engineering, construction, and operation (AECO) industry.
-    Conventional encoding methods (e. g.
-- id: '2602.15785'
-  title: 'This human study did not involve human subjects: Validating LLM simulations
-    as behavioral evidence'
-  authors: Jessica Hullman, David Broska, Huaman Sun, Aaron Shaw
-  abstract: A growing literature uses large language models (LLMs) as synthetic participants
-    to generate cost-effective and nearly instantaneous responses in social science
-    experiments. However, there is limited guidance on when such simulations support
-    valid inference about human behavior. We contrast two strategies for obtaining
-    valid estimates of causal effects and clarify the assumptions under which each
-    is suitable for exploratory versus confirmatory research. Heuristic approaches
-    seek to establish that simulated and observed human behavior are interchangeable
-    through prompt engineering, model fine-tuning, and other repair strategies designed
-    to reduce LLM-induced inaccuracies. While useful for many exploratory tasks, heuristic
-    approaches lack the formal statistical guarantees typically required for confirmatory
-    research. In contrast, statistical calibration combines auxiliary human data with
-    statistical adjustments to account for discrepancies between observed and simulated
-    responses. Under explicit assumptions, statistical calibration preserves validity
-    and provides more precise estimates of causal effects at lower cost than experiments
-    that rely solely on human participants. Yet the potential of both approaches depends
-    on how well LLMs approximate the relevant populations. We consider what opportunities
-    are overlooked when researchers focus myopically on substituting LLMs for human
-    participants in a study.
-  published: '2026-02-17'
-  pdf_url: http://arxiv.org/pdf/2602.15785
-  arxiv_url: http://arxiv.org/abs/2602.15785
-  key_findings: A growing literature uses large language models (LLMs) as synthetic
-    participants to generate cost-effective and nearly instantaneous responses in
-    social science experiments. However, there is limited guidance on when such simulations
-    support valid inference about human behavior. We contrast two strategies for obtaining
-    valid estimates of causal effects and clarify the assumptions under which each
-    is suitable for exploratory versus confirmatory research.
-- id: '2602.15776'
-  title: 'GlobeDiff: State Diffusion Process for Partial Observability in Multi-Agent
-    Systems'
-  authors: Yiqin Yang, Xu Yang, Yuhua Jiang, Ni Mu, Hao Hu, Runpeng Xie, Ziyou Zhang,
-    Siyuan Li, Yuan-Hua Ni, Qianchuan Zhao, Bo Xu
-  abstract: In the realm of multi-agent systems, the challenge of \emph{partial observability}
-    is a critical barrier to effective coordination and decision-making. Existing
-    approaches, such as belief state estimation and inter-agent communication, often
-    fall short. Belief-based methods are limited by their focus on past experiences
-    without fully leveraging global information, while communication methods often
-    lack a robust model to effectively utilize the auxiliary information they provide.
-    To solve this issue, we propose Global State Diffusion Algorithm~(GlobeDiff) to
-    infer the global state based on the local observations. By formulating the state
-    inference process as a multi-modal diffusion process, GlobeDiff overcomes ambiguities
-    in state estimation while simultaneously inferring the global state with high
-    fidelity. We prove that the estimation error of GlobeDiff under both unimodal
-    and multi-modal distributions can be bounded. Extensive experimental results demonstrate
-    that GlobeDiff achieves superior performance and is capable of accurately inferring
-    the global state.
-  published: '2026-02-17'
-  pdf_url: http://arxiv.org/pdf/2602.15776
-  arxiv_url: http://arxiv.org/abs/2602.15776
-  key_findings: In the realm of multi-agent systems, the challenge of \emph{partial
-    observability} is a critical barrier to effective coordination and decision-making.
-    Existing approaches, such as belief state estimation and inter-agent communication,
-    often fall short. Belief-based methods are limited by their focus on past experiences
-    without fully leveraging global information, while communication methods often
-    lack a robust model to effectively utilize the auxiliary information they provide.
+- id: '2602.16708'
+  title: Policy Compiler for Secure Agentic Systems
+  authors: Nils Palumbo, Sarthak Choudhary, Jihye Choi, Prasad Chalasani, Mihai Christodorescu,
+    Somesh Jha
+  abstract: 'LLM-based agents are increasingly being deployed in contexts requiring
+    complex authorization policies: customer service protocols, approval workflows,
+    data access restrictions, and regulatory compliance. Embedding these policies
+    in prompts provides no enforcement guarantees. We present PCAS, a Policy Compiler
+    for Agentic Systems that provides deterministic policy enforcement. Enforcing
+    such policies requires tracking information flow across agents, which linear message
+    histories cannot capture. Instead, PCAS models the agentic system state as a dependency
+    graph capturing causal relationships among events such as tool calls, tool results,
+    and messages. Policies are expressed in a Datalog-derived language, as declarative
+    rules that account for transitive information flow and cross-agent provenance.
+    A reference monitor intercepts all actions and blocks violations before execution,
+    providing deterministic enforcement independent of model reasoning. PCAS takes
+    an existing agent implementation and a policy specification, and compiles them
+    into an instrumented system that is policy-compliant by construction, with no
+    security-specific restructuring required. We evaluate PCAS on three case studies:
+    information flow policies for prompt injection defense, approval workflows in
+    a multi-agent pharmacovigilance system, and organizational policies for customer
+    service. On customer service tasks, PCAS improves policy compliance from 48% to
+    93% across frontier models, with zero policy violations in instrumented runs.'
+  published: '2026-02-18'
+  pdf_url: http://arxiv.org/pdf/2602.16708
+  arxiv_url: http://arxiv.org/abs/2602.16708
+  key_findings: 'LLM-based agents are increasingly being deployed in contexts requiring
+    complex authorization policies: customer service protocols, approval workflows,
+    data access restrictions, and regulatory compliance. Embedding these policies
+    in prompts provides no enforcement guarantees. We present PCAS, a Policy Compiler
+    for Agentic Systems that provides deterministic policy enforcement.'
+- id: '2602.16703'
+  title: Measuring Mid-2025 LLM-Assistance on Novice Performance in Biology
+  authors: Shen Zhou Hong, Alex Kleinman, Alyssa Mathiowetz, Adam Howes, Julian Cohen,
+    Suveer Ganta, Alex Letizia, Dora Liao, Deepika Pahari, Xavier Roberts-Gaal, Luca
+    Righetti, Joe Torres
+  abstract: 'Large language models (LLMs) perform strongly on biological benchmarks,
+    raising concerns that they may help novice actors acquire dual-use laboratory
+    skills. Yet, whether this translates to improved human performance in the physical
+    laboratory remains unclear. To address this, we conducted a pre-registered, investigator-blinded,
+    randomized controlled trial (June-August 2025; n = 153) evaluating whether LLMs
+    improve novice performance in tasks that collectively model a viral reverse genetics
+    workflow. We observed no significant difference in the primary endpoint of workflow
+    completion (5.2% LLM vs. 6.6% Internet; P = 0.759), nor in the success rate of
+    individual tasks. However, the LLM arm had numerically higher success rates in
+    four of the five tasks, most notably for the cell culture task (68.8% LLM vs.
+    55.3% Internet; P = 0.059). Post-hoc Bayesian modeling of pooled data estimates
+    an approximate 1.4-fold increase (95% CrI 0.74-2.62) in success for a "typical"
+    reverse genetics task under LLM assistance. Ordinal regression modelling suggests
+    that participants in the LLM arm were more likely to progress through intermediate
+    steps across all tasks (posterior probability of a positive effect: 81%-96%).
+    Overall, mid-2025 LLMs did not substantially increase novice completion of complex
+    laboratory procedures but were associated with a modest performance benefit. These
+    results reveal a gap between in silico benchmarks and real-world utility, underscoring
+    the need for physical-world validation of AI biosecurity assessments as model
+    capabilities and user proficiency evolve.'
+  published: '2026-02-18'
+  pdf_url: http://arxiv.org/pdf/2602.16703
+  arxiv_url: http://arxiv.org/abs/2602.16703
+  key_findings: Large language models (LLMs) perform strongly on biological benchmarks,
+    raising concerns that they may help novice actors acquire dual-use laboratory
+    skills. Yet, whether this translates to improved human performance in the physical
+    laboratory remains unclear. To address this, we conducted a pre-registered, investigator-blinded,
+    randomized controlled trial (June-August 2025; n = 153) evaluating whether LLMs
+    improve novice performance in tasks that collectively model a viral reverse genetics
+    workflow.
+- id: '2602.16699'
+  title: 'Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents'
+  authors: Wenxuan Ding, Nicholas Tomlin, Greg Durrett
+  abstract: LLMs are increasingly being used for complex problems which are not necessarily
+    resolved in a single response, but require interacting with an environment to
+    acquire information. In these scenarios, LLMs must reason about inherent cost-uncertainty
+    tradeoffs in when to stop exploring and commit to an answer. For instance, on
+    a programming task, an LLM should test a generated code snippet if it is uncertain
+    about the correctness of that code; the cost of writing a test is nonzero, but
+    typically lower than the cost of making a mistake. In this work, we show that
+    we can induce LLMs to explicitly reason about balancing these cost-uncertainty
+    tradeoffs, then perform more optimal environment exploration. We formalize multiple
+    tasks, including information retrieval and coding, as sequential decision-making
+    problems under uncertainty. Each problem has latent environment state that can
+    be reasoned about via a prior which is passed to the LLM agent. We introduce a
+    framework called Calibrate-Then-Act (CTA), where we feed the LLM this additional
+    context to enable it to act more optimally. This improvement is preserved even
+    under RL training of both the baseline and CTA. Our results on information-seeking
+    QA and on a simplified coding task show that making cost-benefit tradeoffs explicit
+    with CTA can help agents discover more optimal decision-making strategies.
+  published: '2026-02-18'
+  pdf_url: http://arxiv.org/pdf/2602.16699
+  arxiv_url: http://arxiv.org/abs/2602.16699
+  key_findings: LLMs are increasingly being used for complex problems which are not
+    necessarily resolved in a single response, but require interacting with an environment
+    to acquire information. In these scenarios, LLMs must reason about inherent cost-uncertainty
+    tradeoffs in when to stop exploring and commit to an answer. For instance, on
+    a programming task, an LLM should test a generated code snippet if it is uncertain
+    about the correctness of that code; the cost of writing a test is nonzero, but
+    typically lower than the cost of making a mistake.
+- id: '2602.16671'
+  title: 'SPARC: Scenario Planning and Reasoning for Automated C Unit Test Generation'
+  authors: Jaid Monwar Chowdhury, Chi-An Fu, Reyhaneh Jabbarvand
+  abstract: 'Automated unit test generation for C remains a formidable challenge due
+    to the semantic gap between high-level program intent and the rigid syntactic
+    constraints of pointer arithmetic and manual memory management. While Large Language
+    Models (LLMs) exhibit strong generative capabilities, direct intent-to-code synthesis
+    frequently suffers from the leap-to-code failure mode, where models prematurely
+    emit code without grounding in program structure, constraints, and semantics.
+    This will result in non-compilable tests, hallucinated function signatures, low
+    branch coverage, and semantically irrelevant assertions that cannot properly capture
+    bugs. We introduce SPARC, a neuro-symbolic, scenario-based framework that bridges
+    this gap through four stages: (1) Control Flow Graph (CFG) analysis, (2) an Operation
+    Map that grounds LLM reasoning in validated utility helpers, (3) Path-targeted
+    test synthesis, and (4) an iterative, self-correction validation loop using compiler
+    and runtime feedback. We evaluate SPARC on 59 real-world and algorithmic subjects,
+    where it outperforms the vanilla prompt generation baseline by 31.36% in line
+    coverage, 26.01% in branch coverage, and 20.78% in mutation score, matching or
+    exceeding the symbolic execution tool KLEE on complex subjects. SPARC retains
+    94.3% of tests through iterative repair and produces code with significantly higher
+    developer-rated readability and maintainability. By aligning LLM reasoning with
+    program structure, SPARC provides a scalable path for industrial-grade testing
+    of legacy C codebases.'
+  published: '2026-02-18'
+  pdf_url: http://arxiv.org/pdf/2602.16671
+  arxiv_url: http://arxiv.org/abs/2602.16671
+  key_findings: Automated unit test generation for C remains a formidable challenge
+    due to the semantic gap between high-level program intent and the rigid syntactic
+    constraints of pointer arithmetic and manual memory management. While Large Language
+    Models (LLMs) exhibit strong generative capabilities, direct intent-to-code synthesis
+    frequently suffers from the leap-to-code failure mode, where models prematurely
+    emit code without grounding in program structure, constraints, and semantics.
+    This will result in non-compilable tests, hallucinated function signatures, low
+    branch coverage, and semantically irrelevant assertions that cannot properly capture
+    bugs.
+- id: '2602.16666'
+  title: Towards a Science of AI Agent Reliability
+  authors: Stephan Rabanser, Sayash Kapoor, Peter Kirgis, Kangheng Liu, Saiteja Utpala,
+    Arvind Narayanan
+  abstract: 'AI agents are increasingly deployed to execute important tasks. While
+    rising accuracy scores on standard benchmarks suggest rapid progress, many agents
+    still continue to fail in practice. This discrepancy highlights a fundamental
+    limitation of current evaluations: compressing agent behavior into a single success
+    metric obscures critical operational flaws. Notably, it ignores whether agents
+    behave consistently across runs, withstand perturbations, fail predictably, or
+    have bounded error severity. Grounded in safety-critical engineering, we provide
+    a holistic performance profile by proposing twelve concrete metrics that decompose
+    agent reliability along four key dimensions: consistency, robustness, predictability,
+    and safety. Evaluating 14 agentic models across two complementary benchmarks,
+    we find that recent capability gains have only yielded small improvements in reliability.
+    By exposing these persistent limitations, our metrics complement traditional evaluations
+    while offering tools for reasoning about how agents perform, degrade, and fail.'
+  published: '2026-02-18'
+  pdf_url: http://arxiv.org/pdf/2602.16666
+  arxiv_url: http://arxiv.org/abs/2602.16666
+  key_findings: 'AI agents are increasingly deployed to execute important tasks. While
+    rising accuracy scores on standard benchmarks suggest rapid progress, many agents
+    still continue to fail in practice. This discrepancy highlights a fundamental
+    limitation of current evaluations: compressing agent behavior into a single success
+    metric obscures critical operational flaws.'
+- id: '2602.16660'
+  title: 'Align Once, Benefit Multilingually: Enforcing Multilingual Consistency for
+    LLM Safety Alignment'
+  authors: Yuyan Bu, Xiaohao Liu, ZhaoXing Ren, Yaodong Yang, Juntao Dai
+  abstract: The widespread deployment of large language models (LLMs) across linguistic
+    communities necessitates reliable multilingual safety alignment. However, recent
+    efforts to extend alignment to other languages often require substantial resources,
+    either through large-scale, high-quality supervision in the target language or
+    through pairwise alignment with high-resource languages, which limits scalability.
+    In this work, we propose a resource-efficient method for improving multilingual
+    safety alignment. We introduce a plug-and-play Multi-Lingual Consistency (MLC)
+    loss that can be integrated into existing monolingual alignment pipelines. By
+    improving collinearity between multilingual representation vectors, our method
+    encourages directional consistency at the multilingual semantic level in a single
+    update. This allows simultaneous alignment across multiple languages using only
+    multilingual prompt variants without requiring additional response-level supervision
+    in low-resource languages. We validate the proposed method across different model
+    architectures and alignment paradigms, and demonstrate its effectiveness in enhancing
+    multilingual safety with limited impact on general model utility. Further evaluation
+    across languages and tasks indicates improved cross-lingual generalization, suggesting
+    the proposed approach as a practical solution for multilingual consistency alignment
+    under limited supervision.
+  published: '2026-02-18'
+  pdf_url: http://arxiv.org/pdf/2602.16660
+  arxiv_url: http://arxiv.org/abs/2602.16660
+  key_findings: The widespread deployment of large language models (LLMs) across linguistic
+    communities necessitates reliable multilingual safety alignment. However, recent
+    efforts to extend alignment to other languages often require substantial resources,
+    either through large-scale, high-quality supervision in the target language or
+    through pairwise alignment with high-resource languages, which limits scalability.
+    In this work, we propose a resource-efficient method for improving multilingual
+    safety alignment.
+- id: '2602.16653'
+  title: 'Agent Skill Framework: Perspectives on the Potential of Small Language Models
+    in Industrial Environments'
+  authors: Yangjie Xu, Lujun Li, Lama Sleem, Niccolo Gentile, Yewei Song, Yiqun Wang,
+    Siming Ji, Wenbo Wu, Radu State
+  abstract: Agent Skill framework, now widely and officially supported by major players
+    such as GitHub Copilot, LangChain, and OpenAI, performs especially well with proprietary
+    models by improving context engineering, reducing hallucinations, and boosting
+    task accuracy. Based on these observations, an investigation is conducted to determine
+    whether the Agent Skill paradigm provides similar benefits to small language models
+    (SLMs). This question matters in industrial scenarios where continuous reliance
+    on public APIs is infeasible due to data-security and budget constraints requirements,
+    and where SLMs often show limited generalization in highly customized scenarios.
+    This work introduces a formal mathematical definition of the Agent Skill process,
+    followed by a systematic evaluation of language models of varying sizes across
+    multiple use cases. The evaluation encompasses two open-source tasks and a real-world
+    insurance claims data set. The results show that tiny models struggle with reliable
+    skill selection, while moderately sized SLMs (approximately 12B - 30B) parameters)
+    benefit substantially from the Agent Skill approach. Moreover, code-specialized
+    variants at around 80B parameters achieve performance comparable to closed-source
+    baselines while improving GPU efficiency. Collectively, these findings provide
+    a comprehensive and nuanced characterization of the capabilities and constraints
+    of the framework, while providing actionable insights for the effective deployment
+    of Agent Skills in SLM-centered environments.
+  published: '2026-02-18'
+  pdf_url: http://arxiv.org/pdf/2602.16653
+  arxiv_url: http://arxiv.org/abs/2602.16653
+  key_findings: Agent Skill framework, now widely and officially supported by major
+    players such as GitHub Copilot, LangChain, and OpenAI, performs especially well
+    with proprietary models by improving context engineering, reducing hallucinations,
+    and boosting task accuracy. Based on these observations, an investigation is conducted
+    to determine whether the Agent Skill paradigm provides similar benefits to small
+    language models (SLMs). This question matters in industrial scenarios where continuous
+    reliance on public APIs is infeasible due to data-security and budget constraints
+    requirements, and where SLMs often show limited generalization in highly customized
+    scenarios.
+- id: '2602.16650'
+  title: 'Retrieval Augmented Generation of Literature-derived Polymer Knowledge:
+    The Example of a Biodegradable Polymer Expert System'
+  authors: Sonakshi Gupta, Akhlak Mahmood, Wei Xiong, Rampi Ramprasad
+  abstract: 'Polymer literature contains a large and growing body of experimental
+    knowledge, yet much of it is buried in unstructured text and inconsistent terminology,
+    making systematic retrieval and reasoning difficult. Existing tools typically
+    extract narrow, study-specific facts in isolation, failing to preserve the cross-study
+    context required to answer broader scientific questions. Retrieval-augmented generation
+    (RAG) offers a promising way to overcome this limitation by combining large language
+    models (LLMs) with external retrieval, but its effectiveness depends strongly
+    on how domain knowledge is represented. In this work, we develop two retrieval
+    pipelines: a dense semantic vector-based approach (VectorRAG) and a graph-based
+    approach (GraphRAG). Using over 1,000 polyhydroxyalkanoate (PHA) papers, we construct
+    context-preserving paragraph embeddings and a canonicalized structured knowledge
+    graph supporting entity disambiguation and multi-hop reasoning. We evaluate these
+    pipelines through standard retrieval metrics, comparisons with general state-of-the-art
+    systems such as GPT and Gemini, and qualitative validation by a domain chemist.
+    The results show that GraphRAG achieves higher precision and interpretability,
+    while VectorRAG provides broader recall, highlighting complementary trade-offs.
+    Expert validation further confirms that the tailored pipelines, particularly GraphRAG,
+    produce well-grounded, citation-reliable responses with strong domain relevance.
+    By grounding every statement in evidence, these systems enable researchers to
+    navigate the literature, compare findings across studies, and uncover patterns
+    that are difficult to extract manually. More broadly, this work establishes a
+    practical framework for building materials science assistants using curated corpora
+    and retrieval design, reducing reliance on proprietary models while enabling trustworthy
+    literature analysis at scale.'
+  published: '2026-02-18'
+  pdf_url: http://arxiv.org/pdf/2602.16650
+  arxiv_url: http://arxiv.org/abs/2602.16650
+  key_findings: Polymer literature contains a large and growing body of experimental
+    knowledge, yet much of it is buried in unstructured text and inconsistent terminology,
+    making systematic retrieval and reasoning difficult. Existing tools typically
+    extract narrow, study-specific facts in isolation, failing to preserve the cross-study
+    context required to answer broader scientific questions. Retrieval-augmented generation
+    (RAG) offers a promising way to overcome this limitation by combining large language
+    models (LLMs) with external retrieval, but its effectiveness depends strongly
+    on how domain knowledge is represented.
+- id: '2602.16634'
+  title: 'Enhanced Diffusion Sampling: Efficient Rare Event Sampling and Free Energy
+    Calculation with Diffusion Models'
+  authors: Yu Xie, Ludwig Winkler, Lixin Sun, Sarah Lewis, Adam E. Foster, José Jiménez
+    Luna, Tim Hempel, Michael Gastegger, Yaoyi Chen, Iryna Zaporozhets, Cecilia Clementi,
+    Christopher M. Bishop, Frank Noé
+  abstract: 'The rare-event sampling problem has long been the central limiting factor
+    in molecular dynamics (MD), especially in biomolecular simulation. Recently, diffusion
+    models such as BioEmu have emerged as powerful equilibrium samplers that generate
+    independent samples from complex molecular distributions, eliminating the cost
+    of sampling rare transition events. However, a sampling problem remains when computing
+    observables that rely on states which are rare in equilibrium, for example folding
+    free energies. Here, we introduce enhanced diffusion sampling, enabling efficient
+    exploration of rare-event regions while preserving unbiased thermodynamic estimators.
+    The key idea is to perform quantitatively accurate steering protocols to generate
+    biased ensembles and subsequently recover equilibrium statistics via exact reweighting.
+    We instantiate our framework in three algorithms: UmbrellaDiff (umbrella sampling
+    with diffusion models), $Δ$G-Diff (free-energy differences via tilted ensembles),
+    and MetaDiff (a batchwise analogue for metadynamics). Across toy systems, protein
+    folding landscapes and folding free energies, our methods achieve fast, accurate,
+    and scalable estimation of equilibrium properties within GPU-minutes to hours
+    per system -- closing the rare-event sampling gap that remained after the advent
+    of diffusion-model equilibrium samplers.'
+  published: '2026-02-18'
+  pdf_url: http://arxiv.org/pdf/2602.16634
+  arxiv_url: http://arxiv.org/abs/2602.16634
+  key_findings: The rare-event sampling problem has long been the central limiting
+    factor in molecular dynamics (MD), especially in biomolecular simulation. Recently,
+    diffusion models such as BioEmu have emerged as powerful equilibrium samplers
+    that generate independent samples from complex molecular distributions, eliminating
+    the cost of sampling rare transition events. However, a sampling problem remains
+    when computing observables that rely on states which are rare in equilibrium,
+    for example folding free energies.
+- id: '2602.16629'
+  title: Almost Sure Convergence of Differential Temporal Difference Learning for
+    Average Reward Markov Decision Processes
+  authors: Ethan Blaser, Jiuqi Wang, Shangtong Zhang
+  abstract: The average reward is a fundamental performance metric in reinforcement
+    learning (RL) focusing on the long-run performance of an agent. Differential temporal
+    difference (TD) learning algorithms are a major advance for average reward RL
+    as they provide an efficient online method to learn the value functions associated
+    with the average reward in both on-policy and off-policy settings. However, existing
+    convergence guarantees require a local clock in learning rates tied to state visit
+    counts, which practitioners do not use and does not extend beyond tabular settings.
+    We address this limitation by proving the almost sure convergence of on-policy
+    $n$-step differential TD for any $n$ using standard diminishing learning rates
+    without a local clock. We then derive three sufficient conditions under which
+    off-policy $n$-step differential TD also converges without a local clock. These
+    results strengthen the theoretical foundations of differential TD and bring its
+    convergence analysis closer to practical implementations.
+  published: '2026-02-18'
+  pdf_url: http://arxiv.org/pdf/2602.16629
+  arxiv_url: http://arxiv.org/abs/2602.16629
+  key_findings: The average reward is a fundamental performance metric in reinforcement
+    learning (RL) focusing on the long-run performance of an agent. Differential temporal
+    difference (TD) learning algorithms are a major advance for average reward RL
+    as they provide an efficient online method to learn the value functions associated
+    with the average reward in both on-policy and off-policy settings. However, existing
+    convergence guarantees require a local clock in learning rates tied to state visit
+    counts, which practitioners do not use and does not extend beyond tabular settings.

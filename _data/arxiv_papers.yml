@@ -1,324 +1,296 @@
 papers:
-- id: '2602.16708'
-  title: Policy Compiler for Secure Agentic Systems
-  authors: Nils Palumbo, Sarthak Choudhary, Jihye Choi, Prasad Chalasani, Mihai Christodorescu,
-    Somesh Jha
-  abstract: 'LLM-based agents are increasingly being deployed in contexts requiring
-    complex authorization policies: customer service protocols, approval workflows,
-    data access restrictions, and regulatory compliance. Embedding these policies
-    in prompts provides no enforcement guarantees. We present PCAS, a Policy Compiler
-    for Agentic Systems that provides deterministic policy enforcement. Enforcing
-    such policies requires tracking information flow across agents, which linear message
-    histories cannot capture. Instead, PCAS models the agentic system state as a dependency
-    graph capturing causal relationships among events such as tool calls, tool results,
-    and messages. Policies are expressed in a Datalog-derived language, as declarative
-    rules that account for transitive information flow and cross-agent provenance.
-    A reference monitor intercepts all actions and blocks violations before execution,
-    providing deterministic enforcement independent of model reasoning. PCAS takes
-    an existing agent implementation and a policy specification, and compiles them
-    into an instrumented system that is policy-compliant by construction, with no
-    security-specific restructuring required. We evaluate PCAS on three case studies:
-    information flow policies for prompt injection defense, approval workflows in
-    a multi-agent pharmacovigilance system, and organizational policies for customer
-    service. On customer service tasks, PCAS improves policy compliance from 48% to
-    93% across frontier models, with zero policy violations in instrumented runs.'
-  published: '2026-02-18'
-  pdf_url: http://arxiv.org/pdf/2602.16708
-  arxiv_url: http://arxiv.org/abs/2602.16708
-  key_findings: 'LLM-based agents are increasingly being deployed in contexts requiring
-    complex authorization policies: customer service protocols, approval workflows,
-    data access restrictions, and regulatory compliance. Embedding these policies
-    in prompts provides no enforcement guarantees. We present PCAS, a Policy Compiler
-    for Agentic Systems that provides deterministic policy enforcement.'
-- id: '2602.16703'
-  title: Measuring Mid-2025 LLM-Assistance on Novice Performance in Biology
-  authors: Shen Zhou Hong, Alex Kleinman, Alyssa Mathiowetz, Adam Howes, Julian Cohen,
-    Suveer Ganta, Alex Letizia, Dora Liao, Deepika Pahari, Xavier Roberts-Gaal, Luca
-    Righetti, Joe Torres
-  abstract: 'Large language models (LLMs) perform strongly on biological benchmarks,
-    raising concerns that they may help novice actors acquire dual-use laboratory
-    skills. Yet, whether this translates to improved human performance in the physical
-    laboratory remains unclear. To address this, we conducted a pre-registered, investigator-blinded,
-    randomized controlled trial (June-August 2025; n = 153) evaluating whether LLMs
-    improve novice performance in tasks that collectively model a viral reverse genetics
-    workflow. We observed no significant difference in the primary endpoint of workflow
-    completion (5.2% LLM vs. 6.6% Internet; P = 0.759), nor in the success rate of
-    individual tasks. However, the LLM arm had numerically higher success rates in
-    four of the five tasks, most notably for the cell culture task (68.8% LLM vs.
-    55.3% Internet; P = 0.059). Post-hoc Bayesian modeling of pooled data estimates
-    an approximate 1.4-fold increase (95% CrI 0.74-2.62) in success for a "typical"
-    reverse genetics task under LLM assistance. Ordinal regression modelling suggests
-    that participants in the LLM arm were more likely to progress through intermediate
-    steps across all tasks (posterior probability of a positive effect: 81%-96%).
-    Overall, mid-2025 LLMs did not substantially increase novice completion of complex
-    laboratory procedures but were associated with a modest performance benefit. These
-    results reveal a gap between in silico benchmarks and real-world utility, underscoring
-    the need for physical-world validation of AI biosecurity assessments as model
-    capabilities and user proficiency evolve.'
-  published: '2026-02-18'
-  pdf_url: http://arxiv.org/pdf/2602.16703
-  arxiv_url: http://arxiv.org/abs/2602.16703
-  key_findings: Large language models (LLMs) perform strongly on biological benchmarks,
-    raising concerns that they may help novice actors acquire dual-use laboratory
-    skills. Yet, whether this translates to improved human performance in the physical
-    laboratory remains unclear. To address this, we conducted a pre-registered, investigator-blinded,
-    randomized controlled trial (June-August 2025; n = 153) evaluating whether LLMs
-    improve novice performance in tasks that collectively model a viral reverse genetics
-    workflow.
-- id: '2602.16699'
-  title: 'Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents'
-  authors: Wenxuan Ding, Nicholas Tomlin, Greg Durrett
-  abstract: LLMs are increasingly being used for complex problems which are not necessarily
-    resolved in a single response, but require interacting with an environment to
-    acquire information. In these scenarios, LLMs must reason about inherent cost-uncertainty
-    tradeoffs in when to stop exploring and commit to an answer. For instance, on
-    a programming task, an LLM should test a generated code snippet if it is uncertain
-    about the correctness of that code; the cost of writing a test is nonzero, but
-    typically lower than the cost of making a mistake. In this work, we show that
-    we can induce LLMs to explicitly reason about balancing these cost-uncertainty
-    tradeoffs, then perform more optimal environment exploration. We formalize multiple
-    tasks, including information retrieval and coding, as sequential decision-making
-    problems under uncertainty. Each problem has latent environment state that can
-    be reasoned about via a prior which is passed to the LLM agent. We introduce a
-    framework called Calibrate-Then-Act (CTA), where we feed the LLM this additional
-    context to enable it to act more optimally. This improvement is preserved even
-    under RL training of both the baseline and CTA. Our results on information-seeking
-    QA and on a simplified coding task show that making cost-benefit tradeoffs explicit
-    with CTA can help agents discover more optimal decision-making strategies.
-  published: '2026-02-18'
-  pdf_url: http://arxiv.org/pdf/2602.16699
-  arxiv_url: http://arxiv.org/abs/2602.16699
-  key_findings: LLMs are increasingly being used for complex problems which are not
-    necessarily resolved in a single response, but require interacting with an environment
-    to acquire information. In these scenarios, LLMs must reason about inherent cost-uncertainty
-    tradeoffs in when to stop exploring and commit to an answer. For instance, on
-    a programming task, an LLM should test a generated code snippet if it is uncertain
-    about the correctness of that code; the cost of writing a test is nonzero, but
-    typically lower than the cost of making a mistake.
-- id: '2602.16671'
-  title: 'SPARC: Scenario Planning and Reasoning for Automated C Unit Test Generation'
-  authors: Jaid Monwar Chowdhury, Chi-An Fu, Reyhaneh Jabbarvand
-  abstract: 'Automated unit test generation for C remains a formidable challenge due
-    to the semantic gap between high-level program intent and the rigid syntactic
-    constraints of pointer arithmetic and manual memory management. While Large Language
-    Models (LLMs) exhibit strong generative capabilities, direct intent-to-code synthesis
-    frequently suffers from the leap-to-code failure mode, where models prematurely
-    emit code without grounding in program structure, constraints, and semantics.
-    This will result in non-compilable tests, hallucinated function signatures, low
-    branch coverage, and semantically irrelevant assertions that cannot properly capture
-    bugs. We introduce SPARC, a neuro-symbolic, scenario-based framework that bridges
-    this gap through four stages: (1) Control Flow Graph (CFG) analysis, (2) an Operation
-    Map that grounds LLM reasoning in validated utility helpers, (3) Path-targeted
-    test synthesis, and (4) an iterative, self-correction validation loop using compiler
-    and runtime feedback. We evaluate SPARC on 59 real-world and algorithmic subjects,
-    where it outperforms the vanilla prompt generation baseline by 31.36% in line
-    coverage, 26.01% in branch coverage, and 20.78% in mutation score, matching or
-    exceeding the symbolic execution tool KLEE on complex subjects. SPARC retains
-    94.3% of tests through iterative repair and produces code with significantly higher
-    developer-rated readability and maintainability. By aligning LLM reasoning with
-    program structure, SPARC provides a scalable path for industrial-grade testing
-    of legacy C codebases.'
-  published: '2026-02-18'
-  pdf_url: http://arxiv.org/pdf/2602.16671
-  arxiv_url: http://arxiv.org/abs/2602.16671
-  key_findings: Automated unit test generation for C remains a formidable challenge
-    due to the semantic gap between high-level program intent and the rigid syntactic
-    constraints of pointer arithmetic and manual memory management. While Large Language
-    Models (LLMs) exhibit strong generative capabilities, direct intent-to-code synthesis
-    frequently suffers from the leap-to-code failure mode, where models prematurely
-    emit code without grounding in program structure, constraints, and semantics.
-    This will result in non-compilable tests, hallucinated function signatures, low
-    branch coverage, and semantically irrelevant assertions that cannot properly capture
-    bugs.
-- id: '2602.16666'
-  title: Towards a Science of AI Agent Reliability
-  authors: Stephan Rabanser, Sayash Kapoor, Peter Kirgis, Kangheng Liu, Saiteja Utpala,
-    Arvind Narayanan
-  abstract: 'AI agents are increasingly deployed to execute important tasks. While
-    rising accuracy scores on standard benchmarks suggest rapid progress, many agents
-    still continue to fail in practice. This discrepancy highlights a fundamental
-    limitation of current evaluations: compressing agent behavior into a single success
-    metric obscures critical operational flaws. Notably, it ignores whether agents
-    behave consistently across runs, withstand perturbations, fail predictably, or
-    have bounded error severity. Grounded in safety-critical engineering, we provide
-    a holistic performance profile by proposing twelve concrete metrics that decompose
-    agent reliability along four key dimensions: consistency, robustness, predictability,
-    and safety. Evaluating 14 agentic models across two complementary benchmarks,
-    we find that recent capability gains have only yielded small improvements in reliability.
-    By exposing these persistent limitations, our metrics complement traditional evaluations
-    while offering tools for reasoning about how agents perform, degrade, and fail.'
-  published: '2026-02-18'
-  pdf_url: http://arxiv.org/pdf/2602.16666
-  arxiv_url: http://arxiv.org/abs/2602.16666
-  key_findings: 'AI agents are increasingly deployed to execute important tasks. While
-    rising accuracy scores on standard benchmarks suggest rapid progress, many agents
-    still continue to fail in practice. This discrepancy highlights a fundamental
-    limitation of current evaluations: compressing agent behavior into a single success
-    metric obscures critical operational flaws.'
-- id: '2602.16660'
-  title: 'Align Once, Benefit Multilingually: Enforcing Multilingual Consistency for
-    LLM Safety Alignment'
-  authors: Yuyan Bu, Xiaohao Liu, ZhaoXing Ren, Yaodong Yang, Juntao Dai
-  abstract: The widespread deployment of large language models (LLMs) across linguistic
-    communities necessitates reliable multilingual safety alignment. However, recent
-    efforts to extend alignment to other languages often require substantial resources,
-    either through large-scale, high-quality supervision in the target language or
-    through pairwise alignment with high-resource languages, which limits scalability.
-    In this work, we propose a resource-efficient method for improving multilingual
-    safety alignment. We introduce a plug-and-play Multi-Lingual Consistency (MLC)
-    loss that can be integrated into existing monolingual alignment pipelines. By
-    improving collinearity between multilingual representation vectors, our method
-    encourages directional consistency at the multilingual semantic level in a single
-    update. This allows simultaneous alignment across multiple languages using only
-    multilingual prompt variants without requiring additional response-level supervision
-    in low-resource languages. We validate the proposed method across different model
-    architectures and alignment paradigms, and demonstrate its effectiveness in enhancing
-    multilingual safety with limited impact on general model utility. Further evaluation
-    across languages and tasks indicates improved cross-lingual generalization, suggesting
-    the proposed approach as a practical solution for multilingual consistency alignment
-    under limited supervision.
-  published: '2026-02-18'
-  pdf_url: http://arxiv.org/pdf/2602.16660
-  arxiv_url: http://arxiv.org/abs/2602.16660
-  key_findings: The widespread deployment of large language models (LLMs) across linguistic
-    communities necessitates reliable multilingual safety alignment. However, recent
-    efforts to extend alignment to other languages often require substantial resources,
-    either through large-scale, high-quality supervision in the target language or
-    through pairwise alignment with high-resource languages, which limits scalability.
-    In this work, we propose a resource-efficient method for improving multilingual
-    safety alignment.
-- id: '2602.16653'
-  title: 'Agent Skill Framework: Perspectives on the Potential of Small Language Models
-    in Industrial Environments'
-  authors: Yangjie Xu, Lujun Li, Lama Sleem, Niccolo Gentile, Yewei Song, Yiqun Wang,
-    Siming Ji, Wenbo Wu, Radu State
-  abstract: Agent Skill framework, now widely and officially supported by major players
-    such as GitHub Copilot, LangChain, and OpenAI, performs especially well with proprietary
-    models by improving context engineering, reducing hallucinations, and boosting
-    task accuracy. Based on these observations, an investigation is conducted to determine
-    whether the Agent Skill paradigm provides similar benefits to small language models
-    (SLMs). This question matters in industrial scenarios where continuous reliance
-    on public APIs is infeasible due to data-security and budget constraints requirements,
-    and where SLMs often show limited generalization in highly customized scenarios.
-    This work introduces a formal mathematical definition of the Agent Skill process,
-    followed by a systematic evaluation of language models of varying sizes across
-    multiple use cases. The evaluation encompasses two open-source tasks and a real-world
-    insurance claims data set. The results show that tiny models struggle with reliable
-    skill selection, while moderately sized SLMs (approximately 12B - 30B) parameters)
-    benefit substantially from the Agent Skill approach. Moreover, code-specialized
-    variants at around 80B parameters achieve performance comparable to closed-source
-    baselines while improving GPU efficiency. Collectively, these findings provide
-    a comprehensive and nuanced characterization of the capabilities and constraints
-    of the framework, while providing actionable insights for the effective deployment
-    of Agent Skills in SLM-centered environments.
-  published: '2026-02-18'
-  pdf_url: http://arxiv.org/pdf/2602.16653
-  arxiv_url: http://arxiv.org/abs/2602.16653
-  key_findings: Agent Skill framework, now widely and officially supported by major
-    players such as GitHub Copilot, LangChain, and OpenAI, performs especially well
-    with proprietary models by improving context engineering, reducing hallucinations,
-    and boosting task accuracy. Based on these observations, an investigation is conducted
-    to determine whether the Agent Skill paradigm provides similar benefits to small
-    language models (SLMs). This question matters in industrial scenarios where continuous
-    reliance on public APIs is infeasible due to data-security and budget constraints
-    requirements, and where SLMs often show limited generalization in highly customized
-    scenarios.
-- id: '2602.16650'
-  title: 'Retrieval Augmented Generation of Literature-derived Polymer Knowledge:
-    The Example of a Biodegradable Polymer Expert System'
-  authors: Sonakshi Gupta, Akhlak Mahmood, Wei Xiong, Rampi Ramprasad
-  abstract: 'Polymer literature contains a large and growing body of experimental
-    knowledge, yet much of it is buried in unstructured text and inconsistent terminology,
-    making systematic retrieval and reasoning difficult. Existing tools typically
-    extract narrow, study-specific facts in isolation, failing to preserve the cross-study
-    context required to answer broader scientific questions. Retrieval-augmented generation
-    (RAG) offers a promising way to overcome this limitation by combining large language
-    models (LLMs) with external retrieval, but its effectiveness depends strongly
-    on how domain knowledge is represented. In this work, we develop two retrieval
-    pipelines: a dense semantic vector-based approach (VectorRAG) and a graph-based
-    approach (GraphRAG). Using over 1,000 polyhydroxyalkanoate (PHA) papers, we construct
-    context-preserving paragraph embeddings and a canonicalized structured knowledge
-    graph supporting entity disambiguation and multi-hop reasoning. We evaluate these
-    pipelines through standard retrieval metrics, comparisons with general state-of-the-art
-    systems such as GPT and Gemini, and qualitative validation by a domain chemist.
-    The results show that GraphRAG achieves higher precision and interpretability,
-    while VectorRAG provides broader recall, highlighting complementary trade-offs.
-    Expert validation further confirms that the tailored pipelines, particularly GraphRAG,
-    produce well-grounded, citation-reliable responses with strong domain relevance.
-    By grounding every statement in evidence, these systems enable researchers to
-    navigate the literature, compare findings across studies, and uncover patterns
-    that are difficult to extract manually. More broadly, this work establishes a
-    practical framework for building materials science assistants using curated corpora
-    and retrieval design, reducing reliance on proprietary models while enabling trustworthy
-    literature analysis at scale.'
-  published: '2026-02-18'
-  pdf_url: http://arxiv.org/pdf/2602.16650
-  arxiv_url: http://arxiv.org/abs/2602.16650
-  key_findings: Polymer literature contains a large and growing body of experimental
-    knowledge, yet much of it is buried in unstructured text and inconsistent terminology,
-    making systematic retrieval and reasoning difficult. Existing tools typically
-    extract narrow, study-specific facts in isolation, failing to preserve the cross-study
-    context required to answer broader scientific questions. Retrieval-augmented generation
-    (RAG) offers a promising way to overcome this limitation by combining large language
-    models (LLMs) with external retrieval, but its effectiveness depends strongly
-    on how domain knowledge is represented.
-- id: '2602.16634'
-  title: 'Enhanced Diffusion Sampling: Efficient Rare Event Sampling and Free Energy
-    Calculation with Diffusion Models'
-  authors: Yu Xie, Ludwig Winkler, Lixin Sun, Sarah Lewis, Adam E. Foster, José Jiménez
-    Luna, Tim Hempel, Michael Gastegger, Yaoyi Chen, Iryna Zaporozhets, Cecilia Clementi,
-    Christopher M. Bishop, Frank Noé
-  abstract: 'The rare-event sampling problem has long been the central limiting factor
-    in molecular dynamics (MD), especially in biomolecular simulation. Recently, diffusion
-    models such as BioEmu have emerged as powerful equilibrium samplers that generate
-    independent samples from complex molecular distributions, eliminating the cost
-    of sampling rare transition events. However, a sampling problem remains when computing
-    observables that rely on states which are rare in equilibrium, for example folding
-    free energies. Here, we introduce enhanced diffusion sampling, enabling efficient
-    exploration of rare-event regions while preserving unbiased thermodynamic estimators.
-    The key idea is to perform quantitatively accurate steering protocols to generate
-    biased ensembles and subsequently recover equilibrium statistics via exact reweighting.
-    We instantiate our framework in three algorithms: UmbrellaDiff (umbrella sampling
-    with diffusion models), $Δ$G-Diff (free-energy differences via tilted ensembles),
-    and MetaDiff (a batchwise analogue for metadynamics). Across toy systems, protein
-    folding landscapes and folding free energies, our methods achieve fast, accurate,
-    and scalable estimation of equilibrium properties within GPU-minutes to hours
-    per system -- closing the rare-event sampling gap that remained after the advent
-    of diffusion-model equilibrium samplers.'
-  published: '2026-02-18'
-  pdf_url: http://arxiv.org/pdf/2602.16634
-  arxiv_url: http://arxiv.org/abs/2602.16634
-  key_findings: The rare-event sampling problem has long been the central limiting
-    factor in molecular dynamics (MD), especially in biomolecular simulation. Recently,
-    diffusion models such as BioEmu have emerged as powerful equilibrium samplers
-    that generate independent samples from complex molecular distributions, eliminating
-    the cost of sampling rare transition events. However, a sampling problem remains
-    when computing observables that rely on states which are rare in equilibrium,
-    for example folding free energies.
-- id: '2602.16629'
-  title: Almost Sure Convergence of Differential Temporal Difference Learning for
-    Average Reward Markov Decision Processes
-  authors: Ethan Blaser, Jiuqi Wang, Shangtong Zhang
-  abstract: The average reward is a fundamental performance metric in reinforcement
-    learning (RL) focusing on the long-run performance of an agent. Differential temporal
-    difference (TD) learning algorithms are a major advance for average reward RL
-    as they provide an efficient online method to learn the value functions associated
-    with the average reward in both on-policy and off-policy settings. However, existing
-    convergence guarantees require a local clock in learning rates tied to state visit
-    counts, which practitioners do not use and does not extend beyond tabular settings.
-    We address this limitation by proving the almost sure convergence of on-policy
-    $n$-step differential TD for any $n$ using standard diminishing learning rates
-    without a local clock. We then derive three sufficient conditions under which
-    off-policy $n$-step differential TD also converges without a local clock. These
-    results strengthen the theoretical foundations of differential TD and bring its
-    convergence analysis closer to practical implementations.
-  published: '2026-02-18'
-  pdf_url: http://arxiv.org/pdf/2602.16629
-  arxiv_url: http://arxiv.org/abs/2602.16629
-  key_findings: The average reward is a fundamental performance metric in reinforcement
-    learning (RL) focusing on the long-run performance of an agent. Differential temporal
-    difference (TD) learning algorithms are a major advance for average reward RL
-    as they provide an efficient online method to learn the value functions associated
-    with the average reward in both on-policy and off-policy settings. However, existing
-    convergence guarantees require a local clock in learning rates tied to state visit
-    counts, which practitioners do not use and does not extend beyond tabular settings.
+- id: '2602.17664'
+  title: Sink-Aware Pruning for Diffusion Language Models
+  authors: Aidar Myrzakhan, Tianyi Li, Bowei Guo, Shengkun Tang, Zhiqiang Shen
+  abstract: 'Diffusion Language Models (DLMs) incur high inference cost due to iterative
+    denoising, motivating efficient pruning. Existing pruning heuristics largely inherited
+    from autoregressive (AR) LLMs, typically preserve attention sink tokens because
+    AR sinks serve as stable global anchors. We show that this assumption does not
+    hold for DLMs: the attention-sink position exhibits substantially higher variance
+    over the full generation trajectory (measured by how the dominant sink locations
+    shift across timesteps), indicating that sinks are often transient and less structurally
+    essential than in AR models. Based on this observation, we propose ${\bf \texttt{Sink-Aware
+    Pruning}}$, which automatically identifies and prunes unstable sinks in DLMs (prior
+    studies usually keep sinks for AR LLMs). Without retraining, our method achieves
+    a better quality-efficiency trade-off and outperforms strong prior pruning baselines
+    under matched compute. Our code is available at https://github.com/VILA-Lab/Sink-Aware-Pruning.'
+  published: '2026-02-19'
+  pdf_url: http://arxiv.org/pdf/2602.17664
+  arxiv_url: http://arxiv.org/abs/2602.17664
+  key_findings: 'Diffusion Language Models (DLMs) incur high inference cost due to
+    iterative denoising, motivating efficient pruning. Existing pruning heuristics
+    largely inherited from autoregressive (AR) LLMs, typically preserve attention
+    sink tokens because AR sinks serve as stable global anchors. We show that this
+    assumption does not hold for DLMs: the attention-sink position exhibits substantially
+    higher variance over the full generation trajectory (measured by how the dominant
+    sink locations shift across timesteps), indicating that sinks are often transient
+    and less structurally essential than in AR models.'
+- id: '2602.17663'
+  title: 'CLEF HIPE-2026: Evaluating Accurate and Efficient Person-Place Relation
+    Extraction from Multilingual Historical Texts'
+  authors: Juri Opitz, Corina Raclé, Emanuela Boros, Andrianos Michail, Matteo Romanello,
+    Maud Ehrmann, Simon Clematide
+  abstract: HIPE-2026 is a CLEF evaluation lab dedicated to person-place relation
+    extraction from noisy, multilingual historical texts. Building on the HIPE-2020
+    and HIPE-2022 campaigns, it extends the series toward semantic relation extraction
+    by targeting the task of identifying person--place associations in multiple languages
+    and time periods. Systems are asked to classify relations of two types - $at$
+    ("Has the person ever been at this place?") and $isAt$ ("Is the person located
+    at this place around publication time?") - requiring reasoning over temporal and
+    geographical cues. The lab introduces a three-fold evaluation profile that jointly
+    assesses accuracy, computational efficiency, and domain generalization. By linking
+    relation extraction to large-scale historical data processing, HIPE-2026 aims
+    to support downstream applications in knowledge-graph construction, historical
+    biography reconstruction, and spatial analysis in digital humanities.
+  published: '2026-02-19'
+  pdf_url: http://arxiv.org/pdf/2602.17663
+  arxiv_url: http://arxiv.org/abs/2602.17663
+  key_findings: HIPE-2026 is a CLEF evaluation lab dedicated to person-place relation
+    extraction from noisy, multilingual historical texts. Building on the HIPE-2020
+    and HIPE-2022 campaigns, it extends the series toward semantic relation extraction
+    by targeting the task of identifying person--place associations in multiple languages
+    and time periods. Systems are asked to classify relations of two types - $at$
+    ("Has the person ever been at this place.
+- id: '2602.17658'
+  title: 'MARS: Margin-Aware Reward-Modeling with Self-Refinement'
+  authors: Payel Bhattacharjee, Osvaldo Simeone, Ravi Tandon
+  abstract: Reward modeling is a core component of modern alignment pipelines including
+    RLHF and RLAIF, underpinning policy optimization methods including PPO and TRPO.
+    However, training reliable reward models relies heavily on human-labeled preference
+    data, which is costly and limited, motivating the use of data augmentation. Existing
+    augmentation approaches typically operate at the representation or semantic level
+    and remain agnostic to the reward model's estimation difficulty. In this paper,
+    we propose MARS, an adaptive, margin-aware augmentation and sampling strategy
+    that explicitly targets ambiguous and failure modes of the reward model. Our proposed
+    framework, MARS, concentrates augmentation on low-margin (ambiguous) preference
+    pairs where the reward model is most uncertain, and iteratively refines the training
+    distribution via hard-sample augmentation. We provide theoretical guarantees showing
+    that this strategy increases the average curvature of the loss function hence
+    enhance information and improves conditioning, along with empirical results demonstrating
+    consistent gains over uniform augmentation for robust reward modeling.
+  published: '2026-02-19'
+  pdf_url: http://arxiv.org/pdf/2602.17658
+  arxiv_url: http://arxiv.org/abs/2602.17658
+  key_findings: Reward modeling is a core component of modern alignment pipelines
+    including RLHF and RLAIF, underpinning policy optimization methods including PPO
+    and TRPO. However, training reliable reward models relies heavily on human-labeled
+    preference data, which is costly and limited, motivating the use of data augmentation.
+    Existing augmentation approaches typically operate at the representation or semantic
+    level and remain agnostic to the reward model's estimation difficulty.
+- id: '2602.17645'
+  title: Pushing the Frontier of Black-Box LVLM Attacks via Fine-Grained Detail Targeting
+  authors: Xiaohan Zhao, Zhaoyi Li, Yaxin Luo, Jiacheng Cui, Zhiqiang Shen
+  abstract: 'Black-box adversarial attacks on Large Vision-Language Models (LVLMs)
+    are challenging due to missing gradients and complex multimodal boundaries. While
+    prior state-of-the-art transfer-based approaches like M-Attack perform well using
+    local crop-level matching between source and target images, we find this induces
+    high-variance, nearly orthogonal gradients across iterations, violating coherent
+    local alignment and destabilizing optimization. We attribute this to (i) ViT translation
+    sensitivity that yields spike-like gradients and (ii) structural asymmetry between
+    source and target crops. We reformulate local matching as an asymmetric expectation
+    over source transformations and target semantics, and build a gradient-denoising
+    upgrade to M-Attack. On the source side, Multi-Crop Alignment (MCA) averages gradients
+    from multiple independently sampled local views per iteration to reduce variance.
+    On the target side, Auxiliary Target Alignment (ATA) replaces aggressive target
+    augmentation with a small auxiliary set from a semantically correlated distribution,
+    producing a smoother, lower-variance target manifold. We further reinterpret momentum
+    as Patch Momentum, replaying historical crop gradients; combined with a refined
+    patch-size ensemble (PE+), this strengthens transferable directions. Together
+    these modules form M-Attack-V2, a simple, modular enhancement over M-Attack that
+    substantially improves transfer-based black-box attacks on frontier LVLMs: boosting
+    success rates on Claude-4.0 from 8% to 30%, Gemini-2.5-Pro from 83% to 97%, and
+    GPT-5 from 98% to 100%, outperforming prior black-box LVLM attacks. Code and data
+    are publicly available at: https://github.com/vila-lab/M-Attack-V2.'
+  published: '2026-02-19'
+  pdf_url: http://arxiv.org/pdf/2602.17645
+  arxiv_url: http://arxiv.org/abs/2602.17645
+  key_findings: Black-box adversarial attacks on Large Vision-Language Models (LVLMs)
+    are challenging due to missing gradients and complex multimodal boundaries. While
+    prior state-of-the-art transfer-based approaches like M-Attack perform well using
+    local crop-level matching between source and target images, we find this induces
+    high-variance, nearly orthogonal gradients across iterations, violating coherent
+    local alignment and destabilizing optimization. We attribute this to (i) ViT translation
+    sensitivity that yields spike-like gradients and (ii) structural asymmetry between
+    source and target crops.
+- id: '2602.17641'
+  title: 'FAMOSE: A ReAct Approach to Automated Feature Discovery'
+  authors: Keith Burghardt, Jienan Liu, Sadman Sakib, Yuning Hao, Bo Li
+  abstract: Feature engineering remains a critical yet challenging bottleneck in machine
+    learning, particularly for tabular data, as identifying optimal features from
+    an exponentially large feature space traditionally demands substantial domain
+    expertise. To address this challenge, we introduce FAMOSE (Feature AugMentation
+    and Optimal Selection agEnt), a novel framework that leverages the ReAct paradigm
+    to autonomously explore, generate, and refine features while integrating feature
+    selection and evaluation tools within an agent architecture. To our knowledge,
+    FAMOSE represents the first application of an agentic ReAct framework to automated
+    feature engineering, especially for both regression and classification tasks.
+    Extensive experiments demonstrate that FAMOSE is at or near the state-of-the-art
+    on classification tasks (especially tasks with more than 10K instances, where
+    ROC-AUC increases 0.23% on average), and achieves the state-of-the-art for regression
+    tasks by reducing RMSE by 2.0% on average, while remaining more robust to errors
+    than other algorithms. We hypothesize that FAMOSE's strong performance is because
+    ReAct allows the LLM context window to record (via iterative feature discovery
+    and evaluation steps) what features did or did not work. This is similar to a
+    few-shot prompt and guides the LLM to invent better, more innovative features.
+    Our work offers evidence that AI agents are remarkably effective in solving problems
+    that require highly inventive solutions, such as feature engineering.
+  published: '2026-02-19'
+  pdf_url: http://arxiv.org/pdf/2602.17641
+  arxiv_url: http://arxiv.org/abs/2602.17641
+  key_findings: Feature engineering remains a critical yet challenging bottleneck
+    in machine learning, particularly for tabular data, as identifying optimal features
+    from an exponentially large feature space traditionally demands substantial domain
+    expertise. To address this challenge, we introduce FAMOSE (Feature AugMentation
+    and Optimal Selection agEnt), a novel framework that leverages the ReAct paradigm
+    to autonomously explore, generate, and refine features while integrating feature
+    selection and evaluation tools within an agent architecture. To our knowledge,
+    FAMOSE represents the first application of an agentic ReAct framework to automated
+    feature engineering, especially for both regression and classification tasks.
+- id: '2602.17634'
+  title: 'Reverso: Efficient Time Series Foundation Models for Zero-shot Forecasting'
+  authors: Xinghong Fu, Yanhong Li, Georgios Papaioannou, Yoon Kim
+  abstract: 'Learning time series foundation models has been shown to be a promising
+    approach for zero-shot time series forecasting across diverse time series domains.
+    Insofar as scaling has been a critical driver of performance of foundation models
+    in other modalities such as language and vision, much recent work on time series
+    foundation modeling has focused on scaling. This has resulted in time series foundation
+    models with hundreds of millions of parameters that are, while performant, inefficient
+    and expensive to use in practice. This paper describes a simple recipe for learning
+    efficient foundation models for zero-shot time series forecasting that are orders
+    of magnitude smaller. We show that large-scale transformers are not necessary:
+    small hybrid models that interleave long convolution and linear RNN layers (in
+    particular DeltaNet layers) can match the performance of larger transformer-based
+    models while being more than a hundred times smaller. We also describe several
+    data augmentation and inference strategies that further improve performance. This
+    recipe results in Reverso, a family of efficient time series foundation models
+    for zero-shot forecasting that significantly push the performance-efficiency Pareto
+    frontier.'
+  published: '2026-02-19'
+  pdf_url: http://arxiv.org/pdf/2602.17634
+  arxiv_url: http://arxiv.org/abs/2602.17634
+  key_findings: Learning time series foundation models has been shown to be a promising
+    approach for zero-shot time series forecasting across diverse time series domains.
+    Insofar as scaling has been a critical driver of performance of foundation models
+    in other modalities such as language and vision, much recent work on time series
+    foundation modeling has focused on scaling. This has resulted in time series foundation
+    models with hundreds of millions of parameters that are, while performant, inefficient
+    and expensive to use in practice.
+- id: '2602.17633'
+  title: 'When to Trust the Cheap Check: Weak and Strong Verification for Reasoning'
+  authors: Shayan Kiyani, Sima Noorani, George Pappas, Hamed Hassani
+  abstract: 'Reasoning with LLMs increasingly unfolds inside a broader verification
+    loop. Internally, systems use cheap checks, such as self-consistency or proxy
+    rewards, which we call weak verification. Externally, users inspect outputs and
+    steer the model through feedback until results are trustworthy, which we call
+    strong verification. These signals differ sharply in cost and reliability: strong
+    verification can establish trust but is resource-intensive, while weak verification
+    is fast and scalable but noisy and imperfect. We formalize this tension through
+    weak--strong verification policies, which decide when to accept or reject based
+    on weak verification and when to defer to strong verification. We introduce metrics
+    capturing incorrect acceptance, incorrect rejection, and strong-verification frequency.
+    Over population, we show that optimal policies admit a two-threshold structure
+    and that calibration and sharpness govern the value of weak verifiers. Building
+    on this, we develop an online algorithm that provably controls acceptance and
+    rejection errors without assumptions on the query stream, the language model,
+    or the weak verifier.'
+  published: '2026-02-19'
+  pdf_url: http://arxiv.org/pdf/2602.17633
+  arxiv_url: http://arxiv.org/abs/2602.17633
+  key_findings: Reasoning with LLMs increasingly unfolds inside a broader verification
+    loop. Internally, systems use cheap checks, such as self-consistency or proxy
+    rewards, which we call weak verification. Externally, users inspect outputs and
+    steer the model through feedback until results are trustworthy, which we call
+    strong verification.
+- id: '2602.17632'
+  title: 'SMAC: Score-Matched Actor-Critics for Robust Offline-to-Online Transfer'
+  authors: Nathan S. de Lara, Florian Shkurti
+  abstract: Modern offline Reinforcement Learning (RL) methods find performant actor-critics,
+    however, fine-tuning these actor-critics online with value-based RL algorithms
+    typically causes immediate drops in performance. We provide evidence consistent
+    with the hypothesis that, in the loss landscape, offline maxima for prior algorithms
+    and online maxima are separated by low-performance valleys that gradient-based
+    fine-tuning traverses. Following this, we present Score Matched Actor-Critic (SMAC),
+    an offline RL method designed to learn actor-critics that transition to online
+    value-based RL algorithms with no drop in performance. SMAC avoids valleys between
+    offline and online maxima by regularizing the Q-function during the offline phase
+    to respect a first-order derivative equality between the score of the policy and
+    action-gradient of the Q-function. We experimentally demonstrate that SMAC converges
+    to offline maxima that are connected to better online maxima via paths with monotonically
+    increasing reward found by first-order optimization. SMAC achieves smooth transfer
+    to Soft Actor-Critic and TD3 in 6/6 D4RL tasks. In 4/6 environments, it reduces
+    regret by 34-58% over the best baseline.
+  published: '2026-02-19'
+  pdf_url: http://arxiv.org/pdf/2602.17632
+  arxiv_url: http://arxiv.org/abs/2602.17632
+  key_findings: Modern offline Reinforcement Learning (RL) methods find performant
+    actor-critics, however, fine-tuning these actor-critics online with value-based
+    RL algorithms typically causes immediate drops in performance. We provide evidence
+    consistent with the hypothesis that, in the loss landscape, offline maxima for
+    prior algorithms and online maxima are separated by low-performance valleys that
+    gradient-based fine-tuning traverses. Following this, we present Score Matched
+    Actor-Critic (SMAC), an offline RL method designed to learn actor-critics that
+    transition to online value-based RL algorithms with no drop in performance.
+- id: '2602.17616'
+  title: 'Stable Asynchrony: Variance-Controlled Off-Policy RL for LLMs'
+  authors: Luke Huang, Zhuoyang Zhang, Qinghao Hu, Shang Yang, Song Han
+  abstract: 'Reinforcement learning (RL) is widely used to improve large language
+    models on reasoning tasks, and asynchronous RL training is attractive because
+    it increases end-to-end throughput. However, for widely adopted critic-free policy-gradient
+    methods such as REINFORCE and GRPO, high asynchrony makes the policy-gradient
+    estimator markedly $\textbf{higher variance}$: training on stale rollouts creates
+    heavy-tailed importance ratios, causing a small fraction of samples to dominate
+    updates. This amplification makes gradients noisy and learning unstable relative
+    to matched on-policy training. Across math and general reasoning benchmarks, we
+    find collapse is reliably predicted by effective sample size (ESS) and unstable
+    gradient norms. Motivated by this diagnosis, we propose $\textbf{V}$ariance $\textbf{C}$ontrolled
+    $\textbf{P}$olicy $\textbf{O}$ptimization ($\textbf{VCPO}$), a general stabilization
+    method for REINFORCE/GRPO-style algorithms that (i) scales learning rate based
+    on effective sample size to dampen unreliable updates, and (ii) applies a closed-form
+    minimum-variance baseline for the off-policy setting, avoiding an auxiliary value
+    model and adding minimal overhead. Empirically, VCPO substantially improves robustness
+    for asynchronous training across math, general reasoning, and tool-use tasks,
+    outperforming a broad suite of baselines spanning masking/clipping stabilizers
+    and algorithmic variants. This reduces long-context, multi-turn training time
+    by 2.5$\times$ while matching synchronous performance, demonstrating that explicit
+    control of policy-gradient variance is key for reliable asynchronous RL at scale.'
+  published: '2026-02-19'
+  pdf_url: http://arxiv.org/pdf/2602.17616
+  arxiv_url: http://arxiv.org/abs/2602.17616
+  key_findings: 'Reinforcement learning (RL) is widely used to improve large language
+    models on reasoning tasks, and asynchronous RL training is attractive because
+    it increases end-to-end throughput. However, for widely adopted critic-free policy-gradient
+    methods such as REINFORCE and GRPO, high asynchrony makes the policy-gradient
+    estimator markedly $\textbf{higher variance}$: training on stale rollouts creates
+    heavy-tailed importance ratios, causing a small fraction of samples to dominate
+    updates. This amplification makes gradients noisy and learning unstable relative
+    to matched on-policy training.'
+- id: '2602.17608'
+  title: Towards Anytime-Valid Statistical Watermarking
+  authors: Baihe Huang, Eric Xu, Kannan Ramchandran, Jiantao Jiao, Michael I. Jordan
+  abstract: 'The proliferation of Large Language Models (LLMs) necessitates efficient
+    mechanisms to distinguish machine-generated content from human text. While statistical
+    watermarking has emerged as a promising solution, existing methods suffer from
+    two critical limitations: the lack of a principled approach for selecting sampling
+    distributions and the reliance on fixed-horizon hypothesis testing, which precludes
+    valid early stopping. In this paper, we bridge this gap by developing the first
+    e-value-based watermarking framework, Anchored E-Watermarking, that unifies optimal
+    sampling with anytime-valid inference. Unlike traditional approaches where optional
+    stopping invalidates Type-I error guarantees, our framework enables valid, anytime-inference
+    by constructing a test supermartingale for the detection process. By leveraging
+    an anchor distribution to approximate the target model, we characterize the optimal
+    e-value with respect to the worst-case log-growth rate and derive the optimal
+    expected stopping time. Our theoretical claims are substantiated by simulations
+    and evaluations on established benchmarks, showing that our framework can significantly
+    enhance sample efficiency, reducing the average token budget required for detection
+    by 13-15% relative to state-of-the-art baselines.'
+  published: '2026-02-19'
+  pdf_url: http://arxiv.org/pdf/2602.17608
+  arxiv_url: http://arxiv.org/abs/2602.17608
+  key_findings: 'The proliferation of Large Language Models (LLMs) necessitates efficient
+    mechanisms to distinguish machine-generated content from human text. While statistical
+    watermarking has emerged as a promising solution, existing methods suffer from
+    two critical limitations: the lack of a principled approach for selecting sampling
+    distributions and the reliance on fixed-horizon hypothesis testing, which precludes
+    valid early stopping. In this paper, we bridge this gap by developing the first
+    e-value-based watermarking framework, Anchored E-Watermarking, that unifies optimal
+    sampling with anytime-valid inference.'

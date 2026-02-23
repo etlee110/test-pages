@@ -1,296 +1,305 @@
 papers:
-- id: '2602.17664'
-  title: Sink-Aware Pruning for Diffusion Language Models
-  authors: Aidar Myrzakhan, Tianyi Li, Bowei Guo, Shengkun Tang, Zhiqiang Shen
-  abstract: 'Diffusion Language Models (DLMs) incur high inference cost due to iterative
-    denoising, motivating efficient pruning. Existing pruning heuristics largely inherited
-    from autoregressive (AR) LLMs, typically preserve attention sink tokens because
-    AR sinks serve as stable global anchors. We show that this assumption does not
-    hold for DLMs: the attention-sink position exhibits substantially higher variance
-    over the full generation trajectory (measured by how the dominant sink locations
-    shift across timesteps), indicating that sinks are often transient and less structurally
-    essential than in AR models. Based on this observation, we propose ${\bf \texttt{Sink-Aware
-    Pruning}}$, which automatically identifies and prunes unstable sinks in DLMs (prior
-    studies usually keep sinks for AR LLMs). Without retraining, our method achieves
-    a better quality-efficiency trade-off and outperforms strong prior pruning baselines
-    under matched compute. Our code is available at https://github.com/VILA-Lab/Sink-Aware-Pruning.'
-  published: '2026-02-19'
-  pdf_url: http://arxiv.org/pdf/2602.17664
-  arxiv_url: http://arxiv.org/abs/2602.17664
-  key_findings: 'Diffusion Language Models (DLMs) incur high inference cost due to
-    iterative denoising, motivating efficient pruning. Existing pruning heuristics
-    largely inherited from autoregressive (AR) LLMs, typically preserve attention
-    sink tokens because AR sinks serve as stable global anchors. We show that this
-    assumption does not hold for DLMs: the attention-sink position exhibits substantially
-    higher variance over the full generation trajectory (measured by how the dominant
-    sink locations shift across timesteps), indicating that sinks are often transient
-    and less structurally essential than in AR models.'
-- id: '2602.17663'
-  title: 'CLEF HIPE-2026: Evaluating Accurate and Efficient Person-Place Relation
-    Extraction from Multilingual Historical Texts'
-  authors: Juri Opitz, Corina Raclé, Emanuela Boros, Andrianos Michail, Matteo Romanello,
-    Maud Ehrmann, Simon Clematide
-  abstract: HIPE-2026 is a CLEF evaluation lab dedicated to person-place relation
-    extraction from noisy, multilingual historical texts. Building on the HIPE-2020
-    and HIPE-2022 campaigns, it extends the series toward semantic relation extraction
-    by targeting the task of identifying person--place associations in multiple languages
-    and time periods. Systems are asked to classify relations of two types - $at$
-    ("Has the person ever been at this place?") and $isAt$ ("Is the person located
-    at this place around publication time?") - requiring reasoning over temporal and
-    geographical cues. The lab introduces a three-fold evaluation profile that jointly
-    assesses accuracy, computational efficiency, and domain generalization. By linking
-    relation extraction to large-scale historical data processing, HIPE-2026 aims
-    to support downstream applications in knowledge-graph construction, historical
-    biography reconstruction, and spatial analysis in digital humanities.
-  published: '2026-02-19'
-  pdf_url: http://arxiv.org/pdf/2602.17663
-  arxiv_url: http://arxiv.org/abs/2602.17663
-  key_findings: HIPE-2026 is a CLEF evaluation lab dedicated to person-place relation
-    extraction from noisy, multilingual historical texts. Building on the HIPE-2020
-    and HIPE-2022 campaigns, it extends the series toward semantic relation extraction
-    by targeting the task of identifying person--place associations in multiple languages
-    and time periods. Systems are asked to classify relations of two types - $at$
-    ("Has the person ever been at this place.
-- id: '2602.17658'
-  title: 'MARS: Margin-Aware Reward-Modeling with Self-Refinement'
-  authors: Payel Bhattacharjee, Osvaldo Simeone, Ravi Tandon
-  abstract: Reward modeling is a core component of modern alignment pipelines including
-    RLHF and RLAIF, underpinning policy optimization methods including PPO and TRPO.
-    However, training reliable reward models relies heavily on human-labeled preference
-    data, which is costly and limited, motivating the use of data augmentation. Existing
-    augmentation approaches typically operate at the representation or semantic level
-    and remain agnostic to the reward model's estimation difficulty. In this paper,
-    we propose MARS, an adaptive, margin-aware augmentation and sampling strategy
-    that explicitly targets ambiguous and failure modes of the reward model. Our proposed
-    framework, MARS, concentrates augmentation on low-margin (ambiguous) preference
-    pairs where the reward model is most uncertain, and iteratively refines the training
-    distribution via hard-sample augmentation. We provide theoretical guarantees showing
-    that this strategy increases the average curvature of the loss function hence
-    enhance information and improves conditioning, along with empirical results demonstrating
-    consistent gains over uniform augmentation for robust reward modeling.
-  published: '2026-02-19'
-  pdf_url: http://arxiv.org/pdf/2602.17658
-  arxiv_url: http://arxiv.org/abs/2602.17658
-  key_findings: Reward modeling is a core component of modern alignment pipelines
-    including RLHF and RLAIF, underpinning policy optimization methods including PPO
-    and TRPO. However, training reliable reward models relies heavily on human-labeled
-    preference data, which is costly and limited, motivating the use of data augmentation.
-    Existing augmentation approaches typically operate at the representation or semantic
-    level and remain agnostic to the reward model's estimation difficulty.
-- id: '2602.17645'
-  title: Pushing the Frontier of Black-Box LVLM Attacks via Fine-Grained Detail Targeting
-  authors: Xiaohan Zhao, Zhaoyi Li, Yaxin Luo, Jiacheng Cui, Zhiqiang Shen
-  abstract: 'Black-box adversarial attacks on Large Vision-Language Models (LVLMs)
-    are challenging due to missing gradients and complex multimodal boundaries. While
-    prior state-of-the-art transfer-based approaches like M-Attack perform well using
-    local crop-level matching between source and target images, we find this induces
-    high-variance, nearly orthogonal gradients across iterations, violating coherent
-    local alignment and destabilizing optimization. We attribute this to (i) ViT translation
-    sensitivity that yields spike-like gradients and (ii) structural asymmetry between
-    source and target crops. We reformulate local matching as an asymmetric expectation
-    over source transformations and target semantics, and build a gradient-denoising
-    upgrade to M-Attack. On the source side, Multi-Crop Alignment (MCA) averages gradients
-    from multiple independently sampled local views per iteration to reduce variance.
-    On the target side, Auxiliary Target Alignment (ATA) replaces aggressive target
-    augmentation with a small auxiliary set from a semantically correlated distribution,
-    producing a smoother, lower-variance target manifold. We further reinterpret momentum
-    as Patch Momentum, replaying historical crop gradients; combined with a refined
-    patch-size ensemble (PE+), this strengthens transferable directions. Together
-    these modules form M-Attack-V2, a simple, modular enhancement over M-Attack that
-    substantially improves transfer-based black-box attacks on frontier LVLMs: boosting
-    success rates on Claude-4.0 from 8% to 30%, Gemini-2.5-Pro from 83% to 97%, and
-    GPT-5 from 98% to 100%, outperforming prior black-box LVLM attacks. Code and data
-    are publicly available at: https://github.com/vila-lab/M-Attack-V2.'
-  published: '2026-02-19'
-  pdf_url: http://arxiv.org/pdf/2602.17645
-  arxiv_url: http://arxiv.org/abs/2602.17645
-  key_findings: Black-box adversarial attacks on Large Vision-Language Models (LVLMs)
-    are challenging due to missing gradients and complex multimodal boundaries. While
-    prior state-of-the-art transfer-based approaches like M-Attack perform well using
-    local crop-level matching between source and target images, we find this induces
-    high-variance, nearly orthogonal gradients across iterations, violating coherent
-    local alignment and destabilizing optimization. We attribute this to (i) ViT translation
-    sensitivity that yields spike-like gradients and (ii) structural asymmetry between
-    source and target crops.
-- id: '2602.17641'
-  title: 'FAMOSE: A ReAct Approach to Automated Feature Discovery'
-  authors: Keith Burghardt, Jienan Liu, Sadman Sakib, Yuning Hao, Bo Li
-  abstract: Feature engineering remains a critical yet challenging bottleneck in machine
-    learning, particularly for tabular data, as identifying optimal features from
-    an exponentially large feature space traditionally demands substantial domain
-    expertise. To address this challenge, we introduce FAMOSE (Feature AugMentation
-    and Optimal Selection agEnt), a novel framework that leverages the ReAct paradigm
-    to autonomously explore, generate, and refine features while integrating feature
-    selection and evaluation tools within an agent architecture. To our knowledge,
-    FAMOSE represents the first application of an agentic ReAct framework to automated
-    feature engineering, especially for both regression and classification tasks.
-    Extensive experiments demonstrate that FAMOSE is at or near the state-of-the-art
-    on classification tasks (especially tasks with more than 10K instances, where
-    ROC-AUC increases 0.23% on average), and achieves the state-of-the-art for regression
-    tasks by reducing RMSE by 2.0% on average, while remaining more robust to errors
-    than other algorithms. We hypothesize that FAMOSE's strong performance is because
-    ReAct allows the LLM context window to record (via iterative feature discovery
-    and evaluation steps) what features did or did not work. This is similar to a
-    few-shot prompt and guides the LLM to invent better, more innovative features.
-    Our work offers evidence that AI agents are remarkably effective in solving problems
-    that require highly inventive solutions, such as feature engineering.
-  published: '2026-02-19'
-  pdf_url: http://arxiv.org/pdf/2602.17641
-  arxiv_url: http://arxiv.org/abs/2602.17641
-  key_findings: Feature engineering remains a critical yet challenging bottleneck
-    in machine learning, particularly for tabular data, as identifying optimal features
-    from an exponentially large feature space traditionally demands substantial domain
-    expertise. To address this challenge, we introduce FAMOSE (Feature AugMentation
-    and Optimal Selection agEnt), a novel framework that leverages the ReAct paradigm
-    to autonomously explore, generate, and refine features while integrating feature
-    selection and evaluation tools within an agent architecture. To our knowledge,
-    FAMOSE represents the first application of an agentic ReAct framework to automated
-    feature engineering, especially for both regression and classification tasks.
-- id: '2602.17634'
-  title: 'Reverso: Efficient Time Series Foundation Models for Zero-shot Forecasting'
-  authors: Xinghong Fu, Yanhong Li, Georgios Papaioannou, Yoon Kim
-  abstract: 'Learning time series foundation models has been shown to be a promising
-    approach for zero-shot time series forecasting across diverse time series domains.
-    Insofar as scaling has been a critical driver of performance of foundation models
-    in other modalities such as language and vision, much recent work on time series
-    foundation modeling has focused on scaling. This has resulted in time series foundation
-    models with hundreds of millions of parameters that are, while performant, inefficient
-    and expensive to use in practice. This paper describes a simple recipe for learning
-    efficient foundation models for zero-shot time series forecasting that are orders
-    of magnitude smaller. We show that large-scale transformers are not necessary:
-    small hybrid models that interleave long convolution and linear RNN layers (in
-    particular DeltaNet layers) can match the performance of larger transformer-based
-    models while being more than a hundred times smaller. We also describe several
-    data augmentation and inference strategies that further improve performance. This
-    recipe results in Reverso, a family of efficient time series foundation models
-    for zero-shot forecasting that significantly push the performance-efficiency Pareto
-    frontier.'
-  published: '2026-02-19'
-  pdf_url: http://arxiv.org/pdf/2602.17634
-  arxiv_url: http://arxiv.org/abs/2602.17634
-  key_findings: Learning time series foundation models has been shown to be a promising
-    approach for zero-shot time series forecasting across diverse time series domains.
-    Insofar as scaling has been a critical driver of performance of foundation models
-    in other modalities such as language and vision, much recent work on time series
-    foundation modeling has focused on scaling. This has resulted in time series foundation
-    models with hundreds of millions of parameters that are, while performant, inefficient
-    and expensive to use in practice.
-- id: '2602.17633'
-  title: 'When to Trust the Cheap Check: Weak and Strong Verification for Reasoning'
-  authors: Shayan Kiyani, Sima Noorani, George Pappas, Hamed Hassani
-  abstract: 'Reasoning with LLMs increasingly unfolds inside a broader verification
-    loop. Internally, systems use cheap checks, such as self-consistency or proxy
-    rewards, which we call weak verification. Externally, users inspect outputs and
-    steer the model through feedback until results are trustworthy, which we call
-    strong verification. These signals differ sharply in cost and reliability: strong
-    verification can establish trust but is resource-intensive, while weak verification
-    is fast and scalable but noisy and imperfect. We formalize this tension through
-    weak--strong verification policies, which decide when to accept or reject based
-    on weak verification and when to defer to strong verification. We introduce metrics
-    capturing incorrect acceptance, incorrect rejection, and strong-verification frequency.
-    Over population, we show that optimal policies admit a two-threshold structure
-    and that calibration and sharpness govern the value of weak verifiers. Building
-    on this, we develop an online algorithm that provably controls acceptance and
-    rejection errors without assumptions on the query stream, the language model,
-    or the weak verifier.'
-  published: '2026-02-19'
-  pdf_url: http://arxiv.org/pdf/2602.17633
-  arxiv_url: http://arxiv.org/abs/2602.17633
-  key_findings: Reasoning with LLMs increasingly unfolds inside a broader verification
-    loop. Internally, systems use cheap checks, such as self-consistency or proxy
-    rewards, which we call weak verification. Externally, users inspect outputs and
-    steer the model through feedback until results are trustworthy, which we call
-    strong verification.
-- id: '2602.17632'
-  title: 'SMAC: Score-Matched Actor-Critics for Robust Offline-to-Online Transfer'
-  authors: Nathan S. de Lara, Florian Shkurti
-  abstract: Modern offline Reinforcement Learning (RL) methods find performant actor-critics,
-    however, fine-tuning these actor-critics online with value-based RL algorithms
-    typically causes immediate drops in performance. We provide evidence consistent
-    with the hypothesis that, in the loss landscape, offline maxima for prior algorithms
-    and online maxima are separated by low-performance valleys that gradient-based
-    fine-tuning traverses. Following this, we present Score Matched Actor-Critic (SMAC),
-    an offline RL method designed to learn actor-critics that transition to online
-    value-based RL algorithms with no drop in performance. SMAC avoids valleys between
-    offline and online maxima by regularizing the Q-function during the offline phase
-    to respect a first-order derivative equality between the score of the policy and
-    action-gradient of the Q-function. We experimentally demonstrate that SMAC converges
-    to offline maxima that are connected to better online maxima via paths with monotonically
-    increasing reward found by first-order optimization. SMAC achieves smooth transfer
-    to Soft Actor-Critic and TD3 in 6/6 D4RL tasks. In 4/6 environments, it reduces
-    regret by 34-58% over the best baseline.
-  published: '2026-02-19'
-  pdf_url: http://arxiv.org/pdf/2602.17632
-  arxiv_url: http://arxiv.org/abs/2602.17632
-  key_findings: Modern offline Reinforcement Learning (RL) methods find performant
-    actor-critics, however, fine-tuning these actor-critics online with value-based
-    RL algorithms typically causes immediate drops in performance. We provide evidence
-    consistent with the hypothesis that, in the loss landscape, offline maxima for
-    prior algorithms and online maxima are separated by low-performance valleys that
-    gradient-based fine-tuning traverses. Following this, we present Score Matched
-    Actor-Critic (SMAC), an offline RL method designed to learn actor-critics that
-    transition to online value-based RL algorithms with no drop in performance.
-- id: '2602.17616'
-  title: 'Stable Asynchrony: Variance-Controlled Off-Policy RL for LLMs'
-  authors: Luke Huang, Zhuoyang Zhang, Qinghao Hu, Shang Yang, Song Han
-  abstract: 'Reinforcement learning (RL) is widely used to improve large language
-    models on reasoning tasks, and asynchronous RL training is attractive because
-    it increases end-to-end throughput. However, for widely adopted critic-free policy-gradient
-    methods such as REINFORCE and GRPO, high asynchrony makes the policy-gradient
-    estimator markedly $\textbf{higher variance}$: training on stale rollouts creates
-    heavy-tailed importance ratios, causing a small fraction of samples to dominate
-    updates. This amplification makes gradients noisy and learning unstable relative
-    to matched on-policy training. Across math and general reasoning benchmarks, we
-    find collapse is reliably predicted by effective sample size (ESS) and unstable
-    gradient norms. Motivated by this diagnosis, we propose $\textbf{V}$ariance $\textbf{C}$ontrolled
-    $\textbf{P}$olicy $\textbf{O}$ptimization ($\textbf{VCPO}$), a general stabilization
-    method for REINFORCE/GRPO-style algorithms that (i) scales learning rate based
-    on effective sample size to dampen unreliable updates, and (ii) applies a closed-form
-    minimum-variance baseline for the off-policy setting, avoiding an auxiliary value
-    model and adding minimal overhead. Empirically, VCPO substantially improves robustness
-    for asynchronous training across math, general reasoning, and tool-use tasks,
-    outperforming a broad suite of baselines spanning masking/clipping stabilizers
-    and algorithmic variants. This reduces long-context, multi-turn training time
-    by 2.5$\times$ while matching synchronous performance, demonstrating that explicit
-    control of policy-gradient variance is key for reliable asynchronous RL at scale.'
-  published: '2026-02-19'
-  pdf_url: http://arxiv.org/pdf/2602.17616
-  arxiv_url: http://arxiv.org/abs/2602.17616
-  key_findings: 'Reinforcement learning (RL) is widely used to improve large language
-    models on reasoning tasks, and asynchronous RL training is attractive because
-    it increases end-to-end throughput. However, for widely adopted critic-free policy-gradient
-    methods such as REINFORCE and GRPO, high asynchrony makes the policy-gradient
-    estimator markedly $\textbf{higher variance}$: training on stale rollouts creates
-    heavy-tailed importance ratios, causing a small fraction of samples to dominate
-    updates. This amplification makes gradients noisy and learning unstable relative
-    to matched on-policy training.'
-- id: '2602.17608'
-  title: Towards Anytime-Valid Statistical Watermarking
-  authors: Baihe Huang, Eric Xu, Kannan Ramchandran, Jiantao Jiao, Michael I. Jordan
-  abstract: 'The proliferation of Large Language Models (LLMs) necessitates efficient
-    mechanisms to distinguish machine-generated content from human text. While statistical
-    watermarking has emerged as a promising solution, existing methods suffer from
-    two critical limitations: the lack of a principled approach for selecting sampling
-    distributions and the reliance on fixed-horizon hypothesis testing, which precludes
-    valid early stopping. In this paper, we bridge this gap by developing the first
-    e-value-based watermarking framework, Anchored E-Watermarking, that unifies optimal
-    sampling with anytime-valid inference. Unlike traditional approaches where optional
-    stopping invalidates Type-I error guarantees, our framework enables valid, anytime-inference
-    by constructing a test supermartingale for the detection process. By leveraging
-    an anchor distribution to approximate the target model, we characterize the optimal
-    e-value with respect to the worst-case log-growth rate and derive the optimal
-    expected stopping time. Our theoretical claims are substantiated by simulations
-    and evaluations on established benchmarks, showing that our framework can significantly
-    enhance sample efficiency, reducing the average token budget required for detection
-    by 13-15% relative to state-of-the-art baselines.'
-  published: '2026-02-19'
-  pdf_url: http://arxiv.org/pdf/2602.17608
-  arxiv_url: http://arxiv.org/abs/2602.17608
-  key_findings: 'The proliferation of Large Language Models (LLMs) necessitates efficient
-    mechanisms to distinguish machine-generated content from human text. While statistical
-    watermarking has emerged as a promising solution, existing methods suffer from
-    two critical limitations: the lack of a principled approach for selecting sampling
-    distributions and the reliance on fixed-horizon hypothesis testing, which precludes
-    valid early stopping. In this paper, we bridge this gap by developing the first
-    e-value-based watermarking framework, Anchored E-Watermarking, that unifies optimal
-    sampling with anytime-valid inference.'
+- id: '2602.18409'
+  title: Unifying approach to uniform expressivity of graph neural networks
+  authors: Huan Luo, Jonni Virtema
+  abstract: 'The expressive power of Graph Neural Networks (GNNs) is often analysed
+    via correspondence to the Weisfeiler-Leman (WL) algorithm and fragments of first-order
+    logic. Standard GNNs are limited to performing aggregation over immediate neighbourhoods
+    or over global read-outs. To increase their expressivity, recent attempts have
+    been made to incorporate substructural information (e.g. cycle counts and subgraph
+    properties). In this paper, we formalize this architectural trend by introducing
+    Template GNNs (T-GNNs), a generalized framework where node features are updated
+    by aggregating over valid template embeddings from a specified set of graph templates.
+    We propose a corresponding logic, Graded template modal logic (GML(T)), and generalized
+    notions of template-based bisimulation and WL algorithm. We establish an equivalence
+    between the expressive power of T-GNNs and GML(T), and provide a unifying approach
+    for analysing GNN expressivity: we show how standard AC-GNNs and its recent variants
+    can be interpreted as instantiations of T-GNNs.'
+  published: '2026-02-20'
+  pdf_url: http://arxiv.org/pdf/2602.18409
+  arxiv_url: http://arxiv.org/abs/2602.18409
+  key_findings: The expressive power of Graph Neural Networks (GNNs) is often analysed
+    via correspondence to the Weisfeiler-Leman (WL) algorithm and fragments of first-order
+    logic. Standard GNNs are limited to performing aggregation over immediate neighbourhoods
+    or over global read-outs. To increase their expressivity, recent attempts have
+    been made to incorporate substructural information (e.
+- id: '2602.18401'
+  title: Leakage and Second-Order Dynamics Improve Hippocampal RNN Replay
+  authors: Josue Casco-Rodriguez, Nanda H. Krishna, Richard G. Baraniuk
+  abstract: 'Biological neural networks (like the hippocampus) can internally generate
+    "replay" resembling stimulus-driven activity. Recent computational models of replay
+    use noisy recurrent neural networks (RNNs) trained to path-integrate. Replay in
+    these networks has been described as Langevin sampling, but new modifiers of noisy
+    RNN replay have surpassed this description. We re-examine noisy RNN replay as
+    sampling to understand or improve it in three ways: (1) Under simple assumptions,
+    we prove that the gradients replay activity should follow are time-varying and
+    difficult to estimate, but readily motivate the use of hidden state leakage in
+    RNNs for replay. (2) We confirm that hidden state adaptation (negative feedback)
+    encourages exploration in replay, but show that it incurs non-Markov sampling
+    that also slows replay. (3) We propose the first model of temporally compressed
+    replay in noisy path-integrating RNNs through hidden state momentum, connect it
+    to underdamped Langevin sampling, and show that, together with adaptation, it
+    counters slowness while maintaining exploration. We verify our findings via path-integration
+    of 2D triangular and T-maze paths and of high-dimensional paths of synthetic rat
+    place cell activity.'
+  published: '2026-02-20'
+  pdf_url: http://arxiv.org/pdf/2602.18401
+  arxiv_url: http://arxiv.org/abs/2602.18401
+  key_findings: Biological neural networks (like the hippocampus) can internally generate
+    "replay" resembling stimulus-driven activity. Recent computational models of replay
+    use noisy recurrent neural networks (RNNs) trained to path-integrate. Replay in
+    these networks has been described as Langevin sampling, but new modifiers of noisy
+    RNN replay have surpassed this description.
+- id: '2602.18386'
+  title: 'Learning to Tune Pure Pursuit in Autonomous Racing: Joint Lookahead and
+    Steering-Gain Control with PPO'
+  authors: Mohamed Elgouhary, Amr S. El-Wakeel
+  abstract: Pure Pursuit (PP) is widely used in autonomous racing for real-time path
+    tracking due to its efficiency and geometric clarity, yet performance is highly
+    sensitive to how key parameters-lookahead distance and steering gain-are chosen.
+    Standard velocity-based schedules adjust these only approximately and often fail
+    to transfer across tracks and speed profiles. We propose a reinforcement-learning
+    (RL) approach that jointly chooses the lookahead Ld and a steering gain g online
+    using Proximal Policy Optimization (PPO). The policy observes compact state features
+    (speed and curvature taps) and outputs (Ld, g) at each control step. Trained in
+    F1TENTH Gym and deployed in a ROS 2 stack, the policy drives PP directly (with
+    light smoothing) and requires no per-map retuning. Across simulation and real-car
+    tests, the proposed RL-PP controller that jointly selects (Ld, g) consistently
+    outperforms fixed-lookahead PP, velocity-scheduled adaptive PP, and an RL lookahead-only
+    variant, and it also exceeds a kinematic MPC raceline tracker under our evaluated
+    settings in lap time, path-tracking accuracy, and steering smoothness, demonstrating
+    that policy-guided parameter tuning can reliably improve classical geometry-based
+    control.
+  published: '2026-02-20'
+  pdf_url: http://arxiv.org/pdf/2602.18386
+  arxiv_url: http://arxiv.org/abs/2602.18386
+  key_findings: Pure Pursuit (PP) is widely used in autonomous racing for real-time
+    path tracking due to its efficiency and geometric clarity, yet performance is
+    highly sensitive to how key parameters-lookahead distance and steering gain-are
+    chosen. Standard velocity-based schedules adjust these only approximately and
+    often fail to transfer across tracks and speed profiles. We propose a reinforcement-learning
+    (RL) approach that jointly chooses the lookahead Ld and a steering gain g online
+    using Proximal Policy Optimization (PPO).
+- id: '2602.18384'
+  title: 'FedZMG: Efficient Client-Side Optimization in Federated Learning'
+  authors: Fotios Zantalis, Evangelos Zervas, Grigorios Koulouras
+  abstract: Federated Learning (FL) enables distributed model training on edge devices
+    while preserving data privacy. However, clients tend to have non-Independent and
+    Identically Distributed (non-IID) data, which often leads to client-drift, and
+    therefore diminishing convergence speed and model performance. While adaptive
+    optimizers have been proposed to mitigate these effects, they frequently introduce
+    computational complexity or communication overhead unsuitable for resource-constrained
+    IoT environments. This paper introduces Federated Zero Mean Gradients (FedZMG),
+    a novel, parameter-free, client-side optimization algorithm designed to tackle
+    client-drift by structurally regularizing the optimization space. Advancing the
+    idea of Gradient Centralization, FedZMG projects local gradients onto a zero-mean
+    hyperplane, effectively neutralizing the "intensity" or "bias" shifts inherent
+    in heterogeneous data distributions without requiring additional communication
+    or hyperparameter tuning. A theoretical analysis is provided, proving that FedZMG
+    reduces the effective gradient variance and guarantees tighter convergence bounds
+    compared to standard FedAvg. Extensive empirical evaluations on EMNIST, CIFAR100,
+    and Shakespeare datasets demonstrate that FedZMG achieves better convergence speed
+    and final validation accuracy compared to the baseline FedAvg and the adaptive
+    optimizer FedAdam, particularly in highly non-IID settings.
+  published: '2026-02-20'
+  pdf_url: http://arxiv.org/pdf/2602.18384
+  arxiv_url: http://arxiv.org/abs/2602.18384
+  key_findings: Federated Learning (FL) enables distributed model training on edge
+    devices while preserving data privacy. However, clients tend to have non-Independent
+    and Identically Distributed (non-IID) data, which often leads to client-drift,
+    and therefore diminishing convergence speed and model performance. While adaptive
+    optimizers have been proposed to mitigate these effects, they frequently introduce
+    computational complexity or communication overhead unsuitable for resource-constrained
+    IoT environments.
+- id: '2602.18374'
+  title: Zero-shot Interactive Perception
+  authors: Venkatesh Sripada, Frank Guerin, Amir Ghalamzan
+  abstract: 'Interactive perception (IP) enables robots to extract hidden information
+    in their workspace and execute manipulation plans by physically interacting with
+    objects and altering the state of the environment -- crucial for resolving occlusions
+    and ambiguity in complex, partially observable scenarios. We present Zero-Shot
+    IP (ZS-IP), a novel framework that couples multi-strategy manipulation (pushing
+    and grasping) with a memory-driven Vision Language Model (VLM) to guide robotic
+    interactions and resolve semantic queries. ZS-IP integrates three key components:
+    (1) an Enhanced Observation (EO) module that augments the VLM''s visual perception
+    with both conventional keypoints and our proposed pushlines -- a novel 2D visual
+    augmentation tailored to pushing actions, (2) a memory-guided action module that
+    reinforces semantic reasoning through context lookup, and (3) a robotic controller
+    that executes pushing, pulling, or grasping based on VLM output. Unlike grid-based
+    augmentations optimized for pick-and-place, pushlines capture affordances for
+    contact-rich actions, substantially improving pushing performance. We evaluate
+    ZS-IP on a 7-DOF Franka Panda arm across diverse scenes with varying occlusions
+    and task complexities. Our experiments demonstrate that ZS-IP outperforms passive
+    and viewpoint-based perception techniques such as Mark-Based Visual Prompting
+    (MOKA), particularly in pushing tasks, while preserving the integrity of non-target
+    elements.'
+  published: '2026-02-20'
+  pdf_url: http://arxiv.org/pdf/2602.18374
+  arxiv_url: http://arxiv.org/abs/2602.18374
+  key_findings: 'Interactive perception (IP) enables robots to extract hidden information
+    in their workspace and execute manipulation plans by physically interacting with
+    objects and altering the state of the environment -- crucial for resolving occlusions
+    and ambiguity in complex, partially observable scenarios. We present Zero-Shot
+    IP (ZS-IP), a novel framework that couples multi-strategy manipulation (pushing
+    and grasping) with a memory-driven Vision Language Model (VLM) to guide robotic
+    interactions and resolve semantic queries. ZS-IP integrates three key components:
+    (1) an Enhanced Observation (EO) module that augments the VLM''s visual perception
+    with both conventional keypoints and our proposed pushlines -- a novel 2D visual
+    augmentation tailored to pushing actions, (2) a memory-guided action module that
+    reinforces semantic reasoning through context lookup, and (3) a robotic controller
+    that executes pushing, pulling, or grasping based on VLM output.'
+- id: '2602.18372'
+  title: '"How Do I ...?": Procedural Questions Predominate Student-LLM Chatbot Conversations'
+  authors: Alexandra Neagu, Marcus Messer, Peter Johnson, Rhodri Nelson
+  abstract: 'Providing scaffolding through educational chatbots built on Large Language
+    Models (LLM) has potential risks and benefits that remain an open area of research.
+    When students navigate impasses, they ask for help by formulating impasse-driven
+    questions. Within interactions with LLM chatbots, such questions shape the user
+    prompts and drive the pedagogical effectiveness of the chatbot''s response. This
+    paper focuses on such student questions from two datasets of distinct learning
+    contexts: formative self-study, and summative assessed coursework. We analysed
+    6,113 messages from both learning contexts, using 11 different LLMs and three
+    human raters to classify student questions using four existing schemas. On the
+    feasibility of using LLMs as raters, results showed moderate-to-good inter-rater
+    reliability, with higher consistency than human raters. The data showed that ''procedural''
+    questions predominated in both learning contexts, but more so when students prepare
+    for summative assessment. These results provide a basis on which to use LLMs for
+    classification of student questions. However, we identify clear limitations in
+    both the ability to classify with schemas and the value of doing so: schemas are
+    limited and thus struggle to accommodate the semantic richness of composite prompts,
+    offering only partial understanding the wider risks and benefits of chatbot integration.
+    In the future, we recommend an analysis approach that captures the nuanced, multi-turn
+    nature of conversation, for example, by applying methods from conversation analysis
+    in discursive psychology.'
+  published: '2026-02-20'
+  pdf_url: http://arxiv.org/pdf/2602.18372
+  arxiv_url: http://arxiv.org/abs/2602.18372
+  key_findings: Providing scaffolding through educational chatbots built on Large
+    Language Models (LLM) has potential risks and benefits that remain an open area
+    of research. When students navigate impasses, they ask for help by formulating
+    impasse-driven questions. Within interactions with LLM chatbots, such questions
+    shape the user prompts and drive the pedagogical effectiveness of the chatbot's
+    response.
+- id: '2602.18351'
+  title: Validating Political Position Predictions of Arguments
+  authors: Jordan Robinson, Angus R. Williams, Katie Atkinson, Anthony G. Cohn
+  abstract: 'Real-world knowledge representation often requires capturing subjective,
+    continuous attributes -- such as political positions -- that conflict with pairwise
+    validation, the widely accepted gold standard for human evaluation. We address
+    this challenge through a dual-scale validation framework applied to political
+    stance prediction in argumentative discourse, combining pointwise and pairwise
+    human annotation. Using 22 language models, we construct a large-scale knowledge
+    base of political position predictions for 23,228 arguments drawn from 30 debates
+    that appeared on the UK politicial television programme \textit{Question Time}.
+    Pointwise evaluation shows moderate human-model agreement (Krippendorff''s $α=0.578$),
+    reflecting intrinsic subjectivity, while pairwise validation reveals substantially
+    stronger alignment between human- and model-derived rankings ($α=0.86$ for the
+    best model). This work contributes: (i) a practical validation methodology for
+    subjective continuous knowledge that balances scalability with reliability; (ii)
+    a validated structured argumentation knowledge base enabling graph-based reasoning
+    and retrieval-augmented generation in political domains; and (iii) evidence that
+    ordinal structure can be extracted from pointwise language models predictions
+    from inherently subjective real-world discourse, advancing knowledge representation
+    capabilities for domains where traditional symbolic or categorical approaches
+    are insufficient.'
+  published: '2026-02-20'
+  pdf_url: http://arxiv.org/pdf/2602.18351
+  arxiv_url: http://arxiv.org/abs/2602.18351
+  key_findings: Real-world knowledge representation often requires capturing subjective,
+    continuous attributes -- such as political positions -- that conflict with pairwise
+    validation, the widely accepted gold standard for human evaluation. We address
+    this challenge through a dual-scale validation framework applied to political
+    stance prediction in argumentative discourse, combining pointwise and pairwise
+    human annotation. Using 22 language models, we construct a large-scale knowledge
+    base of political position predictions for 23,228 arguments drawn from 30 debates
+    that appeared on the UK politicial television programme \textit{Question Time}.
+- id: '2602.18346'
+  title: 'Vichara: Appellate Judgment Prediction and Explanation for the Indian Judicial
+    System'
+  authors: Pavithra PM Nair, Preethu Rose Anish
+  abstract: 'In jurisdictions like India, where courts face an extensive backlog of
+    cases, artificial intelligence offers transformative potential for legal judgment
+    prediction. A critical subset of this backlog comprises appellate cases, which
+    are formal decisions issued by higher courts reviewing the rulings of lower courts.
+    To this end, we present Vichara, a novel framework tailored to the Indian judicial
+    system that predicts and explains appellate judgments. Vichara processes English-language
+    appellate case proceeding documents and decomposes them into decision points.
+    Decision points are discrete legal determinations that encapsulate the legal issue,
+    deciding authority, outcome, reasoning, and temporal context. The structured representation
+    isolates the core determinations and their context, enabling accurate predictions
+    and interpretable explanations. Vichara''s explanations follow a structured format
+    inspired by the IRAC (Issue-Rule-Application-Conclusion) framework and adapted
+    for Indian legal reasoning. This enhances interpretability, allowing legal professionals
+    to assess the soundness of predictions efficiently. We evaluate Vichara on two
+    datasets, PredEx and the expert-annotated subset of the Indian Legal Documents
+    Corpus (ILDC_expert), using four large language models: GPT-4o mini, Llama-3.1-8B,
+    Mistral-7B, and Qwen2.5-7B. Vichara surpasses existing judgment prediction benchmarks
+    on both datasets, with GPT-4o mini achieving the highest performance (F1: 81.5
+    on PredEx, 80.3 on ILDC_expert), followed by Llama-3.1-8B. Human evaluation of
+    the generated explanations across Clarity, Linking, and Usefulness metrics highlights
+    GPT-4o mini''s superior interpretability.'
+  published: '2026-02-20'
+  pdf_url: http://arxiv.org/pdf/2602.18346
+  arxiv_url: http://arxiv.org/abs/2602.18346
+  key_findings: In jurisdictions like India, where courts face an extensive backlog
+    of cases, artificial intelligence offers transformative potential for legal judgment
+    prediction. A critical subset of this backlog comprises appellate cases, which
+    are formal decisions issued by higher courts reviewing the rulings of lower courts.
+    To this end, we present Vichara, a novel framework tailored to the Indian judicial
+    system that predicts and explains appellate judgments.
+- id: '2602.18319'
+  title: 'Robo-Saber: Generating and Simulating Virtual Reality Players'
+  authors: Nam Hee Kim, Jingjing May Liu, Jaakko Lehtinen, Perttu Hämäläinen, James
+    F. O'Brien, Xue Bin Peng
+  abstract: We present the first motion generation system for playtesting virtual
+    reality (VR) games. Our player model generates VR headset and handheld controller
+    movements from in-game object arrangements, guided by style exemplars and aligned
+    to maximize simulated gameplay score. We train on the large BOXRR-23 dataset and
+    apply our framework on the popular VR game Beat Saber. The resulting model Robo-Saber
+    produces skilled gameplay and captures diverse player behaviors, mirroring the
+    skill levels and movement patterns specified by input style exemplars. Robo-Saber
+    demonstrates promise in synthesizing rich gameplay data for predictive applications
+    and enabling a physics-based whole-body VR playtesting agent.
+  published: '2026-02-20'
+  pdf_url: http://arxiv.org/pdf/2602.18319
+  arxiv_url: http://arxiv.org/abs/2602.18319
+  key_findings: We present the first motion generation system for playtesting virtual
+    reality (VR) games. Our player model generates VR headset and handheld controller
+    movements from in-game object arrangements, guided by style exemplars and aligned
+    to maximize simulated gameplay score. We train on the large BOXRR-23 dataset and
+    apply our framework on the popular VR game Beat Saber.
+- id: '2602.18308'
+  title: JPmHC Dynamical Isometry via Orthogonal Hyper-Connections
+  authors: Biswa Sengupta, Jinhua Wang, Leo Brunswic
+  abstract: 'Recent advances in deep learning, exemplified by Hyper-Connections (HC),
+    have expanded the residual connection paradigm by introducing wider residual streams
+    and diverse connectivity patterns. While these innovations yield significant performance
+    gains, they compromise the identity mapping property of residual connections,
+    leading to training instability, limited scalability, and increased memory overhead.
+    To address these challenges, we propose JPmHC (Jacobian-spectrum Preserving manifold-constrained
+    Hyper-Connections), a framework that replaces identity skips with a trainable
+    linear mixer acting on n parallel streams while explicitly controlling gradient
+    conditioning. By constraining the mixer M on operator-norm-bounded manifolds (e.g.,
+    bistochastic, Stiefel, Grassmann), JPmHC prevents gradient pathologies and enhances
+    stability. JPmHC introduces three key contributions: (i) a free-probability analysis
+    that predicts Jacobian spectra for structured skips, providing actionable design
+    rules for mixer selection; (ii) memory-efficient implicit differentiation for
+    fixed-point projections, reducing activation memory and synchronization overhead;
+    and (iii) a Stiefel-constrained mixer via Cayley transforms, ensuring orthogonality
+    without post-hoc normalization. Empirical evaluations on ARC-AGI demonstrate that
+    JPmHC achieves faster convergence, higher accuracy, and lower computational cost
+    compared to bistochastic baselines. As a flexible and scalable extension of HC,
+    JPmHC advances spectrum-aware, stable, and efficient deep learning, offering insights
+    into topological architecture design and foundational model evolution.'
+  published: '2026-02-20'
+  pdf_url: http://arxiv.org/pdf/2602.18308
+  arxiv_url: http://arxiv.org/abs/2602.18308
+  key_findings: Recent advances in deep learning, exemplified by Hyper-Connections
+    (HC), have expanded the residual connection paradigm by introducing wider residual
+    streams and diverse connectivity patterns. While these innovations yield significant
+    performance gains, they compromise the identity mapping property of residual connections,
+    leading to training instability, limited scalability, and increased memory overhead.
+    To address these challenges, we propose JPmHC (Jacobian-spectrum Preserving manifold-constrained
+    Hyper-Connections), a framework that replaces identity skips with a trainable
+    linear mixer acting on n parallel streams while explicitly controlling gradient
+    conditioning.

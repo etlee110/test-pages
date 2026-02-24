@@ -1,305 +1,323 @@
 papers:
-- id: '2602.18409'
-  title: Unifying approach to uniform expressivity of graph neural networks
-  authors: Huan Luo, Jonni Virtema
-  abstract: 'The expressive power of Graph Neural Networks (GNNs) is often analysed
-    via correspondence to the Weisfeiler-Leman (WL) algorithm and fragments of first-order
-    logic. Standard GNNs are limited to performing aggregation over immediate neighbourhoods
-    or over global read-outs. To increase their expressivity, recent attempts have
-    been made to incorporate substructural information (e.g. cycle counts and subgraph
-    properties). In this paper, we formalize this architectural trend by introducing
-    Template GNNs (T-GNNs), a generalized framework where node features are updated
-    by aggregating over valid template embeddings from a specified set of graph templates.
-    We propose a corresponding logic, Graded template modal logic (GML(T)), and generalized
-    notions of template-based bisimulation and WL algorithm. We establish an equivalence
-    between the expressive power of T-GNNs and GML(T), and provide a unifying approach
-    for analysing GNN expressivity: we show how standard AC-GNNs and its recent variants
-    can be interpreted as instantiations of T-GNNs.'
-  published: '2026-02-20'
-  pdf_url: http://arxiv.org/pdf/2602.18409
-  arxiv_url: http://arxiv.org/abs/2602.18409
-  key_findings: The expressive power of Graph Neural Networks (GNNs) is often analysed
-    via correspondence to the Weisfeiler-Leman (WL) algorithm and fragments of first-order
-    logic. Standard GNNs are limited to performing aggregation over immediate neighbourhoods
-    or over global read-outs. To increase their expressivity, recent attempts have
-    been made to incorporate substructural information (e.
-- id: '2602.18401'
-  title: Leakage and Second-Order Dynamics Improve Hippocampal RNN Replay
-  authors: Josue Casco-Rodriguez, Nanda H. Krishna, Richard G. Baraniuk
-  abstract: 'Biological neural networks (like the hippocampus) can internally generate
-    "replay" resembling stimulus-driven activity. Recent computational models of replay
-    use noisy recurrent neural networks (RNNs) trained to path-integrate. Replay in
-    these networks has been described as Langevin sampling, but new modifiers of noisy
-    RNN replay have surpassed this description. We re-examine noisy RNN replay as
-    sampling to understand or improve it in three ways: (1) Under simple assumptions,
-    we prove that the gradients replay activity should follow are time-varying and
-    difficult to estimate, but readily motivate the use of hidden state leakage in
-    RNNs for replay. (2) We confirm that hidden state adaptation (negative feedback)
-    encourages exploration in replay, but show that it incurs non-Markov sampling
-    that also slows replay. (3) We propose the first model of temporally compressed
-    replay in noisy path-integrating RNNs through hidden state momentum, connect it
-    to underdamped Langevin sampling, and show that, together with adaptation, it
-    counters slowness while maintaining exploration. We verify our findings via path-integration
-    of 2D triangular and T-maze paths and of high-dimensional paths of synthetic rat
-    place cell activity.'
-  published: '2026-02-20'
-  pdf_url: http://arxiv.org/pdf/2602.18401
-  arxiv_url: http://arxiv.org/abs/2602.18401
-  key_findings: Biological neural networks (like the hippocampus) can internally generate
-    "replay" resembling stimulus-driven activity. Recent computational models of replay
-    use noisy recurrent neural networks (RNNs) trained to path-integrate. Replay in
-    these networks has been described as Langevin sampling, but new modifiers of noisy
-    RNN replay have surpassed this description.
-- id: '2602.18386'
-  title: 'Learning to Tune Pure Pursuit in Autonomous Racing: Joint Lookahead and
-    Steering-Gain Control with PPO'
-  authors: Mohamed Elgouhary, Amr S. El-Wakeel
-  abstract: Pure Pursuit (PP) is widely used in autonomous racing for real-time path
-    tracking due to its efficiency and geometric clarity, yet performance is highly
-    sensitive to how key parameters-lookahead distance and steering gain-are chosen.
-    Standard velocity-based schedules adjust these only approximately and often fail
-    to transfer across tracks and speed profiles. We propose a reinforcement-learning
-    (RL) approach that jointly chooses the lookahead Ld and a steering gain g online
-    using Proximal Policy Optimization (PPO). The policy observes compact state features
-    (speed and curvature taps) and outputs (Ld, g) at each control step. Trained in
-    F1TENTH Gym and deployed in a ROS 2 stack, the policy drives PP directly (with
-    light smoothing) and requires no per-map retuning. Across simulation and real-car
-    tests, the proposed RL-PP controller that jointly selects (Ld, g) consistently
-    outperforms fixed-lookahead PP, velocity-scheduled adaptive PP, and an RL lookahead-only
-    variant, and it also exceeds a kinematic MPC raceline tracker under our evaluated
-    settings in lap time, path-tracking accuracy, and steering smoothness, demonstrating
-    that policy-guided parameter tuning can reliably improve classical geometry-based
-    control.
-  published: '2026-02-20'
-  pdf_url: http://arxiv.org/pdf/2602.18386
-  arxiv_url: http://arxiv.org/abs/2602.18386
-  key_findings: Pure Pursuit (PP) is widely used in autonomous racing for real-time
-    path tracking due to its efficiency and geometric clarity, yet performance is
-    highly sensitive to how key parameters-lookahead distance and steering gain-are
-    chosen. Standard velocity-based schedules adjust these only approximately and
-    often fail to transfer across tracks and speed profiles. We propose a reinforcement-learning
-    (RL) approach that jointly chooses the lookahead Ld and a steering gain g online
-    using Proximal Policy Optimization (PPO).
-- id: '2602.18384'
-  title: 'FedZMG: Efficient Client-Side Optimization in Federated Learning'
-  authors: Fotios Zantalis, Evangelos Zervas, Grigorios Koulouras
-  abstract: Federated Learning (FL) enables distributed model training on edge devices
-    while preserving data privacy. However, clients tend to have non-Independent and
-    Identically Distributed (non-IID) data, which often leads to client-drift, and
-    therefore diminishing convergence speed and model performance. While adaptive
-    optimizers have been proposed to mitigate these effects, they frequently introduce
-    computational complexity or communication overhead unsuitable for resource-constrained
-    IoT environments. This paper introduces Federated Zero Mean Gradients (FedZMG),
-    a novel, parameter-free, client-side optimization algorithm designed to tackle
-    client-drift by structurally regularizing the optimization space. Advancing the
-    idea of Gradient Centralization, FedZMG projects local gradients onto a zero-mean
-    hyperplane, effectively neutralizing the "intensity" or "bias" shifts inherent
-    in heterogeneous data distributions without requiring additional communication
-    or hyperparameter tuning. A theoretical analysis is provided, proving that FedZMG
-    reduces the effective gradient variance and guarantees tighter convergence bounds
-    compared to standard FedAvg. Extensive empirical evaluations on EMNIST, CIFAR100,
-    and Shakespeare datasets demonstrate that FedZMG achieves better convergence speed
-    and final validation accuracy compared to the baseline FedAvg and the adaptive
-    optimizer FedAdam, particularly in highly non-IID settings.
-  published: '2026-02-20'
-  pdf_url: http://arxiv.org/pdf/2602.18384
-  arxiv_url: http://arxiv.org/abs/2602.18384
-  key_findings: Federated Learning (FL) enables distributed model training on edge
-    devices while preserving data privacy. However, clients tend to have non-Independent
-    and Identically Distributed (non-IID) data, which often leads to client-drift,
-    and therefore diminishing convergence speed and model performance. While adaptive
-    optimizers have been proposed to mitigate these effects, they frequently introduce
-    computational complexity or communication overhead unsuitable for resource-constrained
-    IoT environments.
-- id: '2602.18374'
-  title: Zero-shot Interactive Perception
-  authors: Venkatesh Sripada, Frank Guerin, Amir Ghalamzan
-  abstract: 'Interactive perception (IP) enables robots to extract hidden information
-    in their workspace and execute manipulation plans by physically interacting with
-    objects and altering the state of the environment -- crucial for resolving occlusions
-    and ambiguity in complex, partially observable scenarios. We present Zero-Shot
-    IP (ZS-IP), a novel framework that couples multi-strategy manipulation (pushing
-    and grasping) with a memory-driven Vision Language Model (VLM) to guide robotic
-    interactions and resolve semantic queries. ZS-IP integrates three key components:
-    (1) an Enhanced Observation (EO) module that augments the VLM''s visual perception
-    with both conventional keypoints and our proposed pushlines -- a novel 2D visual
-    augmentation tailored to pushing actions, (2) a memory-guided action module that
-    reinforces semantic reasoning through context lookup, and (3) a robotic controller
-    that executes pushing, pulling, or grasping based on VLM output. Unlike grid-based
-    augmentations optimized for pick-and-place, pushlines capture affordances for
-    contact-rich actions, substantially improving pushing performance. We evaluate
-    ZS-IP on a 7-DOF Franka Panda arm across diverse scenes with varying occlusions
-    and task complexities. Our experiments demonstrate that ZS-IP outperforms passive
-    and viewpoint-based perception techniques such as Mark-Based Visual Prompting
-    (MOKA), particularly in pushing tasks, while preserving the integrity of non-target
-    elements.'
-  published: '2026-02-20'
-  pdf_url: http://arxiv.org/pdf/2602.18374
-  arxiv_url: http://arxiv.org/abs/2602.18374
-  key_findings: 'Interactive perception (IP) enables robots to extract hidden information
-    in their workspace and execute manipulation plans by physically interacting with
-    objects and altering the state of the environment -- crucial for resolving occlusions
-    and ambiguity in complex, partially observable scenarios. We present Zero-Shot
-    IP (ZS-IP), a novel framework that couples multi-strategy manipulation (pushing
-    and grasping) with a memory-driven Vision Language Model (VLM) to guide robotic
-    interactions and resolve semantic queries. ZS-IP integrates three key components:
-    (1) an Enhanced Observation (EO) module that augments the VLM''s visual perception
-    with both conventional keypoints and our proposed pushlines -- a novel 2D visual
-    augmentation tailored to pushing actions, (2) a memory-guided action module that
-    reinforces semantic reasoning through context lookup, and (3) a robotic controller
-    that executes pushing, pulling, or grasping based on VLM output.'
-- id: '2602.18372'
-  title: '"How Do I ...?": Procedural Questions Predominate Student-LLM Chatbot Conversations'
-  authors: Alexandra Neagu, Marcus Messer, Peter Johnson, Rhodri Nelson
-  abstract: 'Providing scaffolding through educational chatbots built on Large Language
-    Models (LLM) has potential risks and benefits that remain an open area of research.
-    When students navigate impasses, they ask for help by formulating impasse-driven
-    questions. Within interactions with LLM chatbots, such questions shape the user
-    prompts and drive the pedagogical effectiveness of the chatbot''s response. This
-    paper focuses on such student questions from two datasets of distinct learning
-    contexts: formative self-study, and summative assessed coursework. We analysed
-    6,113 messages from both learning contexts, using 11 different LLMs and three
-    human raters to classify student questions using four existing schemas. On the
-    feasibility of using LLMs as raters, results showed moderate-to-good inter-rater
-    reliability, with higher consistency than human raters. The data showed that ''procedural''
-    questions predominated in both learning contexts, but more so when students prepare
-    for summative assessment. These results provide a basis on which to use LLMs for
-    classification of student questions. However, we identify clear limitations in
-    both the ability to classify with schemas and the value of doing so: schemas are
-    limited and thus struggle to accommodate the semantic richness of composite prompts,
-    offering only partial understanding the wider risks and benefits of chatbot integration.
-    In the future, we recommend an analysis approach that captures the nuanced, multi-turn
-    nature of conversation, for example, by applying methods from conversation analysis
-    in discursive psychology.'
-  published: '2026-02-20'
-  pdf_url: http://arxiv.org/pdf/2602.18372
-  arxiv_url: http://arxiv.org/abs/2602.18372
-  key_findings: Providing scaffolding through educational chatbots built on Large
-    Language Models (LLM) has potential risks and benefits that remain an open area
-    of research. When students navigate impasses, they ask for help by formulating
-    impasse-driven questions. Within interactions with LLM chatbots, such questions
-    shape the user prompts and drive the pedagogical effectiveness of the chatbot's
-    response.
-- id: '2602.18351'
-  title: Validating Political Position Predictions of Arguments
-  authors: Jordan Robinson, Angus R. Williams, Katie Atkinson, Anthony G. Cohn
-  abstract: 'Real-world knowledge representation often requires capturing subjective,
-    continuous attributes -- such as political positions -- that conflict with pairwise
-    validation, the widely accepted gold standard for human evaluation. We address
-    this challenge through a dual-scale validation framework applied to political
-    stance prediction in argumentative discourse, combining pointwise and pairwise
-    human annotation. Using 22 language models, we construct a large-scale knowledge
-    base of political position predictions for 23,228 arguments drawn from 30 debates
-    that appeared on the UK politicial television programme \textit{Question Time}.
-    Pointwise evaluation shows moderate human-model agreement (Krippendorff''s $α=0.578$),
-    reflecting intrinsic subjectivity, while pairwise validation reveals substantially
-    stronger alignment between human- and model-derived rankings ($α=0.86$ for the
-    best model). This work contributes: (i) a practical validation methodology for
-    subjective continuous knowledge that balances scalability with reliability; (ii)
-    a validated structured argumentation knowledge base enabling graph-based reasoning
-    and retrieval-augmented generation in political domains; and (iii) evidence that
-    ordinal structure can be extracted from pointwise language models predictions
-    from inherently subjective real-world discourse, advancing knowledge representation
-    capabilities for domains where traditional symbolic or categorical approaches
-    are insufficient.'
-  published: '2026-02-20'
-  pdf_url: http://arxiv.org/pdf/2602.18351
-  arxiv_url: http://arxiv.org/abs/2602.18351
-  key_findings: Real-world knowledge representation often requires capturing subjective,
-    continuous attributes -- such as political positions -- that conflict with pairwise
-    validation, the widely accepted gold standard for human evaluation. We address
-    this challenge through a dual-scale validation framework applied to political
-    stance prediction in argumentative discourse, combining pointwise and pairwise
-    human annotation. Using 22 language models, we construct a large-scale knowledge
-    base of political position predictions for 23,228 arguments drawn from 30 debates
-    that appeared on the UK politicial television programme \textit{Question Time}.
-- id: '2602.18346'
-  title: 'Vichara: Appellate Judgment Prediction and Explanation for the Indian Judicial
-    System'
-  authors: Pavithra PM Nair, Preethu Rose Anish
-  abstract: 'In jurisdictions like India, where courts face an extensive backlog of
-    cases, artificial intelligence offers transformative potential for legal judgment
-    prediction. A critical subset of this backlog comprises appellate cases, which
-    are formal decisions issued by higher courts reviewing the rulings of lower courts.
-    To this end, we present Vichara, a novel framework tailored to the Indian judicial
-    system that predicts and explains appellate judgments. Vichara processes English-language
-    appellate case proceeding documents and decomposes them into decision points.
-    Decision points are discrete legal determinations that encapsulate the legal issue,
-    deciding authority, outcome, reasoning, and temporal context. The structured representation
-    isolates the core determinations and their context, enabling accurate predictions
-    and interpretable explanations. Vichara''s explanations follow a structured format
-    inspired by the IRAC (Issue-Rule-Application-Conclusion) framework and adapted
-    for Indian legal reasoning. This enhances interpretability, allowing legal professionals
-    to assess the soundness of predictions efficiently. We evaluate Vichara on two
-    datasets, PredEx and the expert-annotated subset of the Indian Legal Documents
-    Corpus (ILDC_expert), using four large language models: GPT-4o mini, Llama-3.1-8B,
-    Mistral-7B, and Qwen2.5-7B. Vichara surpasses existing judgment prediction benchmarks
-    on both datasets, with GPT-4o mini achieving the highest performance (F1: 81.5
-    on PredEx, 80.3 on ILDC_expert), followed by Llama-3.1-8B. Human evaluation of
-    the generated explanations across Clarity, Linking, and Usefulness metrics highlights
-    GPT-4o mini''s superior interpretability.'
-  published: '2026-02-20'
-  pdf_url: http://arxiv.org/pdf/2602.18346
-  arxiv_url: http://arxiv.org/abs/2602.18346
-  key_findings: In jurisdictions like India, where courts face an extensive backlog
-    of cases, artificial intelligence offers transformative potential for legal judgment
-    prediction. A critical subset of this backlog comprises appellate cases, which
-    are formal decisions issued by higher courts reviewing the rulings of lower courts.
-    To this end, we present Vichara, a novel framework tailored to the Indian judicial
-    system that predicts and explains appellate judgments.
-- id: '2602.18319'
-  title: 'Robo-Saber: Generating and Simulating Virtual Reality Players'
-  authors: Nam Hee Kim, Jingjing May Liu, Jaakko Lehtinen, Perttu Hämäläinen, James
-    F. O'Brien, Xue Bin Peng
-  abstract: We present the first motion generation system for playtesting virtual
-    reality (VR) games. Our player model generates VR headset and handheld controller
-    movements from in-game object arrangements, guided by style exemplars and aligned
-    to maximize simulated gameplay score. We train on the large BOXRR-23 dataset and
-    apply our framework on the popular VR game Beat Saber. The resulting model Robo-Saber
-    produces skilled gameplay and captures diverse player behaviors, mirroring the
-    skill levels and movement patterns specified by input style exemplars. Robo-Saber
-    demonstrates promise in synthesizing rich gameplay data for predictive applications
-    and enabling a physics-based whole-body VR playtesting agent.
-  published: '2026-02-20'
-  pdf_url: http://arxiv.org/pdf/2602.18319
-  arxiv_url: http://arxiv.org/abs/2602.18319
-  key_findings: We present the first motion generation system for playtesting virtual
-    reality (VR) games. Our player model generates VR headset and handheld controller
-    movements from in-game object arrangements, guided by style exemplars and aligned
-    to maximize simulated gameplay score. We train on the large BOXRR-23 dataset and
-    apply our framework on the popular VR game Beat Saber.
-- id: '2602.18308'
-  title: JPmHC Dynamical Isometry via Orthogonal Hyper-Connections
-  authors: Biswa Sengupta, Jinhua Wang, Leo Brunswic
-  abstract: 'Recent advances in deep learning, exemplified by Hyper-Connections (HC),
-    have expanded the residual connection paradigm by introducing wider residual streams
-    and diverse connectivity patterns. While these innovations yield significant performance
-    gains, they compromise the identity mapping property of residual connections,
-    leading to training instability, limited scalability, and increased memory overhead.
-    To address these challenges, we propose JPmHC (Jacobian-spectrum Preserving manifold-constrained
-    Hyper-Connections), a framework that replaces identity skips with a trainable
-    linear mixer acting on n parallel streams while explicitly controlling gradient
-    conditioning. By constraining the mixer M on operator-norm-bounded manifolds (e.g.,
-    bistochastic, Stiefel, Grassmann), JPmHC prevents gradient pathologies and enhances
-    stability. JPmHC introduces three key contributions: (i) a free-probability analysis
-    that predicts Jacobian spectra for structured skips, providing actionable design
-    rules for mixer selection; (ii) memory-efficient implicit differentiation for
-    fixed-point projections, reducing activation memory and synchronization overhead;
-    and (iii) a Stiefel-constrained mixer via Cayley transforms, ensuring orthogonality
-    without post-hoc normalization. Empirical evaluations on ARC-AGI demonstrate that
-    JPmHC achieves faster convergence, higher accuracy, and lower computational cost
-    compared to bistochastic baselines. As a flexible and scalable extension of HC,
-    JPmHC advances spectrum-aware, stable, and efficient deep learning, offering insights
-    into topological architecture design and foundational model evolution.'
-  published: '2026-02-20'
-  pdf_url: http://arxiv.org/pdf/2602.18308
-  arxiv_url: http://arxiv.org/abs/2602.18308
-  key_findings: Recent advances in deep learning, exemplified by Hyper-Connections
-    (HC), have expanded the residual connection paradigm by introducing wider residual
-    streams and diverse connectivity patterns. While these innovations yield significant
-    performance gains, they compromise the identity mapping property of residual connections,
-    leading to training instability, limited scalability, and increased memory overhead.
-    To address these challenges, we propose JPmHC (Jacobian-spectrum Preserving manifold-constrained
-    Hyper-Connections), a framework that replaces identity skips with a trainable
-    linear mixer acting on n parallel streams while explicitly controlling gradient
-    conditioning.
+- id: '2602.20159'
+  title: A Very Big Video Reasoning Suite
+  authors: Maijunxian Wang, Ruisi Wang, Juyi Lin, Ran Ji, Thaddäus Wiedemer, Qingying
+    Gao, Dezhi Luo, Yaoyao Qian, Lianyu Huang, Zelong Hong, Jiahui Ge, Qianli Ma,
+    Hang He, Yifan Zhou, Lingzi Guo, Lantao Mei, Jiachen Li, Hanwen Xing, Tianqi Zhao,
+    Fengyuan Yu, Weihang Xiao, Yizheng Jiao, Jianheng Hou, Danyang Zhang, Pengcheng
+    Xu, Boyang Zhong, Zehong Zhao, Gaoyun Fang, John Kitaoka, Yile Xu, Hua Xu, Kenton
+    Blacutt, Tin Nguyen, Siyuan Song, Haoran Sun, Shaoyue Wen, Linyang He, Runming
+    Wang, Yanzhi Wang, Mengyue Yang, Ziqiao Ma, Raphaël Millière, Freda Shi, Nuno
+    Vasconcelos, Daniel Khashabi, Alan Yuille, Yilun Du, Ziming Liu, Bo Li, Dahua
+    Lin, Ziwei Liu, Vikash Kumar, Yijiang Li, Lei Yang, Zhongang Cai, Hokin Deng
+  abstract: Rapid progress in video models has largely focused on visual quality,
+    leaving their reasoning capabilities underexplored. Video reasoning grounds intelligence
+    in spatiotemporally consistent visual environments that go beyond what text can
+    naturally capture, enabling intuitive reasoning over spatiotemporal structure
+    such as continuity, interaction, and causality. However, systematically studying
+    video reasoning and its scaling behavior is hindered by the lack of large-scale
+    training data. To address this gap, we introduce the Very Big Video Reasoning
+    (VBVR) Dataset, an unprecedentedly large-scale resource spanning 200 curated reasoning
+    tasks following a principled taxonomy and over one million video clips, approximately
+    three orders of magnitude larger than existing datasets. We further present VBVR-Bench,
+    a verifiable evaluation framework that moves beyond model-based judging by incorporating
+    rule-based, human-aligned scorers, enabling reproducible and interpretable diagnosis
+    of video reasoning capabilities. Leveraging the VBVR suite, we conduct one of
+    the first large-scale scaling studies of video reasoning and observe early signs
+    of emergent generalization to unseen reasoning tasks. Together, VBVR lays a foundation
+    for the next stage of research in generalizable video reasoning. The data, benchmark
+    toolkit, and models are publicly available at https://video-reason.com/ .
+  published: '2026-02-23'
+  pdf_url: http://arxiv.org/pdf/2602.20159
+  arxiv_url: http://arxiv.org/abs/2602.20159
+  key_findings: Rapid progress in video models has largely focused on visual quality,
+    leaving their reasoning capabilities underexplored. Video reasoning grounds intelligence
+    in spatiotemporally consistent visual environments that go beyond what text can
+    naturally capture, enabling intuitive reasoning over spatiotemporal structure
+    such as continuity, interaction, and causality. However, systematically studying
+    video reasoning and its scaling behavior is hindered by the lack of large-scale
+    training data.
+- id: '2602.20152'
+  title: 'Behavior Learning (BL): Learning Hierarchical Optimization Structures from
+    Data'
+  authors: Zhenyao Ma, Yue Liang, Dongxu Li
+  abstract: 'Inspired by behavioral science, we propose Behavior Learning (BL), a
+    novel general-purpose machine learning framework that learns interpretable and
+    identifiable optimization structures from data, ranging from single optimization
+    problems to hierarchical compositions. It unifies predictive performance, intrinsic
+    interpretability, and identifiability, with broad applicability to scientific
+    domains involving optimization. BL parameterizes a compositional utility function
+    built from intrinsically interpretable modular blocks, which induces a data distribution
+    for prediction and generation. Each block represents and can be written in symbolic
+    form as a utility maximization problem (UMP), a foundational paradigm in behavioral
+    science and a universal framework of optimization. BL supports architectures ranging
+    from a single UMP to hierarchical compositions, the latter modeling hierarchical
+    optimization structures. Its smooth and monotone variant (IBL) guarantees identifiability.
+    Theoretically, we establish the universal approximation property of BL, and analyze
+    the M-estimation properties of IBL. Empirically, BL demonstrates strong predictive
+    performance, intrinsic interpretability and scalability to high-dimensional data.
+    Code: https://github.com/MoonYLiang/Behavior-Learning ; install via pip install
+    blnetwork.'
+  published: '2026-02-23'
+  pdf_url: http://arxiv.org/pdf/2602.20152
+  arxiv_url: http://arxiv.org/abs/2602.20152
+  key_findings: Inspired by behavioral science, we propose Behavior Learning (BL),
+    a novel general-purpose machine learning framework that learns interpretable and
+    identifiable optimization structures from data, ranging from single optimization
+    problems to hierarchical compositions. It unifies predictive performance, intrinsic
+    interpretability, and identifiability, with broad applicability to scientific
+    domains involving optimization. BL parameterizes a compositional utility function
+    built from intrinsically interpretable modular blocks, which induces a data distribution
+    for prediction and generation.
+- id: '2602.20144'
+  title: Agentic AI for Scalable and Robust Optical Systems Control
+  authors: Zehao Wang, Mingzhe Han, Wei Cheng, Yue-Kai Huang, Philip Ji, Denton Wu,
+    Mahdi Safari, Flemming Holtorf, Kenaish AlQubaisi, Norbert M. Linke, Danyang Zhuo,
+    Yiran Chen, Ting Wang, Dirk Englund, Tingjun Chen
+  abstract: We present AgentOptics, an agentic AI framework for high-fidelity, autonomous
+    optical system control built on the Model Context Protocol (MCP). AgentOptics
+    interprets natural language tasks and executes protocol-compliant actions on heterogeneous
+    optical devices through a structured tool abstraction layer. We implement 64 standardized
+    MCP tools across 8 representative optical devices and construct a 410-task benchmark
+    to evaluate request understanding, role-aware responses, multi-step coordination,
+    robustness to linguistic variation, and error handling. We assess two deployment
+    configurations--commercial online LLMs and locally hosted open-source LLMs--and
+    compare them with LLM-based code generation baselines. AgentOptics achieves 87.7%--99.0%
+    average task success rates, significantly outperforming code-generation approaches,
+    which reach up to 50% success. We further demonstrate broader applicability through
+    five case studies extending beyond device-level control to system orchestration,
+    monitoring, and closed-loop optimization. These include DWDM link provisioning
+    and coordinated monitoring of coherent 400 GbE and analog radio-over-fiber (ARoF)
+    channels; autonomous characterization and bias optimization of a wideband ARoF
+    link carrying 5G fronthaul traffic; multi-span channel provisioning with launch
+    power optimization; closed-loop fiber polarization stabilization; and distributed
+    acoustic sensing (DAS)-based fiber monitoring with LLM-assisted event detection.
+    These results establish AgentOptics as a scalable, robust paradigm for autonomous
+    control and orchestration of heterogeneous optical systems.
+  published: '2026-02-23'
+  pdf_url: http://arxiv.org/pdf/2602.20144
+  arxiv_url: http://arxiv.org/abs/2602.20144
+  key_findings: We present AgentOptics, an agentic AI framework for high-fidelity,
+    autonomous optical system control built on the Model Context Protocol (MCP). AgentOptics
+    interprets natural language tasks and executes protocol-compliant actions on heterogeneous
+    optical devices through a structured tool abstraction layer. We implement 64 standardized
+    MCP tools across 8 representative optical devices and construct a 410-task benchmark
+    to evaluate request understanding, role-aware responses, multi-step coordination,
+    robustness to linguistic variation, and error handling.
+- id: '2602.20141'
+  title: Recurrent Structural Policy Gradient for Partially Observable Mean Field
+    Games
+  authors: Clarisse Wibault, Johannes Forkel, Sebastian Towers, Tiphaine Wibault,
+    Juan Duque, George Whittle, Andreas Schaab, Yucheng Yang, Chiyuan Wang, Michael
+    Osborne, Benjamin Moll, Jakob Foerster
+  abstract: 'Mean Field Games (MFGs) provide a principled framework for modeling interactions
+    in large population models: at scale, population dynamics become deterministic,
+    with uncertainty entering only through aggregate shocks, or common noise. However,
+    algorithmic progress has been limited since model-free methods are too high variance
+    and exact methods scale poorly. Recent Hybrid Structural Methods (HSMs) use Monte
+    Carlo rollouts for the common noise in combination with exact estimation of the
+    expected return, conditioned on those samples. However, HSMs have not been scaled
+    to Partially Observable settings. We propose Recurrent Structural Policy Gradient
+    (RSPG), the first history-aware HSM for settings involving public information.
+    We also introduce MFAX, our JAX-based framework for MFGs. By leveraging known
+    transition dynamics, RSPG achieves state-of-the-art performance as well as an
+    order-of-magnitude faster convergence and solves, for the first time, a macroeconomics
+    MFG with heterogeneous agents, common noise and history-aware policies. MFAX is
+    publicly available at: https://github.com/CWibault/mfax.'
+  published: '2026-02-23'
+  pdf_url: http://arxiv.org/pdf/2602.20141
+  arxiv_url: http://arxiv.org/abs/2602.20141
+  key_findings: 'Mean Field Games (MFGs) provide a principled framework for modeling
+    interactions in large population models: at scale, population dynamics become
+    deterministic, with uncertainty entering only through aggregate shocks, or common
+    noise. However, algorithmic progress has been limited since model-free methods
+    are too high variance and exact methods scale poorly. Recent Hybrid Structural
+    Methods (HSMs) use Monte Carlo rollouts for the common noise in combination with
+    exact estimation of the expected return, conditioned on those samples.'
+- id: '2602.20135'
+  title: 'KNIGHT: Knowledge Graph-Driven Multiple-Choice Question Generation with
+    Adaptive Hardness Calibration'
+  authors: Mohammad Amanlou, Erfan Shafiee Moghaddam, Yasaman Amou Jafari, Mahdi Noori,
+    Farhan Farsi, Behnam Bahrak
+  abstract: 'With the rise of large language models (LLMs), they have become instrumental
+    in applications such as Retrieval-Augmented Generation (RAG). Yet evaluating these
+    systems remains bottlenecked by the time and cost of building specialized assessment
+    datasets. We introduce KNIGHT, an LLM-based, knowledge-graph-driven framework
+    for generating multiple-choice question (MCQ) datasets from external sources.
+    KNIGHT constructs a topic-specific knowledge graph, a structured and parsimonious
+    summary of entities and relations, that can be reused to generate instructor-controlled
+    difficulty levels, including multi-hop questions, without repeatedly re-feeding
+    the full source text. This knowledge graph acts as a compressed, reusable state,
+    making question generation a cheap read over the graph. We instantiate KNIGHT
+    on Wikipedia/Wikidata while keeping the framework domain- and ontology-agnostic.
+    As a case study, KNIGHT produces six MCQ datasets in History, Biology, and Mathematics.
+    We evaluate quality on five criteria: fluency, unambiguity (single correct answer),
+    topic relevance, option uniqueness, and answerability given the provided sources
+    (as a proxy for hallucination). Results show that KNIGHT enables token- and cost-efficient
+    generation from a reusable graph representation, achieves high quality across
+    these criteria, and yields model rankings aligned with MMLU-style benchmarks,
+    while supporting topic-specific and difficulty-controlled evaluation.'
+  published: '2026-02-23'
+  pdf_url: http://arxiv.org/pdf/2602.20135
+  arxiv_url: http://arxiv.org/abs/2602.20135
+  key_findings: With the rise of large language models (LLMs), they have become instrumental
+    in applications such as Retrieval-Augmented Generation (RAG). Yet evaluating these
+    systems remains bottlenecked by the time and cost of building specialized assessment
+    datasets. We introduce KNIGHT, an LLM-based, knowledge-graph-driven framework
+    for generating multiple-choice question (MCQ) datasets from external sources.
+- id: '2602.20134'
+  title: Modeling Epidemiological Dynamics Under Adversarial Data and User Deception
+  authors: Yiqi Su, Christo Kurisummoottil Thomas, Walid Saad, Bud Mishra, Naren Ramakrishnan
+  abstract: Epidemiological models increasingly rely on self-reported behavioral data
+    such as vaccination status, mask usage, and social distancing adherence to forecast
+    disease transmission and assess the impact of non-pharmaceutical interventions
+    (NPIs). While such data provide valuable real-time insights, they are often subject
+    to strategic misreporting, driven by individual incentives to avoid penalties,
+    access benefits, or express distrust in public health authorities. To account
+    for such human behavior, in this paper, we introduce a game-theoretic framework
+    that models the interaction between the population and a public health authority
+    as a signaling game. Individuals (senders) choose how to report their behaviors,
+    while the public health authority (receiver) updates their epidemiological model(s)
+    based on potentially distorted signals. Focusing on deception around masking and
+    vaccination, we characterize analytically game equilibrium outcomes and evaluate
+    the degree to which deception can be tolerated while maintaining epidemic control
+    through policy interventions. Our results show that separating equilibria-with
+    minimal deception-drive infections to near zero over time. Remarkably, even under
+    pervasive dishonesty in pooling equilibria, well-designed sender and receiver
+    strategies can still maintain effective epidemic control. This work advances the
+    understanding of adversarial data in epidemiology and offers tools for designing
+    more robust public health models in the presence of strategic user behavior.
+  published: '2026-02-23'
+  pdf_url: http://arxiv.org/pdf/2602.20134
+  arxiv_url: http://arxiv.org/abs/2602.20134
+  key_findings: Epidemiological models increasingly rely on self-reported behavioral
+    data such as vaccination status, mask usage, and social distancing adherence to
+    forecast disease transmission and assess the impact of non-pharmaceutical interventions
+    (NPIs). While such data provide valuable real-time insights, they are often subject
+    to strategic misreporting, driven by individual incentives to avoid penalties,
+    access benefits, or express distrust in public health authorities. To account
+    for such human behavior, in this paper, we introduce a game-theoretic framework
+    that models the interaction between the population and a public health authority
+    as a signaling game.
+- id: '2602.20133'
+  title: 'AdaEvolve: Adaptive LLM Driven Zeroth-Order Optimization'
+  authors: Mert Cemri, Shubham Agrawal, Akshat Gupta, Shu Liu, Audrey Cheng, Qiuyang
+    Mang, Ashwin Naren, Lutfi Eren Erdogan, Koushik Sen, Matei Zaharia, Alex Dimakis,
+    Ion Stoica
+  abstract: 'The paradigm of automated program generation is shifting from one-shot
+    generation to inference-time search, where Large Language Models (LLMs) function
+    as semantic mutation operators within evolutionary loops. While effective, these
+    systems are currently governed by static schedules that fail to account for the
+    non-stationary dynamics of the search process. This rigidity results in substantial
+    computational waste, as resources are indiscriminately allocated to stagnating
+    populations while promising frontiers remain under-exploited. We introduce AdaEvolve,
+    a framework that reformulates LLM-driven evolution as a hierarchical adaptive
+    optimization problem. AdaEvolve uses an "accumulated improvement signal" to unify
+    decisions across three levels: Local Adaptation, which dynamically modulates the
+    exploration intensity within a population of solution candidates; Global Adaptation,
+    which routes the global resource budget via bandit-based scheduling across different
+    solution candidate populations; and Meta-Guidance which generates novel solution
+    tactics based on the previously generated solutions and their corresponding improvements
+    when the progress stalls. We demonstrate that AdaEvolve consistently outperforms
+    the open-sourced baselines across 185 different open-ended optimization problems
+    including combinatorial, systems optimization and algorithm design problems.'
+  published: '2026-02-23'
+  pdf_url: http://arxiv.org/pdf/2602.20133
+  arxiv_url: http://arxiv.org/abs/2602.20133
+  key_findings: The paradigm of automated program generation is shifting from one-shot
+    generation to inference-time search, where Large Language Models (LLMs) function
+    as semantic mutation operators within evolutionary loops. While effective, these
+    systems are currently governed by static schedules that fail to account for the
+    non-stationary dynamics of the search process. This rigidity results in substantial
+    computational waste, as resources are indiscriminately allocated to stagnating
+    populations while promising frontiers remain under-exploited.
+- id: '2602.20130'
+  title: 'To Reason or Not to: Selective Chain-of-Thought in Medical Question Answering'
+  authors: Zaifu Zhan, Min Zeng, Shuang Zhou, Yiran Song, Xiaoyi Chen, Yu Hou, Yifan
+    Wu, Yang Ruan, Rui Zhang
+  abstract: 'Objective: To improve the efficiency of medical question answering (MedQA)
+    with large language models (LLMs) by avoiding unnecessary reasoning while maintaining
+    accuracy. Methods: We propose Selective Chain-of-Thought (Selective CoT), an inference-time
+    strategy that first predicts whether a question requires reasoning and generates
+    a rationale only when needed. Two open-source LLMs (Llama-3.1-8B and Qwen-2.5-7B)
+    were evaluated on four biomedical QA benchmarks-HeadQA, MedQA-USMLE, MedMCQA,
+    and PubMedQA. Metrics included accuracy, total generated tokens, and inference
+    time. Results: Selective CoT reduced inference time by 13-45% and token usage
+    by 8-47% with minimal accuracy loss ($\leq$4\%). In some model-task pairs, it
+    achieved both higher accuracy and greater efficiency than standard CoT. Compared
+    with fixed-length CoT, Selective CoT reached similar or superior accuracy at substantially
+    lower computational cost. Discussion: Selective CoT dynamically balances reasoning
+    depth and efficiency by invoking explicit reasoning only when beneficial, reducing
+    redundancy on recall-type questions while preserving interpretability. Conclusion:
+    Selective CoT provides a simple, model-agnostic, and cost-effective approach for
+    medical QA, aligning reasoning effort with question complexity to enhance real-world
+    deployability of LLM-based clinical systems.'
+  published: '2026-02-23'
+  pdf_url: http://arxiv.org/pdf/2602.20130
+  arxiv_url: http://arxiv.org/abs/2602.20130
+  key_findings: 'Objective: To improve the efficiency of medical question answering
+    (MedQA) with large language models (LLMs) by avoiding unnecessary reasoning while
+    maintaining accuracy. Methods: We propose Selective Chain-of-Thought (Selective
+    CoT), an inference-time strategy that first predicts whether a question requires
+    reasoning and generates a rationale only when needed. Two open-source LLMs (Llama-3.'
+- id: '2602.20122'
+  title: 'NanoKnow: How to Know What Your Language Model Knows'
+  authors: Lingwei Gu, Nour Jedidi, Jimmy Lin
+  abstract: 'How do large language models (LLMs) know what they know? Answering this
+    question has been difficult because pre-training data is often a "black box" --
+    unknown or inaccessible. The recent release of nanochat -- a family of small LLMs
+    with fully open pre-training data -- addresses this as it provides a transparent
+    view into where a model''s parametric knowledge comes from. Towards the goal of
+    understanding how knowledge is encoded by LLMs, we release NanoKnow, a benchmark
+    dataset that partitions questions from Natural Questions and SQuAD into splits
+    based on whether their answers are present in nanochat''s pre-training corpus.
+    Using these splits, we can now properly disentangle the sources of knowledge that
+    LLMs rely on when producing an output. To demonstrate NanoKnow''s utility, we
+    conduct experiments using eight nanochat checkpoints. Our findings show: (1) closed-book
+    accuracy is strongly influenced by answer frequency in the pre-training data,
+    (2) providing external evidence can mitigate this frequency dependence, (3) even
+    with external evidence, models are more accurate when answers were seen during
+    pre-training, demonstrating that parametric and external knowledge are complementary,
+    and (4) non-relevant information is harmful, with accuracy decreasing based on
+    both the position and the number of non-relevant contexts. We release all NanoKnow
+    artifacts at https://github.com/castorini/NanoKnow.'
+  published: '2026-02-23'
+  pdf_url: http://arxiv.org/pdf/2602.20122
+  arxiv_url: http://arxiv.org/abs/2602.20122
+  key_findings: How do large language models (LLMs) know what they know. Answering
+    this question has been difficult because pre-training data is often a "black box"
+    -- unknown or inaccessible. The recent release of nanochat -- a family of small
+    LLMs with fully open pre-training data -- addresses this as it provides a transparent
+    view into where a model's parametric knowledge comes from.
+- id: '2602.20119'
+  title: 'NovaPlan: Zero-Shot Long-Horizon Manipulation via Closed-Loop Video Language
+    Planning'
+  authors: Jiahui Fu, Junyu Nan, Lingfeng Sun, Hongyu Li, Jianing Qian, Jennifer L.
+    Barry, Kris Kitani, George Konidaris
+  abstract: 'Solving long-horizon tasks requires robots to integrate high-level semantic
+    reasoning with low-level physical interaction. While vision-language models (VLMs)
+    and video generation models can decompose tasks and imagine outcomes, they often
+    lack the physical grounding necessary for real-world execution. We introduce NovaPlan,
+    a hierarchical framework that unifies closed-loop VLM and video planning with
+    geometrically grounded robot execution for zero-shot long-horizon manipulation.
+    At the high level, a VLM planner decomposes tasks into sub-goals and monitors
+    robot execution in a closed loop, enabling the system to recover from single-step
+    failures through autonomous re-planning. To compute low-level robot actions, we
+    extract and utilize both task-relevant object keypoints and human hand poses as
+    kinematic priors from the generated videos, and employ a switching mechanism to
+    choose the better one as a reference for robot actions, maintaining stable execution
+    even under heavy occlusion or depth inaccuracy. We demonstrate the effectiveness
+    of NovaPlan on three long-horizon tasks and the Functional Manipulation Benchmark
+    (FMB). Our results show that NovaPlan can perform complex assembly tasks and exhibit
+    dexterous error recovery behaviors without any prior demonstrations or training.
+    Project page: https://nova-plan.github.io/'
+  published: '2026-02-23'
+  pdf_url: http://arxiv.org/pdf/2602.20119
+  arxiv_url: http://arxiv.org/abs/2602.20119
+  key_findings: Solving long-horizon tasks requires robots to integrate high-level
+    semantic reasoning with low-level physical interaction. While vision-language
+    models (VLMs) and video generation models can decompose tasks and imagine outcomes,
+    they often lack the physical grounding necessary for real-world execution. We
+    introduce NovaPlan, a hierarchical framework that unifies closed-loop VLM and
+    video planning with geometrically grounded robot execution for zero-shot long-horizon
+    manipulation.

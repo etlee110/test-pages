@@ -1,302 +1,316 @@
 papers:
-- id: '2602.21204'
-  title: Test-Time Training with KV Binding Is Secretly Linear Attention
-  authors: Junchen Liu, Sven Elflein, Or Litany, Zan Gojcic, Ruilong Li
-  abstract: 'Test-time training (TTT) with KV binding as sequence modeling layer is
-    commonly interpreted as a form of online meta-learning that memorizes a key-value
-    mapping at test time. However, our analysis reveals multiple phenomena that contradict
-    this memorization-based interpretation. Motivated by these findings, we revisit
-    the formulation of TTT and show that a broad class of TTT architectures can be
-    expressed as a form of learned linear attention operator. Beyond explaining previously
-    puzzling model behaviors, this perspective yields multiple practical benefits:
-    it enables principled architectural simplifications, admits fully parallel formulations
-    that preserve performance while improving efficiency, and provides a systematic
-    reduction of diverse TTT variants to a standard linear attention form. Overall,
-    our results reframe TTT not as test-time memorization, but as learned linear attention
-    with enhanced representational capacity.'
-  published: '2026-02-24'
-  pdf_url: http://arxiv.org/pdf/2602.21204
-  arxiv_url: http://arxiv.org/abs/2602.21204
-  key_findings: Test-time training (TTT) with KV binding as sequence modeling layer
-    is commonly interpreted as a form of online meta-learning that memorizes a key-value
-    mapping at test time. However, our analysis reveals multiple phenomena that contradict
-    this memorization-based interpretation. Motivated by these findings, we revisit
-    the formulation of TTT and show that a broad class of TTT architectures can be
-    expressed as a form of learned linear attention operator.
-- id: '2602.21201'
-  title: Aletheia tackles FirstProof autonomously
-  authors: Tony Feng, Junehyuk Jung, Sang-hyun Kim, Carlo Pagano, Sergei Gukov, Chiang-Chiang
-    Tsai, David Woodruff, Adel Javanmard, Aryan Mokhtari, Dawsen Hwang, Yuri Chervonyi,
-    Jonathan N. Lee, Garrett Bingham, Trieu H. Trinh, Vahab Mirrokni, Quoc V. Le,
-    Thang Luong
-  abstract: We report the performance of Aletheia (Feng et al., 2026b), a mathematics
-    research agent powered by Gemini 3 Deep Think, on the inaugural FirstProof challenge.
-    Within the allowed timeframe of the challenge, Aletheia autonomously solved 6
-    problems (2, 5, 7, 8, 9, 10) out of 10 according to majority expert assessments;
-    we note that experts were not unanimous on Problem 8 (only). For full transparency,
-    we explain our interpretation of FirstProof and disclose details about our experiments
-    as well as our evaluation. Raw prompts and outputs are available at https://github.com/google-deepmind/superhuman/tree/main/aletheia.
-  published: '2026-02-24'
-  pdf_url: http://arxiv.org/pdf/2602.21201
-  arxiv_url: http://arxiv.org/abs/2602.21201
-  key_findings: We report the performance of Aletheia (Feng et al. , 2026b), a mathematics
-    research agent powered by Gemini 3 Deep Think, on the inaugural FirstProof challenge.
-    Within the allowed timeframe of the challenge, Aletheia autonomously solved 6
-    problems (2, 5, 7, 8, 9, 10) out of 10 according to majority expert assessments;
-    we note that experts were not unanimous on Problem 8 (only).
-- id: '2602.21198'
-  title: 'Learning from Trials and Errors: Reflective Test-Time Planning for Embodied
-    LLMs'
-  authors: Yining Hong, Huang Huang, Manling Li, Li Fei-Fei, Jiajun Wu, Yejin Choi
-  abstract: 'Embodied LLMs endow robots with high-level task reasoning, but they cannot
-    reflect on what went wrong or why, turning deployment into a sequence of independent
-    trials where mistakes repeat rather than accumulate into experience. Drawing upon
-    human reflective practitioners, we introduce Reflective Test-Time Planning, which
-    integrates two modes of reflection: \textit{reflection-in-action}, where the agent
-    uses test-time scaling to generate and score multiple candidate actions using
-    internal reflections before execution; and \textit{reflection-on-action}, which
-    uses test-time training to update both its internal reflection model and its action
-    policy based on external reflections after execution. We also include retrospective
-    reflection, allowing the agent to re-evaluate earlier decisions and perform model
-    updates with hindsight for proper long-horizon credit assignment. Experiments
-    on our newly-designed Long-Horizon Household benchmark and MuJoCo Cupboard Fitting
-    benchmark show significant gains over baseline models, with ablative studies validating
-    the complementary roles of reflection-in-action and reflection-on-action. Qualitative
-    analyses, including real-robot trials, highlight behavioral correction through
-    reflection.'
-  published: '2026-02-24'
-  pdf_url: http://arxiv.org/pdf/2602.21198
-  arxiv_url: http://arxiv.org/abs/2602.21198
-  key_findings: 'Embodied LLMs endow robots with high-level task reasoning, but they
-    cannot reflect on what went wrong or why, turning deployment into a sequence of
-    independent trials where mistakes repeat rather than accumulate into experience.
-    Drawing upon human reflective practitioners, we introduce Reflective Test-Time
-    Planning, which integrates two modes of reflection: \textit{reflection-in-action},
-    where the agent uses test-time scaling to generate and score multiple candidate
-    actions using internal reflections before execution; and \textit{reflection-on-action},
-    which uses test-time training to update both its internal reflection model and
-    its action policy based on external reflections after execution. We also include
-    retrospective reflection, allowing the agent to re-evaluate earlier decisions
-    and perform model updates with hindsight for proper long-horizon credit assignment.'
-- id: '2602.21189'
-  title: 'Why Pass@k Optimization Can Degrade Pass@1: Prompt Interference in LLM Post-training'
-  authors: Anas Barakat, Souradip Chakraborty, Khushbu Pahwa, Amrit Singh Bedi
-  abstract: 'Pass@k is a widely used performance metric for verifiable large language
-    model tasks, including mathematical reasoning, code generation, and short-answer
-    reasoning. It defines success if any of $k$ independently sampled solutions passes
-    a verifier. This multi-sample inference metric has motivated inference-aware fine-tuning
-    methods that directly optimize pass@$k$. However, prior work reports a recurring
-    trade-off: pass@k improves while pass@1 degrades under such methods. This trade-off
-    is practically important because pass@1 often remains a hard operational constraint
-    due to latency and cost budgets, imperfect verifier coverage, and the need for
-    a reliable single-shot fallback. We study the origin of this trade-off and provide
-    a theoretical characterization of when pass@k policy optimization can reduce pass@1
-    through gradient conflict induced by prompt interference. We show that pass@$k$
-    policy gradients can conflict with pass@1 gradients because pass@$k$ optimization
-    implicitly reweights prompts toward low-success prompts; when these prompts are
-    what we term negatively interfering, their upweighting can rotate the pass@k update
-    direction away from the pass@1 direction. We illustrate our theoretical findings
-    with large language model experiments on verifiable mathematical reasoning tasks.'
-  published: '2026-02-24'
-  pdf_url: http://arxiv.org/pdf/2602.21189
-  arxiv_url: http://arxiv.org/abs/2602.21189
-  key_findings: Pass@k is a widely used performance metric for verifiable large language
-    model tasks, including mathematical reasoning, code generation, and short-answer
-    reasoning. It defines success if any of $k$ independently sampled solutions passes
-    a verifier. This multi-sample inference metric has motivated inference-aware fine-tuning
-    methods that directly optimize pass@$k$.
-- id: '2602.21178'
-  title: 'XMorph: Explainable Brain Tumor Analysis Via LLM-Assisted Hybrid Deep Intelligence'
-  authors: Sepehr Salem Ghahfarokhi, M. Moein Esfahani, Raj Sunderraman, Vince Calhoun,
-    Mohammed Alser
-  abstract: 'Deep learning has significantly advanced automated brain tumor diagnosis,
-    yet clinical adoption remains limited by interpretability and computational constraints.
-    Conventional models often act as opaque ''''black boxes'''' and fail to quantify
-    the complex, irregular tumor boundaries that characterize malignant growth. To
-    address these challenges, we present XMorph, an explainable and computationally
-    efficient framework for fine-grained classification of three prominent brain tumor
-    types: glioma, meningioma, and pituitary tumors. We propose an Information-Weighted
-    Boundary Normalization (IWBN) mechanism that emphasizes diagnostically relevant
-    boundary regions alongside nonlinear chaotic and clinically validated features,
-    enabling a richer morphological representation of tumor growth. A dual-channel
-    explainable AI module combines GradCAM++ visual cues with LLM-generated textual
-    rationales, translating model reasoning into clinically interpretable insights.
-    The proposed framework achieves a classification accuracy of 96.0%, demonstrating
-    that explainability and high performance can co-exist in AI-based medical imaging
-    systems. The source code and materials for XMorph are all publicly available at:
-    https://github.com/ALSER-Lab/XMorph.'
-  published: '2026-02-24'
-  pdf_url: http://arxiv.org/pdf/2602.21178
-  arxiv_url: http://arxiv.org/abs/2602.21178
-  key_findings: 'Deep learning has significantly advanced automated brain tumor diagnosis,
-    yet clinical adoption remains limited by interpretability and computational constraints.
-    Conventional models often act as opaque ''''black boxes'''' and fail to quantify
-    the complex, irregular tumor boundaries that characterize malignant growth. To
-    address these challenges, we present XMorph, an explainable and computationally
-    efficient framework for fine-grained classification of three prominent brain tumor
-    types: glioma, meningioma, and pituitary tumors.'
-- id: '2602.21174'
-  title: Efficient Hierarchical Any-Angle Path Planning on Multi-Resolution 3D Grids
-  authors: Victor Reijgwart, Cesar Cadena, Roland Siegwart, Lionel Ott
-  abstract: Hierarchical, multi-resolution volumetric mapping approaches are widely
-    used to represent large and complex environments as they can efficiently capture
-    their occupancy and connectivity information. Yet widely used path planning methods
-    such as sampling and trajectory optimization do not exploit this explicit connectivity
-    information, and search-based methods such as A* suffer from scalability issues
-    in large-scale high-resolution maps. In many applications, Euclidean shortest
-    paths form the underpinning of the navigation system. For such applications, any-angle
-    planning methods, which find optimal paths by connecting corners of obstacles
-    with straight-line segments, provide a simple and efficient solution. In this
-    paper, we present a method that has the optimality and completeness properties
-    of any-angle planners while overcoming computational tractability issues common
-    to search-based methods by exploiting multi-resolution representations. Extensive
-    experiments on real and synthetic environments demonstrate the proposed approach's
-    solution quality and speed, outperforming even sampling-based methods. The framework
-    is open-sourced to allow the robotics and planning community to build on our research.
-  published: '2026-02-24'
-  pdf_url: http://arxiv.org/pdf/2602.21174
-  arxiv_url: http://arxiv.org/abs/2602.21174
-  key_findings: Hierarchical, multi-resolution volumetric mapping approaches are widely
-    used to represent large and complex environments as they can efficiently capture
-    their occupancy and connectivity information. Yet widely used path planning methods
-    such as sampling and trajectory optimization do not exploit this explicit connectivity
-    information, and search-based methods such as A* suffer from scalability issues
-    in large-scale high-resolution maps. In many applications, Euclidean shortest
-    paths form the underpinning of the navigation system.
-- id: '2602.21172'
-  title: 'NoRD: A Data-Efficient Vision-Language-Action Model that Drives without
-    Reasoning'
-  authors: Ishaan Rawal, Shubh Gupta, Yihan Hu, Wei Zhan
-  abstract: 'Vision-Language-Action (VLA) models are advancing autonomous driving
-    by replacing modular pipelines with unified end-to-end architectures. However,
-    current VLAs face two expensive requirements: (1) massive dataset collection,
-    and (2) dense reasoning annotations. In this work, we address both challenges
-    with \modelname (\textbf{No} \textbf{R}easoning for \textbf{D}riving). Compared
-    to existing VLAs, \modelname achieves competitive performance while being fine-tuned
-    on $<$60\% of the data and no reasoning annotations, resulting in 3$\times$ fewer
-    tokens. We identify that standard Group Relative Policy Optimization (GRPO) fails
-    to yield significant improvements when applied to policies trained on such small,
-    reasoning-free datasets. We show that this limitation stems from difficulty bias,
-    which disproportionately penalizes reward signals from scenarios that produce
-    high-variance rollouts within GRPO. \modelname overcomes this by incorporating
-    Dr.~GRPO, a recent algorithm designed to mitigate difficulty bias in LLMs. As
-    a result, \modelname achieves competitive performance on Waymo and NAVSIM with
-    a fraction of the training data and no reasoning overhead, enabling more efficient
-    autonomous systems.'
-  published: '2026-02-24'
-  pdf_url: http://arxiv.org/pdf/2602.21172
-  arxiv_url: http://arxiv.org/abs/2602.21172
-  key_findings: 'Vision-Language-Action (VLA) models are advancing autonomous driving
-    by replacing modular pipelines with unified end-to-end architectures. However,
-    current VLAs face two expensive requirements: (1) massive dataset collection,
-    and (2) dense reasoning annotations. In this work, we address both challenges
-    with \modelname (\textbf{No} \textbf{R}easoning for \textbf{D}riving).'
-- id: '2602.21165'
-  title: 'PVminer: A Domain-Specific Tool to Detect the Patient Voice in Patient Generated
-    Data'
-  authors: Samah Fodeh, Linhai Ma, Yan Wang, Srivani Talakokkul, Ganesh Puthiaraju,
-    Afshan Khan, Ashley Hagaman, Sarah Lowe, Aimee Roundtree
-  abstract: Patient-generated text such as secure messages, surveys, and interviews
-    contains rich expressions of the patient voice (PV), reflecting communicative
-    behaviors and social determinants of health (SDoH). Traditional qualitative coding
-    frameworks are labor intensive and do not scale to large volumes of patient-authored
-    messages across health systems. Existing machine learning (ML) and natural language
-    processing (NLP) approaches provide partial solutions but often treat patient-centered
-    communication (PCC) and SDoH as separate tasks or rely on models not well suited
-    to patient-facing language. We introduce PVminer, a domain-adapted NLP framework
-    for structuring patient voice in secure patient-provider communication. PVminer
-    formulates PV detection as a multi-label, multi-class prediction task integrating
-    patient-specific BERT encoders (PV-BERT-base and PV-BERT-large), unsupervised
-    topic modeling for thematic augmentation (PV-Topic-BERT), and fine-tuned classifiers
-    for Code, Subcode, and Combo-level labels. Topic representations are incorporated
-    during fine-tuning and inference to enrich semantic inputs. PVminer achieves strong
-    performance across hierarchical tasks and outperforms biomedical and clinical
-    pre-trained baselines, achieving F1 scores of 82.25% (Code), 80.14% (Subcode),
-    and up to 77.87% (Combo). An ablation study further shows that author identity
-    and topic-based augmentation each contribute meaningful gains. Pre-trained models,
-    source code, and documentation will be publicly released, with annotated datasets
-    available upon request for research use.
-  published: '2026-02-24'
-  pdf_url: http://arxiv.org/pdf/2602.21165
-  arxiv_url: http://arxiv.org/abs/2602.21165
-  key_findings: Patient-generated text such as secure messages, surveys, and interviews
-    contains rich expressions of the patient voice (PV), reflecting communicative
-    behaviors and social determinants of health (SDoH). Traditional qualitative coding
-    frameworks are labor intensive and do not scale to large volumes of patient-authored
-    messages across health systems. Existing machine learning (ML) and natural language
-    processing (NLP) approaches provide partial solutions but often treat patient-centered
-    communication (PCC) and SDoH as separate tasks or rely on models not well suited
-    to patient-facing language.
-- id: '2602.21154'
-  title: 'CG-DMER: Hybrid Contrastive-Generative Framework for Disentangled Multimodal
-    ECG Representation Learning'
-  authors: Ziwei Niu, Hao Sun, Shujun Bian, Xihong Yang, Lanfen Lin, Yuxin Liu, Yueming
-    Jin
-  abstract: 'Accurate interpretation of electrocardiogram (ECG) signals is crucial
-    for diagnosing cardiovascular diseases. Recent multimodal approaches that integrate
-    ECGs with accompanying clinical reports show strong potential, but they still
-    face two main concerns from a modality perspective: (1) intra-modality: existing
-    models process ECGs in a lead-agnostic manner, overlooking spatial-temporal dependencies
-    across leads, which restricts their effectiveness in modeling fine-grained diagnostic
-    patterns; (2) inter-modality: existing methods directly align ECG signals with
-    clinical reports, introducing modality-specific biases due to the free-text nature
-    of the reports. In light of these two issues, we propose CG-DMER, a contrastive-generative
-    framework for disentangled multimodal ECG representation learning, powered by
-    two key designs: (1) Spatial-temporal masked modeling is designed to better capture
-    fine-grained temporal dynamics and inter-lead spatial dependencies by applying
-    masking across both spatial and temporal dimensions and reconstructing the missing
-    information. (2) A representation disentanglement and alignment strategy is designed
-    to mitigate unnecessary noise and modality-specific biases by introducing modality-specific
-    and modality-shared encoders, ensuring a clearer separation between modality-invariant
-    and modality-specific representations. Experiments on three public datasets demonstrate
-    that CG-DMER achieves state-of-the-art performance across diverse downstream tasks.'
-  published: '2026-02-24'
-  pdf_url: http://arxiv.org/pdf/2602.21154
-  arxiv_url: http://arxiv.org/abs/2602.21154
-  key_findings: 'Accurate interpretation of electrocardiogram (ECG) signals is crucial
-    for diagnosing cardiovascular diseases. Recent multimodal approaches that integrate
-    ECGs with accompanying clinical reports show strong potential, but they still
-    face two main concerns from a modality perspective: (1) intra-modality: existing
-    models process ECGs in a lead-agnostic manner, overlooking spatial-temporal dependencies
-    across leads, which restricts their effectiveness in modeling fine-grained diagnostic
-    patterns; (2) inter-modality: existing methods directly align ECG signals with
-    clinical reports, introducing modality-specific biases due to the free-text nature
-    of the reports. In light of these two issues, we propose CG-DMER, a contrastive-generative
-    framework for disentangled multimodal ECG representation learning, powered by
-    two key designs: (1) Spatial-temporal masked modeling is designed to better capture
-    fine-grained temporal dynamics and inter-lead spatial dependencies by applying
-    masking across both spatial and temporal dimensions and reconstructing the missing
-    information.'
-- id: '2602.21143'
-  title: A Benchmark for Deep Information Synthesis
-  authors: Debjit Paul, Daniel Murphy, Milan Gritta, Ronald Cardenas, Victor Prokhorov,
-    Lena Sophia Bolliger, Aysim Toker, Roy Miles, Andreea-Maria Oncescu, Jasivan Alex
-    Sivakumar, Philipp Borchert, Ismail Elezi, Meiru Zhang, Ka Yiu Lee, Guchun Zhang,
-    Jun Wang, Gerasimos Lampouras
-  abstract: Large language model (LLM)-based agents are increasingly used to solve
-    complex tasks involving tool use, such as web browsing, code execution, and data
-    analysis. However, current evaluation benchmarks do not adequately assess their
-    ability to solve real-world tasks that require synthesizing information from multiple
-    sources and inferring insights beyond simple fact retrieval. To address this,
-    we introduce DEEPSYNTH, a novel benchmark designed to evaluate agents on realistic,
-    time-consuming problems that combine information gathering, synthesis, and structured
-    reasoning to produce insights. DEEPSYNTH contains 120 tasks collected across 7
-    domains and data sources covering 67 countries. DEEPSYNTH is constructed using
-    a multi-stage data collection pipeline that requires annotators to collect official
-    data sources, create hypotheses, perform manual analysis, and design tasks with
-    verifiable answers. When evaluated on DEEPSYNTH, 11 state-of-the-art LLMs and
-    deep research agents achieve a maximum F1 score of 8.97 and 17.5 on the LLM-judge
-    metric, underscoring the difficulty of the benchmark. Our analysis reveals that
-    current agents struggle with hallucinations and reasoning over large information
-    spaces, highlighting DEEPSYNTH as a crucial benchmark for guiding future research.
-  published: '2026-02-24'
-  pdf_url: http://arxiv.org/pdf/2602.21143
-  arxiv_url: http://arxiv.org/abs/2602.21143
-  key_findings: Large language model (LLM)-based agents are increasingly used to solve
-    complex tasks involving tool use, such as web browsing, code execution, and data
-    analysis. However, current evaluation benchmarks do not adequately assess their
-    ability to solve real-world tasks that require synthesizing information from multiple
-    sources and inferring insights beyond simple fact retrieval. To address this,
-    we introduce DEEPSYNTH, a novel benchmark designed to evaluate agents on realistic,
-    time-consuming problems that combine information gathering, synthesis, and structured
-    reasoning to produce insights.
+- id: '2602.22207'
+  title: 'Recovered in Translation: Efficient Pipeline for Automated Translation of
+    Benchmarks and Datasets'
+  authors: Hanna Yukhymenko, Anton Alexandrov, Martin Vechev
+  abstract: The reliability of multilingual Large Language Model (LLM) evaluation
+    is currently compromised by the inconsistent quality of translated benchmarks.
+    Existing resources often suffer from semantic drift and context loss, which can
+    lead to misleading performance metrics. In this work, we present a fully automated
+    framework designed to address these challenges by enabling scalable, high-quality
+    translation of datasets and benchmarks. We demonstrate that adapting test-time
+    compute scaling strategies, specifically Universal Self-Improvement (USI) and
+    our proposed multi-round ranking method, T-RANK, allows for significantly higher
+    quality outputs compared to traditional pipelines. Our framework ensures that
+    benchmarks preserve their original task structure and linguistic nuances during
+    localization. We apply this approach to translate popular benchmarks and datasets
+    into eight Eastern and Southern European languages (Ukrainian, Bulgarian, Slovak,
+    Romanian, Lithuanian, Estonian, Turkish, Greek). Evaluations using both reference-based
+    metrics and LLM-as-a-judge show that our translations surpass existing resources,
+    resulting in more accurate downstream model assessment. We release both the framework
+    and the improved benchmarks to facilitate robust and reproducible multilingual
+    AI development.
+  published: '2026-02-25'
+  pdf_url: http://arxiv.org/pdf/2602.22207
+  arxiv_url: http://arxiv.org/abs/2602.22207
+  key_findings: The reliability of multilingual Large Language Model (LLM) evaluation
+    is currently compromised by the inconsistent quality of translated benchmarks.
+    Existing resources often suffer from semantic drift and context loss, which can
+    lead to misleading performance metrics. In this work, we present a fully automated
+    framework designed to address these challenges by enabling scalable, high-quality
+    translation of datasets and benchmarks.
+- id: '2602.22197'
+  title: Off-The-Shelf Image-to-Image Models Are All You Need To Defeat Image Protection
+    Schemes
+  authors: Xavier Pleimling, Sifat Muhammad Abdullah, Gunjan Balde, Peng Gao, Mainack
+    Mondal, Murtuza Jadliwala, Bimal Viswanath
+  abstract: 'Advances in Generative AI (GenAI) have led to the development of various
+    protection strategies to prevent the unauthorized use of images. These methods
+    rely on adding imperceptible protective perturbations to images to thwart misuse
+    such as style mimicry or deepfake manipulations. Although previous attacks on
+    these protections required specialized, purpose-built methods, we demonstrate
+    that this is no longer necessary. We show that off-the-shelf image-to-image GenAI
+    models can be repurposed as generic ``denoisers" using a simple text prompt, effectively
+    removing a wide range of protective perturbations. Across 8 case studies spanning
+    6 diverse protection schemes, our general-purpose attack not only circumvents
+    these defenses but also outperforms existing specialized attacks while preserving
+    the image''s utility for the adversary. Our findings reveal a critical and widespread
+    vulnerability in the current landscape of image protection, indicating that many
+    schemes provide a false sense of security. We stress the urgent need to develop
+    robust defenses and establish that any future protection mechanism must be benchmarked
+    against attacks from off-the-shelf GenAI models. Code is available in this repository:
+    https://github.com/mlsecviswanath/img2imgdenoiser'
+  published: '2026-02-25'
+  pdf_url: http://arxiv.org/pdf/2602.22197
+  arxiv_url: http://arxiv.org/abs/2602.22197
+  key_findings: Advances in Generative AI (GenAI) have led to the development of various
+    protection strategies to prevent the unauthorized use of images. These methods
+    rely on adding imperceptible protective perturbations to images to thwart misuse
+    such as style mimicry or deepfake manipulations. Although previous attacks on
+    these protections required specialized, purpose-built methods, we demonstrate
+    that this is no longer necessary.
+- id: '2602.22190'
+  title: 'GUI-Libra: Training Native GUI Agents to Reason and Act with Action-aware
+    Supervision and Partially Verifiable RL'
+  authors: Rui Yang, Qianhui Wu, Zhaoyang Wang, Hanyang Chen, Ke Yang, Hao Cheng,
+    Huaxiu Yao, Baoling Peng, Huan Zhang, Jianfeng Gao, Tong Zhang
+  abstract: 'Open-source native GUI agents still lag behind closed-source systems
+    on long-horizon navigation tasks. This gap stems from two limitations: a shortage
+    of high-quality, action-aligned reasoning data, and the direct adoption of generic
+    post-training pipelines that overlook the unique challenges of GUI agents. We
+    identify two fundamental issues in these pipelines: (i) standard SFT with CoT
+    reasoning often hurts grounding, and (ii) step-wise RLVR-tyle training faces partial
+    verifiability, where multiple actions can be correct but only a single demonstrated
+    action is used for verification. This makes offline step-wise metrics weak predictors
+    of online task success. In this work, we present GUI-Libra, a tailored training
+    recipe that addresses these challenges. First, to mitigate the scarcity of action-aligned
+    reasoning data, we introduce a data construction and filtering pipeline and release
+    a curated 81K GUI reasoning dataset. Second, to reconcile reasoning with grounding,
+    we propose action-aware SFT that mixes reasoning-then-action and direct-action
+    data and reweights tokens to emphasize action and grounding. Third, to stabilize
+    RL under partial verifiability, we identify the overlooked importance of KL regularization
+    in RLVR and show that a KL trust region is critical for improving offline-to-online
+    predictability; we further introduce success-adaptive scaling to downweight unreliable
+    negative gradients. Across diverse web and mobile benchmarks, GUI-Libra consistently
+    improves both step-wise accuracy and end-to-end task completion. Our results suggest
+    that carefully designed post-training and data curation can unlock significantly
+    stronger task-solving capabilities without costly online data collection. We release
+    our dataset, code, and models to facilitate further research on data-efficient
+    post-training for reasoning-capable GUI agents.'
+  published: '2026-02-25'
+  pdf_url: http://arxiv.org/pdf/2602.22190
+  arxiv_url: http://arxiv.org/abs/2602.22190
+  key_findings: 'Open-source native GUI agents still lag behind closed-source systems
+    on long-horizon navigation tasks. This gap stems from two limitations: a shortage
+    of high-quality, action-aligned reasoning data, and the direct adoption of generic
+    post-training pipelines that overlook the unique challenges of GUI agents. We
+    identify two fundamental issues in these pipelines: (i) standard SFT with CoT
+    reasoning often hurts grounding, and (ii) step-wise RLVR-tyle training faces partial
+    verifiability, where multiple actions can be correct but only a single demonstrated
+    action is used for verification.'
+- id: '2602.22188'
+  title: 'Surrogate models for Rock-Fluid Interaction: A Grid-Size-Invariant Approach'
+  authors: Nathalie C. Pinheiro, Donghu Guo, Hannah P. Menke, Aniket C. Joshi, Claire
+    E. Heaney, Ahmed H. ElSheikh, Christopher C. Pain
+  abstract: Modelling rock-fluid interaction requires solving a set of partial differential
+    equations (PDEs) to predict the flow behaviour and the reactions of the fluid
+    with the rock on the interfaces. Conventional high-fidelity numerical models require
+    a high resolution to obtain reliable results, resulting in huge computational
+    expense. This restricts the applicability of these models for multi-query problems,
+    such as uncertainty quantification and optimisation, which require running numerous
+    scenarios. As a cheaper alternative to high-fidelity models, this work develops
+    eight surrogate models for predicting the fluid flow in porous media. Four of
+    these are reduced-order models (ROM) based on one neural network for compression
+    and another for prediction. The other four are single neural networks with the
+    property of grid-size invariance; a term which we use to refer to image-to-image
+    models that are capable of inferring on computational domains that are larger
+    than those used during training. In addition to the novel grid-size-invariant
+    framework for surrogate models, we compare the predictive performance of UNet
+    and UNet++ architectures, and demonstrate that UNet++ outperforms UNet for surrogate
+    models. Furthermore, we show that the grid-size-invariant approach is a reliable
+    way to reduce memory consumption during training, resulting in good correlation
+    between predicted and ground-truth values and outperforming the ROMs analysed.
+    The application analysed is particularly challenging because fluid-induced rock
+    dissolution results in a non-static solid field and, consequently, it cannot be
+    used to help in adjustments of the future prediction.
+  published: '2026-02-25'
+  pdf_url: http://arxiv.org/pdf/2602.22188
+  arxiv_url: http://arxiv.org/abs/2602.22188
+  key_findings: Modelling rock-fluid interaction requires solving a set of partial
+    differential equations (PDEs) to predict the flow behaviour and the reactions
+    of the fluid with the rock on the interfaces. Conventional high-fidelity numerical
+    models require a high resolution to obtain reliable results, resulting in huge
+    computational expense. This restricts the applicability of these models for multi-query
+    problems, such as uncertainty quantification and optimisation, which require running
+    numerous scenarios.
+- id: '2602.22149'
+  title: Enhancing Framingham Cardiovascular Risk Score Transparency through Logic-Based
+    XAI
+  authors: Emannuel L. de A. Bezerra, Luiz H. T. Viana, Vinícius P. Chagas, Diogo
+    E. Rolim, Thiago Alves Rocha, Carlos H. L. Cavalcante
+  abstract: Cardiovascular disease (CVD) remains one of the leading global health
+    challenges, accounting for more than 19 million deaths worldwide. To address this,
+    several tools that aim to predict CVD risk and support clinical decision making
+    have been developed. In particular, the Framingham Risk Score (FRS) is one of
+    the most widely used and recommended worldwide. However, it does not explain why
+    a patient was assigned to a particular risk category nor how it can be reduced.
+    Due to this lack of transparency, we present a logical explainer for the FRS.
+    Based on first-order logic and explainable artificial intelligence (XAI) fundaments,
+    the explainer is capable of identifying a minimal set of patient attributes that
+    are sufficient to explain a given risk classification. Our explainer also produces
+    actionable scenarios that illustrate which modifiable variables would reduce a
+    patient's risk category. We evaluated all possible input combinations of the FRS
+    (over 22,000 samples) and tested them with our explainer, successfully identifying
+    important risk factors and suggesting focused interventions for each case. The
+    results may improve clinician trust and facilitate a wider implementation of CVD
+    risk assessment by converting opaque scores into transparent and prescriptive
+    insights, particularly in areas with restricted access to specialists.
+  published: '2026-02-25'
+  pdf_url: http://arxiv.org/pdf/2602.22149
+  arxiv_url: http://arxiv.org/abs/2602.22149
+  key_findings: Cardiovascular disease (CVD) remains one of the leading global health
+    challenges, accounting for more than 19 million deaths worldwide. To address this,
+    several tools that aim to predict CVD risk and support clinical decision making
+    have been developed. In particular, the Framingham Risk Score (FRS) is one of
+    the most widely used and recommended worldwide.
+- id: '2602.22146'
+  title: Provable Last-Iterate Convergence for Multi-Objective Safe LLM Alignment
+    via Optimistic Primal-Dual
+  authors: Yining Li, Peizhong Ju, Ness Shroff
+  abstract: Reinforcement Learning from Human Feedback (RLHF) plays a significant
+    role in aligning Large Language Models (LLMs) with human preferences. While RLHF
+    with expected reward constraints can be formulated as a primal-dual optimization
+    problem, standard primal-dual methods only guarantee convergence with a distributional
+    policy where the saddle-point problem is in convex-concave form. Moreover, standard
+    primal-dual methods may exhibit instability or divergence in the last iterate
+    under policy parameterization in practical applications. In this work, we propose
+    a universal primal-dual framework for safe RLHF that unifies a broad class of
+    existing alignment algorithms, including safe-RLHF, one-shot, and multi-shot based
+    methods. Building on this framework, we introduce an optimistic primal-dual (OPD)
+    algorithm that incorporates predictive updates for both primal and dual variables
+    to stabilize saddle-point dynamics. We establish last-iterate convergence guarantees
+    for the proposed method, covering both exact policy optimization in the distributional
+    space and convergence to a neighborhood of the optimal solution whose gap is related
+    to approximation error and bias under parameterized policies. Our analysis reveals
+    that optimism plays a crucial role in mitigating oscillations inherent to constrained
+    alignment objectives, thereby closing a key theoretical gap between constrained
+    RL and practical RLHF.
+  published: '2026-02-25'
+  pdf_url: http://arxiv.org/pdf/2602.22146
+  arxiv_url: http://arxiv.org/abs/2602.22146
+  key_findings: Reinforcement Learning from Human Feedback (RLHF) plays a significant
+    role in aligning Large Language Models (LLMs) with human preferences. While RLHF
+    with expected reward constraints can be formulated as a primal-dual optimization
+    problem, standard primal-dual methods only guarantee convergence with a distributional
+    policy where the saddle-point problem is in convex-concave form. Moreover, standard
+    primal-dual methods may exhibit instability or divergence in the last iterate
+    under policy parameterization in practical applications.
+- id: '2602.22145'
+  title: When AI Writes, Whose Voice Remains? Quantifying Cultural Marker Erasure
+    Across World English Varieties in Large Language Models
+  authors: Satyam Kumar Navneet, Joydeep Chandra, Yong Zhang
+  abstract: 'Large Language Models (LLMs) are increasingly used to ``professionalize''''
+    workplace communication, often at the cost of linguistic identity. We introduce
+    "Cultural Ghosting", the systematic erasure of linguistic markers unique to non-native
+    English varieties during text processing. Through analysis of 22,350 LLM outputs
+    generated from 1,490 culturally marked texts (Indian, Singaporean,& Nigerian English)
+    processed by five models under three prompt conditions, we quantify this phenomenon
+    using two novel metrics: Identity Erasure Rate (IER) & Semantic Preservation Score
+    (SPS). Across all prompts, we find an overall IER of 10.26%, with model-level
+    variation from 3.5% to 20.5% (5.9x range). Crucially, we identify a Semantic Preservation
+    Paradox: models maintain high semantic similarity (mean SPS = 0.748) while systematically
+    erasing cultural markers. Pragmatic markers (politeness conventions) are 1.9x
+    more vulnerable than lexical markers (71.5% vs. 37.1% erasure). Our experiments
+    demonstrate that explicit cultural-preservation prompts reduce erasure by 29%
+    without sacrificing semantic quality.'
+  published: '2026-02-25'
+  pdf_url: http://arxiv.org/pdf/2602.22145
+  arxiv_url: http://arxiv.org/abs/2602.22145
+  key_findings: 'Large Language Models (LLMs) are increasingly used to ``professionalize''''
+    workplace communication, often at the cost of linguistic identity. We introduce
+    "Cultural Ghosting", the systematic erasure of linguistic markers unique to non-native
+    English varieties during text processing. Through analysis of 22,350 LLM outputs
+    generated from 1,490 culturally marked texts (Indian, Singaporean,& Nigerian English)
+    processed by five models under three prompt conditions, we quantify this phenomenon
+    using two novel metrics: Identity Erasure Rate (IER) & Semantic Preservation Score
+    (SPS).'
+- id: '2602.22144'
+  title: 'NoLan: Mitigating Object Hallucinations in Large Vision-Language Models
+    via Dynamic Suppression of Language Priors'
+  authors: Lingfeng Ren, Weihao Yu, Runpeng Yu, Xinchao Wang
+  abstract: 'Object hallucination is a critical issue in Large Vision-Language Models
+    (LVLMs), where outputs include objects that do not appear in the input image.
+    A natural question arises from this phenomenon: Which component of the LVLM pipeline
+    primarily contributes to object hallucinations? The vision encoder to perceive
+    visual information, or the language decoder to generate text responses? In this
+    work, we strive to answer this question through designing a systematic experiment
+    to analyze the roles of the vision encoder and the language decoder in hallucination
+    generation. Our observations reveal that object hallucinations are predominantly
+    associated with the strong priors from the language decoder. Based on this finding,
+    we propose a simple and training-free framework, No-Language-Hallucination Decoding,
+    NoLan, which refines the output distribution by dynamically suppressing language
+    priors, modulated based on the output distribution difference between multimodal
+    and text-only inputs. Experimental results demonstrate that NoLan effectively
+    reduces object hallucinations across various LVLMs on different tasks. For instance,
+    NoLan achieves substantial improvements on POPE, enhancing the accuracy of LLaVA-1.5
+    7B and Qwen-VL 7B by up to 6.45 and 7.21, respectively. The code is publicly available
+    at: https://github.com/lingfengren/NoLan.'
+  published: '2026-02-25'
+  pdf_url: http://arxiv.org/pdf/2602.22144
+  arxiv_url: http://arxiv.org/abs/2602.22144
+  key_findings: 'Object hallucination is a critical issue in Large Vision-Language
+    Models (LVLMs), where outputs include objects that do not appear in the input
+    image. A natural question arises from this phenomenon: Which component of the
+    LVLM pipeline primarily contributes to object hallucinations. The vision encoder
+    to perceive visual information, or the language decoder to generate text responses.'
+- id: '2602.22124'
+  title: 'SWE-Protégé: Learning to Selectively Collaborate With an Expert Unlocks
+    Small Language Models as Software Engineering Agents'
+  authors: Patrick Tser Jern Kon, Archana Pradeep, Ang Chen, Alexander P. Ellis, Warren
+    Hunt, Zijian Wang, John Yang, Samuel Thompson
+  abstract: Small language models (SLMs) offer compelling advantages in cost, latency,
+    and adaptability, but have so far lagged behind larger models on long-horizon
+    software engineering tasks such as SWE-bench, where they suffer from pervasive
+    action looping and low resolution rates. We introduce SWE-Protégé, a post-training
+    framework that reframes software repair as an expert-protégé collaboration problem.
+    In SWE-Protégé, an SLM remains the sole decision-maker while learning to selectively
+    seek guidance from a strong expert model, recognize stalled states, and follow
+    through on expert feedback. Our approach combines supervised fine-tuning on expert-augmented
+    trajectories with agentic reinforcement learning that explicitly discourages degenerative
+    looping and unproductive expert collaboration. We lightly post-train Qwen2.5-Coder-7B-Instruct
+    to achieve 42.4% Pass@1 on SWE-bench Verified, a +25.4% improvement over the prior
+    SLM state of the art, while using expert assistance sparsely (~4 calls per task
+    and 11% of total tokens).
+  published: '2026-02-25'
+  pdf_url: http://arxiv.org/pdf/2602.22124
+  arxiv_url: http://arxiv.org/abs/2602.22124
+  key_findings: Small language models (SLMs) offer compelling advantages in cost,
+    latency, and adaptability, but have so far lagged behind larger models on long-horizon
+    software engineering tasks such as SWE-bench, where they suffer from pervasive
+    action looping and low resolution rates. We introduce SWE-Protégé, a post-training
+    framework that reframes software repair as an expert-protégé collaboration problem.
+    In SWE-Protégé, an SLM remains the sole decision-maker while learning to selectively
+    seek guidance from a strong expert model, recognize stalled states, and follow
+    through on expert feedback.
+- id: '2602.22107'
+  title: 'Don''t stop me now: Rethinking Validation Criteria for Model Parameter Selection'
+  authors: Andrea Apicella, Francesco Isgrò, Andrea Pollastro, Roberto Prevete
+  abstract: 'Despite the extensive literature on training loss functions, the evaluation
+    of generalization on the validation set remains underexplored. In this work, we
+    conduct a systematic empirical and statistical study of how the validation criterion
+    used for model selection affects test performance in neural classifiers, with
+    attention to early stopping. Using fully connected networks on standard benchmarks
+    under $k$-fold evaluation, we compare: (i) early stopping with patience and (ii)
+    post-hoc selection over all epochs (i.e. no early stopping). Models are trained
+    with cross-entropy, C-Loss, or PolyLoss; the model parameter selection on the
+    validation set is made using accuracy or one of the three loss functions, each
+    considered independently. Three main findings emerge. (1) Early stopping based
+    on validation accuracy performs worst, consistently selecting checkpoints with
+    lower test accuracy than both loss-based early stopping and post-hoc selection.
+    (2) Loss-based validation criteria yield comparable and more stable test accuracy.
+    (3) Across datasets and folds, any single validation rule often underperforms
+    the test-optimal checkpoint. Overall, the selected model typically achieves test-set
+    performance statistically lower than the best performance across all epochs, regardless
+    of the validation criterion. Our results suggest avoiding validation accuracy
+    (in particular with early stopping) for parameter selection, favoring loss-based
+    validation criteria.'
+  published: '2026-02-25'
+  pdf_url: http://arxiv.org/pdf/2602.22107
+  arxiv_url: http://arxiv.org/abs/2602.22107
+  key_findings: 'Despite the extensive literature on training loss functions, the
+    evaluation of generalization on the validation set remains underexplored. In this
+    work, we conduct a systematic empirical and statistical study of how the validation
+    criterion used for model selection affects test performance in neural classifiers,
+    with attention to early stopping. Using fully connected networks on standard benchmarks
+    under $k$-fold evaluation, we compare: (i) early stopping with patience and (ii)
+    post-hoc selection over all epochs (i.'

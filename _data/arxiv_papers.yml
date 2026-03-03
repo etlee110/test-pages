@@ -1,300 +1,299 @@
 papers:
-- id: '2603.01748'
-  title: Discrete World Models via Regularization
-  authors: Davide Bizzaro, Luciano Serafini
-  abstract: 'World models aim to capture the states and dynamics of an environment
-    in a compact latent space. Moreover, using Boolean state representations is particularly
-    useful for search heuristics and symbolic reasoning and planning. Existing approaches
-    keep latents informative via decoder-based reconstruction, or instead via contrastive
-    or reward signals. In this work, we introduce Discrete World Models via Regularization
-    (DWMR): a reconstruction-free and contrastive-free method for unsupervised Boolean
-    world-model learning. In particular, we introduce a novel world-modeling loss
-    that couples latent prediction with specialized regularizers. Such regularizers
-    maximize the entropy and independence of the representation bits through variance,
-    correlation, and coskewness penalties, while simultaneously enforcing a locality
-    prior for sparse action changes. To enable effective optimization, we also introduce
-    a novel training scheme improving robustness to discrete roll-outs. Experiments
-    on two benchmarks with underlying combinatorial structure show that DWMR learns
-    more accurate representations and transitions than reconstruction-based alternatives.
-    Finally, DWMR can also be paired with an auxiliary reconstruction decoder, and
-    this combination yields additional gains.'
+- id: '2603.02203'
+  title: Tool Verification for Test-Time Reinforcement Learning
+  authors: Ruotong Liao, Nikolai Röhrich, Xiaohan Wang, Yuhui Zhang, Yasaman Samadzadeh,
+    Volker Tresp, Serena Yeung-Levy
+  abstract: Test-time reinforcement learning (TTRL) has emerged as a promising paradigm
+    for self-evolving large reasoning models (LRMs), enabling online adaptation on
+    unlabeled test inputs via self-induced rewards through majority voting. However,
+    a spurious yet high-frequency unverified consensus can become a biased and reinforced
+    reward signal, leading to incorrect mode collapse. We address this failure mode
+    with T^3RL (Tool-Verification for Test-Time Reinforcement Learning), which introduces
+    test-time tool verification into reward estimation. Concretely, a verifier uses
+    an external tool as evidence (e.g., from code execution) to upweight verified
+    rollouts in a verification-aware voting, producing more reliable pseudo-labels
+    for training. Across various math difficulties (MATH-500, AMC, and AIME 2024)
+    and diverse backbone types, T^3RL significantly improves over TTRL, with larger
+    gains on harder problems. More broadly, T^3RL can be viewed as verified online
+    data synthesis, highlighting test-time tool verification as a key mechanism for
+    stabilizing self-evolution.
   published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.01748
-  arxiv_url: http://arxiv.org/abs/2603.01748
-  key_findings: World models aim to capture the states and dynamics of an environment
-    in a compact latent space. Moreover, using Boolean state representations is particularly
-    useful for search heuristics and symbolic reasoning and planning. Existing approaches
-    keep latents informative via decoder-based reconstruction, or instead via contrastive
-    or reward signals.
-- id: '2603.01746'
-  title: An Analysis of Multi-Task Architectures for the Hierarchic Multi-Label Problem
-    of Vehicle Model and Make Classification
-  authors: Alexandru Manole, Laura Diosan
-  abstract: 'Most information in our world is organized hierarchically; however, many
-    Deep Learning approaches do not leverage this semantically rich structure. Research
-    suggests that human learning benefits from exploiting the hierarchical structure
-    of information, and intelligent models could similarly take advantage of this
-    through multi-task learning. In this work, we analyze the advantages and limitations
-    of multi-task learning in a hierarchical multi-label classification problem: car
-    make and model classification. Considering both parallel and cascaded multi-task
-    architectures, we evaluate their impact on different Deep Learning classifiers
-    (CNNs, Transformers) while varying key factors such as dropout rate and loss weighting
-    to gain deeper insight into the effectiveness of this approach. The tests are
-    conducted on two established benchmarks: StanfordCars and CompCars. We observe
-    the effectiveness of the multi-task paradigm on both datasets, improving the performance
-    of the investigated CNN in almost all scenarios. Furthermore, the approach yields
-    significant improvements on the CompCars dataset for both types of models.'
+  pdf_url: http://arxiv.org/pdf/2603.02203
+  arxiv_url: http://arxiv.org/abs/2603.02203
+  key_findings: Test-time reinforcement learning (TTRL) has emerged as a promising
+    paradigm for self-evolving large reasoning models (LRMs), enabling online adaptation
+    on unlabeled test inputs via self-induced rewards through majority voting. However,
+    a spurious yet high-frequency unverified consensus can become a biased and reinforced
+    reward signal, leading to incorrect mode collapse. We address this failure mode
+    with T^3RL (Tool-Verification for Test-Time Reinforcement Learning), which introduces
+    test-time tool verification into reward estimation.
+- id: '2603.02200'
+  title: Adaptive Confidence Regularization for Multimodal Failure Detection
+  authors: Moru Liu, Hao Dong, Olga Fink, Mario Trapp
+  abstract: 'The deployment of multimodal models in high-stakes domains, such as self-driving
+    vehicles and medical diagnostics, demands not only strong predictive performance
+    but also reliable mechanisms for detecting failures. In this work, we address
+    the largely unexplored problem of failure detection in multimodal contexts. We
+    propose Adaptive Confidence Regularization (ACR), a novel framework specifically
+    designed to detect multimodal failures. Our approach is driven by a key observation:
+    in most failure cases, the confidence of the multimodal prediction is significantly
+    lower than that of at least one unimodal branch, a phenomenon we term confidence
+    degradation. To mitigate this, we introduce an Adaptive Confidence Loss that penalizes
+    such degradations during training. In addition, we propose Multimodal Feature
+    Swapping, a novel outlier synthesis technique that generates challenging, failure-aware
+    training examples. By training with these synthetic failures, ACR learns to more
+    effectively recognize and reject uncertain predictions, thereby improving overall
+    reliability. Extensive experiments across four datasets, three modalities, and
+    multiple evaluation settings demonstrate that ACR achieves consistent and robust
+    gains. The source code will be available at https://github.com/mona4399/ACR.'
   published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.01746
-  arxiv_url: http://arxiv.org/abs/2603.01746
-  key_findings: 'Most information in our world is organized hierarchically; however,
-    many Deep Learning approaches do not leverage this semantically rich structure.
-    Research suggests that human learning benefits from exploiting the hierarchical
-    structure of information, and intelligent models could similarly take advantage
-    of this through multi-task learning. In this work, we analyze the advantages and
-    limitations of multi-task learning in a hierarchical multi-label classification
-    problem: car make and model classification.'
-- id: '2603.01741'
-  title: Rethinking Policy Diversity in Ensemble Policy Gradient in Large-Scale Reinforcement
-    Learning
-  authors: Naoki Shitanda, Motoki Omura, Tatsuya Harada, Takayuki Osa
-  abstract: Scaling reinforcement learning to tens of thousands of parallel environments
-    requires overcoming the limited exploration capacity of a single policy. Ensemble-based
-    policy gradient methods, which employ multiple policies to collect diverse samples,
-    have recently been proposed to promote exploration. However, merely broadening
-    the exploration space does not always enhance learning capability, since excessive
-    exploration can reduce exploration quality or compromise training stability. In
-    this work, we theoretically analyze the impact of inter-policy diversity on learning
-    efficiency in policy ensembles, and propose Coupled Policy Optimization which
-    regulates diversity through KL constraints between policies. The proposed method
-    enables effective exploration and outperforms strong baselines such as SAPG, PBT,
-    and PPO across multiple tasks, including challenging dexterous manipulation, in
-    terms of both sample efficiency and final performance. Furthermore, analysis of
-    policy diversity and effective sample size during training reveals that follower
-    policies naturally distribute around the leader, demonstrating the emergence of
-    structured and efficient exploratory behavior. Our results indicate that diverse
-    exploration under appropriate regulation is key to achieving stable and sample-efficient
-    learning in ensemble policy gradient methods. Project page at https://naoki04.github.io/paper-cpo/
-    .
+  pdf_url: http://arxiv.org/pdf/2603.02200
+  arxiv_url: http://arxiv.org/abs/2603.02200
+  key_findings: The deployment of multimodal models in high-stakes domains, such as
+    self-driving vehicles and medical diagnostics, demands not only strong predictive
+    performance but also reliable mechanisms for detecting failures. In this work,
+    we address the largely unexplored problem of failure detection in multimodal contexts.
+    We propose Adaptive Confidence Regularization (ACR), a novel framework specifically
+    designed to detect multimodal failures.
+- id: '2603.02196'
+  title: Conformal Policy Control
+  authors: Drew Prinster, Clara Fannjiang, Ji Won Park, Kyunghyun Cho, Anqi Liu, Suchi
+    Saria, Samuel Stanton
+  abstract: An agent must try new behaviors to explore and improve. In high-stakes
+    environments, an agent that violates safety constraints may cause harm and must
+    be taken offline, curtailing any future interaction. Imitating old behavior is
+    safe, but excessive conservatism discourages exploration. How much behavior change
+    is too much? We show how to use any safe reference policy as a probabilistic regulator
+    for any optimized but untested policy. Conformal calibration on data from the
+    safe policy determines how aggressively the new policy can act, while provably
+    enforcing the user's declared risk tolerance. Unlike conservative optimization
+    methods, we do not assume the user has identified the correct model class nor
+    tuned any hyperparameters. Unlike previous conformal methods, our theory provides
+    finite-sample guarantees even for non-monotonic bounded constraint functions.
+    Our experiments on applications ranging from natural language question answering
+    to biomolecular engineering show that safe exploration is not only possible from
+    the first moment of deployment, but can also improve performance.
   published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.01741
-  arxiv_url: http://arxiv.org/abs/2603.01741
-  key_findings: Scaling reinforcement learning to tens of thousands of parallel environments
-    requires overcoming the limited exploration capacity of a single policy. Ensemble-based
-    policy gradient methods, which employ multiple policies to collect diverse samples,
-    have recently been proposed to promote exploration. However, merely broadening
-    the exploration space does not always enhance learning capability, since excessive
-    exploration can reduce exploration quality or compromise training stability.
-- id: '2603.01739'
-  title: 'CA-AFP: Cluster-Aware Adaptive Federated Pruning'
-  authors: Om Govind Jha, Harsh Shukla, Haroon R. Lone
-  abstract: 'Federated Learning (FL) faces major challenges in real-world deployments
-    due to statistical heterogeneity across clients and system heterogeneity arising
-    from resource-constrained devices. While clustering-based approaches mitigate
-    statistical heterogeneity and pruning techniques improve memory and communication
-    efficiency, these strategies are typically studied in isolation. We propose CA-AFP,
-    a unified framework that jointly addresses both challenges by performing cluster-specific
-    model pruning. In CA-AFP, clients are first grouped into clusters, and a separate
-    model for each cluster is adaptively pruned during training. The framework introduces
-    two key innovations: (1) a cluster-aware importance scoring mechanism that combines
-    weight magnitude, intra-cluster coherence, and gradient consistency to identify
-    parameters for pruning, and (2) an iterative pruning schedule that progressively
-    removes parameters while enabling model self-healing through weight regrowth.
-    We evaluate CA-AFP on two widely used human activity recognition benchmarks, UCI
-    HAR and WISDM, under natural user-based federated partitions. Experimental results
-    demonstrate that CA-AFP achieves a favorable balance between predictive accuracy,
-    inter-client fairness, and communication efficiency. Compared to pruning-based
-    baselines, CA-AFP consistently improves accuracy and lower performance disparity
-    across clients with limited fine-tuning, while requiring substantially less communication
-    than dense clustering-based methods. It also shows robustness to different Non-IID
-    levels of data. Finally, ablation studies analyze the impact of clustering, pruning
-    schedules and scoring mechanism offering practical insights into the design of
-    efficient and adaptive FL systems.'
+  pdf_url: http://arxiv.org/pdf/2603.02196
+  arxiv_url: http://arxiv.org/abs/2603.02196
+  key_findings: An agent must try new behaviors to explore and improve. In high-stakes
+    environments, an agent that violates safety constraints may cause harm and must
+    be taken offline, curtailing any future interaction. Imitating old behavior is
+    safe, but excessive conservatism discourages exploration.
+- id: '2603.02193'
+  title: Symbol-Equivariant Recurrent Reasoning Models
+  authors: Richard Freinschlag, Timo Bertram, Erich Kobler, Andreas Mayr, Günter Klambauer
+  abstract: Reasoning problems such as Sudoku and ARC-AGI remain challenging for neural
+    networks. The structured problem solving architecture family of Recurrent Reasoning
+    Models (RRMs), including Hierarchical Reasoning Model (HRM) and Tiny Recursive
+    Model (TRM), offer a compact alternative to large language models, but currently
+    handle symbol symmetries only implicitly via costly data augmentation. We introduce
+    Symbol-Equivariant Recurrent Reasoning Models (SE-RRMs), which enforce permutation
+    equivariance at the architectural level through symbol-equivariant layers, guaranteeing
+    identical solutions under symbol or color permutations. SE-RRMs outperform prior
+    RRMs on 9x9 Sudoku and generalize from just training on 9x9 to smaller 4x4 and
+    larger 16x16 and 25x25 instances, to which existing RRMs cannot extrapolate. On
+    ARC-AGI-1 and ARC-AGI-2, SE-RRMs achieve competitive performance with substantially
+    less data augmentation and only 2 million parameters, demonstrating that explicitly
+    encoding symmetry improves the robustness and scalability of neural reasoning.
+    Code is available at https://github.com/ml-jku/SE-RRM.
   published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.01739
-  arxiv_url: http://arxiv.org/abs/2603.01739
-  key_findings: Federated Learning (FL) faces major challenges in real-world deployments
-    due to statistical heterogeneity across clients and system heterogeneity arising
-    from resource-constrained devices. While clustering-based approaches mitigate
-    statistical heterogeneity and pruning techniques improve memory and communication
-    efficiency, these strategies are typically studied in isolation. We propose CA-AFP,
-    a unified framework that jointly addresses both challenges by performing cluster-specific
-    model pruning.
-- id: '2603.01731'
-  title: Solving Inverse PDE Problems using Minimization Methods and AI
-  authors: Noura Helwani, Sophie Moufawad, Georges Sakr
-  abstract: Many physical and engineering systems require solving direct problems
-    to predict behavior and inverse problems to determine unknown parameters from
-    measurement. In this work, we study both aspects for systems governed by differential
-    equations, contrasting well-established numerical methods with new AI-based techniques,
-    specifically Physics-Informed Neural Networks (PINNs). We first analyze the logistic
-    differential equation, using its closed-form solution to verify numerical schemes
-    and validate PINN performance. We then address the Porous Medium Equation (PME),
-    a nonlinear partial differential equation with no general closed-form solution,
-    building strong solvers of the direct problem and testing techniques for parameter
-    estimation in the inverse problem. Our results suggest that PINNs can closely
-    estimate solutions at competitive computational cost, and thus propose an effective
-    tool for solving both direct and inverse problems for complex systems.
+  pdf_url: http://arxiv.org/pdf/2603.02193
+  arxiv_url: http://arxiv.org/abs/2603.02193
+  key_findings: Reasoning problems such as Sudoku and ARC-AGI remain challenging for
+    neural networks. The structured problem solving architecture family of Recurrent
+    Reasoning Models (RRMs), including Hierarchical Reasoning Model (HRM) and Tiny
+    Recursive Model (TRM), offer a compact alternative to large language models, but
+    currently handle symbol symmetries only implicitly via costly data augmentation.
+    We introduce Symbol-Equivariant Recurrent Reasoning Models (SE-RRMs), which enforce
+    permutation equivariance at the architectural level through symbol-equivariant
+    layers, guaranteeing identical solutions under symbol or color permutations.
+- id: '2603.02190'
+  title: 'Sketch2Colab: Sketch-Conditioned Multi-Human Animation via Controllable
+    Flow Distillation'
+  authors: Divyanshu Daiya, Aniket Bera
+  abstract: We present Sketch2Colab, which turns storyboard-style 2D sketches into
+    coherent, object-aware 3D multi-human motion with fine-grained control over agents,
+    joints, timing, and contacts. Conventional diffusion-based motion generators have
+    advanced realism; however, achieving precise adherence to rich interaction constraints
+    typically demands extensive training and/or costly posterior guidance, and performance
+    can degrade under strong multi-entity conditioning. Sketch2Colab instead first
+    learns a sketch-driven diffusion prior and then distills it into an efficient
+    rectified-flow student operating in latent space for fast, stable sampling. Differentiable
+    energies over keyframes, trajectories, and physics-based constraints directly
+    shape the student's transport field, steering samples toward motions that faithfully
+    satisfy the storyboard while remaining physically plausible. To capture coordinated
+    interaction, we augment the continuous flow with a continuous-time Markov chain
+    (CTMC) planner that schedules discrete events such as touches, grasps, and handoffs,
+    modulating the dynamics to produce crisp, well-phased human-object-human collaborations.
+    Experiments on CORE4D and InterHuman show that Sketch2Colab achieves state-of-the-art
+    constraint adherence and perceptual quality while offering significantly faster
+    inference than diffusion-only baselines.
   published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.01731
-  arxiv_url: http://arxiv.org/abs/2603.01731
-  key_findings: Many physical and engineering systems require solving direct problems
-    to predict behavior and inverse problems to determine unknown parameters from
-    measurement. In this work, we study both aspects for systems governed by differential
-    equations, contrasting well-established numerical methods with new AI-based techniques,
-    specifically Physics-Informed Neural Networks (PINNs). We first analyze the logistic
-    differential equation, using its closed-form solution to verify numerical schemes
-    and validate PINN performance.
-- id: '2603.01724'
-  title: 'GMP: A Benchmark for Content Moderation under Co-occurring Violations and
-    Dynamic Rules'
-  authors: Houde Dong, Yifei She, Kai Ye, Liangcai Su, Chenxiong Qian, Jie Hao
-  abstract: 'Online content moderation is essential for maintaining a healthy digital
-    environment, and reliance on AI for this task continues to grow. Consider a user
-    comment using national stereotypes to insult a politician. This example illustrates
-    two critical challenges in real-world scenarios: (1) Co-occurring Violations,
-    where a single post violates multiple policies (e.g., prejudice and personal attacks);
-    (2) Dynamic rules of moderation, where determination of a violation depends on
-    platform-specific guidelines that evolve across contexts . The intersection of
-    co-occurring harms and dynamically changing rules highlights a core limitation
-    of current AI systems: although large language models (LLMs) are adept at following
-    fixed guidelines, their judgment capabilities degrade when policies are unstable
-    or context-dependent . In practice, such shortcomings lead to inconsistent moderation:
-    either erroneously restricting legitimate expression or allowing harmful content
-    to remain online . This raises a critical question for evaluation: Does high performance
-    on existing static benchmarks truly guarantee robust generalization of AI judgment
-    to real-world scenarios involving co-occurring violations and dynamically changing
-    rules?'
+  pdf_url: http://arxiv.org/pdf/2603.02190
+  arxiv_url: http://arxiv.org/abs/2603.02190
+  key_findings: We present Sketch2Colab, which turns storyboard-style 2D sketches
+    into coherent, object-aware 3D multi-human motion with fine-grained control over
+    agents, joints, timing, and contacts. Conventional diffusion-based motion generators
+    have advanced realism; however, achieving precise adherence to rich interaction
+    constraints typically demands extensive training and/or costly posterior guidance,
+    and performance can degrade under strong multi-entity conditioning. Sketch2Colab
+    instead first learns a sketch-driven diffusion prior and then distills it into
+    an efficient rectified-flow student operating in latent space for fast, stable
+    sampling.
+- id: '2603.02184'
+  title: 'MAC: A Conversion Rate Prediction Benchmark Featuring Labels Under Multiple
+    Attribution Mechanisms'
+  authors: Jinqi Wu, Sishuo Chen, Zhangming Chan, Yong Bai, Lei Zhang, Sheng Chen,
+    Chenghuan Hou, Xiang-Rong Sheng, Han Zhu, Jian Xu, Bo Zheng, Chaoyou Fu
+  abstract: 'Multi-attribution learning (MAL), which enhances model performance by
+    learning from conversion labels yielded by multiple attribution mechanisms, has
+    emerged as a promising learning paradigm for conversion rate (CVR) prediction.
+    However, the conversion labels in public CVR datasets are generated by a single
+    attribution mechanism, hindering the development of MAL approaches. To address
+    this data gap, we establish the Multi-Attribution Benchmark (MAC), the first public
+    CVR dataset featuring labels from multiple attribution mechanisms. Besides, to
+    promote reproducible research on MAL, we develop PyMAL, an open-source library
+    covering a wide array of baseline methods. We conduct comprehensive experimental
+    analyses on MAC and reveal three key insights: (1) MAL brings consistent performance
+    gains across different attribution settings, especially for users featuring long
+    conversion paths. (2) The performance growth scales up with objective complexity
+    in most settings; however, when predicting first-click conversion targets, simply
+    adding auxiliary objectives is counterproductive, underscoring the necessity of
+    careful selection of auxiliary objectives. (3) Two architectural design principles
+    are paramount: first, to fully learn the multi-attribution knowledge, and second,
+    to fully leverage this knowledge to serve the main task. Motivated by these findings,
+    we propose Mixture of Asymmetric Experts (MoAE), an effective MAL approach incorporating
+    multi-attribution knowledge learning and main task-centric knowledge utilization.
+    Experiments on MAC show that MoAE substantially surpasses the existing state-of-the-art
+    MAL method. We believe that our benchmark and insights will foster future research
+    in the MAL field. Our MAC benchmark and the PyMAL algorithm library are publicly
+    available at https://github.com/alimama-tech/PyMAL.'
   published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.01724
-  arxiv_url: http://arxiv.org/abs/2603.01724
-  key_findings: 'Online content moderation is essential for maintaining a healthy
-    digital environment, and reliance on AI for this task continues to grow. Consider
-    a user comment using national stereotypes to insult a politician. This example
-    illustrates two critical challenges in real-world scenarios: (1) Co-occurring
-    Violations, where a single post violates multiple policies (e.'
-- id: '2603.01712'
-  title: 'FT-Dojo: Towards Autonomous LLM Fine-Tuning with Language Agents'
-  authors: Qizheng Li, Yifei Zhang, Xiao Yang, Xu Yang, Zhuo Wang, Weiqing Liu, Jiang
-    Bian
-  abstract: 'Fine-tuning large language models for vertical domains remains a labor-intensive
-    and expensive process, requiring domain experts to curate data, configure training,
-    and iteratively diagnose model behavior. Despite growing interest in autonomous
-    machine learning, no prior work has tackled end-to-end LLM fine-tuning with agents.
-    Can LLM-based agents automate this complete process? We frame this as a substantially
-    open problem: agents must navigate an open-ended search space spanning data curation
-    from diverse data sources, processing with complex tools, building a training
-    pipeline, and iteratively refining their approach based on evaluation outcomes
-    in rapidly growing logs--an overall scenario far more intricate than existing
-    benchmarks. To study this question, we introduce FT-Dojo, an interactive environment
-    comprising 13 tasks across 5 domains. We further develop FT-Agent, an autonomous
-    system that mirrors human experts by leveraging evaluation-driven feedback to
-    iteratively diagnose failures and refine fine-tuning strategies. Experiments on
-    FT-Dojo demonstrate that purpose-built fine-tuning agents significantly outperform
-    general-purpose alternatives, with FT-Agent achieving the best performance on
-    10 out of 13 tasks across all five domains. Ablations show that the approach generalizes
-    effectively to 3B models, with additional insights on data scaling trade-offs
-    and backbone sensitivity. Case analyses reveal that agents can recover from failures
-    through cumulative learning from historical experience, while also exposing fundamental
-    limitations in causal reasoning--highlighting both the promise and current boundaries
-    of autonomous LLM fine-tuning.'
+  pdf_url: http://arxiv.org/pdf/2603.02184
+  arxiv_url: http://arxiv.org/abs/2603.02184
+  key_findings: Multi-attribution learning (MAL), which enhances model performance
+    by learning from conversion labels yielded by multiple attribution mechanisms,
+    has emerged as a promising learning paradigm for conversion rate (CVR) prediction.
+    However, the conversion labels in public CVR datasets are generated by a single
+    attribution mechanism, hindering the development of MAL approaches. To address
+    this data gap, we establish the Multi-Attribution Benchmark (MAC), the first public
+    CVR dataset featuring labels from multiple attribution mechanisms.
+- id: '2603.02181'
+  title: Leveraging Model Soups to Classify Intangible Cultural Heritage Images from
+    the Mekong Delta
+  authors: Quoc-Khang Tran, Minh-Thien Nguyen, Nguyen-Khang Pham
+  abstract: The classification of Intangible Cultural Heritage (ICH) images in the
+    Mekong Delta poses unique challenges due to limited annotated data, high visual
+    similarity among classes, and domain heterogeneity. In such low-resource settings,
+    conventional deep learning models often suffer from high variance or overfit to
+    spurious correlations, leading to poor generalization. To address these limitations,
+    we propose a robust framework that integrates the hybrid CoAtNet architecture
+    with model soups, a lightweight weight-space ensembling technique that averages
+    checkpoints from a single training trajectory without increasing inference cost.
+    CoAtNet captures both local and global patterns through stage-wise fusion of convolution
+    and self-attention. We apply two ensembling strategies - greedy and uniform soup
+    - to selectively combine diverse checkpoints into a final model. Beyond performance
+    improvements, we analyze the ensembling effect through the lens of bias-variance
+    decomposition. Our findings show that model soups reduces variance by stabilizing
+    predictions across diverse model snapshots, while introducing minimal additional
+    bias. Furthermore, using cross-entropy-based distance metrics and Multidimensional
+    Scaling (MDS), we show that model soups selects geometrically diverse checkpoints,
+    unlike Soft Voting, which blends redundant models centered in output space. Evaluated
+    on the ICH-17 dataset (7,406 images across 17 classes), our approach achieves
+    state-of-the-art results with 72.36% top-1 accuracy and 69.28% macro F1-score,
+    outperforming strong baselines including ResNet-50, DenseNet-121, and ViT. These
+    results underscore that diversity-aware checkpoint averaging provides a principled
+    and efficient way to reduce variance and enhance generalization in culturally
+    rich, data-scarce classification tasks.
   published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.01712
-  arxiv_url: http://arxiv.org/abs/2603.01712
-  key_findings: Fine-tuning large language models for vertical domains remains a labor-intensive
-    and expensive process, requiring domain experts to curate data, configure training,
-    and iteratively diagnose model behavior. Despite growing interest in autonomous
-    machine learning, no prior work has tackled end-to-end LLM fine-tuning with agents.
-    Can LLM-based agents automate this complete process.
-- id: '2603.01698'
-  title: 'Towards Principled Dataset Distillation: A Spectral Distribution Perspective'
-  authors: Ruixi Wu, Shaobo Wang, Jiahuan Chen, Zhiyuan Liu, Yicun Yang, Zhaorun Chen,
-    Zekai Li, Kaixin Li, Xinming Wang, Hongzhu Yi, Kai Wang, Linfeng Zhang
-  abstract: 'Dataset distillation (DD) aims to compress large-scale datasets into
-    compact synthetic counterparts for efficient model training. However, existing
-    DD methods exhibit substantial performance degradation on long-tailed datasets.
-    We identify two fundamental challenges: heuristic design choices for distribution
-    discrepancy measure and uniform treatment of imbalanced classes. To address these
-    limitations, we propose Class-Aware Spectral Distribution Matching (CSDM), which
-    reformulates distribution alignment via the spectrum of a well-behaved kernel
-    function. This technique maps the original samples into frequency space, resulting
-    in the Spectral Distribution Distance (SDD). To mitigate class imbalance, we exploit
-    the unified form of SDD to perform amplitude-phase decomposition, which adaptively
-    prioritizes the realism in tail classes. On CIFAR-10-LT, with 10 images per class,
-    CSDM achieves a 14.0% improvement over state-of-the-art DD methods, with only
-    a 5.7% performance drop when the number of images in tail classes decreases from
-    500 to 25, demonstrating strong stability on long-tailed data.'
+  pdf_url: http://arxiv.org/pdf/2603.02181
+  arxiv_url: http://arxiv.org/abs/2603.02181
+  key_findings: The classification of Intangible Cultural Heritage (ICH) images in
+    the Mekong Delta poses unique challenges due to limited annotated data, high visual
+    similarity among classes, and domain heterogeneity. In such low-resource settings,
+    conventional deep learning models often suffer from high variance or overfit to
+    spurious correlations, leading to poor generalization. To address these limitations,
+    we propose a robust framework that integrates the hybrid CoAtNet architecture
+    with model soups, a lightweight weight-space ensembling technique that averages
+    checkpoints from a single training trajectory without increasing inference cost.
+- id: '2603.02178'
+  title: Reservoir Subspace Injection for Online ICA under Top-n Whitening
+  authors: Wenjun Xiao, Yuda Bi, Vince D Calhoun
+  abstract: 'Reservoir expansion can improve online independent component analysis
+    (ICA) under nonlinear mixing, yet top-$n$ whitening may discard injected features.
+    We formalize this bottleneck as \emph{reservoir subspace injection} (RSI): injected
+    features help only if they enter the retained eigenspace without displacing passthrough
+    directions. RSI diagnostics (IER, SSO, $ρ_x$) identify a failure mode in our top-$n$
+    setting: stronger injection increases IER but crowds out passthrough energy ($ρ_x:
+    1.00\!\rightarrow\!0.77$), degrading SI-SDR by up to $2.2$\,dB. A guarded RSI
+    controller preserves passthrough retention and recovers mean performance to within
+    $0.1$\,dB of baseline $1/N$ scaling. With passthrough preserved, RE-OICA improves
+    over vanilla online ICA by $+1.7$\,dB under nonlinear mixing and achieves positive
+    SI-SDR$_{\mathrm{sc}}$ on the tested super-Gaussian benchmark ($+0.6$\,dB).'
   published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.01698
-  arxiv_url: http://arxiv.org/abs/2603.01698
-  key_findings: 'Dataset distillation (DD) aims to compress large-scale datasets into
-    compact synthetic counterparts for efficient model training. However, existing
-    DD methods exhibit substantial performance degradation on long-tailed datasets.
-    We identify two fundamental challenges: heuristic design choices for distribution
-    discrepancy measure and uniform treatment of imbalanced classes.'
-- id: '2603.01697'
-  title: 'DynaMoE: Dynamic Token-Level Expert Activation with Layer-Wise Adaptive
-    Capacity for Mixture-of-Experts Neural Networks'
-  authors: Gökdeniz Gülmez
-  abstract: 'Mixture-of-Experts (MoE) architectures have emerged as a powerful paradigm
-    for scaling neural networks while maintaining computational efficiency. However,
-    standard MoE implementations rely on two rigid design assumptions: (1) fixed Top-K
-    routing where exactly K experts are activated per token, and (2) uniform expert
-    allocation across all layers. This paper introduces DynaMoE, a novel MoE framework
-    that relaxes both constraints through dynamic token-level expert activation and
-    layer-wise adaptive capacity allocation. DynaMoE introduces a principled routing
-    mechanism where the number of active experts per token varies based on input complexity.
-    Concurrently, the framework implements six distinct scheduling strategies for
-    distributing expert capacity across network depth, including descending, ascending,
-    pyramid, and wave patterns. We theoretically analyze the expressivity gains of
-    dynamic routing and derive bounds on computational efficiency. Through extensive
-    experiments on MNIST, Fashion-MNIST, CIFAR-10 (image classification), and Recycling-the-Web
-    (language modeling) across multiple model scales, we demonstrate that DynaMoE
-    achieves superior parameter efficiency compared to static baselines. Our key finding
-    is that optimal expert schedules are task- and scale-dependent: descending schedules
-    (concentrating capacity in early layers) outperform uniform baselines on image
-    classification. For language modeling, optimal schedules vary by model size, descending
-    for Tiny, ascending for Small, and uniform for Medium. Furthermore, dynamic routing
-    reduces gradient variance during training, leading to improved convergence stability.
-    DynaMoE establishes a new framework for adaptive computation in neural networks,
-    providing principled guidance for MoE architecture design.'
+  pdf_url: http://arxiv.org/pdf/2603.02178
+  arxiv_url: http://arxiv.org/abs/2603.02178
+  key_findings: 'Reservoir expansion can improve online independent component analysis
+    (ICA) under nonlinear mixing, yet top-$n$ whitening may discard injected features.
+    We formalize this bottleneck as \emph{reservoir subspace injection} (RSI): injected
+    features help only if they enter the retained eigenspace without displacing passthrough
+    directions. RSI diagnostics (IER, SSO, $ρ_x$) identify a failure mode in our top-$n$
+    setting: stronger injection increases IER but crowds out passthrough energy ($ρ_x:
+    1.'
+- id: '2603.02175'
+  title: 'Kiwi-Edit: Versatile Video Editing via Instruction and Reference Guidance'
+  authors: Yiqi Lin, Guoqiang Liang, Ziyun Zeng, Zechen Bai, Yanzhe Chen, Mike Zheng
+    Shou
+  abstract: Instruction-based video editing has witnessed rapid progress, yet current
+    methods often struggle with precise visual control, as natural language is inherently
+    limited in describing complex visual nuances. Although reference-guided editing
+    offers a robust solution, its potential is currently bottlenecked by the scarcity
+    of high-quality paired training data. To bridge this gap, we introduce a scalable
+    data generation pipeline that transforms existing video editing pairs into high-fidelity
+    training quadruplets, leveraging image generative models to create synthesized
+    reference scaffolds. Using this pipeline, we construct RefVIE, a large-scale dataset
+    tailored for instruction-reference-following tasks, and establish RefVIE-Bench
+    for comprehensive evaluation. Furthermore, we propose a unified editing architecture,
+    Kiwi-Edit, that synergizes learnable queries and latent visual features for reference
+    semantic guidance. Our model achieves significant gains in instruction following
+    and reference fidelity via a progressive multi-stage training curriculum. Extensive
+    experiments demonstrate that our data and architecture establish a new state-of-the-art
+    in controllable video editing. All datasets, models, and code is released at https://github.com/showlab/Kiwi-Edit.
   published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.01697
-  arxiv_url: http://arxiv.org/abs/2603.01697
-  key_findings: 'Mixture-of-Experts (MoE) architectures have emerged as a powerful
-    paradigm for scaling neural networks while maintaining computational efficiency.
-    However, standard MoE implementations rely on two rigid design assumptions: (1)
-    fixed Top-K routing where exactly K experts are activated per token, and (2) uniform
-    expert allocation across all layers. This paper introduces DynaMoE, a novel MoE
-    framework that relaxes both constraints through dynamic token-level expert activation
-    and layer-wise adaptive capacity allocation.'
-- id: '2603.01696'
-  title: 'Cross-modal Identity Mapping: Minimizing Information Loss in Modality Conversion
-    via Reinforcement Learning'
-  authors: Haonan Jia, Shichao Dong, Xin Dong, Zenghui Sun, Jin Wang, Jinsong Lan,
-    Xiaoyong Zhu, Bo Zheng, Kaifu Zhang
-  abstract: 'Large Vision-Language Models (LVLMs) often omit or misrepresent critical
-    visual content in generated image captions. Minimizing such information loss will
-    force LVLMs to focus on image details to generate precise descriptions. However,
-    measuring information loss during modality conversion is inherently challenging
-    due to the modal gap between visual content and text output. In this paper, we
-    argue that the quality of an image caption is positively correlated with the similarity
-    between images retrieved via text search using that caption. Based on this insight,
-    we further propose Cross-modal Identity Mapping (CIM), a reinforcement learning
-    framework that enhances image captioning without requiring additional annotations.
-    Specifically, the method quantitatively evaluates the information loss from two
-    perspectives: Gallery Representation Consistency and Query-gallery Image Relevance.
-    Supervised under these metrics, LVLM minimizes information loss and aims to achieve
-    identity mapping from images to captions. The experimental results demonstrate
-    the superior performance of our method in image captioning, even when compared
-    with Supervised Fine-Tuning. Particularly, on the COCO-LN500 benchmark, CIM achieves
-    a 20% improvement in relation reasoning on Qwen2.5-VL-7B.The code will be released
-    when the paper is accepted.'
+  pdf_url: http://arxiv.org/pdf/2603.02175
+  arxiv_url: http://arxiv.org/abs/2603.02175
+  key_findings: Instruction-based video editing has witnessed rapid progress, yet
+    current methods often struggle with precise visual control, as natural language
+    is inherently limited in describing complex visual nuances. Although reference-guided
+    editing offers a robust solution, its potential is currently bottlenecked by the
+    scarcity of high-quality paired training data. To bridge this gap, we introduce
+    a scalable data generation pipeline that transforms existing video editing pairs
+    into high-fidelity training quadruplets, leveraging image generative models to
+    create synthesized reference scaffolds.
+- id: '2603.02170'
+  title: 'SageBwd: A Trainable Low-bit Attention'
+  authors: Jintao Zhang, Marco Chen, Haoxu Wang, Kai Jiang, Ion Stoica, Joseph E.
+    Gonzalez, Jianfei Chen, Jun Zhu
+  abstract: 'Low-bit attention, such as SageAttention, has emerged as an effective
+    approach for accelerating model inference, but its applicability to training remains
+    poorly understood. In prior work, we introduced SageBwd, a trainable INT8 attention
+    that quantizes six of seven attention matrix multiplications while preserving
+    fine-tuning performance. However, SageBwd exhibited a persistent performance gap
+    to full-precision attention (FPA) during pre-training. In this work, we investigate
+    why this gap occurs and demonstrate that SageBwd matches full-precision attention
+    during pretraining. Through experiments and theoretical analysis, we reach a few
+    important insights and conclusions: (i) QK-norm is necessary for stable training
+    at large tokens per step, (ii) quantization errors primarily arise from the backward-pass
+    score gradient dS, (iii) reducing tokens per step enables SageBwd to match FPA
+    performance in pre-training, and (iv) K-smoothing remains essential for training
+    stability, while Q-smoothing provides limited benefit during pre-training.'
   published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.01696
-  arxiv_url: http://arxiv.org/abs/2603.01696
-  key_findings: Large Vision-Language Models (LVLMs) often omit or misrepresent critical
-    visual content in generated image captions. Minimizing such information loss will
-    force LVLMs to focus on image details to generate precise descriptions. However,
-    measuring information loss during modality conversion is inherently challenging
-    due to the modal gap between visual content and text output.
+  pdf_url: http://arxiv.org/pdf/2603.02170
+  arxiv_url: http://arxiv.org/abs/2603.02170
+  key_findings: Low-bit attention, such as SageAttention, has emerged as an effective
+    approach for accelerating model inference, but its applicability to training remains
+    poorly understood. In prior work, we introduced SageBwd, a trainable INT8 attention
+    that quantizes six of seven attention matrix multiplications while preserving
+    fine-tuning performance. However, SageBwd exhibited a persistent performance gap
+    to full-precision attention (FPA) during pre-training.

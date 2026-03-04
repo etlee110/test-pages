@@ -1,299 +1,316 @@
 papers:
-- id: '2603.02203'
-  title: Tool Verification for Test-Time Reinforcement Learning
-  authors: Ruotong Liao, Nikolai Röhrich, Xiaohan Wang, Yuhui Zhang, Yasaman Samadzadeh,
-    Volker Tresp, Serena Yeung-Levy
-  abstract: Test-time reinforcement learning (TTRL) has emerged as a promising paradigm
-    for self-evolving large reasoning models (LRMs), enabling online adaptation on
-    unlabeled test inputs via self-induced rewards through majority voting. However,
-    a spurious yet high-frequency unverified consensus can become a biased and reinforced
-    reward signal, leading to incorrect mode collapse. We address this failure mode
-    with T^3RL (Tool-Verification for Test-Time Reinforcement Learning), which introduces
-    test-time tool verification into reward estimation. Concretely, a verifier uses
-    an external tool as evidence (e.g., from code execution) to upweight verified
-    rollouts in a verification-aware voting, producing more reliable pseudo-labels
-    for training. Across various math difficulties (MATH-500, AMC, and AIME 2024)
-    and diverse backbone types, T^3RL significantly improves over TTRL, with larger
-    gains on harder problems. More broadly, T^3RL can be viewed as verified online
-    data synthesis, highlighting test-time tool verification as a key mechanism for
-    stabilizing self-evolution.
-  published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.02203
-  arxiv_url: http://arxiv.org/abs/2603.02203
-  key_findings: Test-time reinforcement learning (TTRL) has emerged as a promising
-    paradigm for self-evolving large reasoning models (LRMs), enabling online adaptation
-    on unlabeled test inputs via self-induced rewards through majority voting. However,
-    a spurious yet high-frequency unverified consensus can become a biased and reinforced
-    reward signal, leading to incorrect mode collapse. We address this failure mode
-    with T^3RL (Tool-Verification for Test-Time Reinforcement Learning), which introduces
-    test-time tool verification into reward estimation.
-- id: '2603.02200'
-  title: Adaptive Confidence Regularization for Multimodal Failure Detection
-  authors: Moru Liu, Hao Dong, Olga Fink, Mario Trapp
-  abstract: 'The deployment of multimodal models in high-stakes domains, such as self-driving
-    vehicles and medical diagnostics, demands not only strong predictive performance
-    but also reliable mechanisms for detecting failures. In this work, we address
-    the largely unexplored problem of failure detection in multimodal contexts. We
-    propose Adaptive Confidence Regularization (ACR), a novel framework specifically
-    designed to detect multimodal failures. Our approach is driven by a key observation:
-    in most failure cases, the confidence of the multimodal prediction is significantly
-    lower than that of at least one unimodal branch, a phenomenon we term confidence
-    degradation. To mitigate this, we introduce an Adaptive Confidence Loss that penalizes
-    such degradations during training. In addition, we propose Multimodal Feature
-    Swapping, a novel outlier synthesis technique that generates challenging, failure-aware
-    training examples. By training with these synthetic failures, ACR learns to more
-    effectively recognize and reject uncertain predictions, thereby improving overall
-    reliability. Extensive experiments across four datasets, three modalities, and
-    multiple evaluation settings demonstrate that ACR achieves consistent and robust
-    gains. The source code will be available at https://github.com/mona4399/ACR.'
-  published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.02200
-  arxiv_url: http://arxiv.org/abs/2603.02200
-  key_findings: The deployment of multimodal models in high-stakes domains, such as
-    self-driving vehicles and medical diagnostics, demands not only strong predictive
-    performance but also reliable mechanisms for detecting failures. In this work,
-    we address the largely unexplored problem of failure detection in multimodal contexts.
-    We propose Adaptive Confidence Regularization (ACR), a novel framework specifically
-    designed to detect multimodal failures.
-- id: '2603.02196'
-  title: Conformal Policy Control
-  authors: Drew Prinster, Clara Fannjiang, Ji Won Park, Kyunghyun Cho, Anqi Liu, Suchi
-    Saria, Samuel Stanton
-  abstract: An agent must try new behaviors to explore and improve. In high-stakes
-    environments, an agent that violates safety constraints may cause harm and must
-    be taken offline, curtailing any future interaction. Imitating old behavior is
-    safe, but excessive conservatism discourages exploration. How much behavior change
-    is too much? We show how to use any safe reference policy as a probabilistic regulator
-    for any optimized but untested policy. Conformal calibration on data from the
-    safe policy determines how aggressively the new policy can act, while provably
-    enforcing the user's declared risk tolerance. Unlike conservative optimization
-    methods, we do not assume the user has identified the correct model class nor
-    tuned any hyperparameters. Unlike previous conformal methods, our theory provides
-    finite-sample guarantees even for non-monotonic bounded constraint functions.
-    Our experiments on applications ranging from natural language question answering
-    to biomolecular engineering show that safe exploration is not only possible from
-    the first moment of deployment, but can also improve performance.
-  published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.02196
-  arxiv_url: http://arxiv.org/abs/2603.02196
-  key_findings: An agent must try new behaviors to explore and improve. In high-stakes
-    environments, an agent that violates safety constraints may cause harm and must
-    be taken offline, curtailing any future interaction. Imitating old behavior is
-    safe, but excessive conservatism discourages exploration.
-- id: '2603.02193'
-  title: Symbol-Equivariant Recurrent Reasoning Models
-  authors: Richard Freinschlag, Timo Bertram, Erich Kobler, Andreas Mayr, Günter Klambauer
-  abstract: Reasoning problems such as Sudoku and ARC-AGI remain challenging for neural
-    networks. The structured problem solving architecture family of Recurrent Reasoning
-    Models (RRMs), including Hierarchical Reasoning Model (HRM) and Tiny Recursive
-    Model (TRM), offer a compact alternative to large language models, but currently
-    handle symbol symmetries only implicitly via costly data augmentation. We introduce
-    Symbol-Equivariant Recurrent Reasoning Models (SE-RRMs), which enforce permutation
-    equivariance at the architectural level through symbol-equivariant layers, guaranteeing
-    identical solutions under symbol or color permutations. SE-RRMs outperform prior
-    RRMs on 9x9 Sudoku and generalize from just training on 9x9 to smaller 4x4 and
-    larger 16x16 and 25x25 instances, to which existing RRMs cannot extrapolate. On
-    ARC-AGI-1 and ARC-AGI-2, SE-RRMs achieve competitive performance with substantially
-    less data augmentation and only 2 million parameters, demonstrating that explicitly
-    encoding symmetry improves the robustness and scalability of neural reasoning.
-    Code is available at https://github.com/ml-jku/SE-RRM.
-  published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.02193
-  arxiv_url: http://arxiv.org/abs/2603.02193
-  key_findings: Reasoning problems such as Sudoku and ARC-AGI remain challenging for
-    neural networks. The structured problem solving architecture family of Recurrent
-    Reasoning Models (RRMs), including Hierarchical Reasoning Model (HRM) and Tiny
-    Recursive Model (TRM), offer a compact alternative to large language models, but
-    currently handle symbol symmetries only implicitly via costly data augmentation.
-    We introduce Symbol-Equivariant Recurrent Reasoning Models (SE-RRMs), which enforce
-    permutation equivariance at the architectural level through symbol-equivariant
-    layers, guaranteeing identical solutions under symbol or color permutations.
-- id: '2603.02190'
-  title: 'Sketch2Colab: Sketch-Conditioned Multi-Human Animation via Controllable
-    Flow Distillation'
-  authors: Divyanshu Daiya, Aniket Bera
-  abstract: We present Sketch2Colab, which turns storyboard-style 2D sketches into
-    coherent, object-aware 3D multi-human motion with fine-grained control over agents,
-    joints, timing, and contacts. Conventional diffusion-based motion generators have
-    advanced realism; however, achieving precise adherence to rich interaction constraints
-    typically demands extensive training and/or costly posterior guidance, and performance
-    can degrade under strong multi-entity conditioning. Sketch2Colab instead first
-    learns a sketch-driven diffusion prior and then distills it into an efficient
-    rectified-flow student operating in latent space for fast, stable sampling. Differentiable
-    energies over keyframes, trajectories, and physics-based constraints directly
-    shape the student's transport field, steering samples toward motions that faithfully
-    satisfy the storyboard while remaining physically plausible. To capture coordinated
-    interaction, we augment the continuous flow with a continuous-time Markov chain
-    (CTMC) planner that schedules discrete events such as touches, grasps, and handoffs,
-    modulating the dynamics to produce crisp, well-phased human-object-human collaborations.
-    Experiments on CORE4D and InterHuman show that Sketch2Colab achieves state-of-the-art
-    constraint adherence and perceptual quality while offering significantly faster
-    inference than diffusion-only baselines.
-  published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.02190
-  arxiv_url: http://arxiv.org/abs/2603.02190
-  key_findings: We present Sketch2Colab, which turns storyboard-style 2D sketches
-    into coherent, object-aware 3D multi-human motion with fine-grained control over
-    agents, joints, timing, and contacts. Conventional diffusion-based motion generators
-    have advanced realism; however, achieving precise adherence to rich interaction
-    constraints typically demands extensive training and/or costly posterior guidance,
-    and performance can degrade under strong multi-entity conditioning. Sketch2Colab
-    instead first learns a sketch-driven diffusion prior and then distills it into
-    an efficient rectified-flow student operating in latent space for fast, stable
-    sampling.
-- id: '2603.02184'
-  title: 'MAC: A Conversion Rate Prediction Benchmark Featuring Labels Under Multiple
-    Attribution Mechanisms'
-  authors: Jinqi Wu, Sishuo Chen, Zhangming Chan, Yong Bai, Lei Zhang, Sheng Chen,
-    Chenghuan Hou, Xiang-Rong Sheng, Han Zhu, Jian Xu, Bo Zheng, Chaoyou Fu
-  abstract: 'Multi-attribution learning (MAL), which enhances model performance by
-    learning from conversion labels yielded by multiple attribution mechanisms, has
-    emerged as a promising learning paradigm for conversion rate (CVR) prediction.
-    However, the conversion labels in public CVR datasets are generated by a single
-    attribution mechanism, hindering the development of MAL approaches. To address
-    this data gap, we establish the Multi-Attribution Benchmark (MAC), the first public
-    CVR dataset featuring labels from multiple attribution mechanisms. Besides, to
-    promote reproducible research on MAL, we develop PyMAL, an open-source library
-    covering a wide array of baseline methods. We conduct comprehensive experimental
-    analyses on MAC and reveal three key insights: (1) MAL brings consistent performance
-    gains across different attribution settings, especially for users featuring long
-    conversion paths. (2) The performance growth scales up with objective complexity
-    in most settings; however, when predicting first-click conversion targets, simply
-    adding auxiliary objectives is counterproductive, underscoring the necessity of
-    careful selection of auxiliary objectives. (3) Two architectural design principles
-    are paramount: first, to fully learn the multi-attribution knowledge, and second,
-    to fully leverage this knowledge to serve the main task. Motivated by these findings,
-    we propose Mixture of Asymmetric Experts (MoAE), an effective MAL approach incorporating
-    multi-attribution knowledge learning and main task-centric knowledge utilization.
-    Experiments on MAC show that MoAE substantially surpasses the existing state-of-the-art
-    MAL method. We believe that our benchmark and insights will foster future research
-    in the MAL field. Our MAC benchmark and the PyMAL algorithm library are publicly
-    available at https://github.com/alimama-tech/PyMAL.'
-  published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.02184
-  arxiv_url: http://arxiv.org/abs/2603.02184
-  key_findings: Multi-attribution learning (MAL), which enhances model performance
-    by learning from conversion labels yielded by multiple attribution mechanisms,
-    has emerged as a promising learning paradigm for conversion rate (CVR) prediction.
-    However, the conversion labels in public CVR datasets are generated by a single
-    attribution mechanism, hindering the development of MAL approaches. To address
-    this data gap, we establish the Multi-Attribution Benchmark (MAC), the first public
-    CVR dataset featuring labels from multiple attribution mechanisms.
-- id: '2603.02181'
-  title: Leveraging Model Soups to Classify Intangible Cultural Heritage Images from
-    the Mekong Delta
-  authors: Quoc-Khang Tran, Minh-Thien Nguyen, Nguyen-Khang Pham
-  abstract: The classification of Intangible Cultural Heritage (ICH) images in the
-    Mekong Delta poses unique challenges due to limited annotated data, high visual
-    similarity among classes, and domain heterogeneity. In such low-resource settings,
-    conventional deep learning models often suffer from high variance or overfit to
-    spurious correlations, leading to poor generalization. To address these limitations,
-    we propose a robust framework that integrates the hybrid CoAtNet architecture
-    with model soups, a lightweight weight-space ensembling technique that averages
-    checkpoints from a single training trajectory without increasing inference cost.
-    CoAtNet captures both local and global patterns through stage-wise fusion of convolution
-    and self-attention. We apply two ensembling strategies - greedy and uniform soup
-    - to selectively combine diverse checkpoints into a final model. Beyond performance
-    improvements, we analyze the ensembling effect through the lens of bias-variance
-    decomposition. Our findings show that model soups reduces variance by stabilizing
-    predictions across diverse model snapshots, while introducing minimal additional
-    bias. Furthermore, using cross-entropy-based distance metrics and Multidimensional
-    Scaling (MDS), we show that model soups selects geometrically diverse checkpoints,
-    unlike Soft Voting, which blends redundant models centered in output space. Evaluated
-    on the ICH-17 dataset (7,406 images across 17 classes), our approach achieves
-    state-of-the-art results with 72.36% top-1 accuracy and 69.28% macro F1-score,
-    outperforming strong baselines including ResNet-50, DenseNet-121, and ViT. These
-    results underscore that diversity-aware checkpoint averaging provides a principled
-    and efficient way to reduce variance and enhance generalization in culturally
-    rich, data-scarce classification tasks.
-  published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.02181
-  arxiv_url: http://arxiv.org/abs/2603.02181
-  key_findings: The classification of Intangible Cultural Heritage (ICH) images in
-    the Mekong Delta poses unique challenges due to limited annotated data, high visual
-    similarity among classes, and domain heterogeneity. In such low-resource settings,
-    conventional deep learning models often suffer from high variance or overfit to
-    spurious correlations, leading to poor generalization. To address these limitations,
-    we propose a robust framework that integrates the hybrid CoAtNet architecture
-    with model soups, a lightweight weight-space ensembling technique that averages
-    checkpoints from a single training trajectory without increasing inference cost.
-- id: '2603.02178'
-  title: Reservoir Subspace Injection for Online ICA under Top-n Whitening
-  authors: Wenjun Xiao, Yuda Bi, Vince D Calhoun
-  abstract: 'Reservoir expansion can improve online independent component analysis
-    (ICA) under nonlinear mixing, yet top-$n$ whitening may discard injected features.
-    We formalize this bottleneck as \emph{reservoir subspace injection} (RSI): injected
-    features help only if they enter the retained eigenspace without displacing passthrough
-    directions. RSI diagnostics (IER, SSO, $ρ_x$) identify a failure mode in our top-$n$
-    setting: stronger injection increases IER but crowds out passthrough energy ($ρ_x:
-    1.00\!\rightarrow\!0.77$), degrading SI-SDR by up to $2.2$\,dB. A guarded RSI
-    controller preserves passthrough retention and recovers mean performance to within
-    $0.1$\,dB of baseline $1/N$ scaling. With passthrough preserved, RE-OICA improves
-    over vanilla online ICA by $+1.7$\,dB under nonlinear mixing and achieves positive
-    SI-SDR$_{\mathrm{sc}}$ on the tested super-Gaussian benchmark ($+0.6$\,dB).'
-  published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.02178
-  arxiv_url: http://arxiv.org/abs/2603.02178
-  key_findings: 'Reservoir expansion can improve online independent component analysis
-    (ICA) under nonlinear mixing, yet top-$n$ whitening may discard injected features.
-    We formalize this bottleneck as \emph{reservoir subspace injection} (RSI): injected
-    features help only if they enter the retained eigenspace without displacing passthrough
-    directions. RSI diagnostics (IER, SSO, $ρ_x$) identify a failure mode in our top-$n$
-    setting: stronger injection increases IER but crowds out passthrough energy ($ρ_x:
-    1.'
-- id: '2603.02175'
-  title: 'Kiwi-Edit: Versatile Video Editing via Instruction and Reference Guidance'
-  authors: Yiqi Lin, Guoqiang Liang, Ziyun Zeng, Zechen Bai, Yanzhe Chen, Mike Zheng
-    Shou
-  abstract: Instruction-based video editing has witnessed rapid progress, yet current
-    methods often struggle with precise visual control, as natural language is inherently
-    limited in describing complex visual nuances. Although reference-guided editing
-    offers a robust solution, its potential is currently bottlenecked by the scarcity
-    of high-quality paired training data. To bridge this gap, we introduce a scalable
-    data generation pipeline that transforms existing video editing pairs into high-fidelity
-    training quadruplets, leveraging image generative models to create synthesized
-    reference scaffolds. Using this pipeline, we construct RefVIE, a large-scale dataset
-    tailored for instruction-reference-following tasks, and establish RefVIE-Bench
-    for comprehensive evaluation. Furthermore, we propose a unified editing architecture,
-    Kiwi-Edit, that synergizes learnable queries and latent visual features for reference
-    semantic guidance. Our model achieves significant gains in instruction following
-    and reference fidelity via a progressive multi-stage training curriculum. Extensive
-    experiments demonstrate that our data and architecture establish a new state-of-the-art
-    in controllable video editing. All datasets, models, and code is released at https://github.com/showlab/Kiwi-Edit.
-  published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.02175
-  arxiv_url: http://arxiv.org/abs/2603.02175
-  key_findings: Instruction-based video editing has witnessed rapid progress, yet
-    current methods often struggle with precise visual control, as natural language
-    is inherently limited in describing complex visual nuances. Although reference-guided
-    editing offers a robust solution, its potential is currently bottlenecked by the
-    scarcity of high-quality paired training data. To bridge this gap, we introduce
-    a scalable data generation pipeline that transforms existing video editing pairs
-    into high-fidelity training quadruplets, leveraging image generative models to
-    create synthesized reference scaffolds.
-- id: '2603.02170'
-  title: 'SageBwd: A Trainable Low-bit Attention'
-  authors: Jintao Zhang, Marco Chen, Haoxu Wang, Kai Jiang, Ion Stoica, Joseph E.
-    Gonzalez, Jianfei Chen, Jun Zhu
-  abstract: 'Low-bit attention, such as SageAttention, has emerged as an effective
-    approach for accelerating model inference, but its applicability to training remains
-    poorly understood. In prior work, we introduced SageBwd, a trainable INT8 attention
-    that quantizes six of seven attention matrix multiplications while preserving
-    fine-tuning performance. However, SageBwd exhibited a persistent performance gap
-    to full-precision attention (FPA) during pre-training. In this work, we investigate
-    why this gap occurs and demonstrate that SageBwd matches full-precision attention
-    during pretraining. Through experiments and theoretical analysis, we reach a few
-    important insights and conclusions: (i) QK-norm is necessary for stable training
-    at large tokens per step, (ii) quantization errors primarily arise from the backward-pass
-    score gradient dS, (iii) reducing tokens per step enables SageBwd to match FPA
-    performance in pre-training, and (iv) K-smoothing remains essential for training
-    stability, while Q-smoothing provides limited benefit during pre-training.'
-  published: '2026-03-02'
-  pdf_url: http://arxiv.org/pdf/2603.02170
-  arxiv_url: http://arxiv.org/abs/2603.02170
-  key_findings: Low-bit attention, such as SageAttention, has emerged as an effective
-    approach for accelerating model inference, but its applicability to training remains
-    poorly understood. In prior work, we introduced SageBwd, a trainable INT8 attention
-    that quantizes six of seven attention matrix multiplications while preserving
-    fine-tuning performance. However, SageBwd exhibited a persistent performance gap
-    to full-precision attention (FPA) during pre-training.
+- id: '2603.03280'
+  title: 'How to Peel with a Knife: Aligning Fine-Grained Manipulation with Human
+    Preference'
+  authors: Toru Lin, Shuying Deng, Zhao-Heng Yin, Pieter Abbeel, Jitendra Malik
+  abstract: 'Many essential manipulation tasks - such as food preparation, surgery,
+    and craftsmanship - remain intractable for autonomous robots. These tasks are
+    characterized not only by contact-rich, force-sensitive dynamics, but also by
+    their "implicit" success criteria: unlike pick-and-place, task quality in these
+    domains is continuous and subjective (e.g. how well a potato is peeled), making
+    quantitative evaluation and reward engineering difficult. We present a learning
+    framework for such tasks, using peeling with a knife as a representative example.
+    Our approach follows a two-stage pipeline: first, we learn a robust initial policy
+    via force-aware data collection and imitation learning, enabling generalization
+    across object variations; second, we refine the policy through preference-based
+    finetuning using a learned reward model that combines quantitative task metrics
+    with qualitative human feedback, aligning policy behavior with human notions of
+    task quality. Using only 50-200 peeling trajectories, our system achieves over
+    90% average success rates on challenging produce including cucumbers, apples,
+    and potatoes, with performance improving by up to 40% through preference-based
+    finetuning. Remarkably, policies trained on a single produce category exhibit
+    strong zero-shot generalization to unseen in-category instances and to out-of-distribution
+    produce from different categories while maintaining over 90% success rates.'
+  published: '2026-03-03'
+  pdf_url: http://arxiv.org/pdf/2603.03280
+  arxiv_url: http://arxiv.org/abs/2603.03280
+  key_findings: 'Many essential manipulation tasks - such as food preparation, surgery,
+    and craftsmanship - remain intractable for autonomous robots. These tasks are
+    characterized not only by contact-rich, force-sensitive dynamics, but also by
+    their "implicit" success criteria: unlike pick-and-place, task quality in these
+    domains is continuous and subjective (e. g.'
+- id: '2603.03278'
+  title: 'Tether: Autonomous Functional Play with Correspondence-Driven Trajectory
+    Warping'
+  authors: William Liang, Sam Wang, Hung-Ju Wang, Osbert Bastani, Yecheng Jason Ma,
+    Dinesh Jayaraman
+  abstract: The ability to conduct and learn from interaction and experience is a
+    central challenge in robotics, offering a scalable alternative to labor-intensive
+    human demonstrations. However, realizing such "play" requires (1) a policy robust
+    to diverse, potentially out-of-distribution environment states, and (2) a procedure
+    that continuously produces useful robot experience. To address these challenges,
+    we introduce Tether, a method for autonomous functional play involving structured,
+    task-directed interactions. First, we design a novel open-loop policy that warps
+    actions from a small set of source demonstrations (<=10) by anchoring them to
+    semantic keypoint correspondences in the target scene. We show that this design
+    is extremely data-efficient and robust even under significant spatial and semantic
+    variations. Second, we deploy this policy for autonomous functional play in the
+    real world via a continuous cycle of task selection, execution, evaluation, and
+    improvement, guided by the visual understanding capabilities of vision-language
+    models. This procedure generates diverse, high-quality datasets with minimal human
+    intervention. In a household-like multi-object setup, our method is the first
+    to perform many hours of autonomous multi-task play in the real world starting
+    from only a handful of demonstrations. This produces a stream of data that consistently
+    improves the performance of closed-loop imitation policies over time, ultimately
+    yielding over 1000 expert-level trajectories and training policies competitive
+    with those learned from human-collected demonstrations.
+  published: '2026-03-03'
+  pdf_url: http://arxiv.org/pdf/2603.03278
+  arxiv_url: http://arxiv.org/abs/2603.03278
+  key_findings: The ability to conduct and learn from interaction and experience is
+    a central challenge in robotics, offering a scalable alternative to labor-intensive
+    human demonstrations. However, realizing such "play" requires (1) a policy robust
+    to diverse, potentially out-of-distribution environment states, and (2) a procedure
+    that continuously produces useful robot experience. To address these challenges,
+    we introduce Tether, a method for autonomous functional play involving structured,
+    task-directed interactions.
+- id: '2603.03258'
+  title: 'Inherited Goal Drift: Contextual Pressure Can Undermine Agentic Goals'
+  authors: Achyutha Menon, Magnus Saebo, Tyler Crosse, Spencer Gibson, Eyon Jang,
+    Diogo Cruz
+  abstract: 'The accelerating adoption of language models (LMs) as agents for deployment
+    in long-context tasks motivates a thorough understanding of goal drift: agents''
+    tendency to deviate from an original objective. While prior-generation language
+    model agents have been shown to be susceptible to drift, the extent to which drift
+    affects more recent models remains unclear. In this work, we provide an updated
+    characterization of the extent and causes of goal drift. We investigate drift
+    in state-of-the-art models within a simulated stock-trading environment (Arike
+    et al., 2025). These models are largely shown to be robust even when subjected
+    to adversarial pressure. We show, however, that this robustness is brittle: across
+    multiple settings, the same models often inherit drift when conditioned on prefilled
+    trajectories from weaker agents. The extent of conditioning-induced drift varies
+    significantly by model family, with only GPT-5.1 maintaining consistent resilience
+    among tested models. We find that drift behavior is inconsistent between prompt
+    variations and correlates poorly with instruction hierarchy following behavior,
+    with strong hierarchy following failing to reliably predict resistance to drift.
+    Finally, we run analogous experiments in a new emergency room triage environment
+    to show preliminary evidence for the transferability of our results across qualitatively
+    different settings. Our findings underscore the continued vulnerability of modern
+    LM agents to contextual pressures and the need for refined post-training techniques
+    to mitigate this.'
+  published: '2026-03-03'
+  pdf_url: http://arxiv.org/pdf/2603.03258
+  arxiv_url: http://arxiv.org/abs/2603.03258
+  key_findings: 'The accelerating adoption of language models (LMs) as agents for
+    deployment in long-context tasks motivates a thorough understanding of goal drift:
+    agents'' tendency to deviate from an original objective. While prior-generation
+    language model agents have been shown to be susceptible to drift, the extent to
+    which drift affects more recent models remains unclear. In this work, we provide
+    an updated characterization of the extent and causes of goal drift.'
+- id: '2603.03252'
+  title: 'Valet: A Standardized Testbed of Traditional Imperfect-Information Card
+    Games'
+  authors: Mark Goadrich, Achille Morenville, Éric Piette
+  abstract: AI algorithms for imperfect-information games are typically compared using
+    performance metrics on individual games, making it difficult to assess robustness
+    across game choices. Card games are a natural domain for imperfect information
+    due to hidden hands and stochastic draws. To facilitate comparative research on
+    imperfect-information game-playing algorithms and game systems, we introduce Valet,
+    a diverse and comprehensive testbed of 21 traditional imperfect-information card
+    games. These games span multiple genres, cultures, player counts, deck structures,
+    mechanics, winning conditions, and methods of hiding and revealing information.
+    To standardize implementations across systems, we encode the rules of each game
+    in RECYCLE, a card game description language. We empirically characterize each
+    game's branching factor and duration using random simulations, reporting baseline
+    score distributions for a Monte Carlo Tree Search player against random opponents
+    to demonstrate the suitability of Valet as a benchmarking suite.
+  published: '2026-03-03'
+  pdf_url: http://arxiv.org/pdf/2603.03252
+  arxiv_url: http://arxiv.org/abs/2603.03252
+  key_findings: AI algorithms for imperfect-information games are typically compared
+    using performance metrics on individual games, making it difficult to assess robustness
+    across game choices. Card games are a natural domain for imperfect information
+    due to hidden hands and stochastic draws. To facilitate comparative research on
+    imperfect-information game-playing algorithms and game systems, we introduce Valet,
+    a diverse and comprehensive testbed of 21 traditional imperfect-information card
+    games.
+- id: '2603.03242'
+  title: 'Density-Guided Response Optimization: Community-Grounded Alignment via Implicit
+    Acceptance Signals'
+  authors: Patrick Gerard, Svitlana Volkova
+  abstract: 'Language models deployed in online communities must adapt to norms that
+    vary across social, cultural, and domain-specific contexts. Prior alignment approaches
+    rely on explicit preference supervision or predefined principles, which are effective
+    for well-resourced settings but exclude most online communities -- particularly
+    those without institutional backing, annotation infrastructure, or organized around
+    sensitive topics -- where preference elicitation is costly, ethically fraught,
+    or culturally misaligned. We observe that communities already express preferences
+    implicitly through what content they accept, engage with, and allow to persist.
+    We show that this acceptance behavior induces measurable geometric structure in
+    representation space: accepted responses occupy coherent, high-density regions
+    that reflect community-specific norms, while rejected content falls in sparser
+    or misaligned areas. We operationalize this structure as an implicit preference
+    signal for alignment and introduce density-guided response optimization (DGRO),
+    a method that aligns language models to community norms without requiring explicit
+    preference labels. Using labeled preference data, we demonstrate that local density
+    recovers pairwise community judgments, indicating that geometric structure encodes
+    meaningful preference signal. We then apply DGRO in annotation-scarce settings
+    across diverse communities spanning platform, topic, and language. DGRO-aligned
+    models consistently produce responses preferred by human annotators, domain experts,
+    and model-based judges over supervised and prompt-based baselines. We position
+    DGRO as a practical alignment alternative for communities where explicit preference
+    supervision is unavailable or misaligned with situated practices, and discuss
+    the implications and risks of learning from emergent acceptance behavior.'
+  published: '2026-03-03'
+  pdf_url: http://arxiv.org/pdf/2603.03242
+  arxiv_url: http://arxiv.org/abs/2603.03242
+  key_findings: Language models deployed in online communities must adapt to norms
+    that vary across social, cultural, and domain-specific contexts. Prior alignment
+    approaches rely on explicit preference supervision or predefined principles, which
+    are effective for well-resourced settings but exclude most online communities
+    -- particularly those without institutional backing, annotation infrastructure,
+    or organized around sensitive topics -- where preference elicitation is costly,
+    ethically fraught, or culturally misaligned. We observe that communities already
+    express preferences implicitly through what content they accept, engage with,
+    and allow to persist.
+- id: '2603.03241'
+  title: 'UniG2U-Bench: Do Unified Models Advance Multimodal Understanding?'
+  authors: Zimo Wen, Boxiu Li, Wanbo Zhang, Junxiang Lei, Xiaoyu Chen, Yijia Fan,
+    Qi Zhang, Yujiang Wang, Lili Qiu, Bo Li, Ziwei Liu, Caihua Shan, Yifan Yang, Yifei
+    Shen
+  abstract: 'Unified multimodal models have recently demonstrated strong generative
+    capabilities, yet whether and when generation improves understanding remains unclear.
+    Existing benchmarks lack a systematic exploration of the specific tasks where
+    generation facilitates understanding. To this end, we introduce UniG2U-Bench,
+    a comprehensive benchmark categorizing generation-to-understanding (G2U) evaluation
+    into 7 regimes and 30 subtasks, requiring varying degrees of implicit or explicit
+    visual transformations. Extensive evaluation of over 30 models reveals three core
+    findings: 1) Unified models generally underperform their base Vision-Language
+    Models (VLMs), and Generate-then-Answer (GtA) inference typically degrades performance
+    relative to direct inference. 2) Consistent enhancements emerge in spatial intelligence,
+    visual illusions, or multi-round reasoning subtasks, where enhanced spatial and
+    shape perception, as well as multi-step intermediate image states, prove beneficial.
+    3) Tasks with similar reasoning structures and models sharing architectures exhibit
+    correlated behaviors, suggesting that generation-understanding coupling induces
+    class-consistent inductive biases over tasks, pretraining data, and model architectures.
+    These findings highlight the necessity for more diverse training data and novel
+    paradigms to fully unlock the potential of unified multimodal modeling.'
+  published: '2026-03-03'
+  pdf_url: http://arxiv.org/pdf/2603.03241
+  arxiv_url: http://arxiv.org/abs/2603.03241
+  key_findings: Unified multimodal models have recently demonstrated strong generative
+    capabilities, yet whether and when generation improves understanding remains unclear.
+    Existing benchmarks lack a systematic exploration of the specific tasks where
+    generation facilitates understanding. To this end, we introduce UniG2U-Bench,
+    a comprehensive benchmark categorizing generation-to-understanding (G2U) evaluation
+    into 7 regimes and 30 subtasks, requiring varying degrees of implicit or explicit
+    visual transformations.
+- id: '2603.03233'
+  title: AI-for-Science Low-code Platform with Bayesian Adversarial Multi-Agent Framework
+  authors: Zihang Zeng, Jiaquan Zhang, Pengze Li, Yuan Qi, Xi Chen
+  abstract: 'Large Language Models (LLMs) demonstrate potentials for automating scientific
+    code generation but face challenges in reliability, error propagation in multi-agent
+    workflows, and evaluation in domains with ill-defined success metrics. We present
+    a Bayesian adversarial multi-agent framework specifically designed for AI for
+    Science (AI4S) tasks in the form of a Low-code Platform (LCP). Three LLM-based
+    agents are coordinated under the Bayesian framework: a Task Manager that structures
+    user inputs into actionable plans and adaptive test cases, a Code Generator that
+    produces candidate solutions, and an Evaluator providing comprehensive feedback.
+    The framework employs an adversarial loop where the Task Manager iteratively refines
+    test cases to challenge the Code Generator, while prompt distributions are dynamically
+    updated using Bayesian principles by integrating code quality metrics: functional
+    correctness, structural alignment, and static analysis. This co-optimization of
+    tests and code reduces dependence on LLM reliability and addresses evaluation
+    uncertainty inherent to scientific tasks. LCP also streamlines human-AI collaboration
+    by translating non-expert prompts into domain-specific requirements, bypassing
+    the need for manual prompt engineering by practitioners without coding backgrounds.
+    Benchmark evaluations demonstrate LCP''s effectiveness in generating robust code
+    while minimizing error propagation. The proposed platform is also tested on an
+    Earth Science cross-disciplinary task and demonstrates strong reliability, outperforming
+    competing models.'
+  published: '2026-03-03'
+  pdf_url: http://arxiv.org/pdf/2603.03233
+  arxiv_url: http://arxiv.org/abs/2603.03233
+  key_findings: 'Large Language Models (LLMs) demonstrate potentials for automating
+    scientific code generation but face challenges in reliability, error propagation
+    in multi-agent workflows, and evaluation in domains with ill-defined success metrics.
+    We present a Bayesian adversarial multi-agent framework specifically designed
+    for AI for Science (AI4S) tasks in the form of a Low-code Platform (LCP). Three
+    LLM-based agents are coordinated under the Bayesian framework: a Task Manager
+    that structures user inputs into actionable plans and adaptive test cases, a Code
+    Generator that produces candidate solutions, and an Evaluator providing comprehensive
+    feedback.'
+- id: '2603.03230'
+  title: 'SynthCharge: An Electric Vehicle Routing Instance Generator with Feasibility
+    Screening to Enable Learning-Based Optimization and Benchmarking'
+  authors: Mertcan Daysalilar, Fuat Uyguroglu, Gabriel Nicolosi, Adam Meyers
+  abstract: The electric vehicle routing problem with time windows (EVRPTW) extends
+    the classical VRPTW by introducing battery capacity constraints and charging station
+    decisions. Existing benchmark datasets are often static and lack verifiable feasibility,
+    which restricts reproducible evaluation of learning-based routing models. We introduce
+    SynthCharge, a parametric generator that produces diverse, feasibility-screened
+    EVRPTW instances across varying spatiotemporal configurations and scalable customer
+    counts. While SynthCharge can currently generate large-scale instances of up to
+    500 customers, we focus our experiments on sizes ranging from 5 to 100 customers.
+    Unlike static benchmark suites, SynthCharge integrates instance geometry with
+    adaptive energy capacity scaling and range-aware charging station placement. To
+    guarantee structural validity, the generator systematically filters out unsolvable
+    instances through a fast feasibility screening process. Ultimately, SynthCharge
+    provides the dynamic benchmarking infrastructure needed to systematically evaluate
+    the robustness of emerging neural routing and data-driven approaches.
+  published: '2026-03-03'
+  pdf_url: http://arxiv.org/pdf/2603.03230
+  arxiv_url: http://arxiv.org/abs/2603.03230
+  key_findings: The electric vehicle routing problem with time windows (EVRPTW) extends
+    the classical VRPTW by introducing battery capacity constraints and charging station
+    decisions. Existing benchmark datasets are often static and lack verifiable feasibility,
+    which restricts reproducible evaluation of learning-based routing models. We introduce
+    SynthCharge, a parametric generator that produces diverse, feasibility-screened
+    EVRPTW instances across varying spatiotemporal configurations and scalable customer
+    counts.
+- id: '2603.03224'
+  title: Stabilized Adaptive Loss and Residual-Based Collocation for Physics-Informed
+    Neural Networks
+  authors: Divyavardhan Singh, Shubham Kamble, Dimple Sonone, Kishor Upla
+  abstract: Physics-Informed Neural Networks (PINNs) have been recognized as a mesh-free
+    alternative to solve partial differential equations where physics information
+    is incorporated. However, in dealing with problems characterized by high stiffness
+    or shock-dominated dynamics, traditional PINNs have been found to have limitations,
+    including unbalanced training and inaccuracy in solution, even with small physics
+    residuals. In this research, we seek to address these limitations using the viscous
+    Burgers' equation with low viscosity and the Allen-Cahn equation as test problems.
+    In addressing unbalanced training, we have developed a new adaptive loss balancing
+    scheme using smoothed gradient norms to ensure satisfaction of initial and boundary
+    conditions. Further, to address inaccuracy in the solution, we have developed
+    an adaptive residual-based collocation scheme to improve the accuracy of solutions
+    in the regions with high physics residuals. The proposed new approach significantly
+    improves solution accuracy with consistent satisfaction of physics residuals.
+    For instance, in the case of Burgers' equation, the relative L2 error is reduced
+    by about 44 percent compared to traditional PINNs, while for the Allen-Cahn equation,
+    the relative L2 error is reduced by approximately 70 percent. Additionally, we
+    show the trustworthy solution comparison of the proposed method using a robust
+    finite difference solver.
+  published: '2026-03-03'
+  pdf_url: http://arxiv.org/pdf/2603.03224
+  arxiv_url: http://arxiv.org/abs/2603.03224
+  key_findings: Physics-Informed Neural Networks (PINNs) have been recognized as a
+    mesh-free alternative to solve partial differential equations where physics information
+    is incorporated. However, in dealing with problems characterized by high stiffness
+    or shock-dominated dynamics, traditional PINNs have been found to have limitations,
+    including unbalanced training and inaccuracy in solution, even with small physics
+    residuals. In this research, we seek to address these limitations using the viscous
+    Burgers' equation with low viscosity and the Allen-Cahn equation as test problems.
+- id: '2603.03212'
+  title: 'NeuroSkill(tm): Proactive Real-Time Agentic System Capable of Modeling Human
+    State of Mind'
+  authors: Nataliya Kosmyna, Eugene Hauptmann
+  abstract: Real-time proactive agentic system, capable of modeling Human State of
+    Mind, using foundation EXG model and text embeddings model, running fully offline
+    on the edge. Unlike all previously known systems, the NeuroSkill(tm) system leverages
+    SKILL.md description of Human's State of Mind via API and CLI provided by the
+    system, directly from the Brain-Computer Interface (BCI) devices, which records
+    Human biophysical and brain signals. Our custom harness - NeuroLoop(tm) - utilizes
+    all of the above to run agentic flow that manages to engage with the Human on
+    multiple cognitive and affective levels of their State of Mind (e.g., empathy),
+    by providing actionable tool calls and protocol execution with explicit or implicit
+    requests from the Human. GPLv3 open-source software with ethically aligned AI100
+    licensing for the skill markdown.
+  published: '2026-03-03'
+  pdf_url: http://arxiv.org/pdf/2603.03212
+  arxiv_url: http://arxiv.org/abs/2603.03212
+  key_findings: Real-time proactive agentic system, capable of modeling Human State
+    of Mind, using foundation EXG model and text embeddings model, running fully offline
+    on the edge. Unlike all previously known systems, the NeuroSkill(tm) system leverages
+    SKILL. md description of Human's State of Mind via API and CLI provided by the
+    system, directly from the Brain-Computer Interface (BCI) devices, which records
+    Human biophysical and brain signals.

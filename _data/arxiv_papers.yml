@@ -1,298 +1,304 @@
 papers:
-- id: '2603.04390'
-  title: A Dual-Helix Governance Approach Towards Reliable Agentic AI for WebGIS Development
-  authors: ' Boyuan,  Guan, Wencong Cui, Levente Juhasz'
-  abstract: 'WebGIS development requires rigor, yet agentic AI frequently fails due
-    to five large language model (LLM) limitations: context constraints, cross-session
-    forgetting, stochasticity, instruction failure, and adaptation rigidity. We propose
-    a dual-helix governance framework reframing these challenges as structural governance
-    problems that model capacity alone cannot resolve. We implement the framework
-    as a 3-track architecture (Knowledge, Behavior, Skills) that uses a knowledge
-    graph substrate to stabilize execution by externalizing domain facts and enforcing
-    executable protocols, complemented by a self-learning cycle for autonomous knowledge
-    growth. Applying this to the FutureShorelines WebGIS tool, a governed agent refactored
-    a 2,265-line monolithic codebase into modular ES6 components. Results demonstrated
-    a 51\% reduction in cyclomatic complexity and a 7-point increase in maintainability
-    index. A comparative experiment against a zero-shot LLM confirms that externalized
-    governance, not just model capability, drives operational reliability in geospatial
-    engineering. This approach is implemented in the open-source AgentLoom governance
-    toolkit.'
-  published: '2026-03-04'
-  pdf_url: http://arxiv.org/pdf/2603.04390
-  arxiv_url: http://arxiv.org/abs/2603.04390
-  key_findings: 'WebGIS development requires rigor, yet agentic AI frequently fails
-    due to five large language model (LLM) limitations: context constraints, cross-session
-    forgetting, stochasticity, instruction failure, and adaptation rigidity. We propose
-    a dual-helix governance framework reframing these challenges as structural governance
-    problems that model capacity alone cannot resolve. We implement the framework
-    as a 3-track architecture (Knowledge, Behavior, Skills) that uses a knowledge
-    graph substrate to stabilize execution by externalizing domain facts and enforcing
-    executable protocols, complemented by a self-learning cycle for autonomous knowledge
-    growth.'
-- id: '2603.04385'
-  title: 'ZipMap: Linear-Time Stateful 3D Reconstruction with Test-Time Training'
-  authors: Haian Jin, Rundi Wu, Tianyuan Zhang, Ruiqi Gao, Jonathan T. Barron, Noah
-    Snavely, Aleksander Holynski
-  abstract: Feed-forward transformer models have driven rapid progress in 3D vision,
-    but state-of-the-art methods such as VGGT and $π^3$ have a computational cost
-    that scales quadratically with the number of input images, making them inefficient
-    when applied to large image collections. Sequential-reconstruction approaches
-    reduce this cost but sacrifice reconstruction quality. We introduce ZipMap, a
-    stateful feed-forward model that achieves linear-time, bidirectional 3D reconstruction
-    while matching or surpassing the accuracy of quadratic-time methods. ZipMap employs
-    test-time training layers to zip an entire image collection into a compact hidden
-    scene state in a single forward pass, enabling reconstruction of over 700 frames
-    in under 10 seconds on a single H100 GPU, more than $20\times$ faster than state-of-the-art
-    methods such as VGGT. Moreover, we demonstrate the benefits of having a stateful
-    representation in real-time scene-state querying and its extension to sequential
-    streaming reconstruction.
-  published: '2026-03-04'
-  pdf_url: http://arxiv.org/pdf/2603.04385
-  arxiv_url: http://arxiv.org/abs/2603.04385
-  key_findings: Feed-forward transformer models have driven rapid progress in 3D vision,
-    but state-of-the-art methods such as VGGT and $π^3$ have a computational cost
-    that scales quadratically with the number of input images, making them inefficient
-    when applied to large image collections. Sequential-reconstruction approaches
-    reduce this cost but sacrifice reconstruction quality. We introduce ZipMap, a
-    stateful feed-forward model that achieves linear-time, bidirectional 3D reconstruction
-    while matching or surpassing the accuracy of quadratic-time methods.
-- id: '2603.04378'
-  title: Robustness of Agentic AI Systems via Adversarially-Aligned Jacobian Regularization
-  authors: Furkan Mumcu, Yasin Yilmaz
-  abstract: As Large Language Models (LLMs) transition into autonomous multi-agent
-    ecosystems, robust minimax training becomes essential yet remains prone to instability
-    when highly non-linear policies induce extreme local curvature in the inner maximization.
-    Standard remedies that enforce global Jacobian bounds are overly conservative,
-    suppressing sensitivity in all directions and inducing a large Price of Robustness.
-    We introduce Adversarially-Aligned Jacobian Regularization (AAJR), a trajectory-aligned
-    approach that controls sensitivity strictly along adversarial ascent directions.
-    We prove that AAJR yields a strictly larger admissible policy class than global
-    constraints under mild conditions, implying a weakly smaller approximation gap
-    and reduced nominal performance degradation. Furthermore, we derive step-size
-    conditions under which AAJR controls effective smoothness along optimization trajectories
-    and ensures inner-loop stability. These results provide a structural theory for
-    agentic robustness that decouples minimax stability from global expressivity restrictions.
-  published: '2026-03-04'
-  pdf_url: http://arxiv.org/pdf/2603.04378
-  arxiv_url: http://arxiv.org/abs/2603.04378
-  key_findings: As Large Language Models (LLMs) transition into autonomous multi-agent
-    ecosystems, robust minimax training becomes essential yet remains prone to instability
-    when highly non-linear policies induce extreme local curvature in the inner maximization.
-    Standard remedies that enforce global Jacobian bounds are overly conservative,
-    suppressing sensitivity in all directions and inducing a large Price of Robustness.
-    We introduce Adversarially-Aligned Jacobian Regularization (AAJR), a trajectory-aligned
-    approach that controls sensitivity strictly along adversarial ascent directions.
-- id: '2603.04370'
-  title: '$τ$-Knowledge: Evaluating Conversational Agents over Unstructured Knowledge'
-  authors: Quan Shi, Alexandra Zytek, Pedram Razavi, Karthik Narasimhan, Victor Barres
-  abstract: Conversational agents are increasingly deployed in knowledge-intensive
-    settings, where correct behavior depends on retrieving and applying domain-specific
-    knowledge from large, proprietary, and unstructured corpora during live interactions
-    with users. Yet most existing benchmarks evaluate retrieval or tool use independently
-    of each other, creating a gap in realistic, fully agentic evaluation over unstructured
-    data in long-horizon interactions. We introduce $τ$-Knowledge, an extension of
-    $τ$-Bench for evaluating agents in environments where success depends on coordinating
-    external, natural-language knowledge with tool outputs to produce verifiable,
-    policy-compliant state changes. Our new domain, $τ$-Banking, models realistic
-    fintech customer support workflows in which agents must navigate roughly 700 interconnected
-    knowledge documents while executing tool-mediated account updates. Across embedding-based
-    retrieval and terminal-based search, even frontier models with high reasoning
-    budgets achieve only $\sim$25.5% pass^1, with reliability degrading sharply over
-    repeated trials. Agents struggle to retrieve the correct documents from densely
-    interlinked knowledge bases and to reason accurately over complex internal policies.
-    Overall, $τ$-Knowledge provides a realistic testbed for developing agents that
-    integrate unstructured knowledge in human-facing deployments.
-  published: '2026-03-04'
-  pdf_url: http://arxiv.org/pdf/2603.04370
-  arxiv_url: http://arxiv.org/abs/2603.04370
-  key_findings: Conversational agents are increasingly deployed in knowledge-intensive
-    settings, where correct behavior depends on retrieving and applying domain-specific
-    knowledge from large, proprietary, and unstructured corpora during live interactions
-    with users. Yet most existing benchmarks evaluate retrieval or tool use independently
-    of each other, creating a gap in realistic, fully agentic evaluation over unstructured
-    data in long-horizon interactions. We introduce $τ$-Knowledge, an extension of
-    $τ$-Bench for evaluating agents in environments where success depends on coordinating
-    external, natural-language knowledge with tool outputs to produce verifiable,
-    policy-compliant state changes.
-- id: '2603.04366'
-  title: Low-Resource Guidance for Controllable Latent Audio Diffusion
-  authors: Zachary Novack, Zack Zukowski, CJ Carr, Julian Parker, Zach Evans, Josiah
-    Taylor, Taylor Berg-Kirkpatrick, Julian McAuley, Jordi Pons
-  abstract: Generative audio requires fine-grained controllable outputs, yet most
-    existing methods require model retraining on specific controls or inference-time
-    controls (\textit{e.g.}, guidance) that can also be computationally demanding.
-    By examining the bottlenecks of existing guidance-based controls, in particular
-    their high cost-per-step due to decoder backpropagation, we introduce a guidance-based
-    approach through selective TFG and Latent-Control Heads (LatCHs), which enables
-    controlling latent audio diffusion models with low computational overhead. LatCHs
-    operate directly in latent space, avoiding the expensive decoder step, and requiring
-    minimal training resources (7M parameters and $\approx$ 4 hours of training).
-    Experiments with Stable Audio Open demonstrate effective control over intensity,
-    pitch, and beats (and a combination of those) while maintaining generation quality.
-    Our method balances precision and audio fidelity with far lower computational
-    costs than standard end-to-end guidance. Demo examples can be found at https://zacharynovack.github.io/latch/latch.html.
-  published: '2026-03-04'
-  pdf_url: http://arxiv.org/pdf/2603.04366
-  arxiv_url: http://arxiv.org/abs/2603.04366
-  key_findings: Generative audio requires fine-grained controllable outputs, yet most
-    existing methods require model retraining on specific controls or inference-time
-    controls (\textit{e. g. }, guidance) that can also be computationally demanding.
-- id: '2603.04364'
-  title: 'Dual-Modality Multi-Stage Adversarial Safety Training: Robustifying Multimodal
-    Web Agents Against Cross-Modal Attacks'
-  authors: Haoyu Liu, Dingcheng Li, Lukas Rutishauser, Zeyu Zheng
-  abstract: 'Multimodal web agents that process both screenshots and accessibility
-    trees are increasingly deployed to interact with web interfaces, yet their dual-stream
-    architecture opens an underexplored attack surface: an adversary who injects content
-    into the webpage DOM simultaneously corrupts both observation channels with a
-    consistent deceptive narrative. Our vulnerability analysis on MiniWob++ reveals
-    that attacks including a visual component far outperform text-only injections,
-    exposing critical gaps in text-centric VLM safety training. Motivated by this
-    finding, we propose Dual-Modality Multi-Stage Adversarial Safety Training (DMAST),
-    a framework that formalizes the agent-attacker interaction as a two-player zero-sum
-    Markov game and co-trains both players through a three-stage pipeline: (1) imitation
-    learning from a strong teacher model, (2) oracle-guided supervised fine-tuning
-    that uses a novel zero-acknowledgment strategy to instill task-focused reasoning
-    under adversarial noise, and (3) adversarial reinforcement learning via Group
-    Relative Policy Optimization (GRPO) self-play. On out-of-distribution tasks, DMAST
-    substantially mitigates adversarial risks while simultaneously doubling task completion
-    efficiency. Our approach significantly outperforms established training-based
-    and prompt-based defenses, demonstrating genuine co-evolutionary progress and
-    robust generalization to complex, unseen environments.'
-  published: '2026-03-04'
-  pdf_url: http://arxiv.org/pdf/2603.04364
-  arxiv_url: http://arxiv.org/abs/2603.04364
-  key_findings: 'Multimodal web agents that process both screenshots and accessibility
-    trees are increasingly deployed to interact with web interfaces, yet their dual-stream
-    architecture opens an underexplored attack surface: an adversary who injects content
-    into the webpage DOM simultaneously corrupts both observation channels with a
-    consistent deceptive narrative. Our vulnerability analysis on MiniWob++ reveals
-    that attacks including a visual component far outperform text-only injections,
-    exposing critical gaps in text-centric VLM safety training. Motivated by this
-    finding, we propose Dual-Modality Multi-Stage Adversarial Safety Training (DMAST),
-    a framework that formalizes the agent-attacker interaction as a two-player zero-sum
-    Markov game and co-trains both players through a three-stage pipeline: (1) imitation
-    learning from a strong teacher model, (2) oracle-guided supervised fine-tuning
-    that uses a novel zero-acknowledgment strategy to instill task-focused reasoning
-    under adversarial noise, and (3) adversarial reinforcement learning via Group
-    Relative Policy Optimization (GRPO) self-play.'
-- id: '2603.04359'
-  title: 'Dissecting Quantization Error: A Concentration-Alignment Perspective'
-  authors: Marco Federici, Boris van Breugel, Paul Whatmough, Markus Nagel
-  abstract: 'Quantization can drastically increase the efficiency of large language
-    and vision models, but typically incurs an accuracy drop. Recently, function-preserving
-    transforms (e.g. rotations, Hadamard transform, channel-wise scaling) have been
-    successfully applied to reduce post-training quantization error, yet a principled
-    explanation remains elusive. We analyze linear-layer quantization via the signal-to-quantization-noise
-    ratio (SQNR), showing that for uniform integer quantization at a fixed bit width,
-    SQNR decomposes into (i) the concentration of weights and activations (capturing
-    spread and outliers), and (ii) the alignment of their dominant variation directions.
-    This reveals an actionable insight: beyond concentration - the focus of most prior
-    transforms (e.g. rotations or Hadamard) - improving alignment between weight and
-    activation can further reduce quantization error. Motivated by this, we introduce
-    block Concentration-Alignment Transforms (CAT), a lightweight linear transformation
-    that uses a covariance estimate from a small calibration set to jointly improve
-    concentration and alignment, approximately maximizing SQNR. Experiments across
-    several LLMs show that CAT consistently matches or outperforms prior transform-based
-    quantization methods at 4-bit precision, confirming the insights gained in our
-    framework.'
-  published: '2026-03-04'
-  pdf_url: http://arxiv.org/pdf/2603.04359
-  arxiv_url: http://arxiv.org/abs/2603.04359
-  key_findings: Quantization can drastically increase the efficiency of large language
-    and vision models, but typically incurs an accuracy drop. Recently, function-preserving
-    transforms (e. g.
-- id: '2603.04356'
-  title: 'RoboCasa365: A Large-Scale Simulation Framework for Training and Benchmarking
-    Generalist Robots'
-  authors: Soroush Nasiriany, Sepehr Nasiriany, Abhiram Maddukuri, Yuke Zhu
-  abstract: Recent advances in robot learning have accelerated progress toward generalist
-    robots that can perform everyday tasks in human environments. Yet it remains difficult
-    to gauge how close we are to this vision. The field lacks a reproducible, large-scale
-    benchmark for systematic evaluation. To fill this gap, we present RoboCasa365,
-    a comprehensive simulation benchmark for household mobile manipulation. Built
-    on the RoboCasa platform, RoboCasa365 introduces 365 everyday tasks across 2,500
-    diverse kitchen environments, with over 600 hours of human demonstration data
-    and over 1600 hours of synthetically generated demonstration data -- making it
-    one of the most diverse and large-scale resources for studying generalist policies.
-    RoboCasa365 is designed to support systematic evaluations for different problem
-    settings, including multi-task learning, robot foundation model training, and
-    lifelong learning. We conduct extensive experiments on this benchmark with state-of-the-art
-    methods and analyze the impacts of task diversity, dataset scale, and environment
-    variation on generalization. Our results provide new insights into what factors
-    most strongly affect the performance of generalist robots and inform strategies
-    for future progress in the field.
-  published: '2026-03-04'
-  pdf_url: http://arxiv.org/pdf/2603.04356
-  arxiv_url: http://arxiv.org/abs/2603.04356
-  key_findings: Recent advances in robot learning have accelerated progress toward
-    generalist robots that can perform everyday tasks in human environments. Yet it
-    remains difficult to gauge how close we are to this vision. The field lacks a
-    reproducible, large-scale benchmark for systematic evaluation.
-- id: '2603.04355'
-  title: Efficient Refusal Ablation in LLM through Optimal Transport
-  authors: Geraldin Nanfack, Eugene Belilovsky, Elvis Dohmatob
-  abstract: Safety-aligned language models refuse harmful requests through learned
-    refusal behaviors encoded in their internal representations. Recent activation-based
-    jailbreaking methods circumvent these safety mechanisms by applying orthogonal
-    projections to remove refusal directions, but these approaches treat refusal as
-    a one-dimensional phenomenon and ignore the rich distributional structure of model
-    activations. We introduce a principled framework based on optimal transport theory
-    that transforms the entire distribution of harmful activations to match harmless
-    ones. By combining PCA with closed-form Gaussian optimal transport, we achieve
-    efficient computation in high-dimensional representation spaces while preserving
-    essential geometric structure. Across six models (Llama-2, Llama-3.1, Qwen-2.5;
-    7B-32B parameters), our method achieves up to 11% higher attack success rates
-    than state-of-the-art baselines while maintaining comparable perplexity, demonstrating
-    superior preservation of model capabilities. Critically, we discover that layer-selective
-    intervention (applying optimal transport to 1-2 carefully chosen layers at approximately
-    40-60% network depth) substantially outperforms full-network interventions, revealing
-    that refusal mechanisms may be localized rather than distributed. Our analysis
-    provides new insights into the geometric structure of safety representations and
-    suggests that current alignment methods may be vulnerable to distributional attacks
-    beyond simple direction removal.
-  published: '2026-03-04'
-  pdf_url: http://arxiv.org/pdf/2603.04355
-  arxiv_url: http://arxiv.org/abs/2603.04355
-  key_findings: Safety-aligned language models refuse harmful requests through learned
-    refusal behaviors encoded in their internal representations. Recent activation-based
-    jailbreaking methods circumvent these safety mechanisms by applying orthogonal
-    projections to remove refusal directions, but these approaches treat refusal as
-    a one-dimensional phenomenon and ignore the rich distributional structure of model
-    activations. We introduce a principled framework based on optimal transport theory
-    that transforms the entire distribution of harmful activations to match harmless
-    ones.
-- id: '2603.04348'
-  title: 'RANGER: Sparsely-Gated Mixture-of-Experts with Adaptive Retrieval Re-ranking
-    for Pathology Report Generation'
-  authors: Yixin Chen, Ziyu Su, Hikmat Khan, Muhammad Khalid Khan Niazi
-  abstract: Pathology report generation remains a relatively under-explored downstream
-    task, primarily due to the gigapixel scale and complex morphological heterogeneity
-    of Whole Slide Images (WSIs). Existing pathology report generation frameworks
-    typically employ transformer architectures, relying on a homogeneous decoder architecture
-    and static knowledge retrieval integration. Such architectures limit generative
-    specialization and may introduce noisy external guidance during the report generation
-    process. To address these limitations, we propose RANGER, a sparsely-gated Mixture-of-Experts
-    (MoE) framework with adaptive retrieval re-ranking for pathology report generation.
-    Specifically, we integrate a sparsely gated MoE into the decoder, along with noisy
-    top-$k$ routing and load-balancing regularization, to enable dynamic expert specialization
-    across various diagnostic patterns. Additionally, we introduce an adaptive retrieval
-    re-ranking module that selectively refines retrieved memory from a knowledge base
-    before integration, reducing noise and improving semantic alignment based on visual
-    feature representations. We perform extensive experiments on the PathText-BRCA
-    dataset and demonstrate consistent improvements over existing approaches across
-    standard natural language generation metrics. Our full RANGER model achieves optimal
-    performance on PathText dataset, reaching BLEU-1 to BLEU-4 scores of 0.4598, 0.3044,
-    0.2036, and 0.1435, respectively, with METEOR of 0.1883, and ROUGE-L of 0.3038,
-    validating the effectiveness of dynamic expert routing and adaptive knowledge
-    refinement for semantically grounded pathology report generation.
-  published: '2026-03-04'
-  pdf_url: http://arxiv.org/pdf/2603.04348
-  arxiv_url: http://arxiv.org/abs/2603.04348
-  key_findings: Pathology report generation remains a relatively under-explored downstream
-    task, primarily due to the gigapixel scale and complex morphological heterogeneity
-    of Whole Slide Images (WSIs). Existing pathology report generation frameworks
-    typically employ transformer architectures, relying on a homogeneous decoder architecture
-    and static knowledge retrieval integration. Such architectures limit generative
-    specialization and may introduce noisy external guidance during the report generation
-    process.
+- id: '2603.05504'
+  title: 'RoboPocket: Improve Robot Policies Instantly with Your Phone'
+  authors: Junjie Fang, Wendi Chen, Han Xue, Fangyuan Zhou, Tian Le, Yi Wang, Yuting
+    Zhang, Jun Lv, Chuan Wen, Cewu Lu
+  abstract: 'Scaling imitation learning is fundamentally constrained by the efficiency
+    of data collection. While handheld interfaces have emerged as a scalable solution
+    for in-the-wild data acquisition, they predominantly operate in an open-loop manner:
+    operators blindly collect demonstrations without knowing the underlying policy''s
+    weaknesses, leading to inefficient coverage of critical state distributions. Conversely,
+    interactive methods like DAgger effectively address covariate shift but rely on
+    physical robot execution, which is costly and difficult to scale. To reconcile
+    this trade-off, we introduce RoboPocket, a portable system that enables Robot-Free
+    Instant Policy Iteration using single consumer smartphones. Its core innovation
+    is a Remote Inference framework that visualizes the policy''s predicted trajectory
+    via Augmented Reality (AR) Visual Foresight. This immersive feedback allows collectors
+    to proactively identify potential failures and focus data collection on the policy''s
+    weak regions without requiring a physical robot. Furthermore, we implement an
+    asynchronous Online Finetuning pipeline that continuously updates the policy with
+    incoming data, effectively closing the learning loop in minutes. Extensive experiments
+    demonstrate that RoboPocket adheres to data scaling laws and doubles the data
+    efficiency compared to offline scaling strategies, overcoming their long-standing
+    efficiency bottleneck. Moreover, our instant iteration loop also boosts sample
+    efficiency by up to 2$\times$ in distributed environments a small number of interactive
+    corrections per person. Project page and videos: https://robo-pocket.github.io.'
+  published: '2026-03-05'
+  pdf_url: http://arxiv.org/pdf/2603.05504
+  arxiv_url: http://arxiv.org/abs/2603.05504
+  key_findings: 'Scaling imitation learning is fundamentally constrained by the efficiency
+    of data collection. While handheld interfaces have emerged as a scalable solution
+    for in-the-wild data acquisition, they predominantly operate in an open-loop manner:
+    operators blindly collect demonstrations without knowing the underlying policy''s
+    weaknesses, leading to inefficient coverage of critical state distributions. Conversely,
+    interactive methods like DAgger effectively address covariate shift but rely on
+    physical robot execution, which is costly and difficult to scale.'
+- id: '2603.05500'
+  title: 'POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation'
+  authors: Zeju Qiu, Lixin Liu, Adrian Weller, Han Shi, Weiyang Liu
+  abstract: Efficient and stable training of large language models (LLMs) remains
+    a core challenge in modern machine learning systems. To address this challenge,
+    Reparameterized Orthogonal Equivalence Training (POET), a spectrum-preserving
+    framework that optimizes each weight matrix through orthogonal equivalence transformation,
+    has been proposed. Although POET provides strong training stability, its original
+    implementation incurs high memory consumption and computational overhead due to
+    intensive matrix multiplications. To overcome these limitations, we introduce
+    POET-X, a scalable and memory-efficient variant that performs orthogonal equivalence
+    transformations with significantly reduced computational cost. POET-X maintains
+    the generalization and stability benefits of POET while achieving substantial
+    improvements in throughput and memory efficiency. In our experiments, POET-X enables
+    the pretraining of billion-parameter LLMs on a single Nvidia H100 GPU, and in
+    contrast, standard optimizers such as AdamW run out of memory under the same settings.
+  published: '2026-03-05'
+  pdf_url: http://arxiv.org/pdf/2603.05500
+  arxiv_url: http://arxiv.org/abs/2603.05500
+  key_findings: Efficient and stable training of large language models (LLMs) remains
+    a core challenge in modern machine learning systems. To address this challenge,
+    Reparameterized Orthogonal Equivalence Training (POET), a spectrum-preserving
+    framework that optimizes each weight matrix through orthogonal equivalence transformation,
+    has been proposed. Although POET provides strong training stability, its original
+    implementation incurs high memory consumption and computational overhead due to
+    intensive matrix multiplications.
+- id: '2603.05498'
+  title: 'The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention
+    Sinks'
+  authors: Shangwen Sun, Alfredo Canziani, Yann LeCun, Jiachen Zhu
+  abstract: 'We study two recurring phenomena in Transformer language models: massive
+    activations, in which a small number of tokens exhibit extreme outliers in a few
+    channels, and attention sinks, in which certain tokens attract disproportionate
+    attention mass regardless of semantic relevance. Prior work observes that these
+    phenomena frequently co-occur and often involve the same tokens, but their functional
+    roles and causal relationship remain unclear. Through systematic experiments,
+    we show that the co-occurrence is largely an architectural artifact of modern
+    Transformer design, and that the two phenomena serve related but distinct functions.
+    Massive activations operate globally: they induce near-constant hidden representations
+    that persist across layers, effectively functioning as implicit parameters of
+    the model. Attention sinks operate locally: they modulate attention outputs across
+    heads and bias individual heads toward short-range dependencies. We identify the
+    pre-norm configuration as the key choice that enables the co-occurrence, and show
+    that ablating it causes the two phenomena to decouple.'
+  published: '2026-03-05'
+  pdf_url: http://arxiv.org/pdf/2603.05498
+  arxiv_url: http://arxiv.org/abs/2603.05498
+  key_findings: 'We study two recurring phenomena in Transformer language models:
+    massive activations, in which a small number of tokens exhibit extreme outliers
+    in a few channels, and attention sinks, in which certain tokens attract disproportionate
+    attention mass regardless of semantic relevance. Prior work observes that these
+    phenomena frequently co-occur and often involve the same tokens, but their functional
+    roles and causal relationship remain unclear. Through systematic experiments,
+    we show that the co-occurrence is largely an architectural artifact of modern
+    Transformer design, and that the two phenomena serve related but distinct functions.'
+- id: '2603.05494'
+  title: Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation
+  authors: Helena Casademunt, Bartosz Cywiński, Khoi Tran, Arya Jakkli, Samuel Marks,
+    Neel Nanda
+  abstract: 'Large language models sometimes produce false or misleading responses.
+    Two approaches to this problem are honesty elicitation -- modifying prompts or
+    weights so that the model answers truthfully -- and lie detection -- classifying
+    whether a given response is false. Prior work evaluates such methods on models
+    specifically trained to lie or conceal information, but these artificial constructions
+    may not resemble naturally-occurring dishonesty. We instead study open-weights
+    LLMs from Chinese developers, which are trained to censor politically sensitive
+    topics: Qwen3 models frequently produce falsehoods about subjects like Falun Gong
+    or the Tiananmen protests while occasionally answering correctly, indicating they
+    possess knowledge they are trained to suppress. Using this as a testbed, we evaluate
+    a suite of elicitation and lie detection techniques. For honesty elicitation,
+    sampling without a chat template, few-shot prompting, and fine-tuning on generic
+    honesty data most reliably increase truthful responses. For lie detection, prompting
+    the censored model to classify its own responses performs near an uncensored-model
+    upper bound, and linear probes trained on unrelated data offer a cheaper alternative.
+    The strongest honesty elicitation techniques also transfer to frontier open-weights
+    models including DeepSeek R1. Notably, no technique fully eliminates false responses.
+    We release all prompts, code, and transcripts.'
+  published: '2026-03-05'
+  pdf_url: http://arxiv.org/pdf/2603.05494
+  arxiv_url: http://arxiv.org/abs/2603.05494
+  key_findings: Large language models sometimes produce false or misleading responses.
+    Two approaches to this problem are honesty elicitation -- modifying prompts or
+    weights so that the model answers truthfully -- and lie detection -- classifying
+    whether a given response is false. Prior work evaluates such methods on models
+    specifically trained to lie or conceal information, but these artificial constructions
+    may not resemble naturally-occurring dishonesty.
+- id: '2603.05488'
+  title: 'Reasoning Theater: Disentangling Model Beliefs from Chain-of-Thought'
+  authors: Siddharth Boppana, Annabel Ma, Max Loeffler, Raphael Sarfati, Eric Bigelow,
+    Atticus Geiger, Owen Lewis, Jack Merullo
+  abstract: 'We provide evidence of performative chain-of-thought (CoT) in reasoning
+    models, where a model becomes strongly confident in its final answer, but continues
+    generating tokens without revealing its internal belief. Our analysis compares
+    activation probing, early forced answering, and a CoT monitor across two large
+    models (DeepSeek-R1 671B & GPT-OSS 120B) and find task difficulty-specific differences:
+    The model''s final answer is decodable from activations far earlier in CoT than
+    a monitor is able to say, especially for easy recall-based MMLU questions. We
+    contrast this with genuine reasoning in difficult multihop GPQA-Diamond questions.
+    Despite this, inflection points (e.g., backtracking, ''aha'' moments) occur almost
+    exclusively in responses where probes show large belief shifts, suggesting these
+    behaviors track genuine uncertainty rather than learned "reasoning theater." Finally,
+    probe-guided early exit reduces tokens by up to 80% on MMLU and 30% on GPQA-Diamond
+    with similar accuracy, positioning attention probing as an efficient tool for
+    detecting performative reasoning and enabling adaptive computation.'
+  published: '2026-03-05'
+  pdf_url: http://arxiv.org/pdf/2603.05488
+  arxiv_url: http://arxiv.org/abs/2603.05488
+  key_findings: 'We provide evidence of performative chain-of-thought (CoT) in reasoning
+    models, where a model becomes strongly confident in its final answer, but continues
+    generating tokens without revealing its internal belief. Our analysis compares
+    activation probing, early forced answering, and a CoT monitor across two large
+    models (DeepSeek-R1 671B & GPT-OSS 120B) and find task difficulty-specific differences:
+    The model''s final answer is decodable from activations far earlier in CoT than
+    a monitor is able to say, especially for easy recall-based MMLU questions. We
+    contrast this with genuine reasoning in difficult multihop GPQA-Diamond questions.'
+- id: '2603.05485'
+  title: Towards Provably Unbiased LLM Judges via Bias-Bounded Evaluation
+  authors: Benjamin Feuer, Lucas Rosenblatt, Oussama Elachqar
+  abstract: As AI models progress beyond simple chatbots into more complex workflows,
+    we draw ever closer to the event horizon beyond which AI systems will be utilized
+    in autonomous, self-maintaining feedback loops. Any autonomous AI system will
+    depend on automated, verifiable rewards and feedback; in settings where ground
+    truth is sparse or non-deterministic, one practical source of such rewards is
+    an LLM-as-a-Judge. Although LLM judges continue to improve, the literature has
+    yet to introduce systems capable of enforcing standards with strong guarantees,
+    particularly when bias vectors are unknown or adversarially discovered. To remedy
+    this issue, we propose average bias-boundedness (A-BB), an algorithmic framework
+    which formally guarantees reductions of harm/impact as a result of any measurable
+    bias in an LLM judge. Evaluating on Arena-Hard-Auto with four LLM judges, we achieve
+    (tau=0.5, delta=0.01) bias-bounded guarantees while retaining 61-99% correlation
+    with original rankings across formatting and schematic bias settings, with most
+    judge-bias combinations exceeding 80%. The code to reproduce our findings is available
+    at https://github.com/penfever/bias-bounded-evaluation.
+  published: '2026-03-05'
+  pdf_url: http://arxiv.org/pdf/2603.05485
+  arxiv_url: http://arxiv.org/abs/2603.05485
+  key_findings: As AI models progress beyond simple chatbots into more complex workflows,
+    we draw ever closer to the event horizon beyond which AI systems will be utilized
+    in autonomous, self-maintaining feedback loops. Any autonomous AI system will
+    depend on automated, verifiable rewards and feedback; in settings where ground
+    truth is sparse or non-deterministic, one practical source of such rewards is
+    an LLM-as-a-Judge. Although LLM judges continue to improve, the literature has
+    yet to introduce systems capable of enforcing standards with strong guarantees,
+    particularly when bias vectors are unknown or adversarially discovered.
+- id: '2603.05483'
+  title: 'SurvHTE-Bench: A Benchmark for Heterogeneous Treatment Effect Estimation
+    in Survival Analysis'
+  authors: Shahriar Noroozizadeh, Xiaobin Shen, Jeremy C. Weiss, George H. Chen
+  abstract: 'Estimating heterogeneous treatment effects (HTEs) from right-censored
+    survival data is critical in high-stakes applications such as precision medicine
+    and individualized policy-making. Yet, the survival analysis setting poses unique
+    challenges for HTE estimation due to censoring, unobserved counterfactuals, and
+    complex identification assumptions. Despite recent advances, from Causal Survival
+    Forests to survival meta-learners and outcome imputation approaches, evaluation
+    practices remain fragmented and inconsistent. We introduce SurvHTE-Bench, the
+    first comprehensive benchmark for HTE estimation with censored outcomes. The benchmark
+    spans (i) a modular suite of synthetic datasets with known ground truth, systematically
+    varying causal assumptions and survival dynamics, (ii) semi-synthetic datasets
+    that pair real-world covariates with simulated treatments and outcomes, and (iii)
+    real-world datasets from a twin study (with known ground truth) and from an HIV
+    clinical trial. Across synthetic, semi-synthetic, and real-world settings, we
+    provide the first rigorous comparison of survival HTE methods under diverse conditions
+    and realistic assumption violations. SurvHTE-Bench establishes a foundation for
+    fair, reproducible, and extensible evaluation of causal survival methods. The
+    data and code of our benchmark are available at: https://github.com/Shahriarnz14/SurvHTE-Bench
+    .'
+  published: '2026-03-05'
+  pdf_url: http://arxiv.org/pdf/2603.05483
+  arxiv_url: http://arxiv.org/abs/2603.05483
+  key_findings: Estimating heterogeneous treatment effects (HTEs) from right-censored
+    survival data is critical in high-stakes applications such as precision medicine
+    and individualized policy-making. Yet, the survival analysis setting poses unique
+    challenges for HTE estimation due to censoring, unobserved counterfactuals, and
+    complex identification assumptions. Despite recent advances, from Causal Survival
+    Forests to survival meta-learners and outcome imputation approaches, evaluation
+    practices remain fragmented and inconsistent.
+- id: '2603.05471'
+  title: Leveraging LLM Parametric Knowledge for Fact Checking without Retrieval
+  authors: Artem Vazhentsev, Maria Marina, Daniil Moskovskiy, Sergey Pletenev, Mikhail
+    Seleznyov, Mikhail Salnikov, Elena Tutubalina, Vasily Konovalov, Irina Nikishina,
+    Alexander Panchenko, Viktor Moskvoretskii
+  abstract: Trustworthiness is a core research challenge for agentic AI systems built
+    on Large Language Models (LLMs). To enhance trust, natural language claims from
+    diverse sources, including human-written text, web content, and model outputs,
+    are commonly checked for factuality by retrieving external knowledge and using
+    an LLM to verify the faithfulness of claims to the retrieved evidence. As a result,
+    such methods are constrained by retrieval errors and external data availability,
+    while leaving the models intrinsic fact-verification capabilities largely unused.
+    We propose the task of fact-checking without retrieval, focusing on the verification
+    of arbitrary natural language claims, independent of their source. To study this
+    setting, we introduce a comprehensive evaluation framework focused on generalization,
+    testing robustness to (i) long-tail knowledge, (ii) variation in claim sources,
+    (iii) multilinguality, and (iv) long-form generation. Across 9 datasets, 18 methods
+    and 3 models, our experiments indicate that logit-based approaches often underperform
+    compared to those that leverage internal model representations. Building on this
+    finding, we introduce INTRA, a method that exploits interactions between internal
+    representations and achieves state-of-the-art performance with strong generalization.
+    More broadly, our work establishes fact-checking without retrieval as a promising
+    research direction that can complement retrieval-based frameworks, improve scalability,
+    and enable the use of such systems as reward signals during training or as components
+    integrated into the generation process.
+  published: '2026-03-05'
+  pdf_url: http://arxiv.org/pdf/2603.05471
+  arxiv_url: http://arxiv.org/abs/2603.05471
+  key_findings: Trustworthiness is a core research challenge for agentic AI systems
+    built on Large Language Models (LLMs). To enhance trust, natural language claims
+    from diverse sources, including human-written text, web content, and model outputs,
+    are commonly checked for factuality by retrieving external knowledge and using
+    an LLM to verify the faithfulness of claims to the retrieved evidence. As a result,
+    such methods are constrained by retrieval errors and external data availability,
+    while leaving the models intrinsic fact-verification capabilities largely unused.
+- id: '2603.05450'
+  title: 'Distributed Partial Information Puzzles: Examining Common Ground Construction
+    Under Epistemic Asymmetry'
+  authors: Yifan Zhu, Mariah Bradford, Kenneth Lai, Timothy Obiso, Videep Venkatesha,
+    James Pustejovsky, Nikhil Krishnaswamy
+  abstract: 'Establishing common ground, a shared set of beliefs and mutually recognized
+    facts, is fundamental to collaboration, yet remains a challenge for current AI
+    systems, especially in multimodal, multiparty settings, where the collaborators
+    bring different information to the table. We introduce the Distributed Partial
+    Information Puzzle (DPIP), a collaborative construction task that elicits rich
+    multimodal communication under epistemic asymmetry. We present a multimodal dataset
+    of these interactions, annotated and temporally aligned across speech, gesture,
+    and action modalities to support reasoning over propositional content and belief
+    dynamics. We then evaluate two paradigms for modeling common ground (CG): (1)
+    state-of-the-art large language models (LLMs), prompted to infer shared beliefs
+    from multimodal updates, and (2) an axiomatic pipeline grounded in Dynamic Epistemic
+    Logic (DEL) that incrementally performs the same task. Results on the annotated
+    DPIP data indicate that it poses a challenge to modern LLMs'' abilities to track
+    both task progression and belief state.'
+  published: '2026-03-05'
+  pdf_url: http://arxiv.org/pdf/2603.05450
+  arxiv_url: http://arxiv.org/abs/2603.05450
+  key_findings: Establishing common ground, a shared set of beliefs and mutually recognized
+    facts, is fundamental to collaboration, yet remains a challenge for current AI
+    systems, especially in multimodal, multiparty settings, where the collaborators
+    bring different information to the table. We introduce the Distributed Partial
+    Information Puzzle (DPIP), a collaborative construction task that elicits rich
+    multimodal communication under epistemic asymmetry. We present a multimodal dataset
+    of these interactions, annotated and temporally aligned across speech, gesture,
+    and action modalities to support reasoning over propositional content and belief
+    dynamics.
+- id: '2603.05449'
+  title: 'RealWonder: Real-Time Physical Action-Conditioned Video Generation'
+  authors: Wei Liu, Ziyu Chen, Zizhang Li, Yue Wang, Hong-Xing Yu, Jiajun Wu
+  abstract: 'Current video generation models cannot simulate physical consequences
+    of 3D actions like forces and robotic manipulations, as they lack structural understanding
+    of how actions affect 3D scenes. We present RealWonder, the first real-time system
+    for action-conditioned video generation from a single image. Our key insight is
+    using physics simulation as an intermediate bridge: instead of directly encoding
+    continuous actions, we translate them through physics simulation into visual representations
+    (optical flow and RGB) that video models can process. RealWonder integrates three
+    components: 3D reconstruction from single images, physics simulation, and a distilled
+    video generator requiring only 4 diffusion steps. Our system achieves 13.2 FPS
+    at 480x832 resolution, enabling interactive exploration of forces, robot actions,
+    and camera controls on rigid objects, deformable bodies, fluids, and granular
+    materials. We envision RealWonder opens new opportunities to apply video models
+    in immersive experiences, AR/VR, and robot learning. Our code and model weights
+    are publicly available in our project website: https://liuwei283.github.io/RealWonder/'
+  published: '2026-03-05'
+  pdf_url: http://arxiv.org/pdf/2603.05449
+  arxiv_url: http://arxiv.org/abs/2603.05449
+  key_findings: 'Current video generation models cannot simulate physical consequences
+    of 3D actions like forces and robotic manipulations, as they lack structural understanding
+    of how actions affect 3D scenes. We present RealWonder, the first real-time system
+    for action-conditioned video generation from a single image. Our key insight is
+    using physics simulation as an intermediate bridge: instead of directly encoding
+    continuous actions, we translate them through physics simulation into visual representations
+    (optical flow and RGB) that video models can process.'

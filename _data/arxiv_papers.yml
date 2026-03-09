@@ -1,304 +1,301 @@
 papers:
-- id: '2603.05504'
-  title: 'RoboPocket: Improve Robot Policies Instantly with Your Phone'
-  authors: Junjie Fang, Wendi Chen, Han Xue, Fangyuan Zhou, Tian Le, Yi Wang, Yuting
-    Zhang, Jun Lv, Chuan Wen, Cewu Lu
-  abstract: 'Scaling imitation learning is fundamentally constrained by the efficiency
-    of data collection. While handheld interfaces have emerged as a scalable solution
-    for in-the-wild data acquisition, they predominantly operate in an open-loop manner:
-    operators blindly collect demonstrations without knowing the underlying policy''s
-    weaknesses, leading to inefficient coverage of critical state distributions. Conversely,
-    interactive methods like DAgger effectively address covariate shift but rely on
-    physical robot execution, which is costly and difficult to scale. To reconcile
-    this trade-off, we introduce RoboPocket, a portable system that enables Robot-Free
-    Instant Policy Iteration using single consumer smartphones. Its core innovation
-    is a Remote Inference framework that visualizes the policy''s predicted trajectory
-    via Augmented Reality (AR) Visual Foresight. This immersive feedback allows collectors
-    to proactively identify potential failures and focus data collection on the policy''s
-    weak regions without requiring a physical robot. Furthermore, we implement an
-    asynchronous Online Finetuning pipeline that continuously updates the policy with
-    incoming data, effectively closing the learning loop in minutes. Extensive experiments
-    demonstrate that RoboPocket adheres to data scaling laws and doubles the data
-    efficiency compared to offline scaling strategies, overcoming their long-standing
-    efficiency bottleneck. Moreover, our instant iteration loop also boosts sample
-    efficiency by up to 2$\times$ in distributed environments a small number of interactive
-    corrections per person. Project page and videos: https://robo-pocket.github.io.'
-  published: '2026-03-05'
-  pdf_url: http://arxiv.org/pdf/2603.05504
-  arxiv_url: http://arxiv.org/abs/2603.05504
-  key_findings: 'Scaling imitation learning is fundamentally constrained by the efficiency
-    of data collection. While handheld interfaces have emerged as a scalable solution
-    for in-the-wild data acquisition, they predominantly operate in an open-loop manner:
-    operators blindly collect demonstrations without knowing the underlying policy''s
-    weaknesses, leading to inefficient coverage of critical state distributions. Conversely,
-    interactive methods like DAgger effectively address covariate shift but rely on
-    physical robot execution, which is costly and difficult to scale.'
-- id: '2603.05500'
-  title: 'POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation'
-  authors: Zeju Qiu, Lixin Liu, Adrian Weller, Han Shi, Weiyang Liu
-  abstract: Efficient and stable training of large language models (LLMs) remains
-    a core challenge in modern machine learning systems. To address this challenge,
-    Reparameterized Orthogonal Equivalence Training (POET), a spectrum-preserving
-    framework that optimizes each weight matrix through orthogonal equivalence transformation,
-    has been proposed. Although POET provides strong training stability, its original
-    implementation incurs high memory consumption and computational overhead due to
-    intensive matrix multiplications. To overcome these limitations, we introduce
-    POET-X, a scalable and memory-efficient variant that performs orthogonal equivalence
-    transformations with significantly reduced computational cost. POET-X maintains
-    the generalization and stability benefits of POET while achieving substantial
-    improvements in throughput and memory efficiency. In our experiments, POET-X enables
-    the pretraining of billion-parameter LLMs on a single Nvidia H100 GPU, and in
-    contrast, standard optimizers such as AdamW run out of memory under the same settings.
-  published: '2026-03-05'
-  pdf_url: http://arxiv.org/pdf/2603.05500
-  arxiv_url: http://arxiv.org/abs/2603.05500
-  key_findings: Efficient and stable training of large language models (LLMs) remains
-    a core challenge in modern machine learning systems. To address this challenge,
-    Reparameterized Orthogonal Equivalence Training (POET), a spectrum-preserving
-    framework that optimizes each weight matrix through orthogonal equivalence transformation,
-    has been proposed. Although POET provides strong training stability, its original
-    implementation incurs high memory consumption and computational overhead due to
-    intensive matrix multiplications.
-- id: '2603.05498'
-  title: 'The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention
-    Sinks'
-  authors: Shangwen Sun, Alfredo Canziani, Yann LeCun, Jiachen Zhu
-  abstract: 'We study two recurring phenomena in Transformer language models: massive
-    activations, in which a small number of tokens exhibit extreme outliers in a few
-    channels, and attention sinks, in which certain tokens attract disproportionate
-    attention mass regardless of semantic relevance. Prior work observes that these
-    phenomena frequently co-occur and often involve the same tokens, but their functional
-    roles and causal relationship remain unclear. Through systematic experiments,
-    we show that the co-occurrence is largely an architectural artifact of modern
-    Transformer design, and that the two phenomena serve related but distinct functions.
-    Massive activations operate globally: they induce near-constant hidden representations
-    that persist across layers, effectively functioning as implicit parameters of
-    the model. Attention sinks operate locally: they modulate attention outputs across
-    heads and bias individual heads toward short-range dependencies. We identify the
-    pre-norm configuration as the key choice that enables the co-occurrence, and show
-    that ablating it causes the two phenomena to decouple.'
-  published: '2026-03-05'
-  pdf_url: http://arxiv.org/pdf/2603.05498
-  arxiv_url: http://arxiv.org/abs/2603.05498
-  key_findings: 'We study two recurring phenomena in Transformer language models:
-    massive activations, in which a small number of tokens exhibit extreme outliers
-    in a few channels, and attention sinks, in which certain tokens attract disproportionate
-    attention mass regardless of semantic relevance. Prior work observes that these
-    phenomena frequently co-occur and often involve the same tokens, but their functional
-    roles and causal relationship remain unclear. Through systematic experiments,
-    we show that the co-occurrence is largely an architectural artifact of modern
-    Transformer design, and that the two phenomena serve related but distinct functions.'
-- id: '2603.05494'
-  title: Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation
-  authors: Helena Casademunt, Bartosz Cywiński, Khoi Tran, Arya Jakkli, Samuel Marks,
-    Neel Nanda
-  abstract: 'Large language models sometimes produce false or misleading responses.
-    Two approaches to this problem are honesty elicitation -- modifying prompts or
-    weights so that the model answers truthfully -- and lie detection -- classifying
-    whether a given response is false. Prior work evaluates such methods on models
-    specifically trained to lie or conceal information, but these artificial constructions
-    may not resemble naturally-occurring dishonesty. We instead study open-weights
-    LLMs from Chinese developers, which are trained to censor politically sensitive
-    topics: Qwen3 models frequently produce falsehoods about subjects like Falun Gong
-    or the Tiananmen protests while occasionally answering correctly, indicating they
-    possess knowledge they are trained to suppress. Using this as a testbed, we evaluate
-    a suite of elicitation and lie detection techniques. For honesty elicitation,
-    sampling without a chat template, few-shot prompting, and fine-tuning on generic
-    honesty data most reliably increase truthful responses. For lie detection, prompting
-    the censored model to classify its own responses performs near an uncensored-model
-    upper bound, and linear probes trained on unrelated data offer a cheaper alternative.
-    The strongest honesty elicitation techniques also transfer to frontier open-weights
-    models including DeepSeek R1. Notably, no technique fully eliminates false responses.
-    We release all prompts, code, and transcripts.'
-  published: '2026-03-05'
-  pdf_url: http://arxiv.org/pdf/2603.05494
-  arxiv_url: http://arxiv.org/abs/2603.05494
-  key_findings: Large language models sometimes produce false or misleading responses.
-    Two approaches to this problem are honesty elicitation -- modifying prompts or
-    weights so that the model answers truthfully -- and lie detection -- classifying
-    whether a given response is false. Prior work evaluates such methods on models
-    specifically trained to lie or conceal information, but these artificial constructions
-    may not resemble naturally-occurring dishonesty.
-- id: '2603.05488'
-  title: 'Reasoning Theater: Disentangling Model Beliefs from Chain-of-Thought'
-  authors: Siddharth Boppana, Annabel Ma, Max Loeffler, Raphael Sarfati, Eric Bigelow,
-    Atticus Geiger, Owen Lewis, Jack Merullo
-  abstract: 'We provide evidence of performative chain-of-thought (CoT) in reasoning
-    models, where a model becomes strongly confident in its final answer, but continues
-    generating tokens without revealing its internal belief. Our analysis compares
-    activation probing, early forced answering, and a CoT monitor across two large
-    models (DeepSeek-R1 671B & GPT-OSS 120B) and find task difficulty-specific differences:
-    The model''s final answer is decodable from activations far earlier in CoT than
-    a monitor is able to say, especially for easy recall-based MMLU questions. We
-    contrast this with genuine reasoning in difficult multihop GPQA-Diamond questions.
-    Despite this, inflection points (e.g., backtracking, ''aha'' moments) occur almost
-    exclusively in responses where probes show large belief shifts, suggesting these
-    behaviors track genuine uncertainty rather than learned "reasoning theater." Finally,
-    probe-guided early exit reduces tokens by up to 80% on MMLU and 30% on GPQA-Diamond
-    with similar accuracy, positioning attention probing as an efficient tool for
-    detecting performative reasoning and enabling adaptive computation.'
-  published: '2026-03-05'
-  pdf_url: http://arxiv.org/pdf/2603.05488
-  arxiv_url: http://arxiv.org/abs/2603.05488
-  key_findings: 'We provide evidence of performative chain-of-thought (CoT) in reasoning
-    models, where a model becomes strongly confident in its final answer, but continues
-    generating tokens without revealing its internal belief. Our analysis compares
-    activation probing, early forced answering, and a CoT monitor across two large
-    models (DeepSeek-R1 671B & GPT-OSS 120B) and find task difficulty-specific differences:
-    The model''s final answer is decodable from activations far earlier in CoT than
-    a monitor is able to say, especially for easy recall-based MMLU questions. We
-    contrast this with genuine reasoning in difficult multihop GPQA-Diamond questions.'
-- id: '2603.05485'
-  title: Towards Provably Unbiased LLM Judges via Bias-Bounded Evaluation
-  authors: Benjamin Feuer, Lucas Rosenblatt, Oussama Elachqar
-  abstract: As AI models progress beyond simple chatbots into more complex workflows,
-    we draw ever closer to the event horizon beyond which AI systems will be utilized
-    in autonomous, self-maintaining feedback loops. Any autonomous AI system will
-    depend on automated, verifiable rewards and feedback; in settings where ground
-    truth is sparse or non-deterministic, one practical source of such rewards is
-    an LLM-as-a-Judge. Although LLM judges continue to improve, the literature has
-    yet to introduce systems capable of enforcing standards with strong guarantees,
-    particularly when bias vectors are unknown or adversarially discovered. To remedy
-    this issue, we propose average bias-boundedness (A-BB), an algorithmic framework
-    which formally guarantees reductions of harm/impact as a result of any measurable
-    bias in an LLM judge. Evaluating on Arena-Hard-Auto with four LLM judges, we achieve
-    (tau=0.5, delta=0.01) bias-bounded guarantees while retaining 61-99% correlation
-    with original rankings across formatting and schematic bias settings, with most
-    judge-bias combinations exceeding 80%. The code to reproduce our findings is available
-    at https://github.com/penfever/bias-bounded-evaluation.
-  published: '2026-03-05'
-  pdf_url: http://arxiv.org/pdf/2603.05485
-  arxiv_url: http://arxiv.org/abs/2603.05485
-  key_findings: As AI models progress beyond simple chatbots into more complex workflows,
-    we draw ever closer to the event horizon beyond which AI systems will be utilized
-    in autonomous, self-maintaining feedback loops. Any autonomous AI system will
-    depend on automated, verifiable rewards and feedback; in settings where ground
-    truth is sparse or non-deterministic, one practical source of such rewards is
-    an LLM-as-a-Judge. Although LLM judges continue to improve, the literature has
-    yet to introduce systems capable of enforcing standards with strong guarantees,
-    particularly when bias vectors are unknown or adversarially discovered.
-- id: '2603.05483'
-  title: 'SurvHTE-Bench: A Benchmark for Heterogeneous Treatment Effect Estimation
-    in Survival Analysis'
-  authors: Shahriar Noroozizadeh, Xiaobin Shen, Jeremy C. Weiss, George H. Chen
-  abstract: 'Estimating heterogeneous treatment effects (HTEs) from right-censored
-    survival data is critical in high-stakes applications such as precision medicine
-    and individualized policy-making. Yet, the survival analysis setting poses unique
-    challenges for HTE estimation due to censoring, unobserved counterfactuals, and
-    complex identification assumptions. Despite recent advances, from Causal Survival
-    Forests to survival meta-learners and outcome imputation approaches, evaluation
-    practices remain fragmented and inconsistent. We introduce SurvHTE-Bench, the
-    first comprehensive benchmark for HTE estimation with censored outcomes. The benchmark
-    spans (i) a modular suite of synthetic datasets with known ground truth, systematically
-    varying causal assumptions and survival dynamics, (ii) semi-synthetic datasets
-    that pair real-world covariates with simulated treatments and outcomes, and (iii)
-    real-world datasets from a twin study (with known ground truth) and from an HIV
-    clinical trial. Across synthetic, semi-synthetic, and real-world settings, we
-    provide the first rigorous comparison of survival HTE methods under diverse conditions
-    and realistic assumption violations. SurvHTE-Bench establishes a foundation for
-    fair, reproducible, and extensible evaluation of causal survival methods. The
-    data and code of our benchmark are available at: https://github.com/Shahriarnz14/SurvHTE-Bench
-    .'
-  published: '2026-03-05'
-  pdf_url: http://arxiv.org/pdf/2603.05483
-  arxiv_url: http://arxiv.org/abs/2603.05483
-  key_findings: Estimating heterogeneous treatment effects (HTEs) from right-censored
-    survival data is critical in high-stakes applications such as precision medicine
-    and individualized policy-making. Yet, the survival analysis setting poses unique
-    challenges for HTE estimation due to censoring, unobserved counterfactuals, and
-    complex identification assumptions. Despite recent advances, from Causal Survival
-    Forests to survival meta-learners and outcome imputation approaches, evaluation
-    practices remain fragmented and inconsistent.
-- id: '2603.05471'
-  title: Leveraging LLM Parametric Knowledge for Fact Checking without Retrieval
-  authors: Artem Vazhentsev, Maria Marina, Daniil Moskovskiy, Sergey Pletenev, Mikhail
-    Seleznyov, Mikhail Salnikov, Elena Tutubalina, Vasily Konovalov, Irina Nikishina,
-    Alexander Panchenko, Viktor Moskvoretskii
-  abstract: Trustworthiness is a core research challenge for agentic AI systems built
-    on Large Language Models (LLMs). To enhance trust, natural language claims from
-    diverse sources, including human-written text, web content, and model outputs,
-    are commonly checked for factuality by retrieving external knowledge and using
-    an LLM to verify the faithfulness of claims to the retrieved evidence. As a result,
-    such methods are constrained by retrieval errors and external data availability,
-    while leaving the models intrinsic fact-verification capabilities largely unused.
-    We propose the task of fact-checking without retrieval, focusing on the verification
-    of arbitrary natural language claims, independent of their source. To study this
-    setting, we introduce a comprehensive evaluation framework focused on generalization,
-    testing robustness to (i) long-tail knowledge, (ii) variation in claim sources,
-    (iii) multilinguality, and (iv) long-form generation. Across 9 datasets, 18 methods
-    and 3 models, our experiments indicate that logit-based approaches often underperform
-    compared to those that leverage internal model representations. Building on this
-    finding, we introduce INTRA, a method that exploits interactions between internal
-    representations and achieves state-of-the-art performance with strong generalization.
-    More broadly, our work establishes fact-checking without retrieval as a promising
-    research direction that can complement retrieval-based frameworks, improve scalability,
-    and enable the use of such systems as reward signals during training or as components
-    integrated into the generation process.
-  published: '2026-03-05'
-  pdf_url: http://arxiv.org/pdf/2603.05471
-  arxiv_url: http://arxiv.org/abs/2603.05471
-  key_findings: Trustworthiness is a core research challenge for agentic AI systems
-    built on Large Language Models (LLMs). To enhance trust, natural language claims
-    from diverse sources, including human-written text, web content, and model outputs,
-    are commonly checked for factuality by retrieving external knowledge and using
-    an LLM to verify the faithfulness of claims to the retrieved evidence. As a result,
-    such methods are constrained by retrieval errors and external data availability,
-    while leaving the models intrinsic fact-verification capabilities largely unused.
-- id: '2603.05450'
-  title: 'Distributed Partial Information Puzzles: Examining Common Ground Construction
-    Under Epistemic Asymmetry'
-  authors: Yifan Zhu, Mariah Bradford, Kenneth Lai, Timothy Obiso, Videep Venkatesha,
-    James Pustejovsky, Nikhil Krishnaswamy
-  abstract: 'Establishing common ground, a shared set of beliefs and mutually recognized
-    facts, is fundamental to collaboration, yet remains a challenge for current AI
-    systems, especially in multimodal, multiparty settings, where the collaborators
-    bring different information to the table. We introduce the Distributed Partial
-    Information Puzzle (DPIP), a collaborative construction task that elicits rich
-    multimodal communication under epistemic asymmetry. We present a multimodal dataset
-    of these interactions, annotated and temporally aligned across speech, gesture,
-    and action modalities to support reasoning over propositional content and belief
-    dynamics. We then evaluate two paradigms for modeling common ground (CG): (1)
-    state-of-the-art large language models (LLMs), prompted to infer shared beliefs
-    from multimodal updates, and (2) an axiomatic pipeline grounded in Dynamic Epistemic
-    Logic (DEL) that incrementally performs the same task. Results on the annotated
-    DPIP data indicate that it poses a challenge to modern LLMs'' abilities to track
-    both task progression and belief state.'
-  published: '2026-03-05'
-  pdf_url: http://arxiv.org/pdf/2603.05450
-  arxiv_url: http://arxiv.org/abs/2603.05450
-  key_findings: Establishing common ground, a shared set of beliefs and mutually recognized
-    facts, is fundamental to collaboration, yet remains a challenge for current AI
-    systems, especially in multimodal, multiparty settings, where the collaborators
-    bring different information to the table. We introduce the Distributed Partial
-    Information Puzzle (DPIP), a collaborative construction task that elicits rich
-    multimodal communication under epistemic asymmetry. We present a multimodal dataset
-    of these interactions, annotated and temporally aligned across speech, gesture,
-    and action modalities to support reasoning over propositional content and belief
-    dynamics.
-- id: '2603.05449'
-  title: 'RealWonder: Real-Time Physical Action-Conditioned Video Generation'
-  authors: Wei Liu, Ziyu Chen, Zizhang Li, Yue Wang, Hong-Xing Yu, Jiajun Wu
-  abstract: 'Current video generation models cannot simulate physical consequences
-    of 3D actions like forces and robotic manipulations, as they lack structural understanding
-    of how actions affect 3D scenes. We present RealWonder, the first real-time system
-    for action-conditioned video generation from a single image. Our key insight is
-    using physics simulation as an intermediate bridge: instead of directly encoding
-    continuous actions, we translate them through physics simulation into visual representations
-    (optical flow and RGB) that video models can process. RealWonder integrates three
-    components: 3D reconstruction from single images, physics simulation, and a distilled
-    video generator requiring only 4 diffusion steps. Our system achieves 13.2 FPS
-    at 480x832 resolution, enabling interactive exploration of forces, robot actions,
-    and camera controls on rigid objects, deformable bodies, fluids, and granular
-    materials. We envision RealWonder opens new opportunities to apply video models
-    in immersive experiences, AR/VR, and robot learning. Our code and model weights
-    are publicly available in our project website: https://liuwei283.github.io/RealWonder/'
-  published: '2026-03-05'
-  pdf_url: http://arxiv.org/pdf/2603.05449
-  arxiv_url: http://arxiv.org/abs/2603.05449
-  key_findings: 'Current video generation models cannot simulate physical consequences
-    of 3D actions like forces and robotic manipulations, as they lack structural understanding
-    of how actions affect 3D scenes. We present RealWonder, the first real-time system
-    for action-conditioned video generation from a single image. Our key insight is
-    using physics simulation as an intermediate bridge: instead of directly encoding
-    continuous actions, we translate them through physics simulation into visual representations
-    (optical flow and RGB) that video models can process.'
+- id: '2603.06522'
+  title: Artificial Intelligence for Detecting Fetal Orofacial Clefts and Advancing
+    Medical Education
+  authors: Yuanji Zhang, Yuhao Huang, Haoran Dou, Xiliang Zhu, Chen Ling, Zhong Yang,
+    Lianying Liang, Jiuping Li, Siying Liang, Rui Li, Yan Cao, Yuhan Zhang, Jiewei
+    Lai, Yongsong Zhou, Hongyu Zheng, Xinru Gao, Cheng Yu, Liling Shi, Mengqin Yuan,
+    Honglong Li, Xiaoqiong Huang, Chaoyu Chen, Jialin Zhang, Wenxiong Pan, Alejandro
+    F. Frangi, Guangzhi He, Xin Yang, Yi Xiong, Linliang Yin, Xuedong Deng, Dong Ni
+  abstract: Orofacial clefts are among the most common congenital craniofacial abnormalities,
+    yet accurate prenatal detection remains challenging due to the scarcity of experienced
+    specialists and the relative rarity of the condition. Early and reliable diagnosis
+    is essential to enable timely clinical intervention and reduce associated morbidity.
+    Here we show that an artificial intelligence system, trained on over 45,139 ultrasound
+    images from 9,215 fetuses across 22 hospitals, can diagnose fetal orofacial clefts
+    with sensitivity and specificity exceeding 93% and 95% respectively, matching
+    the performance of senior radiologists and substantially outperforming junior
+    radiologists. When used as a medical copilot, the system raises junior radiologists'
+    sensitivity by more than 6%. Beyond direct diagnostic assistance, the system also
+    accelerates the development of clinical expertise. A pilot study involving 24
+    radiologists and trainees demonstrated that the model can improve the expertise
+    development for rare conditions. This dual-purpose approach offers a scalable
+    solution for improving both diagnostic accuracy and specialist training in settings
+    where experienced radiologists are scarce.
+  published: '2026-03-06'
+  pdf_url: http://arxiv.org/pdf/2603.06522
+  arxiv_url: http://arxiv.org/abs/2603.06522
+  key_findings: Orofacial clefts are among the most common congenital craniofacial
+    abnormalities, yet accurate prenatal detection remains challenging due to the
+    scarcity of experienced specialists and the relative rarity of the condition.
+    Early and reliable diagnosis is essential to enable timely clinical intervention
+    and reduce associated morbidity. Here we show that an artificial intelligence
+    system, trained on over 45,139 ultrasound images from 9,215 fetuses across 22
+    hospitals, can diagnose fetal orofacial clefts with sensitivity and specificity
+    exceeding 93% and 95% respectively, matching the performance of senior radiologists
+    and substantially outperforming junior radiologists.
+- id: '2603.06495'
+  title: 'COLD-Steer: Steering Large Language Models via In-Context One-step Learning
+    Dynamics'
+  authors: Kartik Sharma, Rakshit S. Trivedi
+  abstract: 'Activation steering methods enable inference-time control of large language
+    model (LLM) behavior without retraining, but current approaches face a fundamental
+    trade-off: sample-efficient methods suboptimally capture steering signals from
+    labeled examples, while methods that better extract these signals require hundreds
+    to thousands of examples. We introduce COLD-Steer, a training-free framework that
+    steers LLM activations by approximating the representational changes that would
+    result from gradient descent on in-context examples. Our key insight is that the
+    effect of fine-tuning on a small set of examples can be efficiently approximated
+    at inference time without actual parameter updates. We formalize this through
+    two complementary approaches: (i) a unit kernel approximation method that updates
+    the activations directly using gradients with respect to them, normalized across
+    examples, and (ii) a finite-difference approximation requiring only two forward
+    passes regardless of example count. Experiments across a variety of steering tasks
+    and benchmarks demonstrate that COLD-Steer achieves upto 95% steering effectiveness
+    while using 50 times fewer samples compared to the best baseline. COLD-Steer facilitates
+    accommodating diverse perspectives without extensive demonstration data, which
+    we validate through our experiments on pluralistic alignment tasks. Our framework
+    opens new possibilities for adaptive, context-aware model control that can flexibly
+    address varying loss-driven human preferences through principled approximation
+    of learning dynamics rather than specialized training procedures.'
+  published: '2026-03-06'
+  pdf_url: http://arxiv.org/pdf/2603.06495
+  arxiv_url: http://arxiv.org/abs/2603.06495
+  key_findings: 'Activation steering methods enable inference-time control of large
+    language model (LLM) behavior without retraining, but current approaches face
+    a fundamental trade-off: sample-efficient methods suboptimally capture steering
+    signals from labeled examples, while methods that better extract these signals
+    require hundreds to thousands of examples. We introduce COLD-Steer, a training-free
+    framework that steers LLM activations by approximating the representational changes
+    that would result from gradient descent on in-context examples. Our key insight
+    is that the effect of fine-tuning on a small set of examples can be efficiently
+    approximated at inference time without actual parameter updates.'
+- id: '2603.06492'
+  title: 'NOBLE: Accelerating Transformers with Nonlinear Low-Rank Branches'
+  authors: Ethan Smith
+  abstract: 'We introduce NOBLE (Nonlinear lOw-rank Branch for Linear Enhancement),
+    an architectural augmentation that adds nonlinear low-rank branches to transformer
+    linear layers. Unlike LoRA and other parameter-efficient fine-tuning (PEFT) methods,
+    NOBLE is designed for pretraining from scratch. The branch is a permanent part
+    of the architecture as opposed to an adapter for finetuning on top of frozen weights.
+    The branch computes σ(xWdown)Wup where σ is a learnable nonlinearity. We evaluate
+    several activation functions and find that CosNet, a two-layer cosine nonlinearity
+    with learnable frequency and phase with a linear projection in between them in
+    the bottleneck space, performs best. NOBLE achieves substantial improvements with
+    minimal overhead: up to 1.47x step speedup to reach baseline eval loss (up to
+    32% fewer training steps), with as low as 4% additional parameters and 7% step
+    time overhead, resulting in up to 1.22x net wallclock speedup. Experiments on
+    LLMs (250M and 1.5B parameters), BERT, VQGAN, and ViT consistently show improved
+    training efficiency. We identify one caveat: Mixup/CutMix augmentation interferes
+    with NOBLE''s benefits in Imagenet classification along with other stochastic
+    augmentations, but when disabled, ViT also improves. This discrepancy is possibly
+    explained by regularization techniques that encourage smoother fits to the target
+    function while NOBLE may specialize more in sharper aspects of the target function.'
+  published: '2026-03-06'
+  pdf_url: http://arxiv.org/pdf/2603.06492
+  arxiv_url: http://arxiv.org/abs/2603.06492
+  key_findings: We introduce NOBLE (Nonlinear lOw-rank Branch for Linear Enhancement),
+    an architectural augmentation that adds nonlinear low-rank branches to transformer
+    linear layers. Unlike LoRA and other parameter-efficient fine-tuning (PEFT) methods,
+    NOBLE is designed for pretraining from scratch. The branch is a permanent part
+    of the architecture as opposed to an adapter for finetuning on top of frozen weights.
+- id: '2603.06485'
+  title: 'PONTE: Personalized Orchestration for Natural Language Trustworthy Explanations'
+  authors: Vittoria Vineis, Matteo Silvestri, Lorenzo Antonelli, Filippo Betello,
+    Gabriele Tolomei
+  abstract: 'Explainable Artificial Intelligence (XAI) seeks to enhance the transparency
+    and accountability of machine learning systems, yet most methods follow a one-size-fits-all
+    paradigm that neglects user differences in expertise, goals, and cognitive needs.
+    Although Large Language Models can translate technical explanations into natural
+    language, they introduce challenges related to faithfulness and hallucinations.
+    To address these challenges, we present PONTE (Personalized Orchestration for
+    Natural language Trustworthy Explanations), a human-in-the-loop framework for
+    adaptive and reliable XAI narratives. PONTE models personalization as a closed-loop
+    validation and adaptation process rather than prompt engineering. It combines:
+    (i) a low-dimensional preference model capturing stylistic requirements; (ii)
+    a preference-conditioned generator grounded in structured XAI artifacts; and (iii)
+    verification modules enforcing numerical faithfulness, informational completeness,
+    and stylistic alignment, optionally supported by retrieval-grounded argumentation.
+    User feedback iteratively updates the preference state, enabling quick personalization.
+    Automatic and human evaluations across healthcare and finance domains show that
+    the verification-refinement loop substantially improves completeness and stylistic
+    alignment over validation-free generation. Human studies further confirm strong
+    agreement between intended preference vectors and perceived style, robustness
+    to generation stochasticity, and consistently positive quality assessments.'
+  published: '2026-03-06'
+  pdf_url: http://arxiv.org/pdf/2603.06485
+  arxiv_url: http://arxiv.org/abs/2603.06485
+  key_findings: Explainable Artificial Intelligence (XAI) seeks to enhance the transparency
+    and accountability of machine learning systems, yet most methods follow a one-size-fits-all
+    paradigm that neglects user differences in expertise, goals, and cognitive needs.
+    Although Large Language Models can translate technical explanations into natural
+    language, they introduce challenges related to faithfulness and hallucinations.
+    To address these challenges, we present PONTE (Personalized Orchestration for
+    Natural language Trustworthy Explanations), a human-in-the-loop framework for
+    adaptive and reliable XAI narratives.
+- id: '2603.06459'
+  title: Do Foundation Models Know Geometry? Probing Frozen Features for Continuous
+    Physical Measurement
+  authors: Yakov Pyotr Shkolnikov
+  abstract: 'Vision-language models encode continuous geometry that their text pathway
+    fails to express: a 6,000-parameter linear probe extracts hand joint angles at
+    6.1 degrees MAE from frozen features, while the best text output achieves only
+    20.0 degrees -- a 3.3x bottleneck. LoRA fine-tuning (r=16, 2,000 images) narrows
+    this gap to 6.5 degrees, providing evidence for a pathway-training deficit rather
+    than a representational one. Training objective determines accuracy more than
+    architecture: five encoders spanning self-supervised, contrastive, and hybrid
+    paradigms converge to statistically equivalent accuracy (R^2 approximately 0.55,
+    TOST-equivalent at delta=0.03) despite sharing as little as CKA=0.41 representational
+    similarity -- functional convergence without representational convergence. Autoregressive
+    generation damages geometric fidelity, but the damage originates in the generation
+    process, not in language alignment: Qwen2.5-VL''s LLM layers actually improve
+    probe accuracy over its raw vision encoder. Layer-wise analysis reveals a universal
+    mid-network accuracy peak across all architectures, with attention heads in layers
+    18-22 carrying disproportionate geometric signal. These findings enable a single
+    frozen backbone to function as a multi-task geometric sensor through lightweight
+    probes, without fine-tuning or text generation.'
+  published: '2026-03-06'
+  pdf_url: http://arxiv.org/pdf/2603.06459
+  arxiv_url: http://arxiv.org/abs/2603.06459
+  key_findings: 'Vision-language models encode continuous geometry that their text
+    pathway fails to express: a 6,000-parameter linear probe extracts hand joint angles
+    at 6. 1 degrees MAE from frozen features, while the best text output achieves
+    only 20. 0 degrees -- a 3.'
+- id: '2603.06444'
+  title: Prosodic Boundary-Aware Streaming Generation for LLM-Based TTS with Streaming
+    Text Input
+  authors: Changsong Liu, Tianrui Wang, Ye Ni, Yizhou Peng, Eng Siong Chng
+  abstract: 'Streaming TTS that receives streaming text is essential for interactive
+    systems, yet this scheme faces two major challenges: unnatural prosody due to
+    missing lookahead and long-form collapse due to unbounded context. We propose
+    a prosodic-boundary-aware post-training strategy, adapting a pretrained LLM-based
+    TTS model using weakly time-aligned data. Specifically, the model is adapted to
+    learn early stopping at specified content boundaries when provided with limited
+    future text. During inference, a sliding-window prompt carries forward previous
+    text and speech tokens, ensuring bounded context and seamless concatenation. Evaluations
+    show our method outperforms CosyVoice-Style interleaved baseline in both short
+    and long-form scenarios. In long-text synthesis, especially, it achieves a 66.2%
+    absolute reduction in word error rate (from 71.0% to 4.8%) and increases speaker
+    and emotion similarity by 16.1% and 1.5% relatively, offering a robust solution
+    for streaming TTS with incremental text.'
+  published: '2026-03-06'
+  pdf_url: http://arxiv.org/pdf/2603.06444
+  arxiv_url: http://arxiv.org/abs/2603.06444
+  key_findings: 'Streaming TTS that receives streaming text is essential for interactive
+    systems, yet this scheme faces two major challenges: unnatural prosody due to
+    missing lookahead and long-form collapse due to unbounded context. We propose
+    a prosodic-boundary-aware post-training strategy, adapting a pretrained LLM-based
+    TTS model using weakly time-aligned data. Specifically, the model is adapted to
+    learn early stopping at specified content boundaries when provided with limited
+    future text.'
+- id: '2603.06428'
+  title: Abductive Reasoning with Syllogistic Forms in Large Language Models
+  authors: Hirohiko Abe, Risako Ando, Takanobu Morishita Kentaro Ozeki, Koji Mineshima,
+    Mitsuhiro Okada
+  abstract: Research in AI using Large-Language Models (LLMs) is rapidly evolving,
+    and the comparison of their performance with human reasoning has become a key
+    concern. Prior studies have indicated that LLMs and humans share similar biases,
+    such as dismissing logically valid inferences that contradict common beliefs.
+    However, criticizing LLMs for these biases might be unfair, considering our reasoning
+    not only involves formal deduction but also abduction, which draws tentative conclusions
+    from limited information. Abduction can be regarded as the inverse form of syllogism
+    in its basic structure, that is, a process of drawing a minor premise from a major
+    premise and conclusion. This paper explores the accuracy of LLMs in abductive
+    reasoning by converting a syllogistic dataset into one suitable for abduction.
+    It aims to investigate whether the state-of-the-art LLMs exhibit biases in abduction
+    and to identify potential areas for improvement, emphasizing the importance of
+    contextualized reasoning beyond formal deduction. This investigation is vital
+    for advancing the understanding and application of LLMs in complex reasoning tasks,
+    offering insights into bridging the gap between machine and human cognition.
+  published: '2026-03-06'
+  pdf_url: http://arxiv.org/pdf/2603.06428
+  arxiv_url: http://arxiv.org/abs/2603.06428
+  key_findings: Research in AI using Large-Language Models (LLMs) is rapidly evolving,
+    and the comparison of their performance with human reasoning has become a key
+    concern. Prior studies have indicated that LLMs and humans share similar biases,
+    such as dismissing logically valid inferences that contradict common beliefs.
+    However, criticizing LLMs for these biases might be unfair, considering our reasoning
+    not only involves formal deduction but also abduction, which draws tentative conclusions
+    from limited information.
+- id: '2603.06426'
+  title: 'CLoPA: Continual Low Parameter Adaptation of Interactive Segmentation for
+    Medical Image Annotation'
+  authors: Parhom Esmaeili, Chayanin Tangwiriyasakul, Eli Gibson, Sebastien Ourselin,
+    M. Jorge Cardoso
+  abstract: Interactive segmentation enables clinicians to guide annotation, but existing
+    zero-shot models like nnInteractive fail to consistently reach expert-level performance
+    across diverse medical imaging tasks. Because annotation campaigns produce a growing
+    stream of task-specific labelled data, online adaptation of the segmentation model
+    is a natural complement to zero-shot inference. We propose CLoPA, a continual
+    adaptation strategy that tunes a small fraction of nnInteractive's parameters
+    on the annotation cache, triggered by lightweight episode scheduling. CLoPA requires
+    no new parameters or changes to the inference pipeline, and operates entirely
+    within the existing annotation workflow. Across eight Medical Segmentation Decathlon
+    tasks spanning diverse anatomical targets and imaging characteristics, CLoPA rapidly
+    elevates performance to expert-level, even for tasks where nnInteractive previously
+    failed, with the majority of gains realised after a single training episode. We
+    show that the benefits of tuning different parameter groups depends on task characteristics
+    and data regimes. Also, that for targets with complex geometries (e.g., hepatic
+    vessels), instance normalisation and low-level feature tuning saturates, suggesting
+    a need for deeper feature-representation alignment in the most challenging scenarios.
+  published: '2026-03-06'
+  pdf_url: http://arxiv.org/pdf/2603.06426
+  arxiv_url: http://arxiv.org/abs/2603.06426
+  key_findings: Interactive segmentation enables clinicians to guide annotation, but
+    existing zero-shot models like nnInteractive fail to consistently reach expert-level
+    performance across diverse medical imaging tasks. Because annotation campaigns
+    produce a growing stream of task-specific labelled data, online adaptation of
+    the segmentation model is a natural complement to zero-shot inference. We propose
+    CLoPA, a continual adaptation strategy that tunes a small fraction of nnInteractive's
+    parameters on the annotation cache, triggered by lightweight episode scheduling.
+- id: '2603.06413'
+  title: A Reference Architecture of Reinforcement Learning Frameworks
+  authors: Xiaoran Liu, Istvan David
+  abstract: The surge in reinforcement learning (RL) applications gave rise to diverse
+    supporting technology, such as RL frameworks. However, the architectural patterns
+    of these frameworks are inconsistent across implementations and there exists no
+    reference architecture (RA) to form a common basis of comparison, evaluation,
+    and integration. To address this gap, we propose an RA of RL frameworks. Through
+    a grounded theory approach, we analyze 18 state-of-the-practice RL frameworks
+    and, by that, we identify recurring architectural components and their relationships,
+    and codify them in an RA. To demonstrate our RA, we reconstruct characteristic
+    RL patterns. Finally, we identify architectural trends, e.g., commonly used components,
+    and outline paths to improving RL frameworks.
+  published: '2026-03-06'
+  pdf_url: http://arxiv.org/pdf/2603.06413
+  arxiv_url: http://arxiv.org/abs/2603.06413
+  key_findings: The surge in reinforcement learning (RL) applications gave rise to
+    diverse supporting technology, such as RL frameworks. However, the architectural
+    patterns of these frameworks are inconsistent across implementations and there
+    exists no reference architecture (RA) to form a common basis of comparison, evaluation,
+    and integration. To address this gap, we propose an RA of RL frameworks.
+- id: '2603.06408'
+  title: Physical Simulator In-the-Loop Video Generation
+  authors: Lin Geng Foo, Mark He Huang, Alexandros Lattas, Stylianos Moschoglou, Thabo
+    Beeler, Christian Theobalt
+  abstract: 'Recent advances in diffusion-based video generation have achieved remarkable
+    visual realism but still struggle to obey basic physical laws such as gravity,
+    inertia, and collision. Generated objects often move inconsistently across frames,
+    exhibit implausible dynamics, or violate physical constraints, limiting the realism
+    and reliability of AI-generated videos. We address this gap by introducing Physical
+    Simulator In-the-loop Video Generation (PSIVG), a novel framework that integrates
+    a physical simulator into the video diffusion process. Starting from a template
+    video generated by a pre-trained diffusion model, PSIVG reconstructs the 4D scene
+    and foreground object meshes, initializes them within a physical simulator, and
+    generates physically consistent trajectories. These simulated trajectories are
+    then used to guide the video generator toward spatio-temporally physically coherent
+    motion. To further improve texture consistency during object movement, we propose
+    a Test-Time Texture Consistency Optimization (TTCO) technique that adapts text
+    and feature embeddings based on pixel correspondences from the simulator. Comprehensive
+    experiments demonstrate that PSIVG produces videos that better adhere to real-world
+    physics while preserving visual quality and diversity. Project Page: https://vcai.mpi-inf.mpg.de/projects/PSIVG/'
+  published: '2026-03-06'
+  pdf_url: http://arxiv.org/pdf/2603.06408
+  arxiv_url: http://arxiv.org/abs/2603.06408
+  key_findings: Recent advances in diffusion-based video generation have achieved
+    remarkable visual realism but still struggle to obey basic physical laws such
+    as gravity, inertia, and collision. Generated objects often move inconsistently
+    across frames, exhibit implausible dynamics, or violate physical constraints,
+    limiting the realism and reliability of AI-generated videos. We address this gap
+    by introducing Physical Simulator In-the-loop Video Generation (PSIVG), a novel
+    framework that integrates a physical simulator into the video diffusion process.

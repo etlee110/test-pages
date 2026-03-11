@@ -1,323 +1,306 @@
 papers:
-- id: '2603.08709'
-  title: Scale Space Diffusion
-  authors: Soumik Mukhopadhyay, Prateksha Udhayanan, Abhinav Shrivastava
-  abstract: Diffusion models degrade images through noise, and reversing this process
-    reveals an information hierarchy across timesteps. Scale-space theory exhibits
-    a similar hierarchy via low-pass filtering. We formalize this connection and show
-    that highly noisy diffusion states contain no more information than small, downsampled
-    images - raising the question of why they must be processed at full resolution.
-    To address this, we fuse scale spaces into the diffusion process by formulating
-    a family of diffusion models with generalized linear degradations and practical
-    implementations. Using downsampling as the degradation yields our proposed Scale
-    Space Diffusion. To support Scale Space Diffusion, we introduce Flexi-UNet, a
-    UNet variant that performs resolution-preserving and resolution-increasing denoising
-    using only the necessary parts of the network. We evaluate our framework on CelebA
-    and ImageNet and analyze its scaling behavior across resolutions and network depths.
-    Our project website ( https://prateksha.github.io/projects/scale-space-diffusion/
-    ) is available publicly.
-  published: '2026-03-09'
-  pdf_url: http://arxiv.org/pdf/2603.08709
-  arxiv_url: http://arxiv.org/abs/2603.08709
-  key_findings: Diffusion models degrade images through noise, and reversing this
-    process reveals an information hierarchy across timesteps. Scale-space theory
-    exhibits a similar hierarchy via low-pass filtering. We formalize this connection
-    and show that highly noisy diffusion states contain no more information than small,
-    downsampled images - raising the question of why they must be processed at full
-    resolution.
-- id: '2603.08706'
-  title: Agentic Critical Training
-  authors: Weize Liu, Minghui Liu, Sy-Tuyen Ho, Souradip Chakraborty, Xiyao Wang,
-    Furong Huang
-  abstract: 'Training large language models (LLMs) as autonomous agents often begins
-    with imitation learning, but it only teaches agents what to do without understanding
-    why: agents never contrast successful actions against suboptimal alternatives
-    and thus lack awareness of action quality. Recent approaches attempt to address
-    this by introducing self-reflection supervision derived from contrasts between
-    expert and alternative actions. However, the training paradigm fundamentally remains
-    imitation learning: the model imitates pre-constructed reflection text rather
-    than learning to reason autonomously. We propose Agentic Critical Training (ACT),
-    a reinforcement learning paradigm that trains agents to identify the better action
-    among alternatives. By rewarding whether the model''s judgment is correct, ACT
-    drives the model to autonomously develop reasoning about action quality, producing
-    genuine self-reflection rather than imitating it. Across three challenging agent
-    benchmarks, ACT consistently improves agent performance when combined with different
-    post-training methods. It achieves an average improvement of 5.07 points over
-    imitation learning and 4.62 points over reinforcement learning. Compared to approaches
-    that inject reflection capability through knowledge distillation, ACT also demonstrates
-    clear advantages, yielding an average improvement of 2.42 points. Moreover, ACT
-    enables strong out-of-distribution generalization on agentic benchmarks and improves
-    performance on general reasoning benchmarks without any reasoning-specific training
-    data, highlighting the value of our method. These results suggest that ACT is
-    a promising path toward developing more reflective and capable LLM agents.'
-  published: '2026-03-09'
-  pdf_url: http://arxiv.org/pdf/2603.08706
-  arxiv_url: http://arxiv.org/abs/2603.08706
-  key_findings: 'Training large language models (LLMs) as autonomous agents often
-    begins with imitation learning, but it only teaches agents what to do without
-    understanding why: agents never contrast successful actions against suboptimal
-    alternatives and thus lack awareness of action quality. Recent approaches attempt
-    to address this by introducing self-reflection supervision derived from contrasts
-    between expert and alternative actions. However, the training paradigm fundamentally
-    remains imitation learning: the model imitates pre-constructed reflection text
-    rather than learning to reason autonomously.'
-- id: '2603.08704'
-  title: 'Evaluating Financial Intelligence in Large Language Models: Benchmarking
-    SuperInvesting AI with LLM Engines'
-  authors: Akshay Gulati, Kanha Singhania, Tushar Banga, Parth Arora, Anshul Verma,
-    Vaibhav Kumar Singh, Agyapal Digra, Jayant Singh Bisht, Danish Sharma, Varun Singla,
-    Shubh Garg
-  abstract: 'Large language models are increasingly used for financial analysis and
-    investment research, yet systematic evaluation of their financial reasoning capabilities
-    remains limited. In this work, we introduce the AI Financial Intelligence Benchmark
-    (AFIB), a multi-dimensional evaluation framework designed to assess financial
-    analysis capabilities across five dimensions: factual accuracy, analytical completeness,
-    data recency, model consistency, and failure patterns. We evaluate five AI systems:
-    GPT, Gemini, Perplexity, Claude, and SuperInvesting, using a dataset of 95+ structured
-    financial analysis questions derived from real-world equity research tasks. The
-    results reveal substantial differences in performance across models. Within this
-    benchmark setting, SuperInvesting achieves the highest aggregate performance,
-    with an average factual accuracy score of 8.96/10 and the highest completeness
-    score of 56.65/70, while also demonstrating the lowest hallucination rate among
-    evaluated systems. Retrieval-oriented systems such as Perplexity perform strongly
-    on data recency tasks due to live information access but exhibit weaker analytical
-    synthesis and consistency. Overall, the results highlight that financial intelligence
-    in large language models is inherently multi-dimensional, and systems that combine
-    structured financial data access with analytical reasoning capabilities provide
-    the most reliable performance for complex investment research workflows.'
-  published: '2026-03-09'
-  pdf_url: http://arxiv.org/pdf/2603.08704
-  arxiv_url: http://arxiv.org/abs/2603.08704
-  key_findings: 'Large language models are increasingly used for financial analysis
-    and investment research, yet systematic evaluation of their financial reasoning
-    capabilities remains limited. In this work, we introduce the AI Financial Intelligence
-    Benchmark (AFIB), a multi-dimensional evaluation framework designed to assess
-    financial analysis capabilities across five dimensions: factual accuracy, analytical
-    completeness, data recency, model consistency, and failure patterns. We evaluate
-    five AI systems: GPT, Gemini, Perplexity, Claude, and SuperInvesting, using a
-    dataset of 95+ structured financial analysis questions derived from real-world
-    equity research tasks.'
-- id: '2603.08692'
-  title: A Multi-Objective Optimization Approach for Sustainable AI-Driven Entrepreneurship
-    in Resilient Economies
-  authors: Anas ALsobeh, Raneem Alkurdi
-  abstract: 'The rapid advancement of artificial intelligence (AI) technologies presents
-    both unprecedented opportunities and significant challenges for sustainable economic
-    development. While AI offers transformative potential for addressing environmental
-    challenges and enhancing economic resilience, its deployment often involves substantial
-    energy consumption and environmental costs. This research introduces the EcoAI-Resilience
-    framework, a multi-objective optimization approach designed to maximize the sustainability
-    benefits of AI deployment while minimizing environmental costs and enhancing economic
-    resilience. The framework addresses three critical objectives through mathematical
-    optimization: sustainability impact maximization, economic resilience enhancement,
-    and environmental cost minimization. The methodology integrates diverse data sources,
-    including energy consumption metrics, sustainability indicators, economic performance
-    data, and entrepreneurship outcomes across 53 countries and 14 sectors from 2015-2024.
-    Our experimental validation demonstrates exceptional performance with R scores
-    exceeding 0.99 across all model components, significantly outperforming baseline
-    methods, including Linear Regression (R = 0.943), Random Forest (R = 0.957), and
-    Gradient Boosting (R = 0.989). The framework successfully identifies optimal AI
-    deployment strategies featuring 100\% renewable energy integration, 80% efficiency
-    improvement targets, and optimal investment levels of $202.48 per capita. Key
-    findings reveal strong correlations between economic complexity and resilience
-    (r = 0.82), renewable energy adoption and sustainability outcomes (r = 0.71),
-    and demonstrate significant temporal improvements in AI readiness (+1.12 points/year)
-    and renewable energy adoption (+0.67 year) globally.'
-  published: '2026-03-09'
-  pdf_url: http://arxiv.org/pdf/2603.08692
-  arxiv_url: http://arxiv.org/abs/2603.08692
-  key_findings: The rapid advancement of artificial intelligence (AI) technologies
-    presents both unprecedented opportunities and significant challenges for sustainable
-    economic development. While AI offers transformative potential for addressing
-    environmental challenges and enhancing economic resilience, its deployment often
-    involves substantial energy consumption and environmental costs. This research
-    introduces the EcoAI-Resilience framework, a multi-objective optimization approach
-    designed to maximize the sustainability benefits of AI deployment while minimizing
-    environmental costs and enhancing economic resilience.
-- id: '2603.08687'
-  title: Split Federated Learning Architectures for High-Accuracy and Low-Delay Model
-    Training
-  authors: Yiannis Papageorgiou, Yannis Thomas, Ramin Khalili, Iordanis Koutsopoulos
-  abstract: Can we find a network architecture for ML model training so as to optimize
-    training loss (and thus, accuracy) in Split Federated Learning (SFL)? And can
-    this architecture also reduce training delay and communication overhead? While
-    accuracy is not influenced by how we split the model in ordinary, state-of-the-art
-    SFL, in this work we answer the questions above in the affirmative. Recent Hierarchical
-    SFL (HSFL) architectures adopt a three-tier training structure consisting of clients,
-    (local) aggregators, and a central server. In this architecture, the model is
-    partitioned at two partitioning layers into three sub-models, which are executed
-    across the three tiers. Despite their merits, HSFL architectures overlook the
-    impact of the partitioning layers and client-to-aggregator assignments on accuracy,
-    delay, and overhead. This work explicitly captures the impact of the partitioning
-    layers and client-to-aggregator assignments on accuracy, delay and overhead by
-    formulating a joint optimization problem. We prove that the problem is NP-hard
-    and propose the first accuracy-aware heuristic algorithm that explicitly accounts
-    for model accuracy, while remaining delay-efficient. Simulation results on public
-    datasets show that our approach can improve accuracy by 3%, while reducing delay
-    by 20% and overhead by 50%, compared to state-of-the-art SFL and HSFL schemes.
-  published: '2026-03-09'
-  pdf_url: http://arxiv.org/pdf/2603.08687
-  arxiv_url: http://arxiv.org/abs/2603.08687
-  key_findings: Can we find a network architecture for ML model training so as to
-    optimize training loss (and thus, accuracy) in Split Federated Learning (SFL).
-    And can this architecture also reduce training delay and communication overhead.
-    While accuracy is not influenced by how we split the model in ordinary, state-of-the-art
-    SFL, in this work we answer the questions above in the affirmative.
-- id: '2603.08683'
-  title: Benchmarking Language Modeling for Lossless Compression of Full-Fidelity
-    Audio
-  authors: Phillip Long, Zachary Novack, Chris Donahue
-  abstract: Autoregressive "language" models (LMs) trained on raw waveforms can be
-    repurposed for lossless audio compression, but prior work is limited to 8-bit
-    audio, leaving open whether such approaches work for practical settings (16/24-bit)
-    and can compete with existing codecs. We benchmark LM-based compression on full-fidelity
-    audio across diverse domains (music, speech, bioacoustics), sampling rates (16kHz-48kHz),
-    and bit depths (8, 16, 24-bit). Standard sample-level tokenization becomes intractable
-    at higher bit depths due to vocabulary size (65K for 16-bit; 16.7M for 24-bit).
-    We propose Trilobyte, a byte-level tokenization schema for full resolution audio,
-    improving vocabulary scaling from $O(2^{b})$ to $O(1)$ and enabling the first
-    tractable 24-bit LM-based lossless compression. While LMs consistently outperform
-    FLAC and yield state-of-the-art compression at 8-bit and 16-bit, we observe that
-    compression gains become more modest as bit depth increases beyond 8-bit.
-  published: '2026-03-09'
-  pdf_url: http://arxiv.org/pdf/2603.08683
-  arxiv_url: http://arxiv.org/abs/2603.08683
-  key_findings: Autoregressive "language" models (LMs) trained on raw waveforms can
-    be repurposed for lossless audio compression, but prior work is limited to 8-bit
-    audio, leaving open whether such approaches work for practical settings (16/24-bit)
-    and can compete with existing codecs. We benchmark LM-based compression on full-fidelity
-    audio across diverse domains (music, speech, bioacoustics), sampling rates (16kHz-48kHz),
-    and bit depths (8, 16, 24-bit). Standard sample-level tokenization becomes intractable
-    at higher bit depths due to vocabulary size (65K for 16-bit; 16.
-- id: '2603.08679'
-  title: A New Lower Bound for the Random Offerer Mechanism in Bilateral Trade using
-    AI-Guided Evolutionary Search
-  authors: Yang Cai, Vineet Gupta, Zun Li, Aranyak Mehta
-  abstract: 'The celebrated Myerson--Satterthwaite theorem shows that in bilateral
-    trade, no mechanism can be simultaneously fully efficient, Bayesian incentive
-    compatible (BIC), and budget balanced (BB). This naturally raises the question
-    of how closely the gains from trade (GFT) achievable by a BIC and BB mechanism
-    can approximate the first-best (fully efficient) benchmark. The optimal BIC and
-    BB mechanism is typically complex and highly distribution-dependent, making it
-    difficult to characterize directly. Consequently, much of the literature analyzes
-    simpler mechanisms such as the Random-Offerer (RO) mechanism and establishes constant-factor
-    guarantees relative to the first-best GFT. An important open question concerns
-    the worst-case performance of the RO mechanism relative to first-best (FB) efficiency.
-    While it was originally hypothesized that the approximation ratio $\frac{\text{GFT}_{\text{FB}}}{\text{GFT}_{\text{RO}}}$
-    is bounded by $2$, recent work provided counterexamples to this conjecture: Cai
-    et al. proved that the ratio can be strictly larger than $2$, and Babaioff et
-    al. exhibited an explicit example with ratio approximately $2.02$. In this work,
-    we employ AlphaEvolve, an AI-guided evolutionary search framework, to explore
-    the space of value distributions. We identify a new worst-case instance that yields
-    an improved lower bound of $\frac{\text{GFT}_{\text{FB}}}{\text{GFT}_{\text{RO}}}
-    \ge \textbf{2.0749}$. This establishes a new lower bound on the worst-case performance
-    of the Random-Offerer mechanism, demonstrating a wider efficiency gap than previously
-    known.'
-  published: '2026-03-09'
-  pdf_url: http://arxiv.org/pdf/2603.08679
-  arxiv_url: http://arxiv.org/abs/2603.08679
-  key_findings: The celebrated Myerson--Satterthwaite theorem shows that in bilateral
-    trade, no mechanism can be simultaneously fully efficient, Bayesian incentive
-    compatible (BIC), and budget balanced (BB). This naturally raises the question
-    of how closely the gains from trade (GFT) achievable by a BIC and BB mechanism
-    can approximate the first-best (fully efficient) benchmark. The optimal BIC and
-    BB mechanism is typically complex and highly distribution-dependent, making it
-    difficult to characterize directly.
-- id: '2603.08655'
-  title: 'OfficeQA Pro: An Enterprise Benchmark for End-to-End Grounded Reasoning'
-  authors: Krista Opsahl-Ong, Arnav Singhvi, Jasmine Collins, Ivan Zhou, Cindy Wang,
-    Ashutosh Baheti, Owen Oertell, Jacob Portes, Sam Havens, Erich Elsen, Michael
-    Bendersky, Matei Zaharia, Xing Chen
-  abstract: We introduce OfficeQA Pro, a benchmark for evaluating AI agents on grounded,
-    multi-document reasoning over a large and heterogeneous document corpus. The corpus
-    consists of U.S. Treasury Bulletins spanning nearly 100 years, comprising 89,000
-    pages and over 26 million numerical values. OfficeQA Pro consists of 133 questions
-    that require precise document parsing, retrieval, and analytical reasoning across
-    both unstructured text and tabular data. Frontier LLMs including Claude Opus 4.6,
-    GPT-5.4, and Gemini 3.1 Pro Preview achieve less than 5% accuracy on OfficeQA
-    Pro when relying on parametric knowledge, and less than 12% with additional access
-    to the web. When provided directly with the document corpus, frontier agents still
-    struggle on over half of questions, scoring 34.1% on average. We find that providing
-    agents with a structured document representation produced by Databricks' ai_parse_document
-    yields a 16.1% average relative performance gain across agents. We conduct additional
-    ablations to study the effects of model selection, table representation, retrieval
-    strategy, and test-time scaling on performance. Despite these improvements, significant
-    headroom remains before agents can be considered reliable at enterprise-grade
-    grounded reasoning.
-  published: '2026-03-09'
-  pdf_url: http://arxiv.org/pdf/2603.08655
-  arxiv_url: http://arxiv.org/abs/2603.08655
-  key_findings: We introduce OfficeQA Pro, a benchmark for evaluating AI agents on
-    grounded, multi-document reasoning over a large and heterogeneous document corpus.
-    The corpus consists of U. S.
-- id: '2603.08652'
-  title: 'CoCo: Code as CoT for Text-to-Image Preview and Rare Concept Generation'
-  authors: Haodong Li, Chunmei Qing, Huanyu Zhang, Dongzhi Jiang, Yihang Zou, Hongbo
-    Peng, Dingming Li, Yuhong Dai, ZePeng Lin, Juanxi Tian, Yi Zhou, Siqi Dai, Jingwei
-    Wu
-  abstract: 'Recent advancements in Unified Multimodal Models (UMMs) have significantly
-    advanced text-to-image (T2I) generation, particularly through the integration
-    of Chain-of-Thought (CoT) reasoning. However, existing CoT-based T2I methods largely
-    rely on abstract natural-language planning, which lacks the precision required
-    for complex spatial layouts, structured visual elements, and dense textual content.
-    In this work, we propose CoCo (Code-as-CoT), a code-driven reasoning framework
-    that represents the reasoning process as executable code, enabling explicit and
-    verifiable intermediate planning for image generation. Given a text prompt, CoCo
-    first generates executable code that specifies the structural layout of the scene,
-    which is then executed in a sandboxed environment to render a deterministic draft
-    image. The model subsequently refines this draft through fine-grained image editing
-    to produce the final high-fidelity result. To support this training paradigm,
-    we construct CoCo-10K, a curated dataset containing structured draft-final image
-    pairs designed to teach both structured draft construction and corrective visual
-    refinement. Empirical evaluations on StructT2IBench, OneIG-Bench, and LongText-Bench
-    show that CoCo achieves improvements of +68.83%, +54.8%, and +41.23% over direct
-    generation, while also outperforming other generation methods empowered by CoT.
-    These results demonstrate that executable code is an effective and reliable reasoning
-    paradigm for precise, controllable, and structured text-to-image generation. The
-    code is available at: https://github.com/micky-li-hd/CoCo'
-  published: '2026-03-09'
-  pdf_url: http://arxiv.org/pdf/2603.08652
-  arxiv_url: http://arxiv.org/abs/2603.08652
-  key_findings: Recent advancements in Unified Multimodal Models (UMMs) have significantly
-    advanced text-to-image (T2I) generation, particularly through the integration
-    of Chain-of-Thought (CoT) reasoning. However, existing CoT-based T2I methods largely
-    rely on abstract natural-language planning, which lacks the precision required
-    for complex spatial layouts, structured visual elements, and dense textual content.
-    In this work, we propose CoCo (Code-as-CoT), a code-driven reasoning framework
-    that represents the reasoning process as executable code, enabling explicit and
-    verifiable intermediate planning for image generation.
-- id: '2603.08640'
-  title: 'PostTrainBench: Can LLM Agents Automate LLM Post-Training?'
-  authors: Ben Rank, Hardik Bhatnagar, Ameya Prabhu, Shira Eisenberg, Karina Nguyen,
-    Matthias Bethge, Maksym Andriushchenko
-  abstract: 'AI agents have become surprisingly proficient at software engineering
-    over the past year, largely due to improvements in reasoning capabilities. This
-    raises a deeper question: can these systems extend their capabilities to automate
-    AI research itself? In this paper, we explore post-training, the critical phase
-    that turns base LLMs into useful assistants. We introduce PostTrainBench to benchmark
-    how well LLM agents can perform post-training autonomously under bounded compute
-    constraints (10 hours on one H100 GPU). We ask frontier agents (e.g., Claude Code
-    with Opus 4.6) to optimize the performance of a base LLM on a particular benchmark
-    (e.g., Qwen3-4B on AIME). Importantly, we do not provide any predefined strategies
-    to the agents and instead give them full autonomy to find necessary information
-    on the web, run experiments, and curate data. We find that frontier agents make
-    substantial progress but generally lag behind instruction-tuned LLMs from leading
-    providers: 23.2% for the best agent vs. 51.1% for official instruction-tuned models.
-    However, agents can exceed instruction-tuned models in targeted scenarios: GPT-5.1
-    Codex Max achieves 89% on BFCL with Gemma-3-4B vs. 67% for the official model.
-    We also observe several failure modes worth flagging. Agents sometimes engage
-    in reward hacking: training on the test set, downloading existing instruction-tuned
-    checkpoints instead of training their own, and using API keys they find to generate
-    synthetic data without authorization. These behaviors are concerning and highlight
-    the importance of careful sandboxing as these systems become more capable. Overall,
-    we hope PostTrainBench will be useful for tracking progress in AI R&D automation
-    and for studying the risks that come with it. Website and code are available at
-    https://posttrainbench.com/.'
-  published: '2026-03-09'
-  pdf_url: http://arxiv.org/pdf/2603.08640
-  arxiv_url: http://arxiv.org/abs/2603.08640
-  key_findings: 'AI agents have become surprisingly proficient at software engineering
-    over the past year, largely due to improvements in reasoning capabilities. This
-    raises a deeper question: can these systems extend their capabilities to automate
-    AI research itself. In this paper, we explore post-training, the critical phase
-    that turns base LLMs into useful assistants.'
+- id: '2603.09972'
+  title: 'From Data Statistics to Feature Geometry: How Correlations Shape Superposition'
+  authors: Lucas Prieto, Edward Stevinson, Melih Barsbey, Tolga Birdal, Pedro A. M.
+    Mediano
+  abstract: A central idea in mechanistic interpretability is that neural networks
+    represent more features than they have dimensions, arranging them in superposition
+    to form an over-complete basis. This framing has been influential, motivating
+    dictionary learning approaches such as sparse autoencoders. However, superposition
+    has mostly been studied in idealized settings where features are sparse and uncorrelated.
+    In these settings, superposition is typically understood as introducing interference
+    that must be minimized geometrically and filtered out by non-linearities such
+    as ReLUs, yielding local structures like regular polytopes. We show that this
+    account is incomplete for realistic data by introducing Bag-of-Words Superposition
+    (BOWS), a controlled setting to encode binary bag-of-words representations of
+    internet text in superposition. Using BOWS, we find that when features are correlated,
+    interference can be constructive rather than just noise to be filtered out. This
+    is achieved by arranging features according to their co-activation patterns, making
+    interference between active features constructive, while still using ReLUs to
+    avoid false positives. We show that this kind of arrangement is more prevalent
+    in models trained with weight decay and naturally gives rise to semantic clusters
+    and cyclical structures which have been observed in real language models yet were
+    not explained by the standard picture of superposition. Code for this paper can
+    be found at https://github.com/LucasPrietoAl/correlations-feature-geometry.
+  published: '2026-03-10'
+  pdf_url: http://arxiv.org/pdf/2603.09972
+  arxiv_url: http://arxiv.org/abs/2603.09972
+  key_findings: A central idea in mechanistic interpretability is that neural networks
+    represent more features than they have dimensions, arranging them in superposition
+    to form an over-complete basis. This framing has been influential, motivating
+    dictionary learning approaches such as sparse autoencoders. However, superposition
+    has mostly been studied in idealized settings where features are sparse and uncorrelated.
+- id: '2603.09964'
+  title: Understanding the Use of a Large Language Model-Powered Guide to Make Virtual
+    Reality Accessible for Blind and Low Vision People
+  authors: Jazmin Collins, Sharon Y Lin, Tianqi Liu, Andrea Stevenson Won, Shiri Azenkot
+  abstract: As social virtual reality (VR) grows more popular, addressing accessibility
+    for blind and low vision (BLV) users is increasingly critical. Researchers have
+    proposed an AI "sighted guide" to help users navigate VR and answer their questions,
+    but it has not been studied with users. To address this gap, we developed a large
+    language model (LLM)-powered guide and studied its use with 16 BLV participants
+    in virtual environments with confederates posing as other users. We found that
+    when alone, participants treated the guide as a tool, but treated it companionably
+    around others, giving it nicknames, rationalizing its mistakes with its appearance,
+    and encouraging confederate-guide interaction. Our work furthers understanding
+    of guides as a versatile method for VR accessibility and presents design recommendations
+    for future guides.
+  published: '2026-03-10'
+  pdf_url: http://arxiv.org/pdf/2603.09964
+  arxiv_url: http://arxiv.org/abs/2603.09964
+  key_findings: As social virtual reality (VR) grows more popular, addressing accessibility
+    for blind and low vision (BLV) users is increasingly critical. Researchers have
+    proposed an AI "sighted guide" to help users navigate VR and answer their questions,
+    but it has not been studied with users. To address this gap, we developed a large
+    language model (LLM)-powered guide and studied its use with 16 BLV participants
+    in virtual environments with confederates posing as other users.
+- id: '2603.09963'
+  title: Emotional Modulation in Swarm Decision Dynamics
+  authors: David Freire-Obregón
+  abstract: 'Collective decision-making in biological and human groups often emerges
+    from simple interaction rules that amplify minor differences into consensus. The
+    bee equation, developed initially to describe nest-site selection in honeybee
+    swarms, captures this dynamic through recruitment and inhibition processes. Here,
+    we extend the bee equation into an agent-based model in which emotional valence
+    (positive-negative) and arousal (low-high) act as modulators of interaction rates,
+    effectively altering the recruitment and cross-inhibition parameters. Agents display
+    simulated facial expressions mapped from their valence-arousal states, allowing
+    the study of emotional contagion in consensus formation. Three scenarios are explored:
+    (1) the joint effect of valence and arousal on consensus outcomes and speed, (2)
+    the role of arousal in breaking ties when valence is matched, and (3) the "snowball
+    effect" in which consensus accelerates after surpassing intermediate support thresholds.
+    Results show that emotional modulation can bias decision outcomes and alter convergence
+    times by shifting effective recruitment and inhibition rates. At the same time,
+    intrinsic non-linear amplification can produce decisive wins even in fully symmetric
+    emotional conditions. These findings link classical swarm decision theory with
+    affective and social modelling, highlighting how both emotional asymmetries and
+    structural tipping points shape collective outcomes. The proposed framework offers
+    a flexible tool for studying the emotional dimensions of collective choice in
+    both natural and artificial systems.'
+  published: '2026-03-10'
+  pdf_url: http://arxiv.org/pdf/2603.09963
+  arxiv_url: http://arxiv.org/abs/2603.09963
+  key_findings: Collective decision-making in biological and human groups often emerges
+    from simple interaction rules that amplify minor differences into consensus. The
+    bee equation, developed initially to describe nest-site selection in honeybee
+    swarms, captures this dynamic through recruitment and inhibition processes. Here,
+    we extend the bee equation into an agent-based model in which emotional valence
+    (positive-negative) and arousal (low-high) act as modulators of interaction rates,
+    effectively altering the recruitment and cross-inhibition parameters.
+- id: '2603.09961'
+  title: 'BEACON: Language-Conditioned Navigation Affordance Prediction under Occlusion'
+  authors: Xinyu Gao, Gang Chen, Javier Alonso-Mora
+  abstract: 'Language-conditioned local navigation requires a robot to infer a nearby
+    traversable target location from its current observation and an open-vocabulary,
+    relational instruction. Existing vision-language spatial grounding methods usually
+    rely on vision-language models (VLMs) to reason in image space, producing 2D predictions
+    tied to visible pixels. As a result, they struggle to infer target locations in
+    occluded regions, typically caused by furniture or moving humans. To address this
+    issue, we propose BEACON, which predicts an ego-centric Bird''s-Eye View (BEV)
+    affordance heatmap over a bounded local region including occluded areas. Given
+    an instruction and surround-view RGB-D observations from four directions around
+    the robot, BEACON predicts the BEV heatmap by injecting spatial cues into a VLM
+    and fusing the VLM''s output with depth-derived BEV features. Using an occlusion-aware
+    dataset built in the Habitat simulator, we conduct detailed experimental analysis
+    to validate both our BEV space formulation and the design choices of each module.
+    Our method improves the accuracy averaged across geodesic thresholds by 22.74
+    percentage points over the state-of-the-art image-space baseline on the validation
+    subset with occluded target locations. Our project page is: https://xin-yu-gao.github.io/beacon.'
+  published: '2026-03-10'
+  pdf_url: http://arxiv.org/pdf/2603.09961
+  arxiv_url: http://arxiv.org/abs/2603.09961
+  key_findings: Language-conditioned local navigation requires a robot to infer a
+    nearby traversable target location from its current observation and an open-vocabulary,
+    relational instruction. Existing vision-language spatial grounding methods usually
+    rely on vision-language models (VLMs) to reason in image space, producing 2D predictions
+    tied to visible pixels. As a result, they struggle to infer target locations in
+    occluded regions, typically caused by furniture or moving humans.
+- id: '2603.09957'
+  title: 'Think Before You Lie: How Reasoning Improves Honesty'
+  authors: Ann Yuan, Asma Ghandeharioun, Carter Blum, Alicia Machado, Jessica Hoffmann,
+    Daphne Ippolito, Martin Wattenberg, Lucas Dixon, Katja Filippova
+  abstract: 'While existing evaluations of large language models (LLMs) measure deception
+    rates, the underlying conditions that give rise to deceptive behavior are poorly
+    understood. We investigate this question using a novel dataset of realistic moral
+    trade-offs where honesty incurs variable costs. Contrary to humans, who tend to
+    become less honest given time to deliberate (Capraro, 2017; Capraro et al., 2019),
+    we find that reasoning consistently increases honesty across scales and for several
+    LLM families. This effect is not only a function of the reasoning content, as
+    reasoning traces are often poor predictors of final behaviors. Rather, we show
+    that the underlying geometry of the representational space itself contributes
+    to the effect. Namely, we observe that deceptive regions within this space are
+    metastable: deceptive answers are more easily destabilized by input paraphrasing,
+    output resampling, and activation noise than honest ones. We interpret the effect
+    of reasoning in this vein: generating deliberative tokens as part of moral reasoning
+    entails the traversal of a biased representational space, ultimately nudging the
+    model toward its more stable, honest defaults.'
+  published: '2026-03-10'
+  pdf_url: http://arxiv.org/pdf/2603.09957
+  arxiv_url: http://arxiv.org/abs/2603.09957
+  key_findings: While existing evaluations of large language models (LLMs) measure
+    deception rates, the underlying conditions that give rise to deceptive behavior
+    are poorly understood. We investigate this question using a novel dataset of realistic
+    moral trade-offs where honesty incurs variable costs. Contrary to humans, who
+    tend to become less honest given time to deliberate (Capraro, 2017; Capraro et
+    al.
+- id: '2603.09951'
+  title: Towards a Neural Debugger for Python
+  authors: Maximilian Beck, Jonas Gehring, Jannik Kossen, Gabriel Synnaeve
+  abstract: 'Training large language models (LLMs) on Python execution traces grounds
+    them in code execution and enables the line-by-line execution prediction of whole
+    Python programs, effectively turning them into neural interpreters (FAIR CodeGen
+    Team et al., 2025). However, developers rarely execute programs step by step;
+    instead, they use debuggers to stop execution at certain breakpoints and step
+    through relevant portions only while inspecting or modifying program variables.
+    Existing neural interpreter approaches lack such interactive control. To address
+    this limitation, we introduce neural debuggers: language models that emulate traditional
+    debuggers, supporting operations such as stepping into, over, or out of functions,
+    as well as setting breakpoints at specific source lines. We show that neural debuggers
+    -- obtained via fine-tuning large LLMs or pre-training smaller models from scratch
+    -- can reliably model both forward execution (predicting future states and outputs)
+    and inverse execution (inferring prior states or inputs) conditioned on debugger
+    actions. Evaluated on CruxEval, our models achieve strong performance on both
+    output and input prediction tasks, demonstrating robust conditional execution
+    modeling. Our work takes first steps towards future agentic coding systems in
+    which neural debuggers serve as a world model for simulated debugging environments,
+    providing execution feedback or enabling agents to interact with real debugging
+    tools. This capability lays the foundation for more powerful code generation,
+    program understanding, and automated debugging.'
+  published: '2026-03-10'
+  pdf_url: http://arxiv.org/pdf/2603.09951
+  arxiv_url: http://arxiv.org/abs/2603.09951
+  key_findings: Training large language models (LLMs) on Python execution traces grounds
+    them in code execution and enables the line-by-line execution prediction of whole
+    Python programs, effectively turning them into neural interpreters (FAIR CodeGen
+    Team et al. , 2025). However, developers rarely execute programs step by step;
+    instead, they use debuggers to stop execution at certain breakpoints and step
+    through relevant portions only while inspecting or modifying program variables.
+- id: '2603.09950'
+  title: 'When Learning Rates Go Wrong: Early Structural Signals in PPO Actor-Critic'
+  authors: Alberto Fernández-Hernández, Cristian Pérez-Corral, Jose I. Mestre, Manuel
+    F. Dolz, Jose Duato, Enrique S. Quintana-Ortí
+  abstract: 'Deep Reinforcement Learning systems are highly sensitive to the learning
+    rate (LR), and selecting stable and performant training runs often requires extensive
+    hyperparameter search. In Proximal Policy Optimization (PPO) actor--critic methods,
+    small LR values lead to slow convergence, whereas large LR values may induce instability
+    or collapse. We analyse this phenomenon from the behavior of the hidden neurons
+    in the network using the Overfitting-Underfitting Indicator (OUI), a metric that
+    quantifies the balance of binary activation patterns over a fixed probe batch.
+    We introduce an efficient batch-based formulation of OUI and derive a theoretical
+    connection between LR and activation sign changes, clarifying how a correct evolution
+    of the neuron''s inner structure depends on the step size. Empirically, across
+    three discrete-control environments and multiple seeds, we show that OUI measured
+    at only 10\% of training already discriminates between LR regimes. We observe
+    a consistent asymmetry: critic networks achieving highest return operate in an
+    intermediate OUI band (avoiding saturation), whereas actor networks achieving
+    highest return exhibit comparatively high OUI values. We then compare OUI-based
+    screening rules against early return, clip-based, divergence-based, and flip-based
+    criteria under matched recall over successful runs. In this setting, OUI provides
+    the strongest early screening signal: OUI alone achieves the best precision at
+    broader recall, while combining early return with OUI yields the highest precision
+    in best-performing screening regimes, enabling aggressive pruning of unpromising
+    runs without requiring full training.'
+  published: '2026-03-10'
+  pdf_url: http://arxiv.org/pdf/2603.09950
+  arxiv_url: http://arxiv.org/abs/2603.09950
+  key_findings: Deep Reinforcement Learning systems are highly sensitive to the learning
+    rate (LR), and selecting stable and performant training runs often requires extensive
+    hyperparameter search. In Proximal Policy Optimization (PPO) actor--critic methods,
+    small LR values lead to slow convergence, whereas large LR values may induce instability
+    or collapse. We analyse this phenomenon from the behavior of the hidden neurons
+    in the network using the Overfitting-Underfitting Indicator (OUI), a metric that
+    quantifies the balance of binary activation patterns over a fixed probe batch.
+- id: '2603.09947'
+  title: 'The Confidence Gate Theorem: When Should Ranked Decision Systems Abstain?'
+  authors: Ronald Doku
+  abstract: 'Ranked decision systems -- recommenders, ad auctions, clinical triage
+    queues -- must decide when to intervene in ranked outputs and when to abstain.
+    We study when confidence-based abstention monotonically improves decision quality,
+    and when it fails. The formal conditions are simple: rank-alignment and no inversion
+    zones. The substantive contribution is identifying why these conditions hold or
+    fail: the distinction between structural uncertainty (missing data, e.g., cold-start)
+    and contextual uncertainty (missing context, e.g., temporal drift). Empirically,
+    we validate this distinction across three domains: collaborative filtering (MovieLens,
+    3 distribution shifts), e-commerce intent detection (RetailRocket, Criteo, Yoochoose),
+    and clinical pathway triage (MIMIC-IV). Structural uncertainty produces near-monotonic
+    abstention gains in all domains; structurally grounded confidence signals (observation
+    counts) fail under contextual drift, producing as many monotonicity violations
+    as random abstention on our MovieLens temporal split. Context-aware alternatives
+    -- ensemble disagreement and recency features -- substantially narrow the gap
+    (reducing violations from 3 to 1--2) but do not fully restore monotonicity, suggesting
+    that contextual uncertainty poses qualitatively different challenges. Exception
+    labels defined from residuals degrade substantially under distribution shift (AUC
+    drops from 0.71 to 0.61--0.62 across three splits), providing a clean negative
+    result against the common practice of exception-based intervention. The results
+    provide a practical deployment diagnostic: check C1 and C2 on held-out data before
+    deploying a confidence gate, and match the confidence signal to the dominant uncertainty
+    type.'
+  published: '2026-03-10'
+  pdf_url: http://arxiv.org/pdf/2603.09947
+  arxiv_url: http://arxiv.org/abs/2603.09947
+  key_findings: 'Ranked decision systems -- recommenders, ad auctions, clinical triage
+    queues -- must decide when to intervene in ranked outputs and when to abstain.
+    We study when confidence-based abstention monotonically improves decision quality,
+    and when it fails. The formal conditions are simple: rank-alignment and no inversion
+    zones.'
+- id: '2603.09945'
+  title: 'No Image, No Problem: End-to-End Multi-Task Cardiac Analysis from Undersampled
+    k-Space'
+  authors: Yundi Zhang, Sevgi Gokce Kafali, Niklas Bubeck, Daniel Rueckert, Jiazhen
+    Pan
+  abstract: 'Conventional clinical CMR pipelines rely on a sequential "reconstruct-then-analyze"
+    paradigm, forcing an ill-posed intermediate step that introduces avoidable artifacts
+    and information bottlenecks. This creates a fundamental mathematical paradox:
+    it attempts to recover high-dimensional pixel arrays (i.e., images) from undersampled
+    k-space, rather than directly extracting the low-dimensional physiological labels
+    actually required for diagnosis. To unlock the direct diagnostic potential of
+    k-space, we propose k-MTR (k-space Multi-Task Representation), a k-space representation
+    learning framework that aligns undersampled k-space data and fully-sampled images
+    into a shared semantic manifold. Leveraging a large-scale controlled simulation
+    of 42,000 subjects, k-MTR forces the k-space encoder to restore anatomical information
+    lost to undersampling directly within the latent space, bypassing the explicit
+    inverse problem for downstream analysis. We demonstrate that this latent alignment
+    enables the dense latent space embedded with high-level physiological semantics
+    directly from undersampled frequencies. Across continuous phenotype regression,
+    disease classification, and anatomical segmentation, k-MTR achieves highly competitive
+    performance against state-of-the-art image-domain baselines. By showcasing that
+    precise spatial geometries and multi-task features can be successfully recovered
+    directly from the k-space representations, k-MTR provides a robust architectural
+    blueprint for task-aware cardiac MRI workflows.'
+  published: '2026-03-10'
+  pdf_url: http://arxiv.org/pdf/2603.09945
+  arxiv_url: http://arxiv.org/abs/2603.09945
+  key_findings: 'Conventional clinical CMR pipelines rely on a sequential "reconstruct-then-analyze"
+    paradigm, forcing an ill-posed intermediate step that introduces avoidable artifacts
+    and information bottlenecks. This creates a fundamental mathematical paradox:
+    it attempts to recover high-dimensional pixel arrays (i. e.'
+- id: '2603.09943'
+  title: 'PathMem: Toward Cognition-Aligned Memory Transformation for Pathology MLLMs'
+  authors: Jinyue Li, Yuci Liang, Qiankun Li, Xinheng Lyu, Jiayu Qian, Huabao Chen,
+    Kun Wang, Zhigang Zeng, Anil Anthony Bharath, Yang Liu
+  abstract: Computational pathology demands both visual pattern recognition and dynamic
+    integration of structured domain knowledge, including taxonomy, grading criteria,
+    and clinical evidence. In practice, diagnostic reasoning requires linking morphological
+    evidence with formal diagnostic and grading criteria. Although multimodal large
+    language models (MLLMs) demonstrate strong vision language reasoning capabilities,
+    they lack explicit mechanisms for structured knowledge integration and interpretable
+    memory control. As a result, existing models struggle to consistently incorporate
+    pathology-specific diagnostic standards during reasoning. Inspired by the hierarchical
+    memory process of human pathologists, we propose PathMem, a memory-centric multimodal
+    framework for pathology MLLMs. PathMem organizes structured pathology knowledge
+    as a long-term memory (LTM) and introduces a Memory Transformer that models the
+    dynamic transition from LTM to working memory (WM) through multimodal memory activation
+    and context-aware knowledge grounding, enabling context-aware memory refinement
+    for downstream reasoning. PathMem achieves SOTA performance across benchmarks,
+    improving WSI-Bench report generation (12.8% WSI-Precision, 10.1% WSI-Relevance)
+    and open-ended diagnosis by 9.7% and 8.9% over prior WSI-based models.
+  published: '2026-03-10'
+  pdf_url: http://arxiv.org/pdf/2603.09943
+  arxiv_url: http://arxiv.org/abs/2603.09943
+  key_findings: Computational pathology demands both visual pattern recognition and
+    dynamic integration of structured domain knowledge, including taxonomy, grading
+    criteria, and clinical evidence. In practice, diagnostic reasoning requires linking
+    morphological evidence with formal diagnostic and grading criteria. Although multimodal
+    large language models (MLLMs) demonstrate strong vision language reasoning capabilities,
+    they lack explicit mechanisms for structured knowledge integration and interpretable
+    memory control.

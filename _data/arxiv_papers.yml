@@ -1,302 +1,309 @@
 papers:
-- id: '2603.11048'
-  title: 'COMIC: Agentic Sketch Comedy Generation'
-  authors: Susung Hong, Brian Curless, Ira Kemelmacher-Shlizerman, Steve Seitz
-  abstract: We propose a fully automated AI system that produces short comedic videos
-    similar to sketch shows such as Saturday Night Live. Starting with character references,
-    the system employs a population of agents loosely based on real production studio
-    roles, structured to optimize the quality and diversity of ideas and outputs through
-    iterative competition, evaluation, and improvement. A key contribution is the
-    introduction of LLM critics aligned with real viewer preferences through the analysis
-    of a corpus of comedy videos on YouTube to automatically evaluate humor. Our experiments
-    show that our framework produces results approaching the quality of professionally
-    produced sketches while demonstrating state-of-the-art performance in video generation.
-  published: '2026-03-11'
-  pdf_url: http://arxiv.org/pdf/2603.11048
-  arxiv_url: http://arxiv.org/abs/2603.11048
-  key_findings: We propose a fully automated AI system that produces short comedic
-    videos similar to sketch shows such as Saturday Night Live. Starting with character
-    references, the system employs a population of agents loosely based on real production
-    studio roles, structured to optimize the quality and diversity of ideas and outputs
-    through iterative competition, evaluation, and improvement. A key contribution
-    is the introduction of LLM critics aligned with real viewer preferences through
-    the analysis of a corpus of comedy videos on YouTube to automatically evaluate
-    humor.
-- id: '2603.11047'
-  title: 'LiTo: Surface Light Field Tokenization'
-  authors: Jen-Hao Rick Chang, Xiaoming Zhao, Dorian Chan, Oncel Tuzel
-  abstract: We propose a 3D latent representation that jointly models object geometry
-    and view-dependent appearance. Most prior works focus on either reconstructing
-    3D geometry or predicting view-independent diffuse appearance, and thus struggle
-    to capture realistic view-dependent effects. Our approach leverages that RGB-depth
-    images provide samples of a surface light field. By encoding random subsamples
-    of this surface light field into a compact set of latent vectors, our model learns
-    to represent both geometry and appearance within a unified 3D latent space. This
-    representation reproduces view-dependent effects such as specular highlights and
-    Fresnel reflections under complex lighting. We further train a latent flow matching
-    model on this representation to learn its distribution conditioned on a single
-    input image, enabling the generation of 3D objects with appearances consistent
-    with the lighting and materials in the input. Experiments show that our approach
-    achieves higher visual quality and better input fidelity than existing methods.
-  published: '2026-03-11'
-  pdf_url: http://arxiv.org/pdf/2603.11047
-  arxiv_url: http://arxiv.org/abs/2603.11047
-  key_findings: We propose a 3D latent representation that jointly models object geometry
-    and view-dependent appearance. Most prior works focus on either reconstructing
-    3D geometry or predicting view-independent diffuse appearance, and thus struggle
-    to capture realistic view-dependent effects. Our approach leverages that RGB-depth
-    images provide samples of a surface light field.
-- id: '2603.11045'
-  title: 'Neural Field Thermal Tomography: A Differentiable Physics Framework for
-    Non-Destructive Evaluation'
-  authors: Tao Zhong, Yixun Hu, Dongzhe Zheng, Aditya Sood, Christine Allen-Blanchette
-  abstract: We propose Neural Field Thermal Tomography (NeFTY), a differentiable physics
-    framework for the quantitative 3D reconstruction of material properties from transient
-    surface temperature measurements. While traditional thermography relies on pixel-wise
-    1D approximations that neglect lateral diffusion, and soft-constrained Physics-Informed
-    Neural Networks (PINNs) often fail in transient diffusion scenarios due to gradient
-    stiffness, NeFTY parameterizes the 3D diffusivity field as a continuous neural
-    field optimized through a rigorous numerical solver. By leveraging a differentiable
-    physics solver, our approach enforces thermodynamic laws as hard constraints while
-    maintaining the memory efficiency required for high-resolution 3D tomography.
-    Our discretize-then-optimize paradigm effectively mitigates the spectral bias
-    and ill-posedness inherent in inverse heat conduction, enabling the recovery of
-    subsurface defects at arbitrary scales. Experimental validation on synthetic data
-    demonstrates that NeFTY significantly improves the accuracy of subsurface defect
-    localization over baselines. Additional details at https://cab-lab-princeton.github.io/nefty/
-  published: '2026-03-11'
-  pdf_url: http://arxiv.org/pdf/2603.11045
-  arxiv_url: http://arxiv.org/abs/2603.11045
-  key_findings: We propose Neural Field Thermal Tomography (NeFTY), a differentiable
-    physics framework for the quantitative 3D reconstruction of material properties
-    from transient surface temperature measurements. While traditional thermography
-    relies on pixel-wise 1D approximations that neglect lateral diffusion, and soft-constrained
-    Physics-Informed Neural Networks (PINNs) often fail in transient diffusion scenarios
-    due to gradient stiffness, NeFTY parameterizes the 3D diffusivity field as a continuous
-    neural field optimized through a rigorous numerical solver. By leveraging a differentiable
-    physics solver, our approach enforces thermodynamic laws as hard constraints while
-    maintaining the memory efficiency required for high-resolution 3D tomography.
-- id: '2603.11042'
-  title: 'V2M-Zero: Zero-Pair Time-Aligned Video-to-Music Generation'
-  authors: Yan-Bo Lin, Jonah Casebeer, Long Mai, Aniruddha Mahapatra, Gedas Bertasius,
-    Nicholas J. Bryan
-  abstract: 'Generating music that temporally aligns with video events is challenging
-    for existing text-to-music models, which lack fine-grained temporal control. We
-    introduce V2M-Zero, a zero-pair video-to-music generation approach that outputs
-    time-aligned music for video. Our method is motivated by a key observation: temporal
-    synchronization requires matching when and how much change occurs, not what changes.
-    While musical and visual events differ semantically, they exhibit shared temporal
-    structure that can be captured independently within each modality. We capture
-    this structure through event curves computed from intra-modal similarity using
-    pretrained music and video encoders. By measuring temporal change within each
-    modality independently, these curves provide comparable representations across
-    modalities. This enables a simple training strategy: fine-tune a text-to-music
-    model on music-event curves, then substitute video-event curves at inference without
-    cross-modal training or paired data. Across OES-Pub, MovieGenBench-Music, and
-    AIST++, V2M-Zero achieves substantial gains over paired-data baselines: 5-21%
-    higher audio quality, 13-15% better semantic alignment, 21-52% improved temporal
-    synchronization, and 28% higher beat alignment on dance videos. We find similar
-    results via a large crowd-source subjective listening test. Overall, our results
-    validate that temporal alignment through within-modality features, rather than
-    paired cross-modal supervision, is effective for video-to-music generation. Results
-    are available at https://genjib.github.io/v2m_zero/'
-  published: '2026-03-11'
-  pdf_url: http://arxiv.org/pdf/2603.11042
-  arxiv_url: http://arxiv.org/abs/2603.11042
-  key_findings: 'Generating music that temporally aligns with video events is challenging
-    for existing text-to-music models, which lack fine-grained temporal control. We
-    introduce V2M-Zero, a zero-pair video-to-music generation approach that outputs
-    time-aligned music for video. Our method is motivated by a key observation: temporal
-    synchronization requires matching when and how much change occurs, not what changes.'
-- id: '2603.11039'
-  title: Instruction set for the representation of graphs
-  authors: Ezequiel Lopez-Rubio, Mario Pascual-Gonzalez
-  abstract: We present IsalGraph, a method for representing the structure of any finite,
-    simple graph as a compact string over a nine-character instruction alphabet. The
-    encoding is executed by a small virtual machine comprising a sparse graph, a circular
-    doubly-linked list (CDLL) of graph-node references, and two traversal pointers.
-    Instructions either move a pointer through the CDLL or insert a node or edge into
-    the graph. A key design property is that every string over the alphabet decodes
-    to a valid graph, with no invalid states reachable. A greedy \emph{GraphToString}
-    algorithm encodes any connected graph into a string in time polynomial in the
-    number of nodes; an exhaustive-backtracking variant produces a canonical string
-    by selecting the lexicographically smallest shortest string across all starting
-    nodes and all valid traversal orders. We evaluate the representation on five real-world
-    graph benchmark datasets (IAM Letter LOW/MED/HIGH, LINUX, and AIDS) and show that
-    the Levenshtein distance between IsalGraph strings correlates strongly with graph
-    edit distance (GED). Together, these properties make IsalGraph strings a compact,
-    isomorphism-invariant, and language-model-compatible sequential encoding of graph
-    structure, with direct applications in graph similarity search, graph generation,
-    and graph-conditioned language modelling
-  published: '2026-03-11'
-  pdf_url: http://arxiv.org/pdf/2603.11039
-  arxiv_url: http://arxiv.org/abs/2603.11039
-  key_findings: We present IsalGraph, a method for representing the structure of any
-    finite, simple graph as a compact string over a nine-character instruction alphabet.
-    The encoding is executed by a small virtual machine comprising a sparse graph,
-    a circular doubly-linked list (CDLL) of graph-node references, and two traversal
-    pointers. Instructions either move a pointer through the CDLL or insert a node
-    or edge into the graph.
-- id: '2603.11024'
-  title: Does AI See like Art Historians? Interpreting How Vision Language Models
-    Recognize Artistic Style
-  authors: Marvin Limpijankit, Milad Alshomary, Yassin Oulad Daoud, Amith Ananthram,
-    Tim Trombley, Elias Stengel-Eskin, Mohit Bansal, Noam M. Elcott, Kathleen McKeown
-  abstract: VLMs have become increasingly proficient at a range of computer vision
-    tasks, such as visual question answering and object detection. This includes increasingly
-    strong capabilities in the domain of art, from analyzing artwork to generation
-    of art. In an interdisciplinary collaboration between computer scientists and
-    art historians, we characterize the mechanisms underlying VLMs' ability to predict
-    artistic style and assess the extent to which they align with the criteria art
-    historians use to reason about artistic style. We employ a latent-space decomposition
-    approach to identify concepts that drive art style prediction and conduct quantitative
-    evaluations, causal analysis and assessment by art historians. Our findings indicate
-    that 73% of the extracted concepts are judged by art historians to exhibit a coherent
-    and semantically meaningful visual feature and 90% of concepts used to predict
-    style of a given artwork were judged relevant. In cases where an irrelevant concept
-    was used to successfully predict style, art historians identified possible reasons
-    for its success; for example, the model might "understand" a concept in more formal
-    terms, such as dark/light contrasts.
-  published: '2026-03-11'
-  pdf_url: http://arxiv.org/pdf/2603.11024
-  arxiv_url: http://arxiv.org/abs/2603.11024
-  key_findings: VLMs have become increasingly proficient at a range of computer vision
-    tasks, such as visual question answering and object detection. This includes increasingly
-    strong capabilities in the domain of art, from analyzing artwork to generation
-    of art. In an interdisciplinary collaboration between computer scientists and
-    art historians, we characterize the mechanisms underlying VLMs' ability to predict
-    artistic style and assess the extent to which they align with the criteria art
-    historians use to reason about artistic style.
-- id: '2603.11001'
-  title: 'RCTs & Human Uplift Studies: Methodological Challenges and Practical Solutions
-    for Frontier AI Evaluation'
-  authors: Patricia Paskov, Kevin Wei, Shen Zhou Hong, Dan Bateyko, Xavier Roberts-Gaal,
-    Carson Ezell, Gailius Praninskas, Valerie Chen, Umang Bhatt, Ella Guest
-  abstract: Human uplift studies - or studies that measure AI effects on human performance
-    relative to a status quo, typically using randomized controlled trial (RCT) methodology
-    - are increasingly used to inform deployment, governance, and safety decisions
-    for frontier AI systems. While the methods underlying these studies are well-established,
-    their interaction with the distinctive properties of frontier AI systems remains
-    underexamined, particularly when results are used to inform high-stakes decisions.
-    We present findings from interviews with 16 expert practitioners with experience
-    conducting human uplift studies in domains including biosecurity, cybersecurity,
-    education, and labor. Across interviews, experts described a recurring tension
-    between standard causal inference assumptions and the object of study itself.
-    Rapidly evolving AI systems, shifting baselines, heterogeneous and changing user
-    proficiency, and porous real-world settings strain assumptions underlying internal,
-    external, and construct validity, complicating the interpretation and appropriate
-    use of uplift evidence. We synthesize these challenges across key stages of the
-    human uplift research lifecycle and map them to practitioner-reported solutions,
-    clarifying both the limits and the appropriate uses of evidence from human uplift
-    studies in high-stakes decision-making.
-  published: '2026-03-11'
-  pdf_url: http://arxiv.org/pdf/2603.11001
-  arxiv_url: http://arxiv.org/abs/2603.11001
-  key_findings: Human uplift studies - or studies that measure AI effects on human
-    performance relative to a status quo, typically using randomized controlled trial
-    (RCT) methodology - are increasingly used to inform deployment, governance, and
-    safety decisions for frontier AI systems. While the methods underlying these studies
-    are well-established, their interaction with the distinctive properties of frontier
-    AI systems remains underexamined, particularly when results are used to inform
-    high-stakes decisions. We present findings from interviews with 16 expert practitioners
-    with experience conducting human uplift studies in domains including biosecurity,
-    cybersecurity, education, and labor.
-- id: '2603.10994'
-  title: Artificial Intelligence as a Catalyst for Innovation in Software Engineering
-  authors: Carlos Alberto Fernández-y-Fernández, Jorge R. Aguilar-Cisneros
-  abstract: The rapid evolution and inherent complexity of modern software requirements
-    demand highly flexible and responsive development methodologies. While Agile frameworks
-    have become the industry standard for prioritizing iteration, collaboration, and
-    adaptability, software development teams continue to face persistent challenges
-    in managing constantly evolving requirements and maintaining product quality under
-    tight deadlines. This article explores the intersection of Artificial Intelligence
-    (AI) and Software Engineering (SE), to analyze how AI serves as a powerful catalyst
-    for enhancing agility and fostering innovation. The research combines a comprehensive
-    review of existing literature with an empirical study, utilizing a survey directed
-    at Software Engineering professionals to assess the perception, adoption, and
-    impact of AI-driven tools. Key findings reveal that the integration of AI (specifically
-    through Machine Learning (ML) and Natural Language Processing (NLP) )facilitates
-    the automation of tedious tasks, from requirement management to code generation
-    and testing . This paper demonstrates that AI not only optimizes current Agile
-    practices but also introduces new capabilities essential for sustaining quality,
-    speed, and innovation in the future landscape of software development.
-  published: '2026-03-11'
-  pdf_url: http://arxiv.org/pdf/2603.10994
-  arxiv_url: http://arxiv.org/abs/2603.10994
-  key_findings: The rapid evolution and inherent complexity of modern software requirements
-    demand highly flexible and responsive development methodologies. While Agile frameworks
-    have become the industry standard for prioritizing iteration, collaboration, and
-    adaptability, software development teams continue to face persistent challenges
-    in managing constantly evolving requirements and maintaining product quality under
-    tight deadlines. This article explores the intersection of Artificial Intelligence
-    (AI) and Software Engineering (SE), to analyze how AI serves as a powerful catalyst
-    for enhancing agility and fostering innovation.
-- id: '2603.10978'
-  title: 'GroundCount: Grounding Vision-Language Models with Object Detection for
-    Mitigating Counting Hallucinations'
-  authors: Boyuan Chen, Minghao Shao, Siddharth Garg, Ramesh Karri, Muhammad Shafique
-  abstract: Vision Language Models (VLMs) exhibit persistent hallucinations in counting
-    tasks, with accuracy substantially lower than other visual reasoning tasks (excluding
-    sentiment). This phenomenon persists even in state-of-the-art reasoning-capable
-    VLMs. Conversely, CNN-based object detection models (ODMs) such as YOLO excel
-    at spatial localization and instance counting with minimal computational overhead.
-    We propose GroundCount, a framework that augments VLMs with explicit spatial grounding
-    from ODMs to mitigate counting hallucinations. In the best case, our prompt-based
-    augmentation strategy achieves 81.3% counting accuracy on the best-performing
-    model (Ovis2.5-2B) - a 6.6pp improvement - while reducing inference time by 22%
-    through elimination of hallucination-driven reasoning loops for stronger models.
-    We conduct comprehensive ablation studies demonstrating that positional encoding
-    is a critical component, being beneficial for stronger models but detrimental
-    for weaker ones. Confidence scores, by contrast, introduce noise for most architectures
-    and their removal improves performance in four of five evaluated models. We further
-    evaluate feature-level fusion architectures, finding that explicit symbolic grounding
-    via structured prompts outperforms implicit feature fusion despite sophisticated
-    cross-attention mechanisms. Our approach yields consistent improvements across
-    four of five evaluated VLM architectures (6.2--7.5pp), with one architecture exhibiting
-    degraded performance due to incompatibility between its iterative reflection mechanisms
-    and structured prompts. These results suggest that counting failures stem from
-    fundamental spatial-semantic integration limitations rather than architecture-specific
-    deficiencies, while highlighting the importance of architectural compatibility
-    in augmentation strategies.
-  published: '2026-03-11'
-  pdf_url: http://arxiv.org/pdf/2603.10978
-  arxiv_url: http://arxiv.org/abs/2603.10978
-  key_findings: Vision Language Models (VLMs) exhibit persistent hallucinations in
-    counting tasks, with accuracy substantially lower than other visual reasoning
-    tasks (excluding sentiment). This phenomenon persists even in state-of-the-art
-    reasoning-capable VLMs. Conversely, CNN-based object detection models (ODMs) such
-    as YOLO excel at spatial localization and instance counting with minimal computational
-    overhead.
-- id: '2603.10971'
-  title: Contact Coverage-Guided Exploration for General-Purpose Dexterous Manipulation
-  authors: Zixuan Liu, Ruoyi Qiao, Chenrui Tie, Xuanwei Liu, Yunfan Lou, Chongkai
-    Gao, Zhixuan Xu, Lin Shao
-  abstract: 'Deep Reinforcement learning (DRL) has achieved remarkable success in
-    domains with well-defined reward structures, such as Atari games and locomotion.
-    In contrast, dexterous manipulation lacks general-purpose reward formulations
-    and typically depends on task-specific, handcrafted priors to guide hand-object
-    interactions. We propose Contact Coverage-Guided Exploration (CCGE), a general
-    exploration method designed for general-purpose dexterous manipulation tasks.
-    CCGE represents contact state as the intersection between object surface points
-    and predefined hand keypoints, encouraging dexterous hands to discover diverse
-    and novel contact patterns, namely which fingers contact which object regions.
-    It maintains a contact counter conditioned on discretized object states obtained
-    via learned hash codes, capturing how frequently each finger interacts with different
-    object regions. This counter is leveraged in two complementary ways: (1) to assign
-    a count-based contact coverage reward that promotes exploration of novel contact
-    patterns, and (2) an energy-based reaching reward that guides the agent toward
-    under-explored contact regions. We evaluate CCGE on a diverse set of dexterous
-    manipulation tasks, including cluttered object singulation, constrained object
-    retrieval, in-hand reorientation, and bimanual manipulation. Experimental results
-    show that CCGE substantially improves training efficiency and success rates over
-    existing exploration methods, and that the contact patterns learned with CCGE
-    transfer robustly to real-world robotic systems. Project page is https://contact-coverage-guided-exploration.github.io.'
-  published: '2026-03-11'
-  pdf_url: http://arxiv.org/pdf/2603.10971
-  arxiv_url: http://arxiv.org/abs/2603.10971
-  key_findings: Deep Reinforcement learning (DRL) has achieved remarkable success
-    in domains with well-defined reward structures, such as Atari games and locomotion.
-    In contrast, dexterous manipulation lacks general-purpose reward formulations
-    and typically depends on task-specific, handcrafted priors to guide hand-object
-    interactions. We propose Contact Coverage-Guided Exploration (CCGE), a general
-    exploration method designed for general-purpose dexterous manipulation tasks.
+- id: '2603.12261'
+  title: 'The Latent Color Subspace: Emergent Order in High-Dimensional Chaos'
+  authors: Mateusz Pach, Jessica Bader, Quentin Bouniot, Serge Belongie, Zeynep Akata
+  abstract: Text-to-image generation models have advanced rapidly, yet achieving fine-grained
+    control over generated images remains difficult, largely due to limited understanding
+    of how semantic information is encoded. We develop an interpretation of the color
+    representation in the Variational Autoencoder latent space of FLUX.1 [Dev], revealing
+    a structure reflecting Hue, Saturation, and Lightness. We verify our Latent Color
+    Subspace (LCS) interpretation by demonstrating that it can both predict and explicitly
+    control color, introducing a fully training-free method in FLUX based solely on
+    closed-form latent-space manipulation. Code is available at https://github.com/ExplainableML/LCS.
+  published: '2026-03-12'
+  pdf_url: http://arxiv.org/pdf/2603.12261
+  arxiv_url: http://arxiv.org/abs/2603.12261
+  key_findings: Text-to-image generation models have advanced rapidly, yet achieving
+    fine-grained control over generated images remains difficult, largely due to limited
+    understanding of how semantic information is encoded. We develop an interpretation
+    of the color representation in the Variational Autoencoder latent space of FLUX.
+    1 [Dev], revealing a structure reflecting Hue, Saturation, and Lightness.
+- id: '2603.12249'
+  title: 'SciMDR: Benchmarking and Advancing Scientific Multimodal Document Reasoning'
+  authors: Ziyu Chen, Yilun Zhao, Chengye Wang, Rilyn Han, Manasi Patwardhan, Arman
+    Cohan
+  abstract: 'Constructing scientific multimodal document reasoning datasets for foundation
+    model training involves an inherent trade-off among scale, faithfulness, and realism.
+    To address this challenge, we introduce the synthesize-and-reground framework,
+    a two-stage pipeline comprising: (1) Claim-Centric QA Synthesis, which generates
+    faithful, isolated QA pairs and reasoning on focused segments, and (2) Document-Scale
+    Regrounding, which programmatically re-embeds these pairs into full-document tasks
+    to ensure realistic complexity. Using this framework, we construct SciMDR, a large-scale
+    training dataset for cross-modal comprehension, comprising 300K QA pairs with
+    explicit reasoning chains across 20K scientific papers. We further construct SciMDR-Eval,
+    an expert-annotated benchmark to evaluate multimodal comprehension within full-length
+    scientific workflows. Experiments demonstrate that models fine-tuned on SciMDR
+    achieve significant improvements across multiple scientific QA benchmarks, particularly
+    in those tasks requiring complex document-level reasoning.'
+  published: '2026-03-12'
+  pdf_url: http://arxiv.org/pdf/2603.12249
+  arxiv_url: http://arxiv.org/abs/2603.12249
+  key_findings: 'Constructing scientific multimodal document reasoning datasets for
+    foundation model training involves an inherent trade-off among scale, faithfulness,
+    and realism. To address this challenge, we introduce the synthesize-and-reground
+    framework, a two-stage pipeline comprising: (1) Claim-Centric QA Synthesis, which
+    generates faithful, isolated QA pairs and reasoning on focused segments, and (2)
+    Document-Scale Regrounding, which programmatically re-embeds these pairs into
+    full-document tasks to ensure realistic complexity. Using this framework, we construct
+    SciMDR, a large-scale training dataset for cross-modal comprehension, comprising
+    300K QA pairs with explicit reasoning chains across 20K scientific papers.'
+- id: '2603.12246'
+  title: Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training
+  authors: Yixin Liu, Yue Yu, DiJia Su, Sid Wang, Xuewei Wang, Song Jiang, Bo Liu,
+    Arman Cohan, Yuandong Tian, Zhengxing Chen
+  abstract: 'Reasoning LLMs-as-Judges, which can benefit from inference-time scaling,
+    provide a promising path for extending the success of reasoning models to non-verifiable
+    domains where the output correctness/quality cannot be directly checked. However,
+    while reasoning judges have shown better performance on static evaluation benchmarks,
+    their effectiveness in actual policy training has not been systematically examined.
+    Therefore, we conduct a rigorous study to investigate the actual impact of non-reasoning
+    and reasoning judges in reinforcement-learning-based LLM alignment. Our controlled
+    synthetic setting, where a "gold-standard" judge (gpt-oss-120b) provides preference
+    annotations to train smaller judges, reveals key differences between non-reasoning
+    and reasoning judges: non-reasoning judges lead to reward hacking easily, while
+    reasoning judges can lead to policies that achieve strong performance when evaluated
+    by the gold-standard judge. Interestingly, we find that the reasoning-judge-trained
+    policies achieve such strong performance by learning to generate highly effective
+    adversarial outputs that can also score well on popular benchmarks such as Arena-Hard
+    by deceiving other LLM-judges. Combined with our further analysis, our study highlights
+    both important findings and room for improvements for applying (reasoning) LLM-judges
+    in non-verifiable LLM post-training.'
+  published: '2026-03-12'
+  pdf_url: http://arxiv.org/pdf/2603.12246
+  arxiv_url: http://arxiv.org/abs/2603.12246
+  key_findings: Reasoning LLMs-as-Judges, which can benefit from inference-time scaling,
+    provide a promising path for extending the success of reasoning models to non-verifiable
+    domains where the output correctness/quality cannot be directly checked. However,
+    while reasoning judges have shown better performance on static evaluation benchmarks,
+    their effectiveness in actual policy training has not been systematically examined.
+    Therefore, we conduct a rigorous study to investigate the actual impact of non-reasoning
+    and reasoning judges in reinforcement-learning-based LLM alignment.
+- id: '2603.12244'
+  title: Separable neural architectures as a primitive for unified predictive and
+    generative intelligence
+  authors: Reza T. Batley, Apurba Sarker, Rajib Mostakim, Andrew Klichine, Sourav
+    Saha
+  abstract: 'Intelligent systems across physics, language and perception often exhibit
+    factorisable structure, yet are typically modelled by monolithic neural architectures
+    that do not explicitly exploit this structure. The separable neural architecture
+    (SNA) addresses this by formalising a representational class that unifies additive,
+    quadratic and tensor-decomposed neural models. By constraining interaction order
+    and tensor rank, SNAs impose a structural inductive bias that factorises high-dimensional
+    mappings into low-arity components. Separability need not be a property of the
+    system itself: it often emerges in the coordinates or representations through
+    which the system is expressed. Crucially, this coordinate-aware formulation reveals
+    a structural analogy between chaotic spatiotemporal dynamics and linguistic autoregression.
+    By treating continuous physical states as smooth, separable embeddings, SNAs enable
+    distributional modelling of chaotic systems. This approach mitigates the nonphysical
+    drift characteristics of deterministic operators whilst remaining applicable to
+    discrete sequences. The compositional versatility of this approach is demonstrated
+    across four domains: autonomous waypoint navigation via reinforcement learning,
+    inverse generation of multifunctional microstructures, distributional modelling
+    of turbulent flow and neural language modelling. These results establish the separable
+    neural architecture as a domain-agnostic primitive for predictive and generative
+    intelligence, capable of unifying both deterministic and distributional representations.'
+  published: '2026-03-12'
+  pdf_url: http://arxiv.org/pdf/2603.12244
+  arxiv_url: http://arxiv.org/abs/2603.12244
+  key_findings: Intelligent systems across physics, language and perception often
+    exhibit factorisable structure, yet are typically modelled by monolithic neural
+    architectures that do not explicitly exploit this structure. The separable neural
+    architecture (SNA) addresses this by formalising a representational class that
+    unifies additive, quadratic and tensor-decomposed neural models. By constraining
+    interaction order and tensor rank, SNAs impose a structural inductive bias that
+    factorises high-dimensional mappings into low-arity components.
+- id: '2603.12232'
+  title: Incremental Neural Network Verification via Learned Conflicts
+  authors: Raya Elsaleh, Liam Davis, Haoze Wu, Guy Katz
+  abstract: 'Neural network verification is often used as a core component within
+    larger analysis procedures, which generate sequences of closely related verification
+    queries over the same network. In existing neural network verifiers, each query
+    is typically solved independently, and information learned during previous runs
+    is discarded, leading to repeated exploration of the same infeasible regions of
+    the search space. In this work, we aim to expedite verification by reducing this
+    redundancy. We propose an incremental verification technique that reuses learned
+    conflicts across related verification queries. The technique can be added on top
+    of any branch-and-bound-based neural network verifier. During verification, the
+    verifier records conflicts corresponding to learned infeasible combinations of
+    activation phases, and retains them across runs. We formalize a refinement relation
+    between verification queries and show that conflicts learned for a query remain
+    valid under refinement, enabling sound conflict inheritance. Inherited conflicts
+    are handled using a SAT solver to perform consistency checks and propagation,
+    allowing infeasible subproblems to be detected and pruned early during search.
+    We implement the proposed technique in the Marabou verifier and evaluate it on
+    three verification tasks: local robustness radius determination, verification
+    with input splitting, and minimal sufficient feature set extraction. Our experiments
+    show that incremental conflict reuse reduces verification effort and yields speedups
+    of up to $1.9\times$ over a non-incremental baseline.'
+  published: '2026-03-12'
+  pdf_url: http://arxiv.org/pdf/2603.12232
+  arxiv_url: http://arxiv.org/abs/2603.12232
+  key_findings: Neural network verification is often used as a core component within
+    larger analysis procedures, which generate sequences of closely related verification
+    queries over the same network. In existing neural network verifiers, each query
+    is typically solved independently, and information learned during previous runs
+    is discarded, leading to repeated exploration of the same infeasible regions of
+    the search space. In this work, we aim to expedite verification by reducing this
+    redundancy.
+- id: '2603.12230'
+  title: Security Considerations for Artificial Intelligence Agents
+  authors: Ninghui Li, Kaiyuan Zhang, Kyle Polley, Jerry Ma
+  abstract: 'This article, a lightly adapted version of Perplexity''s response to
+    NIST/CAISI Request for Information 2025-0035, details our observations and recommendations
+    concerning the security of frontier AI agents. These insights are informed by
+    Perplexity''s experience operating general-purpose agentic systems used by millions
+    of users and thousands of enterprises in both controlled and open-world environments.
+    Agent architectures change core assumptions around code-data separation, authority
+    boundaries, and execution predictability, creating new confidentiality, integrity,
+    and availability failure modes. We map principal attack surfaces across tools,
+    connectors, hosting boundaries, and multi-agent coordination, with particular
+    emphasis on indirect prompt injection, confused-deputy behavior, and cascading
+    failures in long-running workflows. We then assess current defenses as a layered
+    stack: input-level and model-level mitigations, sandboxed execution, and deterministic
+    policy enforcement for high-consequence actions. Finally, we identify standards
+    and research gaps, including adaptive security benchmarks, policy models for delegation
+    and privilege control, and guidance for secure multi-agent system design aligned
+    with NIST risk management principles.'
+  published: '2026-03-12'
+  pdf_url: http://arxiv.org/pdf/2603.12230
+  arxiv_url: http://arxiv.org/abs/2603.12230
+  key_findings: This article, a lightly adapted version of Perplexity's response to
+    NIST/CAISI Request for Information 2025-0035, details our observations and recommendations
+    concerning the security of frontier AI agents. These insights are informed by
+    Perplexity's experience operating general-purpose agentic systems used by millions
+    of users and thousands of enterprises in both controlled and open-world environments.
+    Agent architectures change core assumptions around code-data separation, authority
+    boundaries, and execution predictability, creating new confidentiality, integrity,
+    and availability failure modes.
+- id: '2603.12228'
+  title: 'Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights'
+  authors: Yulu Gan, Phillip Isola
+  abstract: Pretraining produces a learned parameter vector that is typically treated
+    as a starting point for further iterative adaptation. In this work, we instead
+    view the outcome of pretraining as a distribution over parameter vectors, whose
+    support already contains task-specific experts. We show that in small models such
+    expert solutions occupy a negligible fraction of the volume of this distribution,
+    making their discovery reliant on structured optimization methods such as gradient
+    descent. In contrast, in large, well-pretrained models the density of task-experts
+    increases dramatically, so that diverse, task-improving specialists populate a
+    substantial fraction of the neighborhood around the pretrained weights. Motivated
+    by this perspective, we explore a simple, fully parallel post-training method
+    that samples $N$ parameter perturbations at random, selects the top $K$, and ensembles
+    predictions via majority vote. Despite its simplicity, this approach is competitive
+    with standard post-training methods such as PPO, GRPO, and ES for contemporary
+    large-scale models.
+  published: '2026-03-12'
+  pdf_url: http://arxiv.org/pdf/2603.12228
+  arxiv_url: http://arxiv.org/abs/2603.12228
+  key_findings: Pretraining produces a learned parameter vector that is typically
+    treated as a starting point for further iterative adaptation. In this work, we
+    instead view the outcome of pretraining as a distribution over parameter vectors,
+    whose support already contains task-specific experts. We show that in small models
+    such expert solutions occupy a negligible fraction of the volume of this distribution,
+    making their discovery reliant on structured optimization methods such as gradient
+    descent.
+- id: '2603.12226'
+  title: Sparking Scientific Creativity via LLM-Driven Interdisciplinary Inspiration
+  authors: Priyanka Kargupta, Shuhaib Mehri, Dilek Hakkani-Tur, Jiawei Han
+  abstract: 'Despite interdisciplinary research leading to larger and longer-term
+    impact, most work remains confined to single-domain academic silos. Recent AI-based
+    approaches to scientific discovery show promise for interdisciplinary research,
+    but many prioritize rapidly designing experiments and solutions, bypassing the
+    exploratory, collaborative reasoning processes that drive creative interdisciplinary
+    breakthroughs. As a result, prior efforts largely prioritize automating scientific
+    discovery rather than augmenting the reasoning processes that underlie scientific
+    disruption. We present Idea-Catalyst, a novel framework that systematically identifies
+    interdisciplinary insights to support creative reasoning in both humans and large
+    language models. Starting from an abstract research goal, Idea-Catalyst is designed
+    to assist the brainstorming stage, explicitly avoiding premature anchoring on
+    specific solutions. The framework embodies key metacognitive features of interdisciplinary
+    reasoning: (a) defining and assessing research goals, (b) awareness of a domain''s
+    opportunities and unresolved challenges, and (c) strategic exploration of interdisciplinary
+    ideas based on impact potential. Concretely, Idea-Catalyst decomposes an abstract
+    goal (e.g., improving human-AI collaboration) into core target-domain research
+    questions that guide the analysis of progress and open challenges within that
+    domain. These challenges are reformulated as domain-agnostic conceptual problems,
+    enabling retrieval from external disciplines (e.g., Psychology, Sociology) that
+    address analogous issues. By synthesizing and recontextualizing insights from
+    these domains back into the target domain, Idea-Catalyst ranks source domains
+    by their interdisciplinary potential. Empirically, this targeted integration improves
+    average novelty by 21% and insightfulness by 16%, while remaining grounded in
+    the original research problem.'
+  published: '2026-03-12'
+  pdf_url: http://arxiv.org/pdf/2603.12226
+  arxiv_url: http://arxiv.org/abs/2603.12226
+  key_findings: Despite interdisciplinary research leading to larger and longer-term
+    impact, most work remains confined to single-domain academic silos. Recent AI-based
+    approaches to scientific discovery show promise for interdisciplinary research,
+    but many prioritize rapidly designing experiments and solutions, bypassing the
+    exploratory, collaborative reasoning processes that drive creative interdisciplinary
+    breakthroughs. As a result, prior efforts largely prioritize automating scientific
+    discovery rather than augmenting the reasoning processes that underlie scientific
+    disruption.
+- id: '2603.12224'
+  title: Portfolio of Solving Strategies in CEGAR-based Object Packing and Scheduling
+    for Sequential 3D Printing
+  authors: Pavel Surynek
+  abstract: Computing power that used to be available only in supercomputers decades
+    ago especially their parallelism is currently available in standard personal computer
+    CPUs even in CPUs for mobile telephones. We show how to effectively utilize the
+    computing power of modern multi-core personal computer CPU to solve the complex
+    combinatorial problem of object arrangement and scheduling for sequential 3D printing.
+    We achieved this by parallelizing the existing CEGAR-SEQ algorithm that solves
+    the sequential object arrangement and scheduling by expressing it as a linear
+    arithmetic formula which is then solved by a technique inspired by counterexample
+    guided abstraction refinement (CEGAR). The original CEGAR-SEQ algorithm uses an
+    object arrangement strategy that places objects towards the center of the printing
+    plate. We propose alternative object arrangement strategies such as placing objects
+    towards a corner of the printing plate and scheduling objects according to their
+    height. Our parallelization is done at the high-level where we execute the CEGAR-SEQ
+    algorithm in parallel with a portfolio of object arrangement strategies, an algorithm
+    is called Porfolio-CEGAR-SEQ. Our experimental evaluation indicates that Porfolio-CEGAR-SEQ
+    outperforms the original CEGAR-SEQ. When a batch of objects for multiple printing
+    plates is scheduled, Portfolio-CEGAR-SEQ often uses fewer printing plates than
+    CEGAR-SEQ.
+  published: '2026-03-12'
+  pdf_url: http://arxiv.org/pdf/2603.12224
+  arxiv_url: http://arxiv.org/abs/2603.12224
+  key_findings: Computing power that used to be available only in supercomputers decades
+    ago especially their parallelism is currently available in standard personal computer
+    CPUs even in CPUs for mobile telephones. We show how to effectively utilize the
+    computing power of modern multi-core personal computer CPU to solve the complex
+    combinatorial problem of object arrangement and scheduling for sequential 3D printing.
+    We achieved this by parallelizing the existing CEGAR-SEQ algorithm that solves
+    the sequential object arrangement and scheduling by expressing it as a linear
+    arithmetic formula which is then solved by a technique inspired by counterexample
+    guided abstraction refinement (CEGAR).
+- id: '2603.12215'
+  title: 'RDNet: Region Proportion-Aware Dynamic Adaptive Salient Object Detection
+    Network in Optical Remote Sensing Images'
+  authors: Bin Wan, Runmin Cong, Xiaofei Zhou, Hao Fang, Yaoqi Sun, Sam Kwong
+  abstract: 'Salient object detection (SOD) in remote sensing images faces significant
+    challenges due to large variations in object sizes, the computational cost of
+    self-attention mechanisms, and the limitations of CNN-based extractors in capturing
+    global context and long-range dependencies. Existing methods that rely on fixed
+    convolution kernels often struggle to adapt to diverse object scales, leading
+    to detail loss or irrelevant feature aggregation. To address these issues, this
+    work aims to enhance robustness to scale variations and achieve precise object
+    localization. We propose the Region Proportion-Aware Dynamic Adaptive Salient
+    Object Detection Network (RDNet), which replaces the CNN backbone with the SwinTransformer
+    for global context modeling and introduces three key modules: (1) the Dynamic
+    Adaptive Detail-aware (DAD) module, which applies varied convolution kernels guided
+    by object region proportions; (2) the Frequency-matching Context Enhancement (FCE)
+    module, which enriches contextual information through wavelet interactions and
+    attention; and (3) the Region Proportion-aware Localization (RPL) module, which
+    employs cross-attention to highlight semantic details and integrates a Proportion
+    Guidance (PG) block to assist the DAD module. By combining these modules, RDNet
+    achieves robustness against scale variations and accurate localization, delivering
+    superior detection performance compared with state-of-the-art methods.'
+  published: '2026-03-12'
+  pdf_url: http://arxiv.org/pdf/2603.12215
+  arxiv_url: http://arxiv.org/abs/2603.12215
+  key_findings: Salient object detection (SOD) in remote sensing images faces significant
+    challenges due to large variations in object sizes, the computational cost of
+    self-attention mechanisms, and the limitations of CNN-based extractors in capturing
+    global context and long-range dependencies. Existing methods that rely on fixed
+    convolution kernels often struggle to adapt to diverse object scales, leading
+    to detail loss or irrelevant feature aggregation. To address these issues, this
+    work aims to enhance robustness to scale variations and achieve precise object
+    localization.

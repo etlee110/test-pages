@@ -1,309 +1,315 @@
 papers:
-- id: '2603.12261'
-  title: 'The Latent Color Subspace: Emergent Order in High-Dimensional Chaos'
-  authors: Mateusz Pach, Jessica Bader, Quentin Bouniot, Serge Belongie, Zeynep Akata
-  abstract: Text-to-image generation models have advanced rapidly, yet achieving fine-grained
-    control over generated images remains difficult, largely due to limited understanding
-    of how semantic information is encoded. We develop an interpretation of the color
-    representation in the Variational Autoencoder latent space of FLUX.1 [Dev], revealing
-    a structure reflecting Hue, Saturation, and Lightness. We verify our Latent Color
-    Subspace (LCS) interpretation by demonstrating that it can both predict and explicitly
-    control color, introducing a fully training-free method in FLUX based solely on
-    closed-form latent-space manipulation. Code is available at https://github.com/ExplainableML/LCS.
-  published: '2026-03-12'
-  pdf_url: http://arxiv.org/pdf/2603.12261
-  arxiv_url: http://arxiv.org/abs/2603.12261
-  key_findings: Text-to-image generation models have advanced rapidly, yet achieving
-    fine-grained control over generated images remains difficult, largely due to limited
-    understanding of how semantic information is encoded. We develop an interpretation
-    of the color representation in the Variational Autoencoder latent space of FLUX.
-    1 [Dev], revealing a structure reflecting Hue, Saturation, and Lightness.
-- id: '2603.12249'
-  title: 'SciMDR: Benchmarking and Advancing Scientific Multimodal Document Reasoning'
-  authors: Ziyu Chen, Yilun Zhao, Chengye Wang, Rilyn Han, Manasi Patwardhan, Arman
-    Cohan
-  abstract: 'Constructing scientific multimodal document reasoning datasets for foundation
-    model training involves an inherent trade-off among scale, faithfulness, and realism.
-    To address this challenge, we introduce the synthesize-and-reground framework,
-    a two-stage pipeline comprising: (1) Claim-Centric QA Synthesis, which generates
-    faithful, isolated QA pairs and reasoning on focused segments, and (2) Document-Scale
-    Regrounding, which programmatically re-embeds these pairs into full-document tasks
-    to ensure realistic complexity. Using this framework, we construct SciMDR, a large-scale
-    training dataset for cross-modal comprehension, comprising 300K QA pairs with
-    explicit reasoning chains across 20K scientific papers. We further construct SciMDR-Eval,
-    an expert-annotated benchmark to evaluate multimodal comprehension within full-length
-    scientific workflows. Experiments demonstrate that models fine-tuned on SciMDR
-    achieve significant improvements across multiple scientific QA benchmarks, particularly
-    in those tasks requiring complex document-level reasoning.'
-  published: '2026-03-12'
-  pdf_url: http://arxiv.org/pdf/2603.12249
-  arxiv_url: http://arxiv.org/abs/2603.12249
-  key_findings: 'Constructing scientific multimodal document reasoning datasets for
-    foundation model training involves an inherent trade-off among scale, faithfulness,
-    and realism. To address this challenge, we introduce the synthesize-and-reground
-    framework, a two-stage pipeline comprising: (1) Claim-Centric QA Synthesis, which
-    generates faithful, isolated QA pairs and reasoning on focused segments, and (2)
-    Document-Scale Regrounding, which programmatically re-embeds these pairs into
-    full-document tasks to ensure realistic complexity. Using this framework, we construct
-    SciMDR, a large-scale training dataset for cross-modal comprehension, comprising
-    300K QA pairs with explicit reasoning chains across 20K scientific papers.'
-- id: '2603.12246'
-  title: Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training
-  authors: Yixin Liu, Yue Yu, DiJia Su, Sid Wang, Xuewei Wang, Song Jiang, Bo Liu,
-    Arman Cohan, Yuandong Tian, Zhengxing Chen
-  abstract: 'Reasoning LLMs-as-Judges, which can benefit from inference-time scaling,
-    provide a promising path for extending the success of reasoning models to non-verifiable
-    domains where the output correctness/quality cannot be directly checked. However,
-    while reasoning judges have shown better performance on static evaluation benchmarks,
-    their effectiveness in actual policy training has not been systematically examined.
-    Therefore, we conduct a rigorous study to investigate the actual impact of non-reasoning
-    and reasoning judges in reinforcement-learning-based LLM alignment. Our controlled
-    synthetic setting, where a "gold-standard" judge (gpt-oss-120b) provides preference
-    annotations to train smaller judges, reveals key differences between non-reasoning
-    and reasoning judges: non-reasoning judges lead to reward hacking easily, while
-    reasoning judges can lead to policies that achieve strong performance when evaluated
-    by the gold-standard judge. Interestingly, we find that the reasoning-judge-trained
-    policies achieve such strong performance by learning to generate highly effective
-    adversarial outputs that can also score well on popular benchmarks such as Arena-Hard
-    by deceiving other LLM-judges. Combined with our further analysis, our study highlights
-    both important findings and room for improvements for applying (reasoning) LLM-judges
-    in non-verifiable LLM post-training.'
-  published: '2026-03-12'
-  pdf_url: http://arxiv.org/pdf/2603.12246
-  arxiv_url: http://arxiv.org/abs/2603.12246
-  key_findings: Reasoning LLMs-as-Judges, which can benefit from inference-time scaling,
-    provide a promising path for extending the success of reasoning models to non-verifiable
-    domains where the output correctness/quality cannot be directly checked. However,
-    while reasoning judges have shown better performance on static evaluation benchmarks,
-    their effectiveness in actual policy training has not been systematically examined.
-    Therefore, we conduct a rigorous study to investigate the actual impact of non-reasoning
-    and reasoning judges in reinforcement-learning-based LLM alignment.
-- id: '2603.12244'
-  title: Separable neural architectures as a primitive for unified predictive and
-    generative intelligence
-  authors: Reza T. Batley, Apurba Sarker, Rajib Mostakim, Andrew Klichine, Sourav
-    Saha
-  abstract: 'Intelligent systems across physics, language and perception often exhibit
-    factorisable structure, yet are typically modelled by monolithic neural architectures
-    that do not explicitly exploit this structure. The separable neural architecture
-    (SNA) addresses this by formalising a representational class that unifies additive,
-    quadratic and tensor-decomposed neural models. By constraining interaction order
-    and tensor rank, SNAs impose a structural inductive bias that factorises high-dimensional
-    mappings into low-arity components. Separability need not be a property of the
-    system itself: it often emerges in the coordinates or representations through
-    which the system is expressed. Crucially, this coordinate-aware formulation reveals
-    a structural analogy between chaotic spatiotemporal dynamics and linguistic autoregression.
-    By treating continuous physical states as smooth, separable embeddings, SNAs enable
-    distributional modelling of chaotic systems. This approach mitigates the nonphysical
-    drift characteristics of deterministic operators whilst remaining applicable to
-    discrete sequences. The compositional versatility of this approach is demonstrated
-    across four domains: autonomous waypoint navigation via reinforcement learning,
-    inverse generation of multifunctional microstructures, distributional modelling
-    of turbulent flow and neural language modelling. These results establish the separable
-    neural architecture as a domain-agnostic primitive for predictive and generative
-    intelligence, capable of unifying both deterministic and distributional representations.'
-  published: '2026-03-12'
-  pdf_url: http://arxiv.org/pdf/2603.12244
-  arxiv_url: http://arxiv.org/abs/2603.12244
-  key_findings: Intelligent systems across physics, language and perception often
-    exhibit factorisable structure, yet are typically modelled by monolithic neural
-    architectures that do not explicitly exploit this structure. The separable neural
-    architecture (SNA) addresses this by formalising a representational class that
-    unifies additive, quadratic and tensor-decomposed neural models. By constraining
-    interaction order and tensor rank, SNAs impose a structural inductive bias that
-    factorises high-dimensional mappings into low-arity components.
-- id: '2603.12232'
-  title: Incremental Neural Network Verification via Learned Conflicts
-  authors: Raya Elsaleh, Liam Davis, Haoze Wu, Guy Katz
-  abstract: 'Neural network verification is often used as a core component within
-    larger analysis procedures, which generate sequences of closely related verification
-    queries over the same network. In existing neural network verifiers, each query
-    is typically solved independently, and information learned during previous runs
-    is discarded, leading to repeated exploration of the same infeasible regions of
-    the search space. In this work, we aim to expedite verification by reducing this
-    redundancy. We propose an incremental verification technique that reuses learned
-    conflicts across related verification queries. The technique can be added on top
-    of any branch-and-bound-based neural network verifier. During verification, the
-    verifier records conflicts corresponding to learned infeasible combinations of
-    activation phases, and retains them across runs. We formalize a refinement relation
-    between verification queries and show that conflicts learned for a query remain
-    valid under refinement, enabling sound conflict inheritance. Inherited conflicts
-    are handled using a SAT solver to perform consistency checks and propagation,
-    allowing infeasible subproblems to be detected and pruned early during search.
-    We implement the proposed technique in the Marabou verifier and evaluate it on
-    three verification tasks: local robustness radius determination, verification
-    with input splitting, and minimal sufficient feature set extraction. Our experiments
-    show that incremental conflict reuse reduces verification effort and yields speedups
-    of up to $1.9\times$ over a non-incremental baseline.'
-  published: '2026-03-12'
-  pdf_url: http://arxiv.org/pdf/2603.12232
-  arxiv_url: http://arxiv.org/abs/2603.12232
-  key_findings: Neural network verification is often used as a core component within
-    larger analysis procedures, which generate sequences of closely related verification
-    queries over the same network. In existing neural network verifiers, each query
-    is typically solved independently, and information learned during previous runs
-    is discarded, leading to repeated exploration of the same infeasible regions of
-    the search space. In this work, we aim to expedite verification by reducing this
-    redundancy.
-- id: '2603.12230'
-  title: Security Considerations for Artificial Intelligence Agents
-  authors: Ninghui Li, Kaiyuan Zhang, Kyle Polley, Jerry Ma
-  abstract: 'This article, a lightly adapted version of Perplexity''s response to
-    NIST/CAISI Request for Information 2025-0035, details our observations and recommendations
-    concerning the security of frontier AI agents. These insights are informed by
-    Perplexity''s experience operating general-purpose agentic systems used by millions
-    of users and thousands of enterprises in both controlled and open-world environments.
-    Agent architectures change core assumptions around code-data separation, authority
-    boundaries, and execution predictability, creating new confidentiality, integrity,
-    and availability failure modes. We map principal attack surfaces across tools,
-    connectors, hosting boundaries, and multi-agent coordination, with particular
-    emphasis on indirect prompt injection, confused-deputy behavior, and cascading
-    failures in long-running workflows. We then assess current defenses as a layered
-    stack: input-level and model-level mitigations, sandboxed execution, and deterministic
-    policy enforcement for high-consequence actions. Finally, we identify standards
-    and research gaps, including adaptive security benchmarks, policy models for delegation
-    and privilege control, and guidance for secure multi-agent system design aligned
-    with NIST risk management principles.'
-  published: '2026-03-12'
-  pdf_url: http://arxiv.org/pdf/2603.12230
-  arxiv_url: http://arxiv.org/abs/2603.12230
-  key_findings: This article, a lightly adapted version of Perplexity's response to
-    NIST/CAISI Request for Information 2025-0035, details our observations and recommendations
-    concerning the security of frontier AI agents. These insights are informed by
-    Perplexity's experience operating general-purpose agentic systems used by millions
-    of users and thousands of enterprises in both controlled and open-world environments.
-    Agent architectures change core assumptions around code-data separation, authority
-    boundaries, and execution predictability, creating new confidentiality, integrity,
-    and availability failure modes.
-- id: '2603.12228'
-  title: 'Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights'
-  authors: Yulu Gan, Phillip Isola
-  abstract: Pretraining produces a learned parameter vector that is typically treated
-    as a starting point for further iterative adaptation. In this work, we instead
-    view the outcome of pretraining as a distribution over parameter vectors, whose
-    support already contains task-specific experts. We show that in small models such
-    expert solutions occupy a negligible fraction of the volume of this distribution,
-    making their discovery reliant on structured optimization methods such as gradient
-    descent. In contrast, in large, well-pretrained models the density of task-experts
-    increases dramatically, so that diverse, task-improving specialists populate a
-    substantial fraction of the neighborhood around the pretrained weights. Motivated
-    by this perspective, we explore a simple, fully parallel post-training method
-    that samples $N$ parameter perturbations at random, selects the top $K$, and ensembles
-    predictions via majority vote. Despite its simplicity, this approach is competitive
-    with standard post-training methods such as PPO, GRPO, and ES for contemporary
-    large-scale models.
-  published: '2026-03-12'
-  pdf_url: http://arxiv.org/pdf/2603.12228
-  arxiv_url: http://arxiv.org/abs/2603.12228
-  key_findings: Pretraining produces a learned parameter vector that is typically
-    treated as a starting point for further iterative adaptation. In this work, we
-    instead view the outcome of pretraining as a distribution over parameter vectors,
-    whose support already contains task-specific experts. We show that in small models
-    such expert solutions occupy a negligible fraction of the volume of this distribution,
-    making their discovery reliant on structured optimization methods such as gradient
-    descent.
-- id: '2603.12226'
-  title: Sparking Scientific Creativity via LLM-Driven Interdisciplinary Inspiration
-  authors: Priyanka Kargupta, Shuhaib Mehri, Dilek Hakkani-Tur, Jiawei Han
-  abstract: 'Despite interdisciplinary research leading to larger and longer-term
-    impact, most work remains confined to single-domain academic silos. Recent AI-based
-    approaches to scientific discovery show promise for interdisciplinary research,
-    but many prioritize rapidly designing experiments and solutions, bypassing the
-    exploratory, collaborative reasoning processes that drive creative interdisciplinary
-    breakthroughs. As a result, prior efforts largely prioritize automating scientific
-    discovery rather than augmenting the reasoning processes that underlie scientific
-    disruption. We present Idea-Catalyst, a novel framework that systematically identifies
-    interdisciplinary insights to support creative reasoning in both humans and large
-    language models. Starting from an abstract research goal, Idea-Catalyst is designed
-    to assist the brainstorming stage, explicitly avoiding premature anchoring on
-    specific solutions. The framework embodies key metacognitive features of interdisciplinary
-    reasoning: (a) defining and assessing research goals, (b) awareness of a domain''s
-    opportunities and unresolved challenges, and (c) strategic exploration of interdisciplinary
-    ideas based on impact potential. Concretely, Idea-Catalyst decomposes an abstract
-    goal (e.g., improving human-AI collaboration) into core target-domain research
-    questions that guide the analysis of progress and open challenges within that
-    domain. These challenges are reformulated as domain-agnostic conceptual problems,
-    enabling retrieval from external disciplines (e.g., Psychology, Sociology) that
-    address analogous issues. By synthesizing and recontextualizing insights from
-    these domains back into the target domain, Idea-Catalyst ranks source domains
-    by their interdisciplinary potential. Empirically, this targeted integration improves
-    average novelty by 21% and insightfulness by 16%, while remaining grounded in
-    the original research problem.'
-  published: '2026-03-12'
-  pdf_url: http://arxiv.org/pdf/2603.12226
-  arxiv_url: http://arxiv.org/abs/2603.12226
-  key_findings: Despite interdisciplinary research leading to larger and longer-term
-    impact, most work remains confined to single-domain academic silos. Recent AI-based
-    approaches to scientific discovery show promise for interdisciplinary research,
-    but many prioritize rapidly designing experiments and solutions, bypassing the
-    exploratory, collaborative reasoning processes that drive creative interdisciplinary
-    breakthroughs. As a result, prior efforts largely prioritize automating scientific
-    discovery rather than augmenting the reasoning processes that underlie scientific
-    disruption.
-- id: '2603.12224'
-  title: Portfolio of Solving Strategies in CEGAR-based Object Packing and Scheduling
-    for Sequential 3D Printing
-  authors: Pavel Surynek
-  abstract: Computing power that used to be available only in supercomputers decades
-    ago especially their parallelism is currently available in standard personal computer
-    CPUs even in CPUs for mobile telephones. We show how to effectively utilize the
-    computing power of modern multi-core personal computer CPU to solve the complex
-    combinatorial problem of object arrangement and scheduling for sequential 3D printing.
-    We achieved this by parallelizing the existing CEGAR-SEQ algorithm that solves
-    the sequential object arrangement and scheduling by expressing it as a linear
-    arithmetic formula which is then solved by a technique inspired by counterexample
-    guided abstraction refinement (CEGAR). The original CEGAR-SEQ algorithm uses an
-    object arrangement strategy that places objects towards the center of the printing
-    plate. We propose alternative object arrangement strategies such as placing objects
-    towards a corner of the printing plate and scheduling objects according to their
-    height. Our parallelization is done at the high-level where we execute the CEGAR-SEQ
-    algorithm in parallel with a portfolio of object arrangement strategies, an algorithm
-    is called Porfolio-CEGAR-SEQ. Our experimental evaluation indicates that Porfolio-CEGAR-SEQ
-    outperforms the original CEGAR-SEQ. When a batch of objects for multiple printing
-    plates is scheduled, Portfolio-CEGAR-SEQ often uses fewer printing plates than
-    CEGAR-SEQ.
-  published: '2026-03-12'
-  pdf_url: http://arxiv.org/pdf/2603.12224
-  arxiv_url: http://arxiv.org/abs/2603.12224
-  key_findings: Computing power that used to be available only in supercomputers decades
-    ago especially their parallelism is currently available in standard personal computer
-    CPUs even in CPUs for mobile telephones. We show how to effectively utilize the
-    computing power of modern multi-core personal computer CPU to solve the complex
-    combinatorial problem of object arrangement and scheduling for sequential 3D printing.
-    We achieved this by parallelizing the existing CEGAR-SEQ algorithm that solves
-    the sequential object arrangement and scheduling by expressing it as a linear
-    arithmetic formula which is then solved by a technique inspired by counterexample
-    guided abstraction refinement (CEGAR).
-- id: '2603.12215'
-  title: 'RDNet: Region Proportion-Aware Dynamic Adaptive Salient Object Detection
-    Network in Optical Remote Sensing Images'
-  authors: Bin Wan, Runmin Cong, Xiaofei Zhou, Hao Fang, Yaoqi Sun, Sam Kwong
-  abstract: 'Salient object detection (SOD) in remote sensing images faces significant
-    challenges due to large variations in object sizes, the computational cost of
-    self-attention mechanisms, and the limitations of CNN-based extractors in capturing
-    global context and long-range dependencies. Existing methods that rely on fixed
-    convolution kernels often struggle to adapt to diverse object scales, leading
-    to detail loss or irrelevant feature aggregation. To address these issues, this
-    work aims to enhance robustness to scale variations and achieve precise object
-    localization. We propose the Region Proportion-Aware Dynamic Adaptive Salient
-    Object Detection Network (RDNet), which replaces the CNN backbone with the SwinTransformer
-    for global context modeling and introduces three key modules: (1) the Dynamic
-    Adaptive Detail-aware (DAD) module, which applies varied convolution kernels guided
-    by object region proportions; (2) the Frequency-matching Context Enhancement (FCE)
-    module, which enriches contextual information through wavelet interactions and
-    attention; and (3) the Region Proportion-aware Localization (RPL) module, which
-    employs cross-attention to highlight semantic details and integrates a Proportion
-    Guidance (PG) block to assist the DAD module. By combining these modules, RDNet
-    achieves robustness against scale variations and accurate localization, delivering
-    superior detection performance compared with state-of-the-art methods.'
-  published: '2026-03-12'
-  pdf_url: http://arxiv.org/pdf/2603.12215
-  arxiv_url: http://arxiv.org/abs/2603.12215
-  key_findings: Salient object detection (SOD) in remote sensing images faces significant
-    challenges due to large variations in object sizes, the computational cost of
-    self-attention mechanisms, and the limitations of CNN-based extractors in capturing
-    global context and long-range dependencies. Existing methods that rely on fixed
-    convolution kernels often struggle to adapt to diverse object scales, leading
-    to detail loss or irrelevant feature aggregation. To address these issues, this
-    work aims to enhance robustness to scale variations and achieve precise object
-    localization.
+- id: '2603.13154'
+  title: 'ESG-Bench: Benchmarking Long-Context ESG Reports for Hallucination Mitigation'
+  authors: Siqi Sun, Ben Peng Wu, Mali Jin, Peizhen Bai, Hanpei Zhang, Xingyi Song
+  abstract: 'As corporate responsibility increasingly incorporates environmental,
+    social, and governance (ESG) criteria, ESG reporting is becoming a legal requirement
+    in many regions and a key channel for documenting sustainability practices and
+    assessing firms'' long-term and ethical performance. However, the length and complexity
+    of ESG disclosures make them difficult to interpret and automate the analysis
+    reliably. To support scalable and trustworthy analysis, this paper introduces
+    ESG-Bench, a benchmark dataset for ESG report understanding and hallucination
+    mitigation in large language models (LLMs). ESG-Bench contains human-annotated
+    question-answer (QA) pairs grounded in real-world ESG report contexts, with fine-grained
+    labels indicating whether model outputs are factually supported or hallucinated.
+    Framing ESG report analysis as a QA task with verifiability constraints enables
+    systematic evaluation of LLMs'' ability to extract and reason over ESG content
+    and provides a new use case: mitigating hallucinations in socially sensitive,
+    compliance-critical settings. We design task-specific Chain-of-Thought (CoT) prompting
+    strategies and fine-tune multiple state-of-the-art LLMs on ESG-Bench using CoT-annotated
+    rationales. Our experiments show that these CoT-based methods substantially outperform
+    standard prompting and direct fine-tuning in reducing hallucinations, and that
+    the gains transfer to existing QA benchmarks beyond the ESG domain.'
+  published: '2026-03-13'
+  pdf_url: http://arxiv.org/pdf/2603.13154
+  arxiv_url: http://arxiv.org/abs/2603.13154
+  key_findings: As corporate responsibility increasingly incorporates environmental,
+    social, and governance (ESG) criteria, ESG reporting is becoming a legal requirement
+    in many regions and a key channel for documenting sustainability practices and
+    assessing firms' long-term and ethical performance. However, the length and complexity
+    of ESG disclosures make them difficult to interpret and automate the analysis
+    reliably. To support scalable and trustworthy analysis, this paper introduces
+    ESG-Bench, a benchmark dataset for ESG report understanding and hallucination
+    mitigation in large language models (LLMs).
+- id: '2603.13134'
+  title: 'When Right Meets Wrong: Bilateral Context Conditioning with Reward-Confidence
+    Correction for GRPO'
+  authors: Yu Li, Tian Lan, Zhengling Qi
+  abstract: 'Group Relative Policy Optimization (GRPO) has emerged as an effective
+    method for training reasoning models. While it computes advantages based on group
+    mean, GRPO treats each output as an independent sample during the optimization
+    and overlooks a vital structural signal: the natural contrast between correct
+    and incorrect solutions within the same group, thus ignoring the rich, comparative
+    data that could be leveraged by explicitly pitting successful reasoning traces
+    against failed ones. To capitalize on this, we present a contrastive reformulation
+    of GRPO, showing that the GRPO objective implicitly maximizes the margin between
+    the policy ratios of correct and incorrect samples. Building on this insight,
+    we propose Bilateral Context Conditioning (BICC), a mechanism that allows the
+    model to cross-reference successful and failed reasoning traces during the optimization,
+    enabling a direct information flow across samples. We further introduce Reward-Confidence
+    Correction (RCC) to stabilize training by dynamically adjusts the advantage baseline
+    in GRPO using reward-confidence covariance derived from the first-order approximation
+    of the variance-minimizing estimator. Both mechanisms require no additional sampling
+    or auxiliary models and can be adapted to all GRPO variants. Experiments on mathematical
+    reasoning benchmarks demonstrate consistent improvements across comprehensive
+    models and algorithms. Code is available at \href{https://github.com/Skylanding/BiCC}{https://github.com/Skylanding/BiCC}.'
+  published: '2026-03-13'
+  pdf_url: http://arxiv.org/pdf/2603.13134
+  arxiv_url: http://arxiv.org/abs/2603.13134
+  key_findings: 'Group Relative Policy Optimization (GRPO) has emerged as an effective
+    method for training reasoning models. While it computes advantages based on group
+    mean, GRPO treats each output as an independent sample during the optimization
+    and overlooks a vital structural signal: the natural contrast between correct
+    and incorrect solutions within the same group, thus ignoring the rich, comparative
+    data that could be leveraged by explicitly pitting successful reasoning traces
+    against failed ones. To capitalize on this, we present a contrastive reformulation
+    of GRPO, showing that the GRPO objective implicitly maximizes the margin between
+    the policy ratios of correct and incorrect samples.'
+- id: '2603.13131'
+  title: 'Steve-Evolving: Open-World Embodied Self-Evolution via Fine-Grained Diagnosis
+    and Dual-Track Knowledge Distillation'
+  authors: Zhengwei Xie, Zhisheng Chen, Ziyan Weng, Tingyu Wu, Chenglong Li, Vireo
+    Zhang, Kun Wang
+  abstract: 'Open-world embodied agents must solve long-horizon tasks where the main
+    bottleneck is not single-step planning quality but how interaction experience
+    is organized and evolved. To this end, we present Steve-Evolving, a non-parametric
+    self-evolving framework that tightly couples fine-grained execution diagnosis
+    with dual-track knowledge distillation in a closed loop. The method follows three
+    phases: Experience Anchoring, Experience Distillation, and Knowledge-Driven Closed-Loop
+    Control. In detail, Experience Anchoring solidifies each subgoal attempt into
+    a structured experience tuple with a fixed schema (pre-state, action, diagnosis-result,
+    and post-state) and organizes it in a three-tier experience space with multi-dimensional
+    indices (e.g., condition signatures, spatial hashing, and semantic tags) plus
+    rolling summarization for efficient and auditable recall. To ensure sufficient
+    information density for attribution, the execution layer provides compositional
+    diagnosis signals beyond binary outcomes, including state-difference summaries,
+    enumerated failure causes, continuous indicators, and stagnation/loop detection.
+    Moreover, successful trajectories of Experience Distillation are generalized into
+    reusable skills with explicit preconditions and verification criteria, while failures
+    are distilled into executable guardrails that capture root causes and forbid risky
+    operations at both subgoal and task granularities. Besides, Knowledge-Driven Closed-Loop
+    Control retrieved skills and guardrails are injected into an LLM planner, and
+    diagnosis-triggered local replanning updates the active constraints online, forming
+    a continual evolution process without any model parameter updates. Experiments
+    on the long-horizon suite of Minecraft MCU demonstrate consistent improvements
+    over static-retrieval baselines.'
+  published: '2026-03-13'
+  pdf_url: http://arxiv.org/pdf/2603.13131
+  arxiv_url: http://arxiv.org/abs/2603.13131
+  key_findings: 'Open-world embodied agents must solve long-horizon tasks where the
+    main bottleneck is not single-step planning quality but how interaction experience
+    is organized and evolved. To this end, we present Steve-Evolving, a non-parametric
+    self-evolving framework that tightly couples fine-grained execution diagnosis
+    with dual-track knowledge distillation in a closed loop. The method follows three
+    phases: Experience Anchoring, Experience Distillation, and Knowledge-Driven Closed-Loop
+    Control.'
+- id: '2603.13126'
+  title: Developing the PsyCogMetrics AI Lab to Evaluate Large Language Models and
+    Advance Cognitive Science -- A Three-Cycle Action Design Science Study
+  authors: Zhiye Jin, Yibai Li, K. D. Joshi,  Xuefei,  Deng,  Xiaobing,  Li
+  abstract: This study presents the development of the PsyCogMetrics AI Lab (psycogmetrics.ai),
+    an integrated, cloud-based platform that operationalizes psychometric and cognitive-science
+    methodologies for Large Language Model (LLM) evaluation. Framed as a three-cycle
+    Action Design Science study, the Relevance Cycle identifies key limitations in
+    current evaluation methods and unfulfilled stakeholder needs. The Rigor Cycle
+    draws on kernel theories such as Popperian falsifiability, Classical Test Theory,
+    and Cognitive Load Theory to derive deductive design objectives. The Design Cycle
+    operationalizes these objectives through nested Build-Intervene-Evaluate loops.
+    The study contributes a novel IT artifact, a validated design for LLM evaluation,
+    benefiting research at the intersection of AI, psychology, cognitive science,
+    and the social and behavioral sciences.
+  published: '2026-03-13'
+  pdf_url: http://arxiv.org/pdf/2603.13126
+  arxiv_url: http://arxiv.org/abs/2603.13126
+  key_findings: This study presents the development of the PsyCogMetrics AI Lab (psycogmetrics.
+    ai), an integrated, cloud-based platform that operationalizes psychometric and
+    cognitive-science methodologies for Large Language Model (LLM) evaluation. Framed
+    as a three-cycle Action Design Science study, the Relevance Cycle identifies key
+    limitations in current evaluation methods and unfulfilled stakeholder needs.
+- id: '2603.13119'
+  title: Geometry-Guided Camera Motion Understanding in VideoLLMs
+  authors: Haoan Feng, Sri Harsha Musunuri, Guan-Ming Su
+  abstract: Camera motion is a fundamental geometric signal that shapes visual perception
+    and cinematic style, yet current video-capable vision-language models (VideoLLMs)
+    rarely represent it explicitly and often fail on fine-grained motion primitives.
+    We address this gap with a framework of $\textbf{benchmarking}$, $\textbf{diagnosis}$,
+    and $\textbf{injection}$. We curate $\textbf{CameraMotionDataset}$, a large-scale
+    synthetic dataset with explicit camera control, formulate camera motion as constraint-aware
+    multi-label recognition, and construct a VQA benchmark--$\textbf{CameraMotionVQA}$.
+    Across diverse off-the-shelf VideoLLMs, we observe substantial errors in recognizing
+    camera motion primitives. Probing experiments on a Qwen2.5-VL vision encoder suggest
+    that camera motion cues are weakly represented, especially in deeper ViT blocks,
+    helping explain the observed failure modes. To bridge this gap without costly
+    training or fine-tuning, we propose a lightweight, model-agnostic pipeline that
+    extracts geometric camera cues from 3D foundation models (3DFMs), predicts constrained
+    motion primitives with a temporal classifier, and injects them into downstream
+    VideoLLM inference via structured prompting. Experiments demonstrate improved
+    motion recognition and more camera-aware model responses, highlighting geometry-driven
+    cue extraction and structured prompting as practical steps toward a camera-aware
+    VideoLLM and VLA system. The dataset and benchmark is publicly available at https://hf.co/datasets/fengyee/camera-motion-dataset-and-benchmark.
+  published: '2026-03-13'
+  pdf_url: http://arxiv.org/pdf/2603.13119
+  arxiv_url: http://arxiv.org/abs/2603.13119
+  key_findings: Camera motion is a fundamental geometric signal that shapes visual
+    perception and cinematic style, yet current video-capable vision-language models
+    (VideoLLMs) rarely represent it explicitly and often fail on fine-grained motion
+    primitives. We address this gap with a framework of $\textbf{benchmarking}$, $\textbf{diagnosis}$,
+    and $\textbf{injection}$. We curate $\textbf{CameraMotionDataset}$, a large-scale
+    synthetic dataset with explicit camera control, formulate camera motion as constraint-aware
+    multi-label recognition, and construct a VQA benchmark--$\textbf{CameraMotionVQA}$.
+- id: '2603.13109'
+  title: 'BoSS: A Best-of-Strategies Selector as an Oracle for Deep Active Learning'
+  authors: Denis Huseljic, Paul Hahn, Marek Herde, Christoph Sandrock, Bernhard Sick
+  abstract: Active learning (AL) aims to reduce annotation costs while maximizing
+    model performance by iteratively selecting valuable instances. While foundation
+    models have made it easier to identify these instances, existing selection strategies
+    still lack robustness across different models, annotation budgets, and datasets.
+    To highlight the potential weaknesses of existing AL strategies and provide a
+    reference point for research, we explore oracle strategies, i.e., strategies that
+    approximate the optimal selection by accessing ground-truth information unavailable
+    in practical AL scenarios. Current oracle strategies, however, fail to scale effectively
+    to large datasets and complex deep neural networks. To tackle these limitations,
+    we introduce the Best-of-Strategy Selector (BoSS), a scalable oracle strategy
+    designed for large-scale AL scenarios. BoSS constructs a set of candidate batches
+    through an ensemble of selection strategies and then selects the batch yielding
+    the highest performance gain. As an ensemble of selection strategies, BoSS can
+    be easily extended with new state-of-the-art strategies as they emerge, ensuring
+    it remains a reliable oracle strategy in the future. Our evaluation demonstrates
+    that i) BoSS outperforms existing oracle strategies, ii) state-of-the-art AL strategies
+    still fall noticeably short of oracle performance, especially in large-scale datasets
+    with many classes, and iii) one possible solution to counteract the inconsistent
+    performance of AL strategies might be to employ an ensemble-based approach for
+    the selection.
+  published: '2026-03-13'
+  pdf_url: http://arxiv.org/pdf/2603.13109
+  arxiv_url: http://arxiv.org/abs/2603.13109
+  key_findings: Active learning (AL) aims to reduce annotation costs while maximizing
+    model performance by iteratively selecting valuable instances. While foundation
+    models have made it easier to identify these instances, existing selection strategies
+    still lack robustness across different models, annotation budgets, and datasets.
+    To highlight the potential weaknesses of existing AL strategies and provide a
+    reference point for research, we explore oracle strategies, i.
+- id: '2603.13100'
+  title: 'Evaluating VLMs'' Spatial Reasoning Over Robot Motion: A Step Towards Robot
+    Planning with Motion Preferences'
+  authors: Wenxi Wu, Jingjing Zhang, Martim Brandão
+  abstract: Understanding user instructions and object spatial relations in surrounding
+    environments is crucial for intelligent robot systems to assist humans in various
+    tasks. The natural language and spatial reasoning capabilities of Vision-Language
+    Models (VLMs) have the potential to enhance the generalization of robot planners
+    on new tasks, objects, and motion specifications. While foundation models have
+    been applied to task planning, it is still unclear the degree to which they have
+    the capability of spatial reasoning required to enforce user preferences or constraints
+    on motion, such as desired distances from objects, topological properties, or
+    motion style preferences. In this paper, we evaluate the capability of four state-of-the-art
+    VLMs at spatial reasoning over robot motion, using four different querying methods.
+    Our results show that, with the highest-performing querying method, Qwen2.5-VL
+    achieves 71.4% accuracy zero-shot and 75% on a smaller model after fine-tuning,
+    and GPT-4o leads to lower performance. We evaluate two types of motion preferences
+    (object-proximity and path-style), and we also analyze the trade-off between accuracy
+    and computation cost in number of tokens. This work shows some promise in the
+    potential of VLM integration with robot motion planning pipelines.
+  published: '2026-03-13'
+  pdf_url: http://arxiv.org/pdf/2603.13100
+  arxiv_url: http://arxiv.org/abs/2603.13100
+  key_findings: Understanding user instructions and object spatial relations in surrounding
+    environments is crucial for intelligent robot systems to assist humans in various
+    tasks. The natural language and spatial reasoning capabilities of Vision-Language
+    Models (VLMs) have the potential to enhance the generalization of robot planners
+    on new tasks, objects, and motion specifications. While foundation models have
+    been applied to task planning, it is still unclear the degree to which they have
+    the capability of spatial reasoning required to enforce user preferences or constraints
+    on motion, such as desired distances from objects, topological properties, or
+    motion style preferences.
+- id: '2603.13099'
+  title: 'Beyond Final Answers: CRYSTAL Benchmark for Transparent Multimodal Reasoning
+    Evaluation'
+  authors: Wayner Barrios, SouYoung Jin
+  abstract: 'We introduce **CRYSTAL** (*__C__lear __R__easoning via __Y__ielded __S__teps,
+    __T__raceability and __L__ogic*), a diagnostic benchmark with 6,372 instances
+    that evaluates multimodal reasoning through verifiable intermediate steps. We
+    propose two complementary metrics: *Match F1*, which scores step-level precision
+    and recall via semantic similarity matching, and *Ordered Match F1*, which further
+    penalizes disordered reasoning chains. References are constructed through a Delphi-inspired
+    pipeline where four independent MLLMs generate trajectories, aggregated via semantic
+    clustering and validated through human quality gates. Evaluation of 20 MLLMs,
+    including commercial frontier systems not used during benchmark construction,
+    reveals systematic failures invisible to accuracy: universal cherry-picking (precision
+    far exceeds recall), non-monotonic scaling trade-offs, and disordered reasoning
+    where no competitive model preserves more than 60% of matched steps in correct
+    order. Beyond evaluation, we propose the **Causal Process Reward (CPR)**, a multiplicative
+    reward that couples answer correctness with step-level alignment, and **CPR-Curriculum**,
+    which progressively increases reasoning difficulty during training. CPR-Curriculum
+    achieves +32% Match F1 via GRPO where additive reward strategies fail, improving
+    reasoning without manual step annotation.'
+  published: '2026-03-13'
+  pdf_url: http://arxiv.org/pdf/2603.13099
+  arxiv_url: http://arxiv.org/abs/2603.13099
+  key_findings: 'We introduce **CRYSTAL** (*__C__lear __R__easoning via __Y__ielded
+    __S__teps, __T__raceability and __L__ogic*), a diagnostic benchmark with 6,372
+    instances that evaluates multimodal reasoning through verifiable intermediate
+    steps. We propose two complementary metrics: *Match F1*, which scores step-level
+    precision and recall via semantic similarity matching, and *Ordered Match F1*,
+    which further penalizes disordered reasoning chains. References are constructed
+    through a Delphi-inspired pipeline where four independent MLLMs generate trajectories,
+    aggregated via semantic clustering and validated through human quality gates.'
+- id: '2603.13083'
+  title: Human-in-the-Loop LLM Grading for Handwritten Mathematics Assessments
+  authors: Arne Vanhoyweghen, Vincent Holst, Melika Mobini, Lukas Van de Voorde, Tibo
+    Vanleke, Bert Verbruggen, Brecht Verbeken, Andres Algaba, Sam Verboven, Marie-Anne
+    Guerry, Filip Van Droogenbroeck, Vincent Ginis
+  abstract: Providing timely and individualised feedback on handwritten student work
+    is highly beneficial for learning but difficult to achieve at scale. This challenge
+    has become more pressing as generative AI undermines the reliability of take-home
+    assessments, shifting emphasis toward supervised, in-class evaluation. We present
+    a scalable, end-to-end workflow for LLM-assisted grading of short, pen-and-paper
+    assessments. The workflow spans (1) constructing solution keys, (2) developing
+    detailed rubric-style grading keys used to guide the LLM, and (3) a grading procedure
+    that combines automated scanning and anonymisation, multi-pass LLM scoring, automated
+    consistency checks, and mandatory human verification. We deploy the system in
+    two undergraduate mathematics courses using six low-stakes in-class tests. Empirically,
+    LLM assistance reduces grading time by approximately 23% while achieving agreement
+    comparable to, and in several cases tighter than, fully manual grading. Occasional
+    model errors occur but are effectively contained by the hybrid design. Overall,
+    our results show that carefully embedded human-in-the-loop LLM grading can substantially
+    reduce workload while maintaining fairness and accuracy.
+  published: '2026-03-13'
+  pdf_url: http://arxiv.org/pdf/2603.13083
+  arxiv_url: http://arxiv.org/abs/2603.13083
+  key_findings: Providing timely and individualised feedback on handwritten student
+    work is highly beneficial for learning but difficult to achieve at scale. This
+    challenge has become more pressing as generative AI undermines the reliability
+    of take-home assessments, shifting emphasis toward supervised, in-class evaluation.
+    We present a scalable, end-to-end workflow for LLM-assisted grading of short,
+    pen-and-paper assessments.
+- id: '2603.13068'
+  title: 'GeoChemAD: Benchmarking Unsupervised Geochemical Anomaly Detection for Mineral
+    Exploration'
+  authors: Yihao Ding, Yiran Zhang, Chris Gonzalez, Eun-Jung Holden, Wei Liu
+  abstract: 'Geochemical anomaly detection plays a critical role in mineral exploration
+    as deviations from regional geochemical baselines may indicate mineralization.
+    Existing studies suffer from two key limitations: (1) single region scenarios
+    which limit model generalizability; (2) proprietary datasets, which makes result
+    reproduction unattainable. In this work, we introduce \textbf{GeoChemAD}, an open-source
+    benchmark dataset compiled from government-led geological surveys, covering multiple
+    regions, sampling sources, and target elements. The dataset comprises eight subsets
+    representing diverse spatial scales and sampling conditions. To establish strong
+    baselines, we reproduce and benchmark a range of unsupervised anomaly detection
+    methods, including statistical models, generative and transformer-based approaches.
+    Furthermore, we propose \textbf{GeoChemFormer}, a transformer-based framework
+    that leverages self-supervised pretraining to learn target-element-aware geochemical
+    representations for spatial samples. Extensive experiments demonstrate that GeoChemFormer
+    consistently achieves superior and robust performance across all eight subsets,
+    outperforming existing unsupervised methods in both anomaly detection accuracy
+    and generalization capability. The proposed dataset and framework provide a foundation
+    for reproducible research and future development in this direction.'
+  published: '2026-03-13'
+  pdf_url: http://arxiv.org/pdf/2603.13068
+  arxiv_url: http://arxiv.org/abs/2603.13068
+  key_findings: 'Geochemical anomaly detection plays a critical role in mineral exploration
+    as deviations from regional geochemical baselines may indicate mineralization.
+    Existing studies suffer from two key limitations: (1) single region scenarios
+    which limit model generalizability; (2) proprietary datasets, which makes result
+    reproduction unattainable. In this work, we introduce \textbf{GeoChemAD}, an open-source
+    benchmark dataset compiled from government-led geological surveys, covering multiple
+    regions, sampling sources, and target elements.'
